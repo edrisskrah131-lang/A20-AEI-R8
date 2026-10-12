@@ -1,0 +1,158 @@
+{
+  "status": "PASS",
+  "scope_only_amendment": true,
+  "formal_confirmation_inputs": 0,
+  "canonical_A_B_invariance_decisions_unchanged": true,
+  "provider_fault_checks": 72,
+  "old_dependencies": {
+    "gsd_m": [
+      "target_plan",
+      "geometry_sampler",
+      "focal_px"
+    ],
+    "blur_px": [
+      "target_plan",
+      "geometry_sampler",
+      "focal_px",
+      "exposure_s",
+      "motion_sampler"
+    ],
+    "coverage": [
+      "target_plan",
+      "geometry_sampler",
+      "focal_px",
+      "exposure_s",
+      "motion_sampler",
+      "roi",
+      "renderer",
+      "detector",
+      "pixel_noise"
+    ],
+    "reprojection_px": [
+      "target_plan",
+      "geometry_sampler",
+      "focal_px",
+      "exposure_s",
+      "motion_sampler",
+      "roi",
+      "renderer",
+      "detector",
+      "pixel_noise",
+      "localization",
+      "capture_sampler"
+    ],
+    "association_m": [
+      "target_plan",
+      "geometry_sampler",
+      "localization",
+      "capture_sampler",
+      "roi",
+      "renderer",
+      "detector",
+      "pixel_noise",
+      "exposure_s",
+      "focal_px",
+      "motion_sampler"
+    ],
+    "localization_ready": [
+      "localization",
+      "capture_sampler"
+    ],
+    "report_delay_s": [
+      "localization",
+      "capture_sampler",
+      "camera_clock",
+      "report_queue"
+    ],
+    "image_age_s": [
+      "localization",
+      "capture_sampler",
+      "camera_clock",
+      "report_queue"
+    ]
+  },
+  "amended_dependencies": {
+    "gsd_m": [
+      "capture_sampler",
+      "focal_px",
+      "geometry_sampler",
+      "motion_sampler",
+      "target_plan"
+    ],
+    "blur_px": [
+      "capture_sampler",
+      "exposure_s",
+      "focal_px",
+      "geometry_sampler",
+      "motion_sampler",
+      "target_plan"
+    ],
+    "coverage": [
+      "capture_sampler",
+      "detector",
+      "exposure_s",
+      "focal_px",
+      "geometry_sampler",
+      "motion_sampler",
+      "pixel_noise",
+      "renderer",
+      "roi",
+      "target_plan"
+    ],
+    "reprojection_px": [
+      "capture_sampler",
+      "detector",
+      "exposure_s",
+      "focal_px",
+      "geometry_sampler",
+      "localization",
+      "motion_sampler",
+      "pixel_noise",
+      "renderer",
+      "roi",
+      "target_plan"
+    ],
+    "association_m": [
+      "capture_sampler",
+      "detector",
+      "exposure_s",
+      "focal_px",
+      "geometry_sampler",
+      "localization",
+      "motion_sampler",
+      "pixel_noise",
+      "renderer",
+      "roi",
+      "target_plan"
+    ],
+    "localization_ready": [
+      "capture_sampler",
+      "geometry_sampler",
+      "localization",
+      "motion_sampler"
+    ],
+    "report_delay_s": [
+      "camera_clock",
+      "capture_sampler",
+      "geometry_sampler",
+      "localization",
+      "motion_sampler",
+      "report_queue"
+    ],
+    "image_age_s": [
+      "camera_clock",
+      "capture_sampler",
+      "geometry_sampler",
+      "localization",
+      "motion_sampler",
+      "report_queue"
+    ]
+  },
+  "calibration_manifests": {
+    "A": "3aa3f323d8f2ccdd74922a6e31af9d0640d220db6a89a96d7a3e272aad7493f2",
+    "B": "1f855af932e2c240678b137c8f6c2f22f2fce12519a9eab5790718f07fa18ca5"
+  },
+  "numerical_generator_changed": false,
+  "event_labels_changed": false,
+  "rationale": "Capture/motion sampling affects planned target addresses and physical pose; conservative source-provider dependencies prevent unsupported transfers."
+}

@@ -1,0 +1,36 @@
+{
+  "repository": "edrisskrah131-lang/A20-AEI-R8",
+  "branch": "r9-rebuild-20261012",
+  "commit": "dc37e48cf2628b06fccf8cf74e7390a315f92f2b",
+  "assets": [
+    {
+      "file": "A20_R9_A_calibration_first16_20261012T110917Z.zip",
+      "bytes": 6392154,
+      "sha256": "2dc5ad4336cbae8dfb3b708d77d04178f6691d5ea9a42e52434ff2bb950c497f"
+    },
+    {
+      "file": "A20_R9_A_calibration_first16_20261012T110917Z.json",
+      "bytes": 8610,
+      "sha256": "e7c9ca9587b1ebedbc54c9efe6c517d2fdec3751232e263eef582c5a3175de96"
+    }
+  ],
+  "remote_upload_verified": true,
+  "authenticated_login": "edrisskrah131-lang",
+  "release_url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/tag/r9-checkpoints-20261012",
+  "verified_assets": [
+    {
+      "file": "A20_R9_A_calibration_first16_20261012T110917Z.zip",
+      "sha256": "2dc5ad4336cbae8dfb3b708d77d04178f6691d5ea9a42e52434ff2bb950c497f",
+      "bytes": 6392154,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_first16_20261012T110917Z.zip",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_A_calibration_first16_20261012T110917Z.json",
+      "sha256": "e7c9ca9587b1ebedbc54c9efe6c517d2fdec3751232e263eef582c5a3175de96",
+      "bytes": 8610,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_first16_20261012T110917Z.json",
+      "verification": "GitHub server SHA256 and byte count"
+    }
+  ]
+}

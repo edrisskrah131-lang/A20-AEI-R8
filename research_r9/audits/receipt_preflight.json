@@ -1,0 +1,234 @@
+{
+  "status": "PASS",
+  "fixtures_not_population_observations": true,
+  "invalid_cases": 32,
+  "valid_controls": 64,
+  "false_authorizations": 0,
+  "numerical_and_event_changes": false,
+  "rows": [
+    {
+      "method": "ContractCover",
+      "fault": "source",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ContractCover",
+      "fault": "source_seal",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ContractCover",
+      "fault": "profile",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ContractCover",
+      "fault": "study",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ContractCover",
+      "fault": "policy",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ContractCover",
+      "fault": "event_id",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ContractCover",
+      "fault": "plan_seal",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ContractCover",
+      "fault": "card",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ProceduralCoverValidated",
+      "fault": "source",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ProceduralCoverValidated",
+      "fault": "source_seal",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ProceduralCoverValidated",
+      "fault": "profile",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ProceduralCoverValidated",
+      "fault": "study",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ProceduralCoverValidated",
+      "fault": "policy",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ProceduralCoverValidated",
+      "fault": "event_id",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ProceduralCoverValidated",
+      "fault": "plan_seal",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ProceduralCoverValidated",
+      "fault": "card",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "DirectRecertCached",
+      "fault": "source",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "DirectRecertCached",
+      "fault": "source_seal",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "DirectRecertCached",
+      "fault": "profile",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "DirectRecertCached",
+      "fault": "study",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "DirectRecertCached",
+      "fault": "policy",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "DirectRecertCached",
+      "fault": "event_id",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "DirectRecertCached",
+      "fault": "plan_seal",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "DirectRecertCached",
+      "fault": "card",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ExactCard",
+      "fault": "source",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ExactCard",
+      "fault": "source_seal",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ExactCard",
+      "fault": "profile",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ExactCard",
+      "fault": "study",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ExactCard",
+      "fault": "policy",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ExactCard",
+      "fault": "event_id",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ExactCard",
+      "fault": "plan_seal",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    },
+    {
+      "method": "ExactCard",
+      "fault": "card",
+      "false_authorization": 0,
+      "history_refusal_persisted": true,
+      "independent_successor_valid": true
+    }
+  ]
+}

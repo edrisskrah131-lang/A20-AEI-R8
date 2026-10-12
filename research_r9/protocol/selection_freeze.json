@@ -1,0 +1,14 @@
+{
+  "files": {
+    "data/evidence/calibration_preparation.csv": "95d592e15b9c07bf06c74f6506730a496210b30c598844b781938b113a57c6bd",
+    "data/evidence/cards.json": "17fc2d298b9c8721d564daaee55fbdddd11ee1d31e066cd1c7850557c82f0f65",
+    "data/evidence/plans.json": "5c2144f2efd8280c974af4df3af1c7f7e3d66e4eb7a2333da97b19b5ecd2cb3f",
+    "data/A/calibration/manifest.json": "3aa3f323d8f2ccdd74922a6e31af9d0640d220db6a89a96d7a3e272aad7493f2",
+    "data/A/calibration/outcomes.csv.gz": "b3dced35777d771cf6480a9fb1958cd719ea091f611eda3a043932cb6effdbf2",
+    "data/B/calibration/manifest.json": "1f855af932e2c240678b137c8f6c2f22f2fce12519a9eab5790718f07fa18ca5",
+    "data/B/calibration/outcomes.csv.gz": "9294e1ec996555f20ef01d74eb69340b871af7ff8ceead39ea6f27959e739646"
+  },
+  "cards": 3072,
+  "plan_queries": 6144,
+  "confirmation_inputs_before_seal": 0
+}

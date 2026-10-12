@@ -42,7 +42,8 @@ class API:
             'X-GitHub-Api-Version':'2026-03-10','Content-Type':content_type,
             'User-Agent':'A20-R9-verified-backup'})
         try:
-            with urllib.request.urlopen(req,timeout=600) as r:return json.load(r)
+            with urllib.request.urlopen(req,timeout=600) as r:
+                return None if r.status==204 else json.load(r)
         except urllib.error.HTTPError as e:
             # Avoid displaying request headers, response bodies or credentials.
             raise RuntimeError(f'GitHub returned HTTP {e.code} for {method} {url.split("?")[0]}') from None
@@ -56,11 +57,19 @@ def publish_assets(api,assets,commit):
             name='A20 AEI R9 — verified research checkpoints',prerelease=True,
             body='In-progress research. Code, prospective protocols and actual execution checkpoints. '
                  'No claim of final acceptance or completed formal study. Per-asset SHA256 manifests accompany archives.'))
-    existing={a['name']:a for a in api.request(base+f'/releases/{release["id"]}/assets?per_page=100')}
+    existing={};page=1
+    while True:
+        batch=api.request(base+f'/releases/{release["id"]}/assets?per_page=100&page={page}')
+        existing.update({a['name']:a for a in batch})
+        if len(batch)<100:break
+        page+=1
     verified=[]
     for path in assets:
         digest=sha(path)
         asset=existing.get(path.name)
+        if asset is not None and asset.get('state')=='starter' and asset.get('size')==0:
+            # An interrupted upload of this exact named checkpoint left no data.
+            api.request(base+'/releases/assets/'+str(asset['id']),'DELETE');asset=None
         if asset is None:
             # Archive sizes are kept below 1 GB by the stage packager.
             if path.stat().st_size>1024**3:raise ValueError('Split this checkpoint before publication.')
