@@ -1,14 +1,16 @@
+> 当前编辑要求：保留R8有效研究主线。原17页压缩稿已被用户否定；请先读 R9_REVISION_STATUS_CN.md 和恢复稿。45页恢复稿保留完整内容，仍需精简重复论述与独立审查，不是已认可的投稿终稿。
+
 # 网页端 Work 接手
 
 这是以不可覆盖的 R8 为基线重新执行的 R9。两项新研究每项 4,096 校准、2,048 确认、256 压力输入，共 **12,800 个独立输入**。8 策略 × 4 工况共 409,600 条结果。6,144 个冻结计划产生 6,291,456 条重复确认请求，不能把它们算成新样本。
 
-新正文 **17 页**，补充 **53 页**，保留 R8 及更早材料。执行记录、独立统计反演、全部原始文件哈希和五个指定来源的数值/像素重放均有审计。远端备份是否完成，以 `audits/GITHUB_UPLOAD_*.json` 中的 `remote_upload_verified=true` 和最终交付索引为准；失败上传占位不算备份。
+最初17页稿已撤为历史。当前恢复主稿 **45 页（待进一步编辑）**，补充 **53 页**，保留 R8 及更早材料。执行记录、独立统计反演、全部原始文件哈希和五个指定来源的数值/像素重放均有审计。远端备份是否完成，以 `audits/GITHUB_UPLOAD_*.json` 中的 `remote_upload_verified=true` 和最终交付索引为准；失败上传占位不算备份。
 
 旧对话“运行六小时、两项实验完成”的 R9 文件没有恢复到，其数值没有复用。用户同意按研究思路重做，本轮数据单独命名、实际执行。
 
 ## 读取顺序
 
-1. 最终交付包中的 `READ_FIRST_R9_CN.md`、**A20_AEI_R9_Manuscript.pdf**（主稿）、R9 Supplement。
+1. 最终交付包中的 `READ_FIRST_R9_CN.md`、**A20_AEI_R9_Restored_Draft.pdf**（恢复主稿，待审阅）、R9 Supplement。
 2. `audits/RESULT_FACTS.json`、`final_execution_audit.json`、`source_replay.json`、全量 `tables/*.csv`。
 3. 编辑时用 `paper/main.tex`、`supplement.tex`、`sections/r9_*.tex`；原 R8 文件不覆盖。
 4. 新实验先读 `protocol/` 的 F0/F1 与全部修正、`REPRODUCE_R9_CN.md`，重新冻结生产者和新种子。

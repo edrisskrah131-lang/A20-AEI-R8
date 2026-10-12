@@ -1,0 +1,32 @@
+\section{Conditions for evidence reuse}\label{sec:r9-theory}
+The source-replacement, delivery-exposure and attachment properties in Section~\ref{sec:theory} remain applicable under their stated assumptions. The following propositions specify the additional task-event interface. They apply to a trusted frozen program and a stated population; they do not establish physical safety, detection of hidden drift or a new optimality guarantee for the learned numerical policy.
+
+For a fixed binary anchor event, let $k$ of $n$ independent complete calibration inputs fail. With family error $\beta$ and reserved family size $K$, store the exact one-sided bound \cite{clopper1934}
+\begin{equation}
+U(k,n)=\begin{cases}1,&k=n,\\
+\operatorname{Beta}^{-1}(1-\beta/K;k+1,n-k),&k<n.
+\end{cases}\label{eq:r9-cp}
+\end{equation}
+The implementation evaluates the inverse survival function to avoid subtractive loss at a small allocated error probability. Validation checks integer counts, the exact numerical inversion, event identity and manifest lineage.
+
+\begin{proposition}[Uniform coverage of a requirement closure]\label{prop:r9-closure}
+Freeze the anchor producer/policy/population combinations independently of calibration outcomes. Assume iid complete calibration inputs and the same deployment distribution and event map. With probability at least $1-\beta$ over calibration, every stored anchor risk is at most its bound in Eq.~\eqref{eq:r9-cp}. On this confidence event, for every requirement $R$ covered pointwise by any such anchor $A$, $\Pr(E_{p,R})\le U_{p,A}$. This conclusion is simultaneous over the entire containment closure, including requirements not individually evaluated on calibration records.
+\end{proposition}
+\begin{proof}
+For each fixed anchor the binomial inversion has undercoverage at most $\beta/K$. A union bound over the reserved finite card family establishes simultaneous anchor coverage, without requiring independence across policies or events. Equation~\eqref{eq:r9-cover} gives $E_{p,R}\subseteq E_{p,A}$ pathwise. Taking probabilities on the simultaneous confidence event establishes every covered requirement bound. No union bound over those derived requirements is needed.
+\end{proof}
+Policy selection using calibration objectives and valid simultaneous bounds is permitted. The selected complete policy remains fixed across the declared population for that before-sensing request. The confidence event does not make the bound conditional on observed image quality or on receiving a particular pose.
+
+\begin{proposition}[Transfer through an invariant requested projection]\label{prop:r9-transfer}
+Let an old producer $p$ have a valid anchor bound $U_{p,A}$. Suppose $A$ covers $R$, the complete-input population is unchanged, and the implemented requested quantities satisfy $z_{p',j}(X)=z_{p,j}(X)$ for all $j\in J_R$ and all supported complete inputs. Then $\Pr(E_{p',R})\le U_{p,A}$ on the same confidence event, even if producer $p'$ changes quantities not required by $R$.
+\end{proposition}
+\begin{proof}
+Requested-projection equality implies $E_{p',R}=E_{p,R}$, including the stated nonfinite-output semantics. Pointwise coverage implies $E_{p,R}\subseteq E_{p,A}$. Combining these two relations with the old anchor bound proves the result.
+\end{proof}
+The premise is a functional invariance condition, stronger than merely matching metadata. Our implementation checks a frozen, inspected dependency projection and tests paired outputs for the predeclared ROI intervention. It does not infer general distribution invariance from finitely many passing samples. Changing an omitted component is permissible only within the implemented functional model; an undeclared physical coupling invalidates that interpretation. Pooling independent calibration draws from two such invariant producers is valid for that event only, and both raw-manifest identities are retained.
+
+\subsection{Why adaptive anchor switching needs another guarantee}
+Two events can each have risk $0.10$ while their union has risk $0.20$. For example, let disjoint sets of inputs trigger the two events, and choose the corresponding unfavorable event after observing the input. A marginal certificate for each event does not bound the selected event by $0.10$. The same issue affects per-image policy or anchor switching. A common covering event, a directly calibrated switched policy, or an applicable union bound is needed. The studied selector commits before opening the source and does not make that switch.
+
+\subsection{Applicability and refusal}
+A request without a valid covering card or successful renewal is refused. A malformed source or a detected invalid version attempt invokes the retained source-history refusal mechanism. A request that changes capture, execution budget or scheduling cannot reuse an old card solely because a textual deadline is relaxed. Unknown operating distributions remain unsupported. Nor does an episode statement imply a route statement: without additional structure, $M$ episodes with individual allowance $\delta$ yield at most the generic union bound $\min(1,M\delta)$. These conditions delimit the engineering service rather than hide its unsupported regions.

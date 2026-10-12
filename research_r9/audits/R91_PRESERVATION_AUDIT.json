@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "checks": {
+    "original_figures": {
+      "original_count": 13,
+      "present_count": 13,
+      "all_retained": true
+    },
+    "original_equations": {
+      "original_count": 15,
+      "present_count": 15,
+      "all_retained": true
+    },
+    "original_tables": {
+      "original_count": 10,
+      "present_count": 10,
+      "all_retained": true
+    },
+    "original_theorems": {
+      "original_count": 4,
+      "present_count": 4,
+      "all_retained": true
+    }
+  },
+  "core_sections": {
+    "r8_formulation.tex": {
+      "byte_identical": true,
+      "sha256": "6904cfba85821f797af216739ef4dff1166ea1a11c6efa84071fb0035f385c91"
+    },
+    "r8_knowledge.tex": {
+      "byte_identical": true,
+      "sha256": "fbb57be8f2f2cfc6f48df8144b54ca3ce96949a76dfe7e46276aa02007504e06"
+    },
+    "r8_method.tex": {
+      "byte_identical": true,
+      "sha256": "fcc19546061a671bc5eb0e5dea13302a3fa5c0ce83689b00daea8cd6e21c19c5"
+    },
+    "r8_theory.tex": {
+      "byte_identical": true,
+      "sha256": "0b17f8aa09e180d33b01d41eecf44530f0d72e4e550347daf49702a60d07a38a"
+    }
+  },
+  "pages": 45,
+  "latex_issues": [],
+  "editorial_changes": [
+    "Updated abstract/introduction/conclusion",
+    "Original core section files byte-identical",
+    "R8 chronology clarified in separate integrated copies",
+    "R9 consumer tasks added without removing original equations, figures, tables or formal results"
+  ],
+  "remaining": "Editorial synthesis and independent scientific review; this is a restored draft, not an acceptance claim.",
+  "duplicate_photo_removed": true
+}

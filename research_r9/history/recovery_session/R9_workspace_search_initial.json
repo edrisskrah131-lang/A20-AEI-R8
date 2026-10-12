@@ -1,0 +1,20 @@
+{
+  "pdf_check": {
+    "file": "C:\\Users\\21882\\Downloads\\A20_AEI_R8_Manuscript.pdf",
+    "pages": 30,
+    "bytes": 7759360,
+    "sha256": "8c0828b711d00dd29e46d863c5c5dc028f63fe627ccacf7cf6efaf8a4464905f",
+    "matches_github_R8_release": true,
+    "title": "Executable Operating Contracts Linking Anytime Localization to Engineering Task Evidence",
+    "R9_terms": {
+      "\\bR9\\b": 0,
+      "\\bGSD\\b": 0,
+      "recertification": 0,
+      "786.?432": 0,
+      "204.?800": 0
+    },
+    "normalized_text_matches_starter_pdf": true
+  },
+  "archives_scanned": 40,
+  "archives_with_R9_paths": []
+}

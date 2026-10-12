@@ -5,7 +5,7 @@ No token is accepted as a command argument, stored in a file, or printed.
 Default mode is read-only. --publish uploads only the named validated assets.
 """
 from pathlib import Path
-import argparse, hashlib, json, os, subprocess, urllib.request, urllib.error
+import argparse, hashlib, json, os, subprocess, urllib.request, urllib.error, http.client, time
 from urllib.parse import quote
 
 REPOSITORY = 'edrisskrah131-lang/A20-AEI-R8'
@@ -75,12 +75,17 @@ class API:
                         print('UPLOAD_PROGRESS_MB',offset//(1024*1024),len(payload)//(1024*1024),flush=True)
             body=blocks()
         req=urllib.request.Request(url,data=body,method=method,headers=headers)
-        try:
-            with urllib.request.urlopen(req,timeout=600) as r:
-                return None if r.status==204 else json.load(r)
-        except urllib.error.HTTPError as e:
-            # Avoid displaying request headers, response bodies or credentials.
-            raise RuntimeError(f'GitHub returned HTTP {e.code} for {method} {url.split("?")[0]}') from None
+        for attempt in range(4):
+            try:
+                with urllib.request.urlopen(req,timeout=120) as r:
+                    return None if r.status==204 else json.load(r)
+            except urllib.error.HTTPError as e:
+                if method=='GET' and e.code in (429,500,502,503,504) and attempt<3:
+                    time.sleep(2*(attempt+1));continue
+                raise RuntimeError(f'GitHub returned HTTP {e.code} for {method} {url.split("?")[0]}') from None
+            except (http.client.IncompleteRead,urllib.error.URLError,TimeoutError,ConnectionError):
+                if method!='GET' or attempt==3:raise
+                time.sleep(2*(attempt+1))
 
 def publish_assets(api,assets,commit):
     base='https://api.github.com/repos/'+REPOSITORY
@@ -93,9 +98,9 @@ def publish_assets(api,assets,commit):
                  'No claim of final acceptance or completed formal study. Per-asset SHA256 manifests accompany archives.'))
     existing={};page=1
     while True:
-        batch=api.request(base+f'/releases/{release["id"]}/assets?per_page=100&page={page}')
+        batch=api.request(base+f'/releases/{release["id"]}/assets?per_page=30&page={page}')
         existing.update({a['name']:a for a in batch})
-        if len(batch)<100:break
+        if len(batch)<30:break
         page+=1
     verified=[]
     for path in assets:

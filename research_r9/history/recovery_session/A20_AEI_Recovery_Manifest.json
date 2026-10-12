@@ -1,0 +1,106 @@
+{
+  "recovery_date": "2026-10-12",
+  "status": "partial_cloud_project_not_retrieved",
+  "source_conversation_id": "6ac5fee2-cb78-83ea-96e5-829b6126d689",
+  "source_conversation_title": "分支 · 绕机论文（sci版）",
+  "historical_directory_clue": "/workspace/scratch/2b4d7a98194b/work_A20_continue/A20_release/",
+  "historical_directory_access_verified": false,
+  "recovered_original_files": [
+    {
+      "filename": "A19_A20_Project_Brief.md",
+      "source_path": "C:\\Users\\21882\\Downloads\\A19_A20_Project_Brief.md",
+      "working_copy": "C:\\Users\\21882\\Documents\\Codex\\2026-10-12\\sci\\work\\recovered_sources\\A19_A20_Project_Brief.md",
+      "bytes": 6144,
+      "sha256": "7c380a0f45360cb828babf3c1877bd92bc2394458d9143330db4a88cd1e9d0e3"
+    },
+    {
+      "filename": "A19_manuscript.pdf",
+      "source_path": "C:\\Users\\21882\\Downloads\\A19_manuscript.pdf",
+      "working_copy": "C:\\Users\\21882\\Documents\\Codex\\2026-10-12\\sci\\work\\recovered_sources\\A19_manuscript.pdf",
+      "bytes": 1266202,
+      "sha256": "1c1f93687fb73c067874928e4d51b71ece467fceefe3b297d3472403eccb3b0a",
+      "pages": 15,
+      "pdf_title": "The value of reusable computation in budgeted LiDAR registration"
+    },
+    {
+      "filename": "A20_RAS_final.pdf",
+      "source_path": "C:\\Users\\21882\\Downloads\\A20_RAS_final.pdf",
+      "working_copy": "C:\\Users\\21882\\Documents\\Codex\\2026-10-12\\sci\\work\\recovered_sources\\A20_RAS_final.pdf",
+      "bytes": 1307141,
+      "sha256": "4506aea0c61c0b1fd5777ad3c33cc59959b5579a67cb014e3a8425abf105db4c",
+      "pages": 20,
+      "pdf_title": "Risk-Calibrated Anytime Registration with Reusable Checkpoints for Aircraft Inspection"
+    },
+    {
+      "filename": "A20_AEI_Revised_Manuscript.pdf",
+      "source_path": "C:\\Users\\21882\\Downloads\\A20_AEI_Revised_Manuscript.pdf",
+      "working_copy": "C:\\Users\\21882\\Documents\\Codex\\2026-10-12\\sci\\work\\recovered_sources\\A20_AEI_Revised_Manuscript.pdf",
+      "bytes": 1369767,
+      "sha256": "e66e28346bf1a05f6cc0a158cd135dc3f4ac0b8e08f50a2aa8a93627a7b9dbcb",
+      "pages": 21,
+      "pdf_title": "Risk-Calibrated Engineering Decision Support for Anytime LiDAR Localization in Aircraft Inspection"
+    }
+  ],
+  "recovered_original_code_files": 0,
+  "recovered_original_simulation_data_files": 0,
+  "recovered_original_run_logs": 0,
+  "cloud_searches": {
+    "google_drive": {
+      "A19": 0,
+      "A20": 0,
+      "RAVC": 0
+    },
+    "chatgpt_pages": {
+      "A20": 0,
+      "绕机论文": 0
+    },
+    "does_not_establish_source_chat_assets_absent": true
+  },
+  "local_archive_search": {
+    "archives_indexed": 34,
+    "download_archive_text_entries_checked": 245,
+    "relevant_matches": 0
+  },
+  "historical_unretrieved_files": [
+    "A20_AEI_R8_Complete_Delivery_Index.md",
+    "A20_AEI_R8_Manuscript.pdf",
+    "A20_AEI_R8_Supplement.pdf",
+    "A20_AEI_R8_Editable_LaTeX.zip",
+    "A20_AEI_R8_Revision_Report_CN.pdf",
+    "A20_AEI_R8_Independent_Review_CN.pdf"
+  ],
+  "original_source_files_modified": false,
+  "new_simulations_run": false,
+  "archive_entries": [
+    {
+      "path": "baselines/A19_A20_Project_Brief.md",
+      "bytes": 6144,
+      "sha256": "7c380a0f45360cb828babf3c1877bd92bc2394458d9143330db4a88cd1e9d0e3"
+    },
+    {
+      "path": "baselines/A19_manuscript.pdf",
+      "bytes": 1266202,
+      "sha256": "1c1f93687fb73c067874928e4d51b71ece467fceefe3b297d3472403eccb3b0a"
+    },
+    {
+      "path": "baselines/A20_RAS_final.pdf",
+      "bytes": 1307141,
+      "sha256": "4506aea0c61c0b1fd5777ad3c33cc59959b5579a67cb014e3a8425abf105db4c"
+    },
+    {
+      "path": "baselines/A20_AEI_Revised_Manuscript.pdf",
+      "bytes": 1369767,
+      "sha256": "e66e28346bf1a05f6cc0a158cd135dc3f4ac0b8e08f50a2aa8a93627a7b9dbcb"
+    },
+    {
+      "path": "A20_AEI_Recovery_Record.md",
+      "bytes": 9316,
+      "sha256": "0e705150c37c455081e8d6f43b2074e716fc16e9018137639bc00feac8bb2530"
+    },
+    {
+      "path": "A20_AEI_Original_Chat_Export_Request.txt",
+      "bytes": 2767,
+      "sha256": "5c92ac3dc0d8308cc34e61f7c704f00be0b2f783ef194262ea5b6a8e3a16ba0f"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS_FOR_RENDER_AND_PRESERVATION",
+  "documents": {
+    "main_pages": 45,
+    "supplement_pages": 53,
+    "revision_report_pages": 2,
+    "internal_review_pages": 2
+  },
+  "all_main_pages_visually_checked": true,
+  "latex_missing_refs_glyphs_overflow": false,
+  "original_core_retained": true,
+  "scope": "Layout and preservation checks only; restored draft needs further editorial synthesis and independent scientific review."
+}

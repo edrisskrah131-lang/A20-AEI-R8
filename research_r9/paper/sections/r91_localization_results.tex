@@ -1,0 +1,185 @@
+\section{Localization and complete-route results}\label{sec:evaluation}
+\subsection{What the contract changes: actions and evidence}
+The experiment separates three effects. First, a learned policy changes how much ICP work is executed and when a source version becomes available. Second, requested-event selection chooses one complete calibrated policy before sensing. Third, evidence predicates decide whether its population bound remains applicable to an installed source version. A representation-specific accuracy gain would require a difference from a procedural implementation with the same semantics.
+
+At relaxed and standard services, KG1, CART\_Time and FlatCART have exactly the same stopping, publication and numerical/event outcomes on both confirmation profiles. The full graph and independently validated procedural selector have identical decisions, numerical events and issued receipts on all 32 primary-allowance (0.15) contexts, with 2,048 shared inputs per profile. The 16 primary interval family retains these exact zeros (Fig.~\ref{fig:primary_intervals}). These results attribute the standard-service accuracy improvement to the learned computation policy, rather than to graph storage or inactive constraints.
+
+The time predicate does bind under contention: it changes the CART stopping endpoint on every input in both confirmation profiles. Its shorter execution reduces total work and some observation failures, while increasing integrated trajectory loss. Under the tight service the common hard-budget reservation already stops all compared refinements early, so the additional time predicate changes no endpoint. The declared profile predicate fires for unfitted geometry and larger priors, but adds no numerical change beyond the time/budget controls in this study. Firing a rule and causing a different decision are distinct quantities; all module counts, including these null effects, are retained.
+For the nominal confirmation profile, adding time screening changes mean loss by +0.005094~m$^2$s, total work by -3.600~ms and observation failure by -1.660 percentage points. This is a service-dependent trade-off, not uniformly better localization.
+
+For the unfitted confirmation profile, adding time screening changes mean loss by +0.004179~m$^2$s, total work by -3.583~ms and observation failure by -1.904 percentage points. This is a service-dependent trade-off, not uniformly better localization.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/ablations.pdf}
+\caption{Matched numerical-module interventions on all confirmation inputs. R/S/T/C denote relaxed/standard/tight/contended. Time/CART and Time/RF add the same time predicate to their Flat predictors; Profile adds the same declared-profile predicate afterward. Curves are paired descriptive means/counts. Profile effects are zero even where the predicate fires. No source is removed.}\label{fig:ablations}
+\end{figure}
+Evidence matching and history enforcement act on different outcomes. An incorrect attachment means a violation of the stated applicability protocol; it does not mean that the injected case has experimentally demonstrated population risk above its bound. In the fault fixtures, numerical noninterference can leave risk unchanged while the declared protocol still suspends the statement. Sixteen constructed applicability violations use the actual frozen F1 cards, accompanied by two valid controls including legal rollback. With stripped checks, incorrect attachments number 16; metadata/evidence matching reduces this to four, current-version checking to two, and the source-history latch to zero. The fully validated procedural comparator also has zero incorrect attachments and accepts both valid controls. These are deterministic software cases, not a measured stochastic fault rate or a proof about an arbitrary faulty population. The wider preflight/audits check cold solves, live prefixes, forged payload/checksum combinations, stale dependencies, reconstructed scopes, and rollback. Claims are withdrawn while later valid numerical installation remains available.
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/contract_mechanism.pdf}
+\caption{Numerical and applicability mechanisms have different endpoints. (a) Matched prediction/action modules are followed by evidence/lifecycle checks. (b) A detected invalid attempt permanently removes the same source scope\textquotesingle s statement; reconstructed plans do not reset it. (c) Incorrect attachments in 16 constructed invalid cases using real F1 cards. Two normal controls pass every layer. Stripped checks are mechanism ablations; validated Flat is the primary fair competitor. The schematic and exact audit chart were produced by Python code assisted by ChatGPT/Codex (GPT-6).}\label{fig:contract_mechanism}
+\end{figure}
+\begin{table}[!htbp]\centering\small
+\caption{Selective evidence lifetime in excluded software fixtures. One active dependency changes per row; the registry contains the same 528 cards. Counts concern applicability, not new population risk observations. Complete procedural validation can implement the same semantics.}\label{tab:r8-dependencies}
+\begin{tabular}{@{}lrr@{}}\toprule
+Changed dependency & Revoked cards & Unaffected cards\\\midrule
+forecast:rf & 168 & 360\\
+artifacts:nominal & 264 & 264\\
+event:union & 176 & 352\\
+service:standard & 132 & 396\\
+clock & 528 & 0\\
+\bottomrule\end{tabular}\end{table}
+A concrete request chain uses the unfitted profile and standard service at allowance 0.10. The observation request admits ten policies and selects OldRAVC, with $U=0.09994596$; trajectory, both-marginal and union requests are refused. Its margin is only 0.00005404. Thus the task changes evidence eligibility and refusal, not necessarily the selected numerical policy among feasible tasks. The dependency fixtures in Table~\ref{tab:r8-dependencies} make the applicable set traceable to the changed artifact while preserving unrelated cards. Source-version and history checks then govern attachment to the actual installation. These outcomes support inspectable consistency semantics, not a measured maintenance-effort advantage over validated Flat.
+
+\subsection{Same-service localization and the strongest fair control}
+Table~\ref{tab:r8-standard} keeps the competitive fixed, learned and old policies under the identical standard service, including shared stage budget and load. The Full rows execute the F1 union-request selection and include actual dispatch/claim overhead; the controlled rows charge the selected executed native prefix plus individually executed components. This component CPU is not the whole-route online CPU reported later.
+KG1 reduces loss relative to Fixed2 by 15.68\% in the nominal profile and 12.61\% in the unfitted profile. The corresponding work increases are 16.09\% and 16.07\%. The same predictor without contracts, FlatCART, obtains exactly the same nominal and transfer numerical results. FlatRF/ContractRF largely choose two iterations and remain close to Fixed2. Fixed4 and Final lower mean loss further while paying more work and, in the nominal profile, losing some deadline availability.
+
+\begin{table}[!htbp]\centering\small
+\caption{Standard-service confirmation. $L$ is in $10^{-3}$ m$^2$s; $W$ is total modeled work and CPU is measured component CPU (ms/input); failure columns are percentages. Full and validated Flat select FlatCART3 on nominal inputs and OldRAVC on unfitted inputs. Their risk allowance is 0.15 for the direct union. Every row retains all predetermined inputs.}\label{tab:r8-standard}
+\begin{tabular}{@{}lrrrrr@{}}\toprule
+Method & $L$ & $W$ (ms) & CPU (ms) & Obs. fail & Union fail\\\midrule
+\multicolumn{6}{l}{\textit{Nominal, n=2,048}}\\
+Fixed2 & 13.833 & 9.221 & 10.498 & 7.18 & 8.64\\
+Fixed4 & 11.295 & 12.109 & 13.450 & 6.49 & 7.52\\
+Final & 11.295 & 12.109 & 13.463 & 6.49 & 7.52\\
+FlatCART & 11.664 & 10.705 & 13.760 & 5.52 & 6.84\\
+FlatRF & 13.844 & 9.973 & 12.817 & 7.18 & 8.64\\
+ContractRF & 13.844 & 9.973 & 12.764 & 7.18 & 8.64\\
+OldRAVC & 12.199 & 9.666 & 11.939 & 5.42 & 6.79\\
+KG1 & 11.664 & 10.705 & 13.749 & 5.52 & 6.84\\
+Full selector & 12.301 & 9.721 & 10.289 & 5.76 & 7.13\\
+Validated Flat & 12.301 & 9.721 & 10.183 & 5.76 & 7.13\\
+\multicolumn{6}{l}{\textit{Unfitted, n=2,048}}\\
+Fixed2 & 19.938 & 9.220 & 10.525 & 9.08 & 10.06\\
+Fixed4 & 17.350 & 11.736 & 13.213 & 8.54 & 9.28\\
+Final & 17.350 & 11.736 & 13.174 & 8.54 & 9.28\\
+FlatCART & 17.423 & 10.702 & 13.801 & 7.91 & 8.79\\
+FlatRF & 19.936 & 9.953 & 12.776 & 9.08 & 10.06\\
+ContractRF & 19.936 & 9.953 & 12.733 & 9.08 & 10.06\\
+OldRAVC & 17.964 & 9.781 & 11.997 & 8.40 & 9.03\\
+KG1 & 17.423 & 10.702 & 13.779 & 7.91 & 8.79\\
+Full selector & 17.964 & 9.781 & 10.304 & 8.40 & 9.03\\
+Validated Flat & 17.964 & 9.781 & 10.191 & 8.40 & 9.03\\
+\bottomrule\end{tabular}\end{table}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/primary_intervals.pdf}
+\caption{All 16 prespecified paired intervals: 2,048 independent confirmation inputs/profile and 32,000 bootstrap replicates. Dark intervals are pointwise 95\%; pale intervals are the 16-interval Bonferroni-adjusted percentile intervals. Exact zero Full--validated Flat and KG1--FlatCART differences remain visible. The intervals are approximate sampling intervals, separate from exact CP calibration.}\label{fig:primary_intervals}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/pareto_services.pdf}
+\caption{Work--loss trade-offs across all 22 policies, separately for each confirmation profile/service. Grey points retain the full catalogue, coloured markers identify the principal controls, and open green rings mark policies whose frozen direct-union card has $U\le0.15$. The grey line joins nondominated means; it is descriptive, not a fitted bound or a confidence region. Coincident methods can overlap. The tight service\textquotesingle s common cap explains its small numerical spread.}\label{fig:pareto_services}
+\end{figure}
+\subsection{Requested events, refusal and actual issued coverage}
+The task-aware selector is tested against a competitor that has the same requested events, risk allowance, calibration costs, catalogue and source/history checks. Both produce the same 96 frozen plans. At the primary allowance, 18/32 constructed profile/service/task requests are selected and the remainder refused. This count measures configured catalogue feasibility, not a random field-request success probability.
+
+Relaxed and standard requests admit all four task types. The chosen policy is FlatCART3 for the nominal mixture and OldRAVC for the unfitted mixture. Under contention only the trajectory request is selected; observation, both marginals and direct union are refused. Tight-service requests are all refused. Refusal keeps the source prior, pays its actual monitoring/stream/dispatch costs and counts as observation/union failure. It is not removed from an accuracy denominator. A trajectory-only choice therefore cannot be credited as satisfying an observation request.
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/task_feasibility.pdf}
+\caption{All 96 frozen requests: the number of feasible policies in the identical 22-policy catalogue, for four tasks and three allowances. R indicates an empty catalogue. Two marginals request two distinct cards; Union requests its directly calibrated OR event. Full and validated procedural selection have exactly the same feasible sets.}\label{fig:task_feasibility}
+\end{figure}
+\begin{table}[!htbp]\centering\small
+\caption{Selected examples from actual integrated confirmation. Success is a timely positive-version correction with error at most 0.1 m; coverage requires at least one valid issued receipt during execution for each requested event. The same rows hold numerically and for receipts in validated Flat.}\label{tab:r8-task}
+\begin{tabular}{@{}llllrr@{}}\toprule
+Profile & Service & Task & Policy & Success (\%) & Coverage (\%)\\\midrule
+Nominal & standard & union & FlatCART3 & 94.24 & 100.00\\
+Nominal & contended & trajectory & FlatCART3 & 49.12 & 100.00\\
+Nominal & contended & union & Refused & 0.00 & 0.00\\
+Nominal & tight & union & Refused & 0.00 & 0.00\\
+Unfitted & standard & union & OldRAVC & 91.60 & 99.95\\
+Unfitted & contended & trajectory & OldRAVC & 17.09 & 99.95\\
+Unfitted & contended & union & Refused & 0.00 & 0.00\\
+Unfitted & tight & union & Refused & 0.00 & 0.00\\
+\bottomrule\end{tabular}\end{table}
+For selected standard union requests, all nominal sources and 2,047/2,048 unfitted sources issue an applicable receipt. One unfitted source produces no attachable version. A receipt carries a population-event bound and can accompany an inaccurate individual pose; coverage is not scan-conditional safety. Observation success, certification feasibility, receipt coverage and false applicability are accordingly reported separately. Within the canonical confirmation executions the two validators have no receipt discrepancies. The software-fault experiment, rather than this geometric denominator, evaluates malformed applicability.
+\subsection{Certificate margins and sensitivity}
+Direct union calibration is recomputed on actual trajectory OR observation failures. At standard service, the selected nominal policy has $U_{\cup}=0.085836$ and the selected unfitted policy has $U_{\cup}=0.115254$. Their 0.15 margins are 0.064164 and 0.034746. The unfitted contended trajectory card is more fragile: $U_{\rm tr}=0.146330$, leaving only 0.003670. At allowance 0.10, the standard OldRAVC observation card has only 0.00005404 margin; it does not justify a broad robust-risk claim.
+
+Figures~\ref{fig:certificate_stability} and \ref{fig:certificate_boundary} show that small samples often certify no policy at this family correction, and that feasibility depends on service and confidence. All 28,512 sensitivity rows retain fixed policies and family size; the displayed prefix/confidence grid does not enjoy an extra simultaneous theorem across the diagnostic grid and does not alter F1. The supplement reports every one of the 528 actual cards. Two passing marginals are never interpreted as a passing joint bound. None of the unsupported stress or route profiles receives a transferred episode certificate.
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/certificate_stability.pdf}
+\caption{Certificate stability under the common 528-member correction. (a,d) Standard direct-union upper bounds versus calibration size. (b,e) The count of union-certified policies by service at allowance 0.15/confidence 0.95. (c,f) Standard full-sample margins for three separately calibrated events. Nested prefixes are descriptive sensitivity; policy selection is not repeated.}\label{fig:certificate_stability}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/certificate_boundary.pdf}
+\caption{Confidence and failure boundaries for the policies actually chosen at standard service. Left: direct-union bounds at confidence 0.90/0.95/0.99; horizontal reference allowances are 0.10, 0.15 and 0.20. Right: full-sample margins for trajectory, observation and union across the declared services. Negative margins require refusal. The unfitted contended trajectory margin is small even at 4,096 calibration inputs.}\label{fig:certificate_boundary}
+\end{figure}
+\subsection{Unfitted geometry, stress and concentrated gains}
+The held-out geometry results use the original unrefitted predictors but independently matched calibration and confirmation. They demonstrate numerical transfer with fresh evidence; they do not demonstrate zero-shot certification. Unsupported occlusion, degeneracy, prior-shift and map-warp populations remain separate and provisional. Their union failure rates at standard service are retained in Table~\ref{tab:r8-stress}, with complete all-method/service statistics in the release CSVs. A deadline screen cannot repair missing geometric information or a poor map.
+\begin{table}[!htbp]\centering\small
+\caption{Unsupported stress, n=384 inputs/stratum at standard service. All entries are descriptive with no applicable episode card. Maximum error is the mean of per-episode maxima, in cm; full tail order statistics are in the release CSVs.}\label{tab:r8-stress}
+\begin{tabular}{@{}llrrr@{}}\toprule
+Stress & Policy & $L$ ($10^{-3}$ m$^2$s) & Union fail (\%) & Mean max (cm)\\\midrule
+occlusion & Fixed2 & 19.22 & 24.74 & 6.28\\
+occlusion & Final & 17.92 & 23.70 & 5.94\\
+occlusion & FlatCART & 17.86 & 22.40 & 6.02\\
+occlusion & KG1 & 17.86 & 22.40 & 6.02\\
+degeneracy & Fixed2 & 21.29 & 13.02 & 6.21\\
+degeneracy & Final & 15.87 & 9.64 & 5.50\\
+degeneracy & FlatCART & 17.41 & 11.46 & 5.86\\
+degeneracy & KG1 & 17.41 & 11.46 & 5.86\\
+prior\_shift & Fixed2 & 27.34 & 20.57 & 7.17\\
+prior\_shift & Final & 20.87 & 10.16 & 5.65\\
+prior\_shift & FlatCART & 18.78 & 10.68 & 5.84\\
+prior\_shift & KG1 & 18.78 & 10.68 & 5.84\\
+map\_shift & Fixed2 & 36.43 & 42.19 & 9.31\\
+map\_shift & Final & 35.69 & 44.27 & 9.33\\
+map\_shift & FlatCART & 35.89 & 43.49 & 9.32\\
+map\_shift & KG1 & 35.89 & 43.49 & 9.32\\
+\bottomrule\end{tabular}\end{table}
+The two largest KG1--Fixed2 contributors account for 27.99\% of the nominal net loss gain. Keeping the remaining 2,046 inputs gives a descriptive mean gain of 0.001563~m$^2$s. The full paired comparison has 442 improved, 374 worsened and 1232 tied inputs; none is deleted from the primary result.
+
+The two largest KG1--Fixed2 contributors account for 10.02\% of the unfitted net loss gain. Keeping the remaining 2,046 inputs gives a descriptive mean gain of 0.002265~m$^2$s. The full paired comparison has 458 improved, 366 worsened and 1224 tied inputs; none is deleted from the primary result.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/tail_distributions.pdf}
+\caption{Exact empirical cumulative distributions of all 2,048 confirmation episode maxima/profile at standard service; the error axis is logarithmic and the dashed line is 10 cm. Coincident FlatCART/KG1 and FlatRF/Fixed2 curves are retained. Quantiles, worst errors and largest-5\% losses are reported with all observations in the source tables.}\label{fig:tail_distributions}
+\end{figure}
+\subsection{Complete-route service performance and measured cost}
+The 36 localization-study route inputs execute a live estimator rather than reusing independent episode scores. All twelve methods process the same raw scans, measured motion, prior and exogenous load schedule. Figure~\ref{fig:route_frontiers} separates aircraft geometries and ordinary/geometric-stress conditions. The full supplement also includes contention, p95/p99/worst error, failures, readiness, drops, CPU decomposition, work and policy switches.
+
+Fixed2 is an effective ordinary-route choice: it often offers lower CPU, similar or lower error and more timely corrections. Normal routes need only modest refinement, so forecast/dispatch/checking and publication/replay overhead can exceed the gain from adapting a few difficult sources. Geometry and accumulated source errors explain why mean loss improvements on independent episodes do not imply lower long-route RMSE. Contention makes earlier publication useful for deadline readiness, while severe occlusion/map/prior stress produces large error irrespective of source-level authorization.
+\begin{table}[!htbp]\centering\small
+\caption{Complete-route descriptive means of four matched realizations/geometry/condition, each 600 s and 299 scan opportunities. CPU is directly measured whole-online work, excluding archive access and truth scoring. Full and validated Flat have identical numeric events; their separately measured CPU can differ. No route card is authorized.}\label{tab:r8-route}
+\begin{tabular}{@{}lllrrr@{}}\toprule
+Geometry & Condition & Method & RMSE (cm) & Success (\%) & CPU (s)\\\midrule
+B767 & ordinary & Fixed2 & 3.806 & 97.07 & 2.450\\
+B767 & ordinary & KG1 & 3.706 & 96.49 & 2.809\\
+B767 & ordinary & Full & 3.715 & 97.24 & 2.514\\
+B767 & contention & Fixed2 & 3.555 & 46.99 & 2.322\\
+B767 & contention & KG1 & 3.543 & 54.43 & 2.246\\
+B767 & contention & Full & 3.531 & 55.02 & 2.019\\
+B767 & stress & Fixed2 & 8.185 & 42.22 & 2.154\\
+B767 & stress & KG1 & 8.200 & 55.85 & 2.207\\
+B767 & stress & Full & 8.158 & 56.19 & 2.300\\
+C172 & ordinary & Fixed2 & 4.787 & 94.15 & 2.297\\
+C172 & ordinary & KG1 & 4.832 & 93.06 & 2.589\\
+C172 & ordinary & Full & 4.805 & 93.81 & 2.518\\
+C172 & contention & Fixed2 & 5.237 & 53.01 & 2.121\\
+C172 & contention & KG1 & 5.341 & 80.94 & 2.194\\
+C172 & contention & Full & 5.234 & 81.61 & 2.028\\
+C172 & stress & Fixed2 & 14.488 & 10.20 & 2.168\\
+C172 & stress & KG1 & 14.439 & 11.45 & 2.198\\
+C172 & stress & Full & 14.414 & 11.20 & 2.221\\
+Unfitted & ordinary & Fixed2 & 2.997 & 99.41 & 2.413\\
+Unfitted & ordinary & KG1 & 3.018 & 99.25 & 2.618\\
+Unfitted & ordinary & Full & 3.006 & 99.25 & 2.395\\
+Unfitted & contention & Fixed2 & 3.064 & 39.21 & 2.108\\
+Unfitted & contention & KG1 & 2.993 & 43.65 & 2.078\\
+Unfitted & contention & Full & 2.994 & 43.65 & 1.975\\
+Unfitted & stress & Fixed2 & 9.665 & 38.21 & 2.017\\
+Unfitted & stress & KG1 & 9.649 & 46.49 & 2.147\\
+Unfitted & stress & Full & 9.663 & 45.74 & 2.211\\
+\bottomrule\end{tabular}\end{table}
+For C172 contention, KG1's timely-correction success is 80.94\% versus 53.01\% for Fixed2, but its RMSE is 5.341 versus 5.237~cm. This deadline benefit does not imply a mean-accuracy advantage. Full's provisional recommendation yields 81.61\% success and 5.234~cm RMSE, exactly shared by the task-aware procedural selector.
+
+Full and validated Flat first refuse all episode-to-route attachments, then execute the same explicit provisional recommendation. They switch policy 48 times per contention/stress route under the exogenous task/service schedule; ordinary routes use a fixed recommendation. These switches describe an uncertified route service, not adaptive transfer of an episode theorem.
+
+The provider audit recomputes two entire route fixtures with lazy versus prehydrated raw arrays. Every state/error/capture array is bitwise identical, and all non-CPU job/publication/work/events match. The original lazy NPZ access adds archive-decompression CPU inside the timer; the delivered provider moves that offline cost before the frozen online loop and records it separately. Startup is also outside the online timer. Native online costs are host measurements, not embedded latency. Controlled component CPU, inclusive replay including offline assertions/scoring, and full online-route CPU therefore remain separate ledgers.
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/route_frontiers.pdf}
+\caption{Descriptive work--accuracy route frontiers, separated by geometry and condition. Small markers are all four original route realizations; larger markers are their means. Fixed2 and adverse methods remain visible. The CPU boundary covers the entire online loop. The complete twelve-method/three-condition table is retained in the supplement.}\label{fig:route_frontiers}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/route_timeseries.pdf}
+\caption{The predeclared unfitted-airframe/contention/replicate-zero route. (a) Continuous positional error, including all 6,000 ticks. (b) Timely positive-version correction success at every opportunity; crosses retain failures. (c) The exogenous processor-load schedule. Full and validated Flat traces overlap exactly. Their route recommendations are provisional and have no episode/mission risk bound.}\label{fig:route_timeseries}
+\end{figure}

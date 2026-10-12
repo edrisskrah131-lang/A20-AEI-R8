@@ -1,0 +1,27 @@
+{
+  "repository": "edrisskrah131-lang/A20-AEI-R8",
+  "branch": "r9-rebuild-20261012",
+  "commit": "9949923d5347053ce176123119063481c58e983b",
+  "release_url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/tag/r9-checkpoints-20261012",
+  "remote_upload_verified": true,
+  "requested_assets": 2,
+  "verified_assets": [
+    {
+      "file": "A20_AEI_R9_Reading_And_Handoff.zip",
+      "sha256": "e61dcea3583c038f1db7ecd6bd2a21494cc2b482a7a84a1f711e3faea7a139e6",
+      "bytes": 3198914,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_AEI_R9_Reading_And_Handoff.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Reading_And_Handoff.json",
+      "sha256": "23783a1a671d16df806f15822c00dd8484b66fcf5b2261687b32b2b0ddd28b45",
+      "bytes": 3202,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_AEI_R9_Reading_And_Handoff.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    }
+  ],
+  "failed": []
+}

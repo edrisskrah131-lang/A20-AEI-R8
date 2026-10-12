@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "archive": "A20_AEI_R9_Editable_Source.zip",
+  "independent_extraction": true,
+  "documents": [
+    "main",
+    "supplement"
+  ],
+  "historical_workspace_dependency_for_TeX": false
+}

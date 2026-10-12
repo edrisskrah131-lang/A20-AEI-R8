@@ -1,16 +1,18 @@
-# A20–AEI R9 research delivery
+# A20–AEI R9 数据归档与主稿恢复
 
-New simulations and manuscripts completed; large raw backup verification is in progress. Unverified local data are retained.
+最初17页R9压缩稿已被用户否定。当前以R8完整研究为基础恢复主稿，**恢复稿待审阅，数据实际执行完成**。不预设9分或Strong Accept。
 
-- [R9 main paper: 17 pages](A20_AEI_R9_Manuscript.pdf)
-- [R9 supplement: 53 pages](A20_AEI_R9_Supplement.pdf)
-- [Chinese revision report](A20_AEI_R9_Revision_Report_CN.pdf)
-- [Internal review; not external peer review](A20_AEI_R9_Internal_Review_CN.pdf)
-- [Web Work handoff](READ_FIRST_R9_CN.md)
-- [Complete R9 code, editable sources, tables and audits](research_r9/)
-- [Raw checkpoints](https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/tag/r9-checkpoints-20261012)
+- [当前恢复稿（45页，待进一步编辑）](A20_AEI_R9_Restored_Draft.pdf)
+- [补充材料（53页）](A20_AEI_R9_Supplement.pdf)
+- [主稿修正状态与保留要求](R9_REVISION_STATUS_CN.md)
+- [中文修订报告](A20_AEI_R9_Revision_Report_CN.pdf)
+- [内部技术检查（非外部审稿）](A20_AEI_R9_Internal_Review_CN.pdf)
+- [源码、表格、冻结协议和审计](research_r9/)
+- [完整数据下载索引](R9_DATA_DOWNLOAD_CN.md)（六阶段、176个文件全部核验）
+- [数据与恢复稿交接发布](https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/tag/r9-data-complete-20261012)
+- [原始数据检查点](https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/tag/r9-checkpoints-20261012)
 
-12,800 independent new inputs; repeated outcomes and requests add no sample size. At risk allowance 0.15, semantic/procedural support is 24/192 in A and 26/192 in B; direct renewal is 30/192 and 32/192. Full reporting remains uncertified. No claim of 9/10 or Strong Accept.
+本轮12,800个独立新输入、409,600条策略/工况结果、6,291,456次重复请求；重复不增加样本量。0.15风险下契约/完整程序式支持24/192、26/192；直接续证支持30/192、32/192。完整报告仍未认证。原R8的有效理论、算法、定位与航线证据及不利结果保留。
 
 ---
 
