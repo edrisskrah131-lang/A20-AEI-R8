@@ -1,0 +1,56 @@
+\section{Prospective protocol and execution provenance}\label{supp:r8-protocol}
+This section concerns the R8 prospective study. The later sections labelled retained describe earlier A19/A20, R4 and secondary R5 studies with their original populations, confidence families and timing. They are not pooled with R8. All complete original manuscripts/source archives remain in the release.
+
+\begin{table}[!htbp]\centering\small
+\caption{Disjoint R8 seed blocks. A seed is one independent geometric episode input, not one policy execution.}\label{supp:r8-seeds}
+\begin{tabular}{@{}lrrl@{}}\toprule
+Block & First seed & Inputs & Role\\\midrule
+Excluded pilot &8,200,000&48&Characterization/software audit\\
+Nominal calibration &8,300,000&4,096&Cards and catalogue selection\\
+Unfitted calibration &8,400,000&4,096&Separate cards, unchanged predictor\\
+Nominal confirmation &8,500,000&2,048&Independent frozen comparisons\\
+Unfitted confirmation &8,600,000&2,048&Independent transfer comparisons\\
+Occlusion stress &8,700,000&384&Unsupported descriptive stress\\
+Degeneracy stress &8,800,000&384&Unsupported descriptive stress\\
+Prior-shift stress &8,900,000&384&Unsupported descriptive stress\\
+Map-shift stress &9,000,000&384&Unsupported descriptive stress\\\bottomrule
+\end{tabular}
+\end{table}
+
+Nominal and unfitted populations are uniform discrete mixtures of their listed geometry, prior deviation, noise and discrepancy settings, with independent perturbation/noise draws per seed. A certificate concerns the entire mixture, not each constituent subgroup. Repeated source frames are permitted draws from the fixed route-template population; independently realized sensor/prior/motion perturbations remain the experimental unit. Geometry and template hashes define conditional simulation artifacts rather than a census of physical aircraft variability.
+
+\subsection{F0, attachment amendment and F1}
+F0 at 2026-10-11 19:07:18.664676 UTC binds 48 numerical/model/artifact components plus the protocol, characterized clock and preflight audit. No final input existed at F0. Frozen predictors are retained CART/RF exports fitted on the earlier 926/194 source-grouped train/validation split; no new input refits either predictor. A19/A20 and R4/R5 data are separate retained studies.
+
+The source-history guard is an explicitly post-F0, pre-F1 attachment amendment. V1 (19:33:16 UTC) demonstrated numerical noninterference but allowed a freshly reconstructed procedural ledger to reset the same source's latch. Independent statistical review identified this discrepancy. V2 introduced persistent scope state; further provenance/timer edits were completed before a final V3 seal at 19:46:40.196132 UTC. Intermediate manifests, matching snapshots, review evidence and superseded status are retained. None was used to generate confirmation data or select a policy. F0, the deterministic event map and family size were unchanged. V3 independently seals the observer, its verification script, integrated confirmation driver and F1 binder.
+
+F1 at 19:59:17.439444 UTC seals 528 real calibration cards, all 96 request plans, calibration means, runtime bindings and calibration-result/input hashes. A preconfirmation inventory at 19:59:32.211933 UTC verified exactly 8,192 raw calibration files and no confirmation/stress files; the separate F1--V3 binding followed at 19:59:32.903035 UTC. Confirmation generation began afterward. These local hashes and execution logs expose chronology but are not external preregistration. The gate-correction note recorded 26 route files present when that later correction was made, a progress snapshot rather than the preconfirmation or final inventory; the final release contains all 36. The executed gate used an incorrect singular route filename; its original source and inventory are preserved, the future glob is corrected, and the independent generation ledger establishes actual route chronology. Two missing unfitted-confirmation JSONL records were restored by rerunning the unchanged collector on their original seeds; all 15 arrays and full NPZ hashes match preserved originals exactly. Their lost original prefix CPU metadata is replaced by recovery-time CPU measurement, not claimed to be bytewise recovered. No source was omitted or added.
+
+\subsection{Exact binomial family and sensitivity}
+For each of 22 complete policies, two profiles, four services and three events, one independent source contributes one binary failure. The corrected one-sided tail is $\beta/K=0.05/528$. For $k<n$, inversion of the binomial lower-tail equation gives $U=\operatorname{Beta}^{-1}(1-\beta/K;k+1,n-k)$; for $k=n$, $U=1$. For $k=0$, $U=1-(\beta/K)^{1/n}$. The card loader recomputes the inversion and checks finite bounds, integer counts, $K$, $\beta$ and sealed body identity.
+
+Cross-policy/service/event dependence does not reduce the source count and is allowed by the union-bound proof. Four requested tasks and three allowances query the same pre-frozen event cards and add no new event family. The union event is evaluated directly from the two binary failures. Two marginals cannot be substituted for that union guarantee. No route failure, fault-injection fixture or receipt-conditioned subset is added to these denominators.
+
+Nested calibration prefixes 128/256/512/1024/2048/4096 and confidence 0.90/0.95/0.99 recompute diagnostic bounds for the unchanged 528-member family. They do not change F1 or optimize the final sample size. Raw and summary tables contain count, upper bound, requested allowance, signed margin and certified-policy count for every combination. Negative margin means refusal. A small positive margin is not silently promoted to robust support.
+
+\subsection{Work-clock versus native CPU}
+The pilot characterizes deterministic CPU-equivalent operation coefficients. Solver initialization, correspondence calls and checkpoint costs fit counted native prefixes; foreground voxel processing uses $n\log_2(1+n)$, forecast work counts tree traversals, and propagation/publication/checking primitives are separately timed. The fitted clock is conditioned on its fixed pilot estimate during calibration. It is a simulated service convention with mean costs and timestamp quantization, not measured embedded latency or worst-case execution time.
+
+The hard sender budget includes source seals, ICP/features, forecasting, rule evaluation and publication witnesses. A common next-stage reservation assumes at most six correspondence queries per new iteration plus checkpoint/model/rule/publication work. Frontend and stream/receiver work are outside that stage cap but inside total work and availability. If the next stage is unaffordable, the last eligible candidate may publish; otherwise the service retains its prior. This wrapper changes even fixed-cap behavior, so all cards are newly calibrated effective policies.
+
+Controlled policy traces execute one common native ICP prefix per input and charge its selected prefix to each counterfactual. Rule decisions, source sealing, producer witnesses, validation and motion replay execute for each service/policy. The integrated wrapper's component ledger adds measured claim bookkeeping; its additional inclusive replay ledger includes offline truth assertions and scoring and is explicitly not pure online CPU. Metadata-only R4/R5 microbenchmarks measure different operations and are not added as an end-to-end improvement.
+
+For complete routes, the entire online loop is measured directly, including array copies, frontend, registration/features, forecasting, precommit/dispatch, producer/receiver checks, replay and scheduling. A versioned input-provider wrapper hydrates compressed raw arrays before the original online timer, avoiding lazy archive decompression inside service timing. Numerical arrays and the frozen route executor are unchanged. A paired provider audit checks complete numeric/clock/event traces. Startup and archive-hydration CPU are recorded separately in worker manifests. CPU is native process time on the documented host; total simulated route duration is not a throughput or embedded real-time measurement.
+
+\subsection{Inference and descriptive analyses}
+The 16 primary intervals use standard service and both confirmation profiles, loss and observation failure, for Full--validated Flat and KG1--FlatCART/FlatRF/Fixed2. The Full/Flat request is union at allowance 0.15. A refused source retains its prior and stays in the denominator. With 32,000 paired bootstrap replicates, the pointwise interval uses quantiles 0.025/0.975 and the family-adjusted interval uses $0.05/(2\times16)$ and its complement. Both are approximate percentile intervals, unlike exact binomial calibration. Input seeds, not repeated policies or time samples, are resampled.
+
+Stress, subgroups, Pareto fronts, route replicates, influence deletion and tail order statistics are descriptive. The 36 route inputs have four paired realizations per geometry/condition with predeclared discrepancy/noise combinations; they are not assumed identically distributed replicates of one mixture. Raw route points and paired replicate differences remain available rather than receiving episode-based confidence claims. The diagnostic route is fixed to unfitted geometry/contention/replicate zero, not selected for a favorable curve.
+
+\subsection{Mechanism assumptions and failure conditions}
+Source replacement requires a common immutable prior, a retained solve and no interleaved independent update. Attachment assumes trusted producer records and startup card validation, matched active dependencies, pre-sensing commitment and canonical modeled delivery/replay. The history monitor covers rejected operational version attempts associated with the trusted source scope. A normal deadline expiry, empty catalogue or ordered rollback is not a history fault. Once faulted, the source cannot reset its attachment by reconstructing a plan or ledger. Its independent successor scope can still operate.
+
+Fingerprint equality does not detect physical drift, authenticate compromised code or validate a sampling mixture from metadata alone. Undetected missing packets, future motion substituted for causal replay, physical processor delays, changed model/service semantics and external interleaved measurements require revised assumptions or calibration. Remaining authorized receipts do not define a conditionally calibrated subpopulation. The original candidate descriptors in the F0 trace remain reproducibility records; only V3 final receipts are the guarded public attachment.
+
+\subsection{Dependency-lifetime software fixtures}
+The excluded preflight changes one active dependency at a time and queries the same 528-card registry. Replacing the RF forecast revokes 168 cards, nominal geometry artifacts 264, the union-event definition 176, standard-service definition 132 and the common clock 528. These are constructed dependency tests, not new population failures or a claim of superiority over a procedural implementation with the same dependency validation. Previously serialized assessment objects remain historical snapshots; eligibility must be checked again at current issuance/use.

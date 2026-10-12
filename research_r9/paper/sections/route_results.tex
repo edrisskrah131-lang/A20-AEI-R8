@@ -1,0 +1,39 @@
+The new study executes 42 complete controller runs on the six retained inputs, totalling 23.1 simulated controller hours. Every run feeds delivered state versions into subsequent scan priors and directly times registration, decisions, motion propagation and replay. Table~\ref{tab:new-routes} reports means over the three paired inputs per aircraft. Figure~\ref{fig:route-tradeoff} shows the individual realizations and method means. No complete-route risk certificate is inferred from these six inputs.
+
+\begin{table}[t]\centering\small
+\caption{New complete-route executions, load factor 10 and two-second scan opportunities. Each entry averages three 1,980-second retained inputs. CPU is directly measured online estimator work, excluding common initialization and offline error scoring. Events exceed 10 cm at a 10 Hz sample after the first five seconds.}\label{tab:new-routes}
+\begin{tabular}{@{}llrrrr@{}}\toprule Aircraft&Policy&RMSE (cm)&CPU (s)&Replay (s)&Events\\\midrule
+
+B767&Fixed 2&3.447&6.374&0.112&3/3\\
+
+&Fixed 4&3.239&8.324&0.170&1/3\\
+
+&Checkpoint final&3.193&8.868&0.156&2/3\\
+
+&Native final&3.190&8.019&0.132&2/3\\
+
+&RAVC-Loc&3.380&6.343&0.185&3/3\\
+
+\midrule
+
+C172&Fixed 2&2.450&6.236&0.104&0/3\\
+
+&Fixed 4&2.416&7.932&0.158&0/3\\
+
+&Checkpoint final&2.419&8.019&0.147&0/3\\
+
+&Native final&2.418&7.542&0.136&0/3\\
+
+&RAVC-Loc&2.449&6.500&0.198&0/3\\
+
+\bottomrule\end{tabular}\end{table}
+
+The selected policy gives mean route RMSE 3.380~cm on B767 and 2.449~cm on C172. Relative to native final, measured total CPU decreases by 20.9\% and 13.8\%, respectively. Its RMSE is +0.190 and +0.031~cm higher in the paired method means. These are descriptive contrasts on three inputs per aircraft, not population precision or hardware-latency guarantees.
+
+Fixed~2 uses 6.374~s and 6.236~s, compared with 6.343~s and 6.500~s for RAVC-Loc. On these sequential inputs the learned policy often selects the same shallow prefix; its adaptation margin over Fixed~2 is correspondingly small. Fixed~4 and final convergence retain the more accurate operating points shown in the table.
+
+Holding publication changes mean route RMSE from 3.380 to 3.381~cm on B767 and from 2.449 to 2.451~cm on C172. Continuing to completion gives 3.189 and 2.408~cm. The modest delivery effect agrees with the episode intervention: publication and final completion are usually separated by only a few motion ticks.
+
+The complete-route event is a position norm above 0.10~m at any stored 10~Hz instant from 5.0 to 1,979.9~s. The selected policy has 3/6 such events, compared with 2/6 for native final, with selected maximum position error 12.09~cm. This evaluation horizon and route distribution differ from Eq.~\eqref{eq:episode-event}; the count is reported without applying the episode certificate.
+
+\begin{figure}[t]\centering\includegraphics[width=.97\linewidth]{route_tradeoff.pdf}\caption{Directly executed complete-route work--error trade-offs. Small points are the three retained sensor/motion realizations per aircraft; large points are their method means. RAVC-Loc and every control use the same scan cadence and delivery model.}\label{fig:route-tradeoff}\end{figure}

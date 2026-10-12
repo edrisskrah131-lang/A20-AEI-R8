@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "applicable": true,
+  "auditable": true,
+  "verdict": "PASS",
+  "backend": "python-matplotlib",
+  "summary": {
+    "fail": 0,
+    "warn": 0,
+    "comparisons": 1,
+    "exemptions": 0
+  },
+  "tolerances": {
+    "alignment_pt": 1.5,
+    "gutter_pt": 1.5
+  },
+  "layout": {
+    "schema_version": 1,
+    "backend": "python-matplotlib",
+    "figure": {
+      "width_pt": 481.68,
+      "height_pt": 316.8
+    },
+    "panels": [
+      {
+        "id": "a",
+        "bbox_pt": [
+          38.5344,
+          238.88358620689658,
+          474.4548,
+          291.456
+        ],
+        "grid_id": "matplotlib-grid-1",
+        "row_start": 0,
+        "row_stop": 1,
+        "col_start": 0,
+        "col_stop": 1,
+        "panel_label": "a",
+        "panel_label_anchor_pt": [
+          23.5344,
+          299.456
+        ]
+      },
+      {
+        "id": "b",
+        "bbox_pt": [
+          38.5344,
+          143.2017931034483,
+          474.4548,
+          195.77420689655173
+        ],
+        "grid_id": "matplotlib-grid-1",
+        "row_start": 1,
+        "row_stop": 2,
+        "col_start": 0,
+        "col_stop": 1,
+        "panel_label": "b",
+        "panel_label_anchor_pt": [
+          23.5344,
+          203.77420689655173
+        ]
+      },
+      {
+        "id": "c",
+        "bbox_pt": [
+          38.5344,
+          47.52000000000001,
+          474.4548,
+          100.09241379310346
+        ],
+        "grid_id": "matplotlib-grid-1",
+        "row_start": 2,
+        "row_stop": 3,
+        "col_start": 0,
+        "col_stop": 1,
+        "panel_label": "c",
+        "panel_label_anchor_pt": [
+          23.5344,
+          108.09241379310347
+        ]
+      }
+    ],
+    "row_groups": [],
+    "column_groups": [
+      {
+        "id": "inferred-column-1",
+        "panels": [
+          "a",
+          "b",
+          "c"
+        ]
+      }
+    ],
+    "boundary_groups": [],
+    "exemptions": []
+  },
+  "findings": []
+}

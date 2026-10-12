@@ -1,0 +1,11 @@
+{
+  "files": {
+    "platform_lab.jpeg": "80e6fdafad7e56c5ee6d51f6999fcc1ee68d777736cee1877caf9cda4c65ebe1",
+    "platform_side.jpeg": "49cd6ab70950c57bc62343ae3547d6f9321f05c2c083dff5b01282051f7792d4",
+    "aircraft_field.jpeg": "8f71e25f09bf0f238973a0056852474cbceb8c5bb842912ae3188f2cc077b856",
+    "aircraft_field_portrait.jpeg": "d107f8c3a6e9a4dc19d32edb284d4ea693c862186baadf0be67e795b57b50441"
+  },
+  "crop": "none",
+  "adjustment": "none",
+  "meaning": "provided real platform/context photos; no localization experiment is inferred"
+}

@@ -1,0 +1,32 @@
+\section{Prospective design and reproducibility}\label{sec:r9-design}
+\subsection{Two studies, freezes and independent units}
+Study A uses a $192\times144$ raster; the predeclared Study B intervention uses $288\times216$ at the same 1,800-pixel focal length and 6-ms exposure. Wider ROI therefore changes the set of acquired pixels and virtual production cost while preserving geometric GSD at the same target addresses. B uses independent input seeds and its changed non-invariant events require fresh calibration. Invariant optical events may use the explicitly identified independent A/B calibration pool, available equally to every baseline.
+
+Each study contains 2,048 nominal and 2,048 unfitted-geometry calibration inputs, 1,024 independent confirmation inputs for each population, and 64 inputs in each of four unsupported stress profiles. Thus each study has 6,400 independent inputs and the two studies have 12,800. The 32 policy/service outcomes per input do not increase sample size. Forty-eight unique pilot seeds are excluded; iterative pilot implementations repeat these same seeds. Additional excluded execution fixtures reuse named seeds and do not become calibration observations.
+
+The nominal mixture samples B767/C172 identities, source frames, prior deviations $\{0.015,0.03,0.06\}$~m, range-noise multipliers $\{1,2\}$ and shape levels $\{0,1,2\}$. The unfitted procedural airframe is excluded from forecast fitting and receives its own matched evidence. Map translation and rotation perturbations have standard deviations 0.025~m and 0.001~rad. Stress separately removes a 2.2-rad range sector, retains a 0.5-rad sector, increases prior deviation to 0.08/0.12~m, or applies a 0.06-m map warp. Stress profiles have no primary cards and cannot inherit matched-population certification.
+
+Numerical algorithms, camera/task modules, thresholds, seed domains, dependencies and timing were frozen before formal input generation. A disclosed format amendment, still with zero formal inputs, normalized manifest paths and preserved hashed JSON bytes across Git/Windows checkout; it changed no scientific parameter. The archived initial freeze and amendment are retained. All calibration cards and choices for both studies are then sealed before any confirmation generation. These are locally archived prospective records with public GitHub checkpoints, not an independently registered trial.
+
+\begin{table}[t]\centering\small
+\caption{Shared numerical services and new virtual camera clock. Camera cost is additional to the retained numerical budget and defines Eq.~\eqref{eq:r9-report}; it is not physical camera latency.}\label{tab:r9-services}
+\begin{tabular}{@{}lrrr@{}}\toprule
+Service & Load $\alpha$ & Numerical deadline (s) & Stage budget (ms)\\\midrule
+Relaxed &10&0.5&20\\Standard &20&0.3&12\\Tight &40&0.2&6\\Contended &60&0.3&12\\\midrule
+\multicolumn{4}{l}{A: raster 46.875 ms; decoder 15.625 ms; total 62.5 ms}\\
+\multicolumn{4}{l}{B: raster 78.125 ms; decoder 46.875 ms; total 125 ms}\\\bottomrule
+\end{tabular}
+\end{table}
+Windows CPU observations show 15.625-ms quantization. Medians characterize the declared virtual-service clock; distributions of native costs remain reported rather than interpreted as precise embedded component latencies. The historical localization operation clock is preserved independently.
+
+\subsection{Requests and fair competitors}
+The full acquisition task requires GSD at most 20~mm/pixel, blur at most 0.5 pixel and correctly acquired target coverage at least 0.50. Association requires coverage at least 0.50, reprojection at most 30 pixels, metric displacement at most 0.10~m and a positive source version at capture. Full reporting requires the union of these constraints, report delay at most 2~s and image age at most 1.8~s. These are synthetic diagnostic-service specifications.
+
+Eight predeclared variants include coarser GSD, larger tolerated blur, explicitly partial coverage, a further relaxed partial request, stricter requirements, later reporting and a single-component service. Full, partial and single-component events form the anchor set. The entire matrix is retained; removing requirements produces a different service, not success on the full task. The primary allowance is 0.15, with 0.10/0.20/0.25 secondary settings.
+
+The reserved simultaneous budget is $\beta=0.05$, $K=4,608$, covering both studies, populations, numerical policies, services and the predeclared event families. Unused reserve is not reassigned after results are seen. Every method uses the same per-card allocation, applicable records, invariant pool, calibration objective and request cache. Direct renewal evaluates the actual requested binary event; it may support more requests than an available anchor closure. Procedural coverage implements the same complete semantics as the contract. Exact-card matching is an explicitly limited control.
+
+\subsection{Evaluation and preservation}
+We separately report configured service support, refusal, conditional confirmation failure, incorrect applicability, certificate margin, cold record evaluation, preparation and repeated-query cost. Refused requests contribute zero supported service and remain in every configuration-count denominator; no successful task-event sample is invented for an unexecuted refused policy. Numerical error and work are reported for all eight producers and separately for authorized selections. Same-source pairing and population-stratified summaries prevent repeated queries from becoming independent observations.
+
+Native source arrays, measured increments, every executed solver checkpoint, RGB/depth rasters, decoded landmarks and publication/installation traces are retained with hashes. Continuation verifies raw input archives, not only result tables. Complete confirmation repetition spans four services; its row count measures executed queries, not evidence sample size. Historical A19/A20/R8 source, 36 R8 route inputs/432 executions, four original photographs and five supplied simulation views remain intact. No new physical trial or route-level task certificate is asserted.

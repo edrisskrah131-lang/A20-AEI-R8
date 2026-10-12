@@ -1,0 +1,46 @@
+\section{Properties supporting the execution and evidence interface}\label{sec:theory}
+The results below concern source consistency, exposure and the scope of a statistical statement. They do not assign an optimality guarantee to the learned endpoint heuristic. Earlier finite decision and scalar deployment models are retained in the supplement.
+
+\begin{proposition}[Source replacement]\label{prop:version}
+Assume all candidates of one source use its immutable scan/prior, publication leaves the retained solve unchanged, and no independent measurement update interleaves with the source job. Replacing an intermediate version with the final candidate and applying Eq.~\eqref{eq:replay} gives the same live state and covariance as delivering that final candidate alone at the same installation time. A final prior rollback has the same property.
+\end{proposition}
+\begin{proof}
+The final candidate is the same deterministic function of scan, prior and executed prefix in both schedules. At final delivery both receivers assign the replay of that same candidate using the same acquired motion increments. The replay begins from the same covariance as well as state. No intermediate candidate contributes a second likelihood factor.
+\end{proof}
+The premise is why the receiver replaces a source instead of recursively fusing checkpoints. Cold-solve and live-prefix audits test the retained implementation; the property does not assert unbiased intermediate ICP error.
+
+\begin{proposition}[Delivery exposure]\label{prop:exposure}
+Consider two schedules with the same source candidates, exogenous motion and aligned final installation $\tau_f$. One publishes an intermediate candidate at $0\le\tau_c<\tau_f\le T$; the other holds it. If $e_0$ is the old-prior error and $e_c$ the replayed candidate error, then
+\begin{equation}
+\mathbb E[L_{\rm hold}-L_{\rm publish}]
+=\int_0^T\mathbb E\!\left[\mathbf 1\{\tau_c\le t<\tau_f\}\big(\|e_0(t)\|^2-\|e_c(t)\|^2\big)\right]dt.\label{eq:exposure}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Before $\tau_c$ the live estimates coincide, and after $\tau_f$ they coincide by Proposition~\ref{prop:version}. Subtract the loss integrals pathwise and exchange integration and expectation under integrability. Deterministic delivery times reduce the expression to an integral over $[\tau_c,\tau_f)$. For multiple publications, use the actual live candidate on each interval.
+\end{proof}
+An eligible residual alone does not determine the sign. Under linear propagation with common independent future noise, the difference contains the actual source error covariance and squared-mean differences; the curvature matrices need not equal those covariances. Publication also pays replay work. The experimental held-publication intervention recomputes timing after removing earlier replay and can change final installation, so its empirical contrast includes that additional effect.
+
+\begin{theorem}[Simultaneous population-event bounds]\label{thm:calibration}
+Freeze the $K$ profile/service/policy/event combinations independently of calibration outcomes. For each combination, assume independent, identically distributed complete calibration inputs from its stated deployment mixture, including any independent policy randomization, and keep its entire effective execution/event map fixed. With Eq.~\eqref{eq:cp}, probability at least $1-\beta$ over calibration gives $r_{g,a,\pi,e}\le U_{g,a,\pi,e}$ simultaneously for every combination. On this confidence event, any calibration-dependent selection from Eq.~\eqref{eq:dispatch-set} satisfies its requested population-event allowances.
+\end{theorem}
+\begin{proof}
+A fixed combination has a binomial failure count. Exact one-sided inversion has undercoverage at most $\beta/K$. A union bound over the fixed combinations gives simultaneous coverage. On that event all bounds hold, including those of a policy selected using calibration cost and event counts. Independence across policies, services, events or sampled instants is unnecessary.
+\end{proof}
+The reproducible Random2or4 comparator obtains its cap from a seed hash. Its binomial interpretation assumes that the seed-derived coin is an independent draw in the complete-input model. Conditioning instead on a fixed heterogeneous cap assignment does not yield the same iid binomial model; that interpretation would require a different bound. All simulator random streams share the usual ideal independent pseudorandom-stream modeling assumption.
+
+Confidence $1-\beta$ concerns uncertainty in population risk; $\delta$ concerns an episode event. The two probabilities differ. A union card calibrates $E_{\rm tr}\cup E_{\rm obs}$ directly and may differ from both marginal decisions. For $M$ deployment episodes, the generic mission bound is only $\min(1,M\delta)$ without further structure. Neither a route certificate nor subgroup/scan-conditional risk follows from an episode card. Declared configuration matching cannot replace the distribution assumption.
+
+\begin{proposition}[Attachment noninterference and history refusal]\label{prop:attachment}
+Let $B(X)$ be a frozen canonical execution and let $\mathcal P$ project it onto numerical decisions, produced/installed versions and ticks, replay/rollback order, deterministic work, loss, readiness and the three events. Suppose an attachment observer calls the original receiver check and installation with identical arguments, returns the original validation result unchanged, alters only separate claim state and source-specific claim nodes, and never feeds its native timing into the frozen work clock. Then
+\begin{equation}
+\mathcal P(W(B(X)))=\mathcal P(B(X)).\label{eq:noninterference}
+\end{equation}
+For canonical valid histories, issued receipts equal the original attachment candidates. After any monitored invalid attempt in a source scope, Eq.~\eqref{eq:history-latch} permanently removes that scope's upper bound, while a valid later numerical version may still install.
+\end{proposition}
+\begin{proof}
+Each original validation result and each permitted installation is preserved, so induction over the original sequence preserves its numerical/clock projection. Claim updates modify no state in that projection. Valid histories keep $M=1$. A failed check sets $M=0$; the conjunction cannot subsequently restore it. Revocation is scoped to a claim child, leaving the reusable operational plan unchanged.
+\end{proof}
+The canonical binary event is consequently unchanged for every calibrated combination, so its original risk bound transfers without adding a new family member. This argument does not certify the faulty-history population or the risk conditional on receiving a remaining authorized receipt. Faulted sources are not removed from calibration denominators. The amendment's actual native CPU is separately measured; its reservation is a frozen work-clock convention, not a measured worst-case service cost. If monitoring changes numerical installation or modeled availability, Eq.~\eqref{eq:noninterference} fails and recalibration is required.
+
+The source-history monitor covers detected invalid attempts rather than all possible trace faults. Undetected omissions, compromised trusted code, hidden distribution changes and interleaved external updates remain explicit failure conditions. Selective dependency invalidation is an implementation mechanism, not a new probabilistic theorem. The stronger procedural implementation can enforce the same semantics, which is why representation and numerical gains are assessed separately.

@@ -1,0 +1,50 @@
+\section{Typed engineering tasks and evidence transfer}\label{sec:r9-knowledge}
+\subsection{Knowledge objects and trusted roles}
+We extend the retained structure $\mathcal K=(\mathcal V,\tau,\mathcal R,\sigma,\Gamma)$ with Quantity, Requirement, CompiledEvent, ProducerComponent and TransferWitness. Quantities carry a dimension and canonical unit; requirements reference quantities and admissible intervals. Relations include \emph{measured-by}, \emph{depends-on}, \emph{compiled-to}, \emph{covered-by} and \emph{calibrated-on}. Immutable specifications identify the source, complete policy, population, event and calibration manifests. Executable predicates check units, event containment, component dependencies and card validity. The implementation uses typed records and a dependency specification rather than OWL or a learned graph embedding.
+
+Observed pixels and measured motion are data. ROI, exposure, focal length, budget and the named population are declared configurations. Equality of deployment and calibration distributions is an assumption. The interface keeps these roles distinct: a successful configuration check cannot establish the distribution assumption.
+
+\begin{table}[t]\centering\small
+\caption{Engineering quantities and the decisions they support. All task thresholds are synthetic study specifications, not aircraft inspection or clearance standards.}\label{tab:r9-quantities}
+\begin{tabularx}{\linewidth}{@{}l l X@{}}\toprule
+Quantity & Unit & Interpretation and dependency\\\midrule
+Fixed-target GSD & m/pixel & Sampling density at preplanned CAD addresses; focal length, target geometry and incidence\\
+Exposure blur & pixel & Declared motion/exposure surrogate at the same targets\\
+Target coverage & fraction & Correctly acquired diagnostic landmarks divided by planned targets; raster, ROI and decoder\\
+Reprojection error & pixel & Causal estimated target projection versus decoded image landmark\\
+Association error & m & Estimated CAD landmark displacement from its simulated physical counterpart\\
+Localization readiness & Boolean & Positive, causally installed source version at image capture\\
+Report delay; image age & s & Delivery time from source acquisition; delivery time minus image capture\\\bottomrule
+\end{tabularx}
+\end{table}
+The GSD value is stored in meters per pixel, with pixel treated as a discrete sampling index; its threshold conversion is between length units at that fixed sampling definition. Pixel-domain errors remain dimensionally distinct from metric errors. The compiler rejects incompatible units, unknown quantities, Boolean thresholds, nonfinite thresholds and empty intervals. Missing required outputs or nonfinite measured/scored values fail the event rather than satisfy a one-sided inequality.
+
+\subsection{Requirement compilation and pointwise coverage}
+Let $z_{p,j}(X)$ be quantity $j$ produced under complete producer $p$ on input $X$. A requirement $R$ defines the admissible set
+\begin{equation}
+S_R=\{z:\ell_{R,j}\le z_j\le u_{R,j},\quad j\in J_R\},\qquad
+E_{p,R}=\{z_p(X)\notin S_R\}.\label{eq:r9-event}
+\end{equation}
+Absent lower or upper bounds are represented as unbounded intervals, while nonfinite outputs are explicitly outside $S_R$. An anchor $A$ covers request $R$ when $J_R\subseteq J_A$ and, for every requested quantity,
+\begin{equation}
+\ell_{A,j}\ge\ell_{R,j},\qquad u_{A,j}\le u_{R,j}.\label{eq:r9-cover}
+\end{equation}
+The compiler records each interval comparison as a witness. Consequently $S_A\subseteq S_R$ and $E_{p,R}\subseteq E_{p,A}$. Dropping an acquisition-quality requirement can therefore produce a covered \emph{partial service}; it cannot be advertised as satisfying the original complete inspection task. Adding a new required quantity or tightening an interval can require renewal.
+
+The report event combines the required acquisition, association and timing violations using OR on the same input. Its calibration is a direct joint-event calibration. Two passing marginal cards are not presented as a passing joint card.
+
+\subsection{Event-specific dependencies under producer changes}
+Each quantity has a frozen implemented dependency set $D_j$. The requested event's closure is $D_R=\bigcup_{j\in J_R}D_j$. A component snapshot $\nu_p$ defines the capsule
+\begin{equation}
+v_{p,R}=H(\{(d,\nu_p(d)):d\in D_R\}).\label{eq:r9-capsule}
+\end{equation}
+The capsule is a compact identity for a specified dependency projection. Its validity follows from the implemented data flow and trusted frozen code, not from hash equality alone. Transfer from producer $p$ to $p'$ requires that the requested quantities be identical functions of the same complete input: $z_{p',j}(X)=z_{p,j}(X)$ for $j\in J_R$. Matching dependency snapshots are the executable check for that narrowly specified condition.
+
+A wider raster ROI changes coverage, pixel associations and the declared camera-work clock. It does not change geometric GSD at the same preplanned target addresses when pixel focal length and target geometry remain fixed. A GSD-only or fixed-target optical request can thus retain evidence through the verified projection; a complete image/report requirement generally cannot. Changing focal length or the target planner invalidates this optical projection. Deadline edits that affect capture, exposure, solver actions or processor scheduling change the producer and cannot be disguised as consumer-only relaxations.
+
+The card binds the anchor event, old producer capsule, named population, $n,k$, allocated error budget, exact upper bound and complete calibration-manifest lineage. Invariant pooled cards identify both independent source blocks. Producer contexts are generated from the trusted frozen protocol; received metadata cannot rewrite the old context to manufacture a transfer witness. The retained source/prior sealing, causal version replacement and history refusal govern numerical attachment separately.
+
+\subsection{Admission, renewal and the fair procedural implementation}
+Before sensing, a request fixes its population, service, compiled event and risk allowance $\delta$. A candidate policy is eligible if a valid applicable card covers the request and has $U\le\delta$. The selector minimizes the same calibration objective $\overline L+\lambda_{\rm sel}\overline W$, with $\lambda_{\rm sel}=1$~m$^2$, and policy-ID tie-breaking. No confirmation label or observed current-image quality chooses the policy or anchor. An empty set refuses the statistical task service; refused requests remain visible in service-support denominators.
+
+\texttt{ContractCover} uses explicit containment witnesses and event capsules. \texttt{ProceduralCoverValidated} independently implements the complete interval comparisons and dependency checks with the same quantities, cards, caches and objective. \texttt{DirectRecertCached} evaluates each predeclared requested event on applicable cached calibration records; it receives invariant pools whenever the same dependency proof permits them. \texttt{ExactCard} is an exact-anchor matching control. The latter is a mechanism ablation rather than the primary competitive baseline. Cold preparation, first updates and repeated lookups have separate accounting, because a warmed direct-renewal table may be faster.

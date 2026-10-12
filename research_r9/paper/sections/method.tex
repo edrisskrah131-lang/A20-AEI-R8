@@ -1,0 +1,62 @@
+\section{Checkpoint-aware registration}\label{sec:method}
+\subsection{One objective, reusable computational prefixes}
+RAVC-Loc uses robust point-to-plane registration with a fixed source-prior penalty. For a local perturbation $d=x\boxminus x_s^-$, the objective is
+\begin{equation}
+\Phi_s(x)=d^\top(P_s^-)^{-1}d+
+\sigma^{-2}\left[\sum_{i\in\mathcal I(x)}\rho(r_i(x))+(n-|\mathcal I(x)|)\rho(r_{\rm out})\right],\label{eq:objective}
+\end{equation}
+with Huber scale $0.0625$~m, $\sigma=0.025$~m and $r_{\rm out}=0.8$~m. The unmatched-point term prevents a candidate from improving its score by losing correspondences. The prior precision is inverted once. Correspondences and the normal equations are updated at each iteration, and backtracking tests step fractions $1,1/2,1/4,1/8,1/16$. The maximum is 25 iterations on at most 96 deterministically thinned points.
+
+Checkpoints occur after iterations $1,2,4,8,16,25$, or earlier when the solver terminates. The normal matrix is
+\begin{equation}
+N_j=G_j^\top(P_s^-)^{-1}G_j+H_j^\top\Omega_jH_j,\qquad P_s^{(j)}=\operatorname{PSD}(N_j^{-1}),\label{eq:checkpoint-cov}
+\end{equation}
+where $G_j$ includes the orientation perturbation Jacobians. Each version uses $P_s^-$, not the covariance published at a previous checkpoint. The matrix in Eq.~\eqref{eq:checkpoint-cov} is a local curvature approximation; empirical episode calibration supplies the reliability assessment.
+
+A candidate is eligible after a descending step when there are at least 12 pairs, clipped residual RMS is below $0.065$~m, and the fraction with absolute residual below $0.10$~m exceeds $0.6$. Final acceptance additionally requires a translation step below $0.001$~m and an orientation step below $0.0005$~rad. An interrupted eligible candidate need not satisfy final convergence. Retaining the iterate, prior precision and correspondence machinery makes continuation pay only the new prefix of computation.
+
+
+\subsection{Multi-action forecasts instead of a final-only endpoint}
+The new forecast uses ten observed registration features: prior position standard deviation, weakest scaled pose-information eigenvalue, residual RMS, inlier fraction, translation and orientation step norms, objective ratio, iteration, pair count and displacement from the source prior. The declared sensor noise setting is the eleventh input. Aircraft identity is excluded from forecast fitting. Structural face IDs, true pose error and future motion are unavailable to the online policy.
+
+For each reachable terminal cap $a\in\{2,4,8,16,25\}$, the model predicts mean squared position error $\widehat v_{ja}$, trajectory-event frequency $\widehat r_{ja}$ and remaining registration work $\widehat c_{ja}$. It also predicts current-candidate and prior MSE for publication. Development labels propagate each candidate over the same four-second motion realization. A cap that encounters ineligible or rejected completion uses the source prior as its effective terminal outcome; a raw intermediate candidate and its eventual rollback outcome have separate labels.
+
+The admitted cap is selected by the surrogate
+\begin{equation}
+\widehat a_j=\arg\min_{a\in\mathcal A(\mathcal K_j)}
+\left\{T\max(\widehat v_{ja},0)+\lambda\max(\widehat c_{ja},0)
++\omega\,\operatorname{clip}(\widehat r_{ja},0,1)\right\},\label{eq:stop-rule}
+\end{equation}
+where $T=4$~s and $\omega=0.002$~m$^2$s. The event-frequency term is a development prediction, not a confidence bound. At iteration two or later, an admitted current cap ends the job. The profile cap and empty deadline-feasible set can also end it; completed solves use their established acceptance/rollback semantics. Eligible intermediate candidates are published when their predicted MSE is below the predicted prior MSE, and an eligible interrupted terminal candidate is published.
+
+CART has maximum depth seven and minimum leaf size 20. The stronger forecast comparator averages 64 depth-eight trees with minimum leaf size 12. Both use the same source-grouped development split and output-standardized targets. Exported traversals are checked against library predictions. The forecast is an inexpensive endpoint approximation, without an optimal-stopping guarantee.
+
+\begin{table}[t]\centering\small
+\caption{One job couples numerical decisions to source and request semantics.}\label{tab:algorithm}
+\begin{tabularx}{\linewidth}{@{}rX@{}}\toprule
+1 & For a task declared before sensing, the separate metadata dispatcher selects a compatible frozen policy by Eq.~\eqref{eq:dispatch-choice}, or refuses the requested statement.\\
+2 & Retain the source scan/prior and copy one ICP state; the metadata interface represents its immutable seal.\\
+3 & Advance to a checkpoint; record eligible quality and charged work.\\
+4 & Forecast reachable terminal outcomes; apply profile and predicted-work predicates.\\
+5 & Select a cap by Eq.~\eqref{eq:stop-rule}; publish, continue or stop.\\
+6 & Install through source replacement and causal replay, including replay work in availability.\\
+7 & In the separate metadata service, validate the scheduled event statement; return its applicable population bound or provisional/refused status.\\
+8 & On rejected completion after a transient publication, replace with the source prior and replay.\\\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Common selection and two-event calibration}
+The frozen family contains 20 policies. CART with contracts, CART without guards, random forest without guards and random forest with the same contracts each use $\lambda\in\{0.3,1,3\}$. Six controls stop at fixed caps 2, 4, 8 or 16, run to final convergence, or stop at iteration two when eligible. A deterministic seeded randomized 2-or-4 control matches the contract policy's development continuation frequency, without claiming exactly equal realized CPU. The original frozen RAVC-Loc is also retained.
+
+For each policy, load, calibration geometry mixture and event, let $k$ of $n$ independent calibration episodes fail. There are $K=20\times3\times2\times2=240$ comparisons. With total confidence error $\beta=0.05$, use
+\begin{equation}
+U=\begin{cases}1,&k=n,\\
+\operatorname{Beta}^{-1}(1-\beta/K;k+1,n-k),&k<n.
+\end{cases}\label{eq:cp}
+\end{equation}
+The nominal mixture has $n=456$ after excluding 24 propagation-cost benchmark inputs; the geometry excluded from forecast fitting has $n=240$. Conditional on the benchmarked service parameter, calibration inputs are disjoint and policies remain frozen. Within each load and mixture, the common selector minimizes $\overline L+\overline C$ across \emph{all} policies whose trajectory upper bound is at most $\delta=0.15$. A separate within-contract selector identifies the best admissible contract-CART operating price. Empty certified sets remain empty. Observation cards use their own event count and the same joint confidence budget.
+
+Mechanism attribution uses the predeclared fixed-price policy KG1, with $\lambda=1$, against same-price controls and predicate-removal interventions. Reporting a calibration-selected price alongside it distinguishes resource selection from causal attribution. Confirmation episodes never refit the forecast or choose the price.
+
+\subsection{Software preparation and reproducibility}
+OpenAI ChatGPT/Codex (GPT-6) assisted protocol and code development, recovery of the scientific implementation, numerical analysis, manuscript preparation and figure code. Synthetic scans and outcomes are produced by the archived geometric sensor, registration and propagation programs; the language model does not supply numerical observations. Data plots are reproducibly derived from frozen records using NumPy, SciPy, pandas and Matplotlib. Source hashes, retained inputs, models and verification scripts support independent checking of the reported calculations.

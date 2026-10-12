@@ -1,0 +1,132 @@
+A20 / AEI: complete architecture drawing request
+
+Status: prepared scientific/design input. No cell_cns_figure order submitted.
+Deliverable: one original, fully editable SVG ordinary explanatory Figure 1.
+Do not copy the visual layout of the previous text-box architecture.
+
+MANUSCRIPT AND CENTRAL MECHANISM
+Title: Executable Operating Contracts for Anytime LiDAR Localization in
+Aircraft Inspection. The contribution connects a declared engineering task,
+retained localization computation and a correctly scoped statistical statement.
+The architecture must make all three visible and show their causal connections.
+This is a method schematic, not measured physical localization evidence.
+
+VISUAL DIRECTION
+Use a strong spatial hero: a believable aircraft silhouette/mesh, quadruped
+robot, sweeping LiDAR returns and an airframe-relative inspection path. Draw
+clear vector objects; use the supplied photos and simulation views only as
+reference for context. Do not alter or replace the original photographic
+evidence. The computation mechanism must remain more prominent than decoration.
+White background; deep graphite text; restrained blue for sensing/numerical
+execution, amber for budgets/decisions, teal for source installation and purple
+for frozen evidence. Use tonal hierarchy, not an array of equally weighted
+rounded boxes. Build clear visual scale, generous gutters and aligned labels.
+
+Compose approximately 180 mm wide by 145-160 mm high, suitable for a full-width
+AEI figure. Use 3 reading bands: pre-task offline evidence at the top; a large
+spatial sensing/computation/receiver mechanism across the middle; a thin separate
+statement-service band below. Main reading direction is left-to-right, with at
+most four large regions across the middle. Do not label every internal quantity
+as a separate box. Prefer checkpoint ladders, small response surfaces, version
+tokens and a real publication/installation time axis over paragraphs inside
+containers. Use Times New Roman unless the author subsequently specifies a
+different font. Minimum rendered glyph size 6.5 pt, including script glyphs.
+
+TOP BAND: DECLARED TASK AND FROZEN EVIDENCE
+1. Frozen CART/RF forecasts and a 20-policy catalogue. Development uses 1,120
+   retained episodes. Risk calibration is separate: nominal n=456 and unfitted
+   geometry n=240, yielding 240 simultaneous policy/load/mixture/event cards.
+2. Task declared before sensing: profile, load, event and allowance. Trajectory
+   and observation events are separate requirements. For a request for both,
+   each marginal must satisfy its own allowance.
+3. Compatible event cards -> eligible policies -> minimum calibration mean
+   loss + priced work. Select one policy for the whole declared population and
+   load, not a new per-scan statistically certified winner. Empty set -> REFUSED.
+   Do not put confirmation-set outcomes into this selection process.
+Draw dashed configuration/evidence links down to the scheduler and checker.
+The dispatch prototype is separate from the timed numerical pipeline.
+
+MIDDLE BAND: NUMERICAL EXECUTION
+A. Physical scene and causal inputs.
+   Aircraft surface/map, rolling LiDAR scan (16 rings, 1,024 azimuth columns),
+   source-time prior and preceding measured motion. Show motion as a separate
+   stream feeding both deskew and later receiver replay. Deskew -> 0.4-m voxels,
+   1,500-point cap -> 96-point registration input. Truth is absent from the
+   online dataflow. Any illustrative scan geometry is schematic, not a result.
+B. Retained computation, drawn as the central mechanism.
+   One immutable scan/prior enters robust 18-D point-to-plane ICP with a maximum
+   of 25 iterations. Show a retained-state ladder 1 -> 2 -> 4 -> 8 -> 16 -> 25,
+   with earlier usable versions and continuing state sharing the same source.
+   Show retained state rather than multiple independently restarted solvers.
+C. Forecast-guided control.
+   Observable residual, inlier rate, step, weak pose information, prior scale
+   and declared noise feed frozen forecasts. Forecast terminal MSE, event
+   frequency and remaining work at caps 2/4/8/16/25. Profile/time predicates
+   restrict admissible caps; the selected priced horizon objective chooses
+   PUBLISH / CONTINUE / STOP. No true pose error, future motion or online
+   ground-truth features. Keep formulas to one compact objective reference;
+   do not make this panel a wall of text. Show compute/accuracy/deadline tradeoff
+   as a conceptual mechanism, without invented quantitative curves or values.
+D. Receiver timeline and live output.
+   Show source version tokens v1, v2, v3. Each carries mean, covariance P,
+   source timestamp and version identity. Replace the previous contribution
+   from the SAME scan; replay measured motion to availability. Never combine
+   correlated source versions as independent measurements. If completion is
+   rejected, restore the original source prior and replay again. Numerical
+   continuation retains its source prior even as the live estimate changes.
+   A 0.3-s observation deadline intersects the installation timeline; finishing
+   computation alone is insufficient if replay is late. Controller ticks are
+   0.1 s, queue is 0.05 s. Avoid implying exact illustrative publication times.
+   Output: airframe-relative pose / P / source-version identity.
+Use solid numerical/motion arrows. Use a distinct dashed style for settings and
+evidence. Include a small legend with these two arrow meanings.
+
+BOTTOM BAND: SEPARATE STATISTICAL STATEMENT SERVICE
+Source/configuration seals and the matching event card enter a separate checker.
+Check source, forecast, policy, artifact, profile, load, event, service,
+allowance and scheduled assessment time. Valid certified match -> APPLICABLE
+POPULATION BOUND. Insufficient matching evidence -> PROVISIONAL / REFUSED,
+consistent with the manuscript's status definitions. Use compact status tokens,
+not a fake per-scan confidence gauge. The checker verifies declared consistency;
+it does not detect hidden distribution shift. It is a separately benchmarked
+metadata prototype, not an integrated embedded-hardware service.
+
+MANDATORY SCIENTIFIC LIMITS
+* Physical photos document supplied hardware only; no real measured localization
+  trial or physical performance dataset is claimed in this manuscript.
+* Upper bounds are for frozen population/policy/event configurations under the
+  declared assumptions. Do not turn them into per-scan confidence or mission
+  guarantees, or a joint 0.15 bound when two marginals are requested.
+* The main numerical ledger includes front end, solver, decisions, propagation
+  and installed replay. Dispatch/checker timing is separate. Do not display
+  a made-up embedded end-to-end latency or failure-recovery controller.
+* Do not invent new experiments, detection functions, branch actions, numerical
+  performance, hardware identities or author logos.
+
+REFERENCE MATERIALS READY IN THIS BUNDLE
+hardware_originals/: all four untouched physical photographs.
+../r6/simulation_originals/: all five supplied simulation screenshots.
+../r6/architecture.pdf and source_versions.pdf: prior semantic coverage;
+retain the scientific connections while replacing their visual composition.
+population_cards_source.csv: all frozen bounds, for factual checking only.
+../../sections/r6_architecture.tex: current scientific caption.
+
+ACCEPTANCE CHECKS
+Original editable vectors and selectable text; coherent scene and mechanism;
+source/prior lineage legible; measured motion feed and replay both shown;
+source replacement and rollback distinct; policy selection separated from
+online numerical scheduling; risk statement separated from a live pose;
+no crossed labels/arrows, clipped glyphs or paragraph-sized boxes. Inspect
+the actual rendered SVG at journal width, not just structural validation.
+
+PROPOSED CAPTION
+Architecture of executable operating contracts. Frozen forecasts and population
+event cards connect a task declared before sensing to a compatible policy.
+Causal scan processing feeds retained point-to-plane registration; forecasts,
+profile predicates and time predicates govern publication and further work.
+The receiver replaces the contribution of the same scan source and replays
+measured motion, restoring the source prior after rejected completion. A
+separate metadata service attaches applicable population event bounds only
+under matching declared configurations. Solid arrows carry numerical data or
+motion; dashed arrows carry configuration or evidence. Dispatch and checking
+are separate prototypes with timing reported separately.

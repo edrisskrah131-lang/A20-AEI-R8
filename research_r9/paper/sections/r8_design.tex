@@ -1,0 +1,54 @@
+\section{Prospective experimental design}\label{sec:design}
+\subsection{Freezes, populations and independent units}
+The new study uses protocol \texttt{A20-AEI-R8-prospective-2}. F0 froze numerical methods, sensor/policy implementations, predictors, maps, route templates and the characterized service clock before final input generation (2026-10-11 19:07:18 UTC). A source-history attachment amendment was separately sealed before F1 or confirmation generation. Its first version at 19:33:16 UTC was superseded after independent review identified a procedural latch reset on reconstruction; the final version preserves the source scope across reconstruction and tests legal rollback. All intermediate versions and their hashes are archived. The final amendment changes only issuance semantics; 16,896 matched pilot paths and 5,632 policy/service paths from the first completed calibration chunk passed automated numerical/clock/event projection comparison. These comparisons emitted equality counts and hashes rather than performance summaries used to choose behavior. F1 freezes all calibration cards and request plans, and a separate binding sidecar seals F1 to the final attachment amendment, before confirmation/stress inputs are opened. The hashes and execution ledger support local chronology; they are not an externally registered protocol.
+
+The retained 1,120-source fitting set has separate training and validation groups. The 48 new pilot sources are excluded from inference. The new final study contains 8,192 calibration, 4,096 confirmation and 1,536 unsupported stress inputs: 13,824 unique seeds. Each input is replayed across 22 policies and four services; these 1,216,512 controlled outcomes are paired executions, not independent samples. Integrated confirmation adds repeated task/validator executions on the same 4,096 confirmation inputs and adds no statistical sample size.
+
+Nominal calibration and confirmation draw uniformly from the B767/C172 identities, prior position standard deviations $\{0.015,0.03,0.06\}$~m, noise multipliers $\{1,2\}$ and shape levels $\{0,1,2\}$. Each independent seed chooses a source frame uniformly from a retained prescribed route, excluding the first/last 100 frames. Map translation and rotation perturbations have standard deviations 0.025~m and 0.001~rad. The new procedural airframe has different dimensions and surfaces and is excluded from all predictor fitting. Its independent calibration/confirmation uses the same prior/noise/source sampler and a distinct profile. Calibrating an unfitted geometry assesses transfer of a predictor with newly matched evidence, not zero-shot risk certification.
+
+Stress inputs separately impose removal of a uniformly oriented 2.2-rad azimuth sector, retention of a 0.5-rad sector about the measured median azimuth, prior deviations 0.08/0.12~m, or a new 0.06-m normal map warp. Their profiles lack primary cards. Numerical best-effort results remain descriptive and their evidence status is refused/provisional. Range overlap alone does not grant applicability. Metadata verifies the declared configuration and does not perform OOD detection.
+
+\begin{table}[t]\centering\small
+\caption{Frozen processing services shared by every method. $B$ caps the registration stage; total work also includes the common front end, receiver and stream.}\label{tab:services}
+\begin{tabular}{@{}lrrr@{}}\toprule
+Service & Load $\alpha$ & Deadline $D$ (s)& Stage budget $B$ (ms)\\\midrule
+Relaxed &10&0.5&20\\
+Standard &20&0.3&12\\
+Tight &40&0.2&6\\
+Contended &60&0.3&12\\\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Seven experiments and fair attribution}
+\begin{table}[t]\centering\small
+\caption{Research questions and evidence units. All interventions use matched inputs and retain null/adverse outcomes.}\label{tab:experiments}
+\begin{tabularx}{\linewidth}{@{}lXX@{}}\toprule
+Experiment & Question and controlled comparison & Evidence\\\midrule
+A & Flat forecast $\to$ time $\to$ time/profile $\to$ evidence-match $\to$ lifecycle; matched model, price and budget & Action changes and accuracy/work versus incorrect attachments\\
+B & Requested-event selection and refusal; Full versus task-aware calibrated validated Flat & Frozen feasibility, selected policies, readiness and admission/receipt coverage\\
+C & Certificate stability rather than threshold passing & Exact $U$, margin $\delta-U$, nested $n$, confidence and service sensitivity\\
+D & Predictor transfer to unfitted geometry and specified difficult populations & Separate confirmation profile and unsupported stress results\\
+E & Binding time and operating-profile constraints & Same-price CART/RF module interventions, guard rates and rejected refinements\\
+F & Complete continuous routes and integrated cost & Geometry/condition strata, tails, timely corrections, drops and policy switches\\
+G & Concentration and extreme failures & Paired loss distributions, top-two deletion, largest-5\% loss and failure taxonomy\\\bottomrule
+\end{tabularx}
+\end{table}
+
+The fair same-task selector includes all 22 effective policies and uses the same cards, allowance, calibration objective and exogenous requests as Full. Fixed2, Fixed4, Final, FlatCART, FlatRF, ContractRF and OldRAVC are always reported. A trajectory-only selector is a diagnostic of changing the task requirement, not the main competitive baseline. Evidence-match and lifecycle ablations preserve the predictor and numerical trace; their software-fault denominators are distinct from geometric inputs. Deterministic fixtures validate malformed cases and are explicitly excluded from calibration counts.
+
+\subsection{Inference, sensitivity and tails}
+The primary interval family was frozen before calibration: standard service, two confirmation profiles, four contrasts (Full minus validated Flat for the union request at $\delta=0.15$; KG1 minus FlatCART, FlatRF and Fixed2), and two metrics (loss and observation failure), giving 16 intervals. Refused union plans retain the source prior, so their outcomes stay in the sample. We use 32,000 paired seed-bootstrap replicates with seed 2026101208, reporting pointwise 95\% and Bonferroni-adjusted percentile intervals. These are approximate sampling intervals, distinct from the exact simultaneous CP bounds. No interval is assigned to repeated executions as if they were independent sources.
+
+All other service, subgroup, Pareto and route summaries are descriptive. Calibration sensitivity uses ordered nested prefixes $n\in\{128,256,512,1024,2048,4096\}$, confidence 0.90/0.95/0.99 and allowance 0.10/0.15/0.20 with the same family size. It does not reselect a policy, stop data collection early or replace F1. Tail summaries include 95th/99th percentiles and mean of the largest 5\%. Removing the two largest paired contributions diagnoses influence and does not define a revised efficacy estimate or delete unfavorable observations.
+
+\subsection{Continuous routes and provenance}
+The route block contains three geometries, three conditions and four independent stochastic replicates: 36 inputs, each 600~s at 10~Hz with two-second scan opportunities. Twelve methods give 432 paired executions, or 72 simulated route-hours. B767/C172 trajectories traverse the original 1,980-s prescribed paths rescaled continuously to 600~s, without cyclic endpoint joining. The procedural airframe uses an archived analytic elliptical orbit. The paths are imposed, so this experiment measures a localization service rather than a controller whose actions respond to pose error.
+
+Ordinary routes use the standard service. Contention and geometric-stress routes use an exogenous repeating standard/tight/contended schedule. Stress adds larger map/prior errors and specified occlusion/degeneracy windows. All methods use the same realization and single-source queue. Full and validated Flat refuse episode-to-route evidence and execute identical explicitly provisional recommendations. Native route CPU times the whole online loop, including frontend, registration/features, forecasts, dispatch, seals, validation, replay and coordination. Model/registry startup, raycasting, archive access and scoring are identified outside that online boundary.
+
+The B767/C172 geometric artifacts come from the pinned, licensed FlightGear models \cite{fg767,fgc172}; sensor, perturbation, motion and load models are documented in the source release. Four original physical-platform photographs and five supplied simulation views are retained in Figs.~\ref{fig:platform} and \ref{fig:simulation-scene}. Photographs establish operating context, not new measured localization results. Earlier A19/A20 inputs, 2,680 later episodes and 81 executions on nine route inputs remain separate preserved studies in the supplementary material.
+\begin{figure}[t]\centering
+\includegraphics[width=\linewidth]{r8/physical_platforms.pdf}
+\caption{All four original platform photographs: laboratory integration, side integration, aircraft field setting and the under-fuselage view. Full original aspect ratios and pixels are retained. These qualitative views do not establish the localization errors or processor latencies measured in the synthetic experiments.}\label{fig:platform}
+\end{figure}
+\input{sections/r6_scene}

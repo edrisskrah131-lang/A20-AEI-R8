@@ -1,0 +1,56 @@
+\section{Problem and estimator interface}\label{sec:problem}
+\subsection{Aircraft-relative localization}
+The inspection robot moves around a stationary airframe and registers LiDAR observations against a structural prior. Its local state is $x=(t,R,b,m_t,m_R)$: robot translation and orientation, six motion-bias components, and prior-map translation and orientation. The covariance $P$ spans an 18-dimensional perturbation. The reported position error is relative to the airframe,
+\begin{equation}
+e_p=\widehat m_R^\top(\widehat t-\widehat m_t)-(m_R^\star)^\top(t^\star-m_t^\star).
+\label{eq:relative-error}
+\end{equation}
+This representation preserves correlation between pose and map alignment rather than treating the structural prior as exact. Motion increments propagate the state and covariance with an $SE(3)$ local linearization \cite{barfoot2014}:
+\begin{equation}
+x_{k+1}=f(x_k,u_k),\qquad P_{k+1}=F_kP_kF_k^\top+Q_k.\label{eq:propagation}
+\end{equation}
+Bias follows a first-order Gauss--Markov model. All policies receive identical measured increments and scans; truth is used to generate the sensor realization and to score completed trajectories.
+
+\subsection{A correction is a versioned source-time result}
+A scan acquired at $t_s$ starts a registration job with an immutable prior $(x_s^-,P_s^-)$ and a retained computational state $z_j$. At checkpoint $j$, the job exposes a candidate posterior $(x_s^{(j)},P_s^{(j)})$, online features $h_j$, and cumulative work $c_j$. Candidates belong to the same scan and source prior. They are successive solutions of one objective, not independent measurements. A publication received at $t_d^{(j)}$ replaces the source-time version and replays the stored motion inputs:
+\begin{equation}
+(x_{t_d}^{(j)},P_{t_d}^{(j)})=\mathcal R_{s\to t_d}\bigl(x_s^{(j)},P_s^{(j)};u_{s+1:t_d}\bigr).\label{eq:replay}
+\end{equation}
+The live estimate propagates throughout computation. The implementation permits one active scan job and processes publications in source-version order. A job occupies its slot until its completion tick and every pending version, including any rollback, have been applied; a scan arriving before that release is discarded. If a completed job fails its final acceptance test after publishing a transient candidate, it publishes the original source prior as a rollback version. Replay then restores the trajectory implied by that prior. This serial interface avoids an unmodelled fusion of correlated scan versions; a system with interleaved independent measurements needs a rewind-and-reprocess buffer.
+
+\subsection{Cost, exposure, and a declared trajectory event}
+For a four-second correction episode, define
+\begin{equation}
+L_\pi=\int_0^T\|e_p^\pi(t)\|^2\,dt,\qquad
+\mathcal F_\pi=\left\{\max_{t\in\mathcal T}\|e_p^\pi(t)\|>\epsilon\right\},\label{eq:episode-event}
+\end{equation}
+where $T=4$~s, $\epsilon=0.10$~m and $\mathcal T=\{0.5,0.6,\ldots,4.0\}$~s. The first half-second is reported separately as startup exposure. The alert threshold defines a localization study metric; it is not an aircraft clearance standard. The calibration unit is an entire episode, including every sampled instant in $\mathcal T$.
+
+Numerical exposure uses the right-endpoint sum $\widehat L_\pi=0.1\sum_{k=1}^{40}\|e_p^\pi(0.1k)\|^2$; startup exposure uses its first five terms. The continuous integral defines the theoretical objective, while tables report this discrete approximation.
+
+
+The charged implementation work is
+\begin{equation}
+C_\pi=C_{\rm front}+C_{\rm registration}+C_{\rm decision}
++C_{\rm propagation}+C_{\rm replay}.\label{eq:cost}
+\end{equation}
+The common front end includes causal deskew and voxelization; raycasting and truth-based scoring belong to offline simulation. Registration includes correspondence searches, checkpoint features and covariance construction. Every installed version pays replay work. This is the numerical execution ledger: interface predicate-check overhead is benchmarked separately, and storage, serialization and transport are outside it. Selection uses the common calibration objective $\overline L_\pi+\lambda_{\rm sel}\overline C_\pi$, with $\lambda_{\rm sel}=1$~m$^2$s per CPU second, subject to a trajectory-risk allowance. Fixed controls and learned policies participate in the same selection.
+
+For an observation request, define a second event,
+\begin{equation}
+\mathcal F_\pi^{\rm obs}=\{\text{no positive scan version active at }D\}
+\ \cup\ \{\|e_p(D)\|>\epsilon\},\quad D=0.3\ {\rm s}.\label{eq:observation-event}
+\end{equation}
+An installed version that has rolled back to the source prior by $D$ is unavailable for this event. This is a registration-linked observation-pose proxy. It evaluates fresh correction availability and position error, without modelling camera orientation, image quality or defect detection. Its event card is distinct from the four-second trajectory card.
+
+\subsection{A service model that includes installation work}
+Recorded host CPU is converted to simulated availability under queue $q=0.05$~s and declared load factor $\alpha\in\{1,10,20\}$. Let $c_j$ be sender work through version $j$, including the front end and decisions, $r_{<j}$ the receiver replay work already charged, and $h$ the timed propagation primitive. Its benchmark uses 24 inputs excluded from risk calibration. The installed episode version has source-relative tick
+\begin{equation}
+n_j=\max\left\{1,\left\lceil
+\frac{q+\alpha(c_j+r_{<j})}{\Delta t-\alpha h}
+\right\rceil\right\},\quad
+r_{<j+1}=r_{<j}+n_jh,\quad \Delta t=0.1\ {\rm s}.\label{eq:delivery}
+\end{equation}
+The denominator is positive in all evaluated scenarios. It solves the self-consistent requirement that installation include replay to its own installation tick. At coincident ticks, later source versions replace earlier ones.
+
+Complete routes measure replay directly. A candidate is replayed only through increments already acquired. If the mapped sender-plus-receiver work has not finished at the current tick, installation is postponed, and the additional acquired increments are replayed at the next service opportunity. Observation readiness counts only installed versions. Load factors model competing processing demand; they do not measure an embedded processor's latency.

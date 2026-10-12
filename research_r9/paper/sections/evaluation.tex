@@ -1,0 +1,192 @@
+
+\section{Independent evaluation}\label{sec:evaluation}
+\subsection{Inputs, comparisons and accounting}
+Table~\ref{tab:splits} separates 2,680 fresh episodes into service benchmarking, risk calibration and independent confirmation. The new forecasts use all 1,120 earlier A20 episodes as development data: 926 for fitting and 194 for validation, split by a deterministic hash of source seed. New calibration and confirmation never refit the models. Exported CART and random forest have validation standardized MSE 0.6648 and 0.5960, respectively.
+
+Figure~\ref{fig:platform} documents the supplied quadruped platform and aircraft operating context, together with the original retained route geometry. The two additional physical-platform views are restored in the supplement.
+\input{sections/r7_platform}
+
+Figure~\ref{fig:simulation-scene} illustrates the intended quadruped inspection setting, including the forward underside, landing gear and under-wing region. These supplied simulation views provide spatial context; the numerical inputs below are retained separately.
+\input{sections/r6_scene}
+
+B767 and C172 use preserved licensed triangular artifacts. The procedural geometry has 6,440 vertices and 12,848 faces representing a fuselage, finite-thickness wings, tails and engine components. It is excluded from fitting and tests transfer to an aircraft-like surface. Raw rolling scans use 16 rings and 1,024 azimuth columns, with incidence-dependent returns, material/noise variation, dropout, dynamic returns and three discrepancy levels. The charged front end uses preceding measured motion for deskew, 0.4-m voxel reduction and a 1,500-point cap; registration thins to 96 points. Truth generates sensor realizations and offline labels. Online features contain neither true errors nor future motion.
+
+Policies share source priors and four-second measured-motion realizations. Nominal position standard deviations are 0.015, 0.03 and 0.06 m, with noise multipliers 1 and 2. Difficult priors use 0.04, 0.06, 0.08 and 0.10 m. Shift inputs use 0.07 or 0.14 m and noise multipliers 3 or 4. Geometry calibration and confirmation use the nominal prior/noise mixture on the procedural surface. Exact seeds, profiles and raw inputs are archived.
+
+The queue is 0.05 s, controller step 0.1 s and observation deadline 0.3 s. Loads $\alpha\in\{1,10,20\}$ scale work in installation availability, modeling contention without identifying execution time on embedded hardware. The trajectory event is any position error above 0.1 m at sampled times 0.5--4.0 s. Exposure uses the right-endpoint squared-error sum over 0.1--4.0 s. Episode RMSE uses samples at 0.5--4.0 s and is then averaged across independent episodes. Observation success requires a positive scan-source version active at the deadline, after installations and rollback, with error at most 0.1 m.
+
+Twenty frozen policies span fixed caps, final convergence, residual stopping, seeded randomized 2-or-4 computation, original RAVC-Loc and CART/RF scheduling with or without contracts at three prices. They share registration and source semantics. Single-predicate interventions and held publication are diagnostic controls outside selection. Comparisons isolate computation/publication decisions, without establishing superiority over an entire LiDAR--inertial system.
+
+Process CPU includes deskew/voxel processing, registration, decisions, ordinary propagation and installed replay. A 24-input primitive benchmark is excluded from calibration. Receiver availability includes replay through the installation tick: a version finishing replay after the deadline cannot count as timely. Acquisition, storage, communication and new hardware timing are outside this ledger; metadata checking is benchmarked separately.
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Independent inputs in the regenerated final study. The 24 service-benchmark inputs are excluded from risk calibration.}\label{tab:splits}
+\begin{tabular}{@{}lrr@{}}\toprule
+Input mixture & Risk calibration & Confirmation\\\midrule
+Nominal B767/C172 & 456 & 640\\
+Difficult prior B767/C172 & --- & 480\\
+Shifted noise/prior B767/C172 & --- & 360\\
+Procedural geometry & 240 & 480\\
+Service benchmark (24) & --- & ---\\
+Risk/confirmation total & 696 & 1960\\
+\bottomrule\end{tabular}\end{table}
+
+Across 240 policy--load--mixture--event cards, 125 meet the allowance. Figure~\ref{fig:population-cards} displays the complete card family and the event-dependent eligibility pattern. Cards depend on the specified mixture, frozen forecast and service. They do not transfer to difficult priors, shifted noise, complete routes or uncalibrated loads.
+\input{sections/r7_population_cards}
+\input{sections/r5_evaluation}
+\subsection{Accuracy, work and stronger schedulers}
+Table~\ref{tab:confirmation} and Figure~\ref{fig:frontier} report load 20; the supplement includes every family policy at all calibrated loads. KG1 is the fixed-price mechanism policy, distinct from calibration-selected KG3. Within contract-CART, nominal calibration selects KG3, with 29 trajectory failures among 456 units and upper risk 0.1136; no contract-CART price meets the procedural-geometry trajectory allowance.
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Independent confirmation at declared load 20. CPU includes numerical front-end processing, solver, decisions, propagation and receiver replay. Success requires a positive scan-source version active at 0.3 s and error at most 0.1 m.}\label{tab:confirmation}
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+Policy & CPU (ms) & $L$ (m$^2$s) & RMSE (cm) & Traj. fails & Pose success & Mean it.\\\midrule
+\multicolumn{7}{l}{\textit{Nominal}}\\
+Fixed2 & 8.44 & 0.01357 & 4.65 & 46 & 600/640 & 2.00\\
+Fixed4 & 11.35 & 0.01013 & 4.08 & 25 & 597/640 & 3.84\\
+Final & 13.44 & 0.01041 & 4.09 & 30 & 466/640 & 5.13\\
+FlatCART & 9.89 & 0.01070 & 4.26 & 29 & 617/640 & 2.76\\
+FlatRF & 10.30 & 0.01040 & 4.17 & 24 & 620/640 & 2.61\\
+ContractRF & 10.30 & 0.01040 & 4.17 & 24 & 621/640 & 2.61\\
+KG1 & 9.89 & 0.01070 & 4.26 & 29 & 617/640 & 2.76\\
+\multicolumn{7}{l}{\textit{Difficult priors}}\\
+Fixed2 & 8.67 & 0.01883 & 5.52 & 67 & 424/480 & 2.00\\
+Fixed4 & 11.80 & 0.01743 & 4.93 & 57 & 426/480 & 3.96\\
+Final & 14.87 & 0.02208 & 5.31 & 70 & 266/480 & 5.84\\
+FlatCART & 11.39 & 0.01613 & 4.99 & 54 & 437/480 & 3.48\\
+FlatRF & 12.01 & 0.01612 & 4.98 & 55 & 437/480 & 3.42\\
+ContractRF & 11.97 & 0.01605 & 4.97 & 55 & 438/480 & 3.41\\
+KG1 & 11.27 & 0.01613 & 5.00 & 54 & 437/480 & 3.41\\
+\multicolumn{7}{l}{\textit{Unfitted geometry}}\\
+Fixed2 & 8.46 & 0.01907 & 5.13 & 57 & 433/480 & 2.00\\
+Fixed4 & 11.03 & 0.01630 & 4.73 & 49 & 430/480 & 3.60\\
+Final & 11.92 & 0.01429 & 4.45 & 37 & 407/480 & 4.13\\
+FlatCART & 9.82 & 0.01682 & 4.88 & 52 & 435/480 & 2.69\\
+FlatRF & 10.09 & 0.01774 & 4.97 & 55 & 432/480 & 2.52\\
+ContractRF & 10.05 & 0.01777 & 4.98 & 55 & 432/480 & 2.52\\
+KG1 & 9.80 & 0.01682 & 4.88 & 52 & 435/480 & 2.69\\
+\multicolumn{7}{l}{\textit{Shifted noise/prior}}\\
+Fixed2 & 8.76 & 0.10930 & 13.36 & 204 & 138/360 & 2.00\\
+Fixed4 & 11.87 & 0.08815 & 12.11 & 197 & 150/360 & 3.97\\
+Final & 17.71 & 0.10826 & 13.52 & 220 & 40/360 & 7.23\\
+FlatCART & 11.28 & 0.08921 & 12.20 & 196 & 150/360 & 3.43\\
+FlatRF & 12.54 & 0.08730 & 12.10 & 197 & 154/360 & 3.87\\
+ContractRF & 12.46 & 0.09018 & 12.29 & 198 & 154/360 & 3.84\\
+KG1 & 10.50 & 0.09021 & 12.29 & 197 & 149/360 & 3.00\\
+\bottomrule\end{tabular}\end{table}
+
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Paired KG1 loss effects at load 20; positive gain means lower loss. Descriptive 95\% intervals resample paired independent seeds 10,000 times. CPU change is relative to the comparator; intervals are not simultaneous tests.}\label{tab:paired}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+Mixture & Comparator & Loss gain (\%) & 95\% interval (\%) & CPU change (\%)\\\midrule
+Nominal & Fixed2 & 21.10 & 11.73, 30.28 & +17.15\\
+Nominal & Fixed4 & -5.68 & -13.81, 0.99 & -12.87\\
+Nominal & FlatCART & 0.00 & -0.00, 0.00 & +0.04\\
+Nominal & FlatRF & -2.90 & -9.86, 2.95 & -3.91\\
+Difficult priors & Fixed2 & 14.37 & 5.67, 22.47 & +29.93\\
+Difficult priors & Fixed4 & 7.47 & 4.74, 10.54 & -4.48\\
+Difficult priors & FlatCART & 0.01 & -0.25, 0.25 & -1.07\\
+Difficult priors & FlatRF & -0.05 & -2.48, 2.29 & -6.14\\
+Unfitted geometry & Fixed2 & 11.80 & 7.20, 16.35 & +15.73\\
+Unfitted geometry & Fixed4 & -3.20 & -6.51, -0.21 & -11.16\\
+Unfitted geometry & FlatCART & 0.00 & 0.00, 0.01 & -0.28\\
+Unfitted geometry & FlatRF & 5.19 & 1.69, 9.28 & -2.88\\
+Shifted noise/prior & Fixed2 & 17.46 & 8.25, 27.54 & +19.94\\
+Shifted noise/prior & Fixed4 & -2.35 & -7.39, 1.70 & -11.56\\
+Shifted noise/prior & FlatCART & -1.12 & -6.57, 4.33 & -6.94\\
+Shifted noise/prior & FlatRF & -3.34 & -8.55, 0.65 & -16.22\\
+\bottomrule\end{tabular}\end{table}
+
+Relative to Fixed2, KG1 reduces mean loss by 21.1\% on nominal inputs, 14.4\% on difficult priors and 11.8\% on unfitted geometry. Paired 95\% intervals are 11.7--30.3\%, 5.7--22.5\% and 7.2--16.3\%. Additional CPU is 17.1\%, 29.9\% and 15.7\%. On difficult priors, KG1 reduces loss by 7.5\% and CPU by 4.5\% relative to Fixed4, with loss interval 4.7--10.5\%. Relative to Final, difficult-prior loss and CPU decrease by 27.0\% and 24.2\%.
+
+FlatCART and KG1 have nearly identical loss in the nominal, difficult-prior and unfitted-geometry mixtures; the difficult-prior interval crosses zero. ContractRF and FlatRF also remain close, while RF is the stronger development predictor. Most ordinary-load accuracy improvement over fixed computation comes from forecasting terminal outcomes. The contracts' numerical effect must be assessed where they alter actions; their statistical effect governs evidence attached to requests.
+
+Shifted inputs remain difficult: KG1 has 197 trajectory failures among 360 episodes, versus 204 for Fixed2 and 220 for Final. Mean loss decreases relative to Fixed2, but failures remain frequent and no nominal card applies. The profile cap bounds computation without establishing general recovery.
+\input{sections/r7_frontier}
+\subsection{Influence, tails and mechanism interventions}
+Table~\ref{tab:influence} tests the earlier concern about concentrated improvement. Removing the two largest gains leaves 15.0\%, 11.1\% and 9.6\% loss improvement for nominal, difficult-prior and geometry mixtures. Top-two shares of net gain are 36.5\%, 26.2\% and 25.5\%, below the earlier study's 78.7\%. Benefits are more distributed, although some episodes worsen.
+
+Largest-5\% loss means improve by 36.6\%, 11.2\% and 14.3\%. These are descriptive summaries without a tail-risk certificate. Difficult-prior 99th-percentile loss is higher for KG1 than Fixed2 even though its largest-5\% mean is lower.
+
+Table~\ref{tab:mechanisms} removes predicates at the same forecast and price. At load 20, the time predicate changes two difficult-prior jobs and one geometry job, with unchanged observation-success counts. The profile predicate changes 12 difficult-prior and 36 shifted jobs, with mixed accuracy effects. Held publication preserves stop choices but changes availability and replay work.
+\begin{table}[!htbp]\centering\footnotesize
+\caption{KG1 versus Fixed2 influence and tail analysis at load 20. Tail means use the largest 5\% losses within each policy. Deletion and tail summaries are descriptive.}\label{tab:influence}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+Mixture & Better/worse/equal & Top-two share (\%) & Gain w/o two (\%) & Tail gain (\%)\\\midrule
+Nominal & 146/107/387 & 36.5 & 15.0 & 36.6\\
+Difficult priors & 213/132/135 & 26.2 & 11.1 & 11.2\\
+Unfitted geometry & 109/77/294 & 25.5 & 9.6 & 14.3\\
+Shifted noise/prior & 70/60/230 & 34.5 & 12.2 & 18.0\\
+\bottomrule\end{tabular}\end{table}
+
+\begin{figure}[t]\centering\includegraphics[width=.98\linewidth]{r4/influence.pdf}\caption{Paired improvements and influence at load 20. The difficult-mixture plot includes adverse and beneficial individual effects. Top-two deletion is a sensitivity analysis.}\label{fig:influence}\end{figure}
+
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Same-forecast interventions at load 20. Changed jobs differ in stop iteration or publication count. Differences are KG1 minus control; loss is in $10^{-3}$ m$^2$s.}\label{tab:mechanisms}
+\begin{tabular}{@{}lrrrrr@{}}\toprule
+Mixture & Control & Changed & CPU (ms) & Loss & Pose successes\\\midrule
+Nominal & KG1 w/o profile & 0 & +0.002 & -0.001 & 617/617\\
+Nominal & KG1 w/o time & 0 & +0.005 & +0.000 & 617/617\\
+Nominal & KG1 held & 608 & +0.184 & -0.224 & 617/615\\
+Difficult priors & KG1 w/o profile & 12 & -0.108 & +0.008 & 437/437\\
+Difficult priors & KG1 w/o time & 2 & -0.010 & -0.019 & 437/437\\
+Difficult priors & KG1 held & 473 & +0.230 & -1.124 & 437/434\\
+Unfitted geometry & KG1 w/o profile & 0 & -0.023 & -0.000 & 435/435\\
+Unfitted geometry & KG1 w/o time & 1 & -0.003 & -0.000 & 435/435\\
+Unfitted geometry & KG1 held & 475 & +0.191 & -0.087 & 435/434\\
+Shifted noise/prior & KG1 w/o profile & 36 & -0.606 & -1.383 & 149/150\\
+Shifted noise/prior & KG1 w/o time & 3 & -0.024 & +2.400 & 149/149\\
+Shifted noise/prior & KG1 held & 159 & +0.083 & -0.696 & 149/149\\
+\bottomrule\end{tabular}\end{table}
+
+\subsection{When the time predicate becomes consequential}
+Additional descriptive workload analysis reuses 1,960 confirmation inputs at loads 40 and 60, without fitting, selection, new geometric samples or calibration. At load 60 on nominal inputs, KG1 supplies 409 successful deadline poses versus 384 without the time predicate: 25/640 additional successes, or 3.9 percentage points. CPU decreases from 10.24 to 6.73 ms. Mean loss rises from 0.01160 to 0.01908 m$^2$s, and trajectory failures increase from 50 to 72. Difficult-prior and geometry success counts increase by 11/480 and 7/480, also with higher loss. Fixed2 supplies no timely scan-source version at this load because its second-iteration installation misses the deadline.
+
+The rule implements a task-dependent tradeoff: strict observation timing can favor an earlier, less accurate version, while four-second exposure may favor further refinement. Neither added workload is calibrated. Requests remain provisional or refused until matching evidence is available.
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Additional workload at load 60 on the same confirmation inputs. These loads are outside the calibration family and carry no event-card guarantee.}\label{tab:workload}
+\begin{tabular}{@{}lrrrrr@{}}\toprule
+Mixture & Policy & CPU (ms) & $L$ (m$^2$s) & Traj. fails & Pose success\\\midrule
+Nominal & KG1 & 6.73 & 0.01908 & 72 & 409/640\\
+Nominal & KG1 w/o time & 10.24 & 0.01160 & 50 & 384/640\\
+Nominal & Fixed2 & 8.61 & 0.01445 & 48 & 0/640\\
+Difficult priors & KG1 & 6.89 & 0.03460 & 113 & 248/480\\
+Difficult priors & KG1 w/o time & 11.75 & 0.01881 & 78 & 237/480\\
+Difficult priors & Fixed2 & 8.85 & 0.02247 & 76 & 0/480\\
+Unfitted geometry & KG1 & 6.71 & 0.02200 & 76 & 355/480\\
+Unfitted geometry & KG1 w/o time & 10.16 & 0.01747 & 59 & 348/480\\
+Unfitted geometry & Fixed2 & 8.63 & 0.01976 & 58 & 0/480\\
+Shifted noise/prior & KG1 & 6.87 & 0.13057 & 236 & 59/360\\
+Shifted noise/prior & KG1 w/o time & 10.76 & 0.09231 & 214 & 57/360\\
+Shifted noise/prior & Fixed2 & 8.85 & 0.11205 & 208 & 0/360\\
+\bottomrule\end{tabular}\end{table}
+
+\begin{figure}[t]\centering\includegraphics[width=.98\linewidth]{r4/workload.pdf}\caption{Additional nominal workload analysis. Earlier stopping reduces CPU and improves deadline availability while increasing loss; these loads have no calibrated card.}\label{fig:workload}\end{figure}
+
+\subsection{Complete-route observation service}
+Nine independent 600-s inputs cover three geometries and three seeds each, with noise multipliers 1, 2 and 2 and discrepancy levels 0, 1 and 2. A causal localization service replays prescribed route inputs at 10 Hz and requests registration every 2 s. The nine stochastic inputs share three geometric path templates; the estimated state does not change the prescribed trajectory. Nine variants per input give 81 executions and 13.5 simulated route-hours, with 299 observation opportunities per route. Replays, temporary versions and rejected-completion rollbacks execute causally before assessment.
+
+KG1 uses 2.472 s CPU per route, versus 3.001 s for Final and 2.184 s for Fixed2. Mean route RMSE is 4.420, 4.396 and 4.371 cm. Deadline-pose success is 93.20\%, 85.69\% and 93.27\%. Routes support earlier availability and lower work than Final; Fixed2 remains an effective cheaper policy. Removing the time predicate changes success by 0.04 percentage points. Held publication lowers success by 0.97 points.
+
+Comparisons resample nine paired inputs, stratified by geometry, rather than treating 2,691 opportunities or 81 executions as independent. Three inputs per geometry limit generalization. FlatRF and ContractRF are stronger route controls; FlatCART3, the global nominal winner, is not run in this block. Episode cards do not certify missions, and route results cannot establish global system dominance.
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Complete-route means over nine paired 600-s inputs, with 299 observation opportunities each. Eighty-one executions are nine policies on nine inputs.}\label{tab:routes}
+\begin{tabular}{@{}lrrrrr@{}}\toprule
+Policy & CPU (s) & RMSE (cm) & $L$ (m$^2$s) & Ready (\%) & Success (\%)\\\midrule
+Fixed2 & 2.184 & 4.371 & 1.4269 & 98.33 & 93.27\\
+Fixed4 & 2.822 & 4.446 & 1.4915 & 94.39 & 89.37\\
+Final & 3.001 & 4.396 & 1.4563 & 89.97 & 85.69\\
+FlatRF & 2.545 & 4.388 & 1.4496 & 98.36 & 93.39\\
+ContractRF & 2.572 & 4.389 & 1.4503 & 98.48 & 93.42\\
+KG1 & 2.472 & 4.420 & 1.4625 & 98.25 & 93.20\\
+KG1 w/o profile & 2.479 & 4.422 & 1.4639 & 98.18 & 93.09\\
+KG1 w/o time & 2.509 & 4.420 & 1.4626 & 98.18 & 93.16\\
+KG1 held & 2.535 & 4.414 & 1.4622 & 97.29 & 92.23\\
+\bottomrule\end{tabular}\end{table}
+
+\begin{figure}[t]\centering\includegraphics[width=.98\linewidth]{r4/routes.pdf}\caption{Means over nine paired independent routes. CPU, RMSE and deadline-pose success describe distinct requirements. Fixed2 remains competitive.}\label{fig:routes}\end{figure}
+
+\subsection{Executable scope checks and retained evidence}
+The separate metadata prototype tests 9,000 deterministic requests across 240 cards. Matching requests receive bounds only when certified. Source, forecast, policy, artifact, profile, workload, event, service and allowance mismatches are refused, as are invalid fields and expired assessments. Zero unexpected authorizations occur. This is interface verification with illustrative seals, not field reliability or an online per-publication authorization log.
+
+A 2,400-call matching-request benchmark has median 3.01 and 95th-percentile 3.14 microseconds process CPU. It excludes transport and fresh scan hashing and is outside the numerical ledger. Scope checks validate declarations; hidden shifts preserving metadata can still invalidate cards.
+
+Release checks reconstruct 240 bounds, verify input/model hashes, test 24 exact state/covariance comparisons with the native solver, and recompute all 81 route errors and deadlines. Earlier evidence remains separate: original 240-input confirmation showed 30.9\% less estimator CPU than native final registration and 20.8\% less loss than Fixed2, with 97.7\% of net gain from 15 deeply iterated inputs. Its stress block had 73/120 failures. Original A19 and earlier A20 allocation, geometry and route studies are retained without pooling their samples or timing ledgers. The supplement restores their work--loss, calibration, publication-intervention, aircraft-specific, route and reuse figures.

@@ -1,0 +1,100 @@
+\section{Retained solver and reuse evidence}\label{app:retained}
+The accompanying A19 aircraft release provides five correction actions: Skip, Strict, Tempered, Converged and Full. Strict and Tempered use one update on at most 96 points; Tempered reduces the likelihood weight when a step violates its gate. Converged uses up to 25 iterations on that point limit. Full uses up to 1,500 points and 40 iterations. These controls preserve an important distinction between solver quality, computation reuse and scheduling. The complete original manuscripts, implementations, mesh licenses, protocols and results are included in the archive.
+
+Its source study contains 1,680 distinct seeds and 8,400 paired action outcomes: 480 training, 240 validation, 480 development diagnostics and 480 confirmation sources. The full-route study contains six 1,980-second inputs and 78 localization-service executions, totalling 42.9 simulated route-hours. Table~\ref{tab:retained} retains the strong controls that determine interpretation. CPU values belong to the original execution environment and are not combined with the new timing ledger.
+
+\begin{table}[t]\centering\small
+\caption{Retained complete-route controls, mean of three inputs per aircraft. All use two-second opportunities except Full / 4 s. These are original results, with their original CPU ledger.}\label{tab:retained}
+\begin{tabular}{@{}llrr@{}}\toprule
+Aircraft & Controller & Position RMSE (cm)& CPU (s)\\\midrule
+B767&Strict&88.419&4.266\\
+&Tempered&3.437&4.422\\
+&Converged&3.181&8.084\\
+&Full&2.892&16.194\\
+&Full / 4 s&3.225&8.628\\
+&Reuse-DP&3.181&8.610\\
+&Cache removed&3.181&8.360\\\midrule
+C172&Strict&2.607&4.726\\
+&Tempered&2.607&4.453\\
+&Converged&2.407&7.737\\
+&Full&2.327&9.003\\
+&Full / 4 s&2.541&5.036\\
+&Reuse-DP&2.600&5.223\\
+&Cache removed&2.600&7.005\\\bottomrule
+\end{tabular}
+\end{table}
+
+On C172, fixed-path cache removal repeats 2,941 registrations across 2,967 post-initialization opportunities. It increases estimator CPU from 5.223 to 7.005~s, a 25.4\% direct reuse saving. Selected actions and delivered trajectories agree; maximum stored error-trace difference is $1.2\times10^{-16}$. B767 directly chooses Converged, so cache removal has no equivalent saved registration prefix. The C172 Full / 4 s control is both cheaper and more accurate than Reuse-DP. These retained controls prevent the cache intervention from being interpreted as universal adaptive-policy dominance.
+
+\subsection{The retained finite inner decision layer}
+For observed probe history $h$ and remaining invocation credit $b$, let $d_a(h)$ be the unpaid cost of terminal action $a$. With cached posteriors, $d_a=0$ for an already available action. The finite controller satisfies
+\begin{align}
+R(h,b)&=\min_{a:d_a(h)\le b}\{\mathbb E[L_a\mid h]+\lambda d_a(h)\},\\
+V(h,b)&=\min\left\{R(h,b),\min_{q\notin h:c_q\le b}\left[\lambda c_q+\mathbb E[V(h\oplus(q,Z_q),b-c_q)\mid h]\right]\right\}.\label{eq:inner-bellman}
+\end{align}
+Three binary acceptance probes have at most $3^3=27$ partial histories. With five terminal actions and fixed costs, the query subsets and final action define at most $5\cdot2^3=40$ candidate budget breakpoints. Between breakpoints, feasible policy trees are unchanged. The optimum is therefore nonincreasing and piecewise constant in budget. At fixed budget it is the minimum of finitely many affine functions of price, hence nondecreasing, concave and piecewise linear.
+
+The two-state noisy-probe example makes the benefit explicit. Equiprobable latent states have losses $(0,2\mu,\mu-\zeta)$ and $(2\mu,0,\mu-\zeta)$ for $(A,B,F)$, with costs $(3,1,4)$ and budget four. Assume $0<\zeta<\mu$ and $3\lambda<\zeta$. A cost-three probe executes and caches $A$ and reports the state with symmetric accuracy $r\ge1/2$. The reuse optimum is
+\begin{equation}
+V_{\rm reuse}=\min\{\mu-\zeta+4\lambda,\ 2\mu(1-r)+\tfrac72\lambda\}.\label{eq:retained-noisy}
+\end{equation}
+It strictly improves the prior optimum when $\mu(2r-1)>\zeta-\lambda/2$. To see this, final $F$ is the best prior action under the price assumption. After probing, cached $A$ and fresh $B$ remain affordable, but $F$ does not. Following the report has expected loss $2\mu(1-r)$ and work $3.5$. Always taking cached $A$ instead costs $\mu+3\lambda$, exceeding the prior $F$ score. Discarding $A$ removes its affordable branch and cannot improve the prior optimum. This example addresses informational reuse; the new checkpoint interface additionally permits source-version delivery during an ongoing solve.
+
+\section{Source-time latency and conditional error certificates}\label{app:certificate}
+The scalar correction envelope is retained as an analytic reference. Let source variance be $v$, process-noise rate $q_p$, useful horizon $T$, and action acceptance probability, source contraction and latency be $p_a,\alpha_a,\tau_a$. Successful correction contracts the source uncertainty and then replays process noise. For $0\le\tau_a<T$,
+\begin{equation}
+L_a=Tv+\tfrac12q_pT^2-p_a(1-\alpha_a)v(T-\tau_a).\label{eq:scalar-loss}
+\end{equation}
+Relative to propagation, the priced action is preferable exactly when
+\begin{equation}
+v>\frac{\lambda c_a}{p_a(1-\alpha_a)(T-\tau_a)},\quad p_a>0,\quad\alpha_a<1.\label{eq:scalar-boundary}
+\end{equation}
+Subtracting the two loss expressions proves the boundary. Contracting $v+q_p\tau_a$ would represent information acquired at delivery rather than at the source timestamp. The source-time replay equation in the main manuscript preserves the source-time interpretation.
+
+For a conditional Gaussian task error $e_k\mid\mathcal H_k\sim\mathcal N(\mu_k,\Sigma_k)$ and tolerated ellipsoid $e_k^\top We_k\le1$, define
+\begin{equation}
+\beta_k(\delta_k)=\|W^{1/2}\mu_k\|+
+\sqrt{\lambda_{\max}(W^{1/2}\Sigma_kW^{1/2})\chi^2_{d,1-\delta_k}}.\label{eq:gaussian-envelope}
+\end{equation}
+If $\beta_k\le1$ and the history-measurable allowances satisfy $\sum_k\delta_k\le\Delta$ almost surely, the probability of an event at any specified evaluation instant is at most $\Delta$. Indeed, on the conditional Gaussian ball $\|z\|^2\le\chi^2_{d,1-\delta_k}$, the triangle and operator-norm inequalities give $\|W^{1/2}e_k\|\le\beta_k$. Taking conditional expectations and applying a union bound proves the result without temporal independence. If conditional event probabilities have extra errors $\varepsilon_k$ with pathwise sum at most $E_{\rm cal}$, the bound becomes $\Delta+E_{\rm cal}$. This certificate requires actual conditional error means and covariances; a registration Hessian alone does not identify them. The executable study uses episode calibration instead.
+
+\section{The exact finite budget model}\label{app:finite}
+The preserved numerical allocation study uses 18 stages, 18 credit units, safe uncertainty indices $s=0,\ldots,9$ and three geometry states. Its initial state is $(s,g,b)=(6,1,18)$. The four abstract actions have costs $(0,1,3,5)$ and successful reductions $(0,2,5,9)$. Corrective acceptance probabilities are
+\begin{equation}
+P_{g,a}=\begin{bmatrix}0.18&0.38&0.62\\0.42&0.70&0.87\\0.67&0.88&0.97\end{bmatrix}.\label{eq:finite-kernel}
+\end{equation}
+Before correction, uncertainty grows by one. Acceptance subtracts the action reduction, bounded below by zero; rejection leaves the incremented state. First entry into $s\ge10$ terminates the model trajectory. Geometry remains unchanged with probability 0.70 and transitions to each other state with probability 0.15. Remaining credit excludes unaffordable actions. These declared kernels define a fully observed finite model.
+
+Let $x_{t,i,a}$ be pre-failure occupancy, $K_{i,a,j}$ its safe transition kernel and $q_{i,a}=1-\sum_jK_{i,a,j}$. The standard chance-constrained occupancy program is
+\begin{align}
+\min_{x\ge0}\ &\sum_{t,i,a}c_{i,a}x_{t,i,a},\\
+\sum_a x_{0,i,a}&=\nu_i,\qquad
+\sum_a x_{t+1,j,a}=\sum_{i,a}K_{i,a,j}x_{t,i,a},\\
+\sum_{t,i,a}q_{i,a}x_{t,i,a}&\le\Delta.\label{eq:finite-lp}
+\end{align}
+The risk sum is exact first-failure probability: its entries correspond to disjoint first-entry events. A feasible policy induces these flows; normalizing feasible flows recovers a randomized Markov policy with identical cost and risk. Credit is part of the state, so every recovered path respects the hard cap. This is an exact model benchmark, not a new general occupancy-equivalence theorem.
+
+At $\Delta=0.10$, the optimum is 10.3242 expected work units. The optimized mixture of 885 periodic, threshold and geometry rules costs 11.3519. Stronger terminal-aware rules reduce the comparator to 10.9280, and 12-stage rolling dynamic programming gives 10.7898. A standard full-horizon Bellman multiplier mixture reaches the same 10.3242 as the occupancy program. Thus the original 9.05\% advantage over stationary-rule mixtures narrows to 5.52\% and 4.32\% against those stronger controls and disappears against the exact same-information solution. This benchmark illustrates the value of horizon and credit information without assigning its margin to the geometric checkpoint policy.
+
+At 80\% nominal correction acceptance, the frozen $0.10$ policy's risk rises to 0.2521; reoptimization has minimum risk 0.1601, so 0.10 is infeasible at the original cap in that model. Its high-authority final action is an assumed kernel, not an implemented aircraft recovery operation. The geometric experiments use actual checkpoint candidates and contain no such recovery action.
+
+\section{Conditional deployment reference}\label{app:deployment}
+A deployment envelope combines a retained simulation anchor $s_0$ with an independent added airframe-map error of RMS magnitude $s_m$, delivery delay $\tau$, added position-noise rate $q_d$ and constant motion-bias bound $b_d$:
+\begin{equation}
+s_{\rm deploy}(\tau)=\sqrt{s_0^2+s_m^2+q_d\tau+(b_d\tau)^2}.\label{eq:deployment-envelope}
+\end{equation}
+Variance addition assumes independent, zero-mean added map error; the drift term is a squared envelope contribution. This computes a reference scenario rather than identifying a hardware error model. We use $q_d=4.8\times10^{-5}$~m$^2$/s and $b_d=\sqrt3(0.0015)$~m/s. The anchors are the retained B767 Converged mean 3.181~cm and C172 Full / 4 s mean 2.541~cm, chosen as existing measured-CPU simulation controls.
+
+\begin{table}[t]\centering\small
+\caption{Calculated deployment reference from Eq.~\eqref{eq:deployment-envelope}. Added map RMS and delay are assumptions. Predicted errors are conditional analytic values, not observed robot errors.}\label{tab:deployment}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+Aircraft&Anchor (cm)&Added map RMS (cm)&Delay (ms)&Predicted RMS (cm)\\\midrule
+B767&3.181&1&50&3.34\\
+&3.181&2&150&3.77\\
+&3.181&3&350&4.39\\
+C172&2.541&1&50&2.74\\
+&2.541&2&150&3.25\\
+&2.541&3&350&3.95\\\bottomrule
+\end{tabular}
+\end{table}
+

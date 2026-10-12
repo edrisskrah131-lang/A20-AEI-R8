@@ -1,0 +1,59 @@
+\section{Executable knowledge, constraints and evidence}\label{sec:knowledge}
+\subsection{Typed representation and applicability}
+Define the operating knowledge structure as
+\begin{equation}
+\mathcal K=(\mathcal V,\tau,\mathcal R,\sigma,\Gamma),\label{eq:knowledge-record}
+\end{equation}
+where $\mathcal V$ contains entities, $\tau$ assigns their types, $\mathcal R$ contains typed relations, $\sigma$ stores immutable specifications and fingerprints, and $\Gamma$ contains executable predicates. Types are Source, Version, Profile, Service, Policy, Predictor, EventCard and Request. The dependency subgraph is directed and acyclic; ordered revision is maintained by the source transaction. This concrete representation uses dictionaries, a dependency graph and monitored state, without an ontology language or learned knowledge-graph embedding.
+
+\begin{table}[t]\centering\small
+\caption{Knowledge entities, executable conditions and consequential decisions.}\label{tab:knowledge}
+\begin{tabularx}{\linewidth}{@{}lXX@{}}\toprule
+Entity/relation & Stored information and condition & Execution or evidence consequence\\\midrule
+Source; derived-from & Scan fingerprint; all source-prior state and covariance arrays sealed & Revisions must use the same source and prior\\
+Version; revises & Producer-recorded sequence, iteration, payload seal and rollback flag & Ordered replacement; no resurrection after rollback\\
+Profile; applicable-under & Whole sampling mixture and geometric artifact & Restrict refinement; refuse unmatched population evidence\\
+Service; executes-with & Queue, load, deadline, budget, clock and same-tick order & Reserve sender work; compute receiver availability\\
+Policy/Predictor; depends-on & Frozen rule specification, model and implementation hashes & Admit the executed policy; invalidate affected cards after change\\
+EventCard; supports & Defined event, $n,k,K,\beta,U$, calibrated profile/service & Select only admissible event requirements\\
+Request; authorized-by & Pre-sensing task, finite allowance and selected-card seals & Commit a policy; attach a matching population statement or refuse\\\bottomrule
+\end{tabularx}
+\end{table}
+
+The representation distinguishes three epistemic roles. Correspondence counts, residuals and motion increments are measured observations. Sensor noise settings, geometric identity and service parameters are declared configurations. Equality of deployment and calibration distributions is an assumption. A metadata match checks the second role; it cannot establish the third or detect hidden distribution shift.
+
+A card is $c=(g,a,\pi,e,n,k,K,\beta,U,\nu)$, where $g$ is a complete population profile, $a$ a processing service, $\pi$ a complete effective policy, $e$ an event and $\nu$ its version dependencies. Schema validation checks finite values, integer counts, exact binomial inversion and the body fingerprint before admitting a card to the trusted registry. Dependencies include the relevant predictor, policy specification, solver, executor, contract implementation, event definition, service, profile, protocol and geometric artifacts. Predictor changes invalidate only dependent policies; global clock changes invalidate every card. Fingerprints identify artifact equality in this controlled software setting; they do not provide remote device attestation or cryptographic authentication against a compromised producer.
+
+\subsection{Exogenous task selection and commitment}\label{sec:dispatch}
+A request $R=(g,a,\mathcal E,\delta)$ is declared before its scan is opened. The service specifies $D,B,\alpha$; $\mathcal E$ is one event or the two marginal events. With frozen catalogue $\Pi_0$, define
+\begin{equation}
+\Pi(R)=\{\pi\in\Pi_0:\operatorname{match}(g,a,\pi,\nu)\ \land\ U_{g,a,\pi,e}\le\delta\text{ for every }e\in\mathcal E\}.\label{eq:dispatch-set}
+\end{equation}
+The selector chooses
+\begin{equation}
+\pi^*(R)=\arg\min_{\pi\in\Pi(R)}(\overline L_{g,a,\pi}+\lambda_{\rm sel}\overline W_{g,a,\pi}),\label{eq:dispatch-choice}
+\end{equation}
+with policy-ID tie-breaking. Empty sets return \texttt{REFUSED}. Calibration estimates may determine the choice because all bounds are simultaneous. No scan quality, confirmation outcome or future error enters selection. The selected policy remains fixed across its declared population; per-scan switching between calibrated policies would define a different policy needing its own calibration.
+
+The selector emits a witness containing the request, chosen policy, card seals, event bounds and active dependency snapshot. A trusted precommit copies it before source acquisition. Binding the actual source changes its phase from \texttt{PRECOMMITTED} to \texttt{SOURCE\_BOUND}; subsequent request or policy replacement is rejected. A new task requires a new exogenous commitment. This rule prevents a bound for one population-level policy from being attached to a favorable scan-selected alternative.
+
+\subsection{Action constraints and lifecycle enforcement}
+Time and profile constraints affect the numerical candidate set. The time predicate removes forecast caps whose estimated availability exceeds $D$. It accounts for the new candidate's own replay but omits previously accumulated receiver work; remaining solve cost is also a conditional mean. It is therefore an optimistic screen rather than a deadline guarantee. The executed installation rule in Eq.~\eqref{eq:delivery} includes accumulated receiver work, and event calibration uses that actual modeled installation. The profile predicate caps refinement at four iterations when declared noise exceeds two, source position standard deviation exceeds 0.061~m, or the geometry was excluded from predictor fitting. Both predicates were fixed on development evidence. They provide bounded fallback behavior, not a proof that mismatch has been detected or corrected. The common hard-budget reservation applies to every policy independently of these two predicates.
+
+Each produced version is registered by the trusted producer with its sequence, iteration, rollback flag and payload seal. Before installation, the receiver checks the source/prior/data identities, current dependency values, committed policy, configuration, producer record, sequence and iteration order, rollback semantics, causal replay time, finite clock and sender work. Checking both the incoming payload and the producer record prevents jointly rewriting a payload and its advertised checksum in the tested trust model. A rejected packet is not installed. A valid late numerical correction may still install after an observation deadline, but its observation statement is expired.
+
+Statistical attachment is an additional operation. It requires the matching requested event and card, current source/version/payload, assessment instant, allowable risk and active dependencies. The attachment identifies an unconditional \emph{policy/population event bound}; it is not a confidence score for this pose. An installed rollback remains part of the policy's calibrated behavior and is not itself a malformed-history fault.
+
+The source-scoped history monitor addresses a lifecycle gap: a valid later packet must not restore a statement after an invalid attempt has changed the execution's evidence status. Scope state persists across ledger/plan reconstruction within the trusted registry's lifetime; process restart requires restoring that state or withholding attachment. For trusted source-execution scope $s$, it maintains
+\begin{equation}
+M_{s,0}=1,\qquad M_{s,j+1}=M_{s,j}\land C_{s,j},\qquad
+A^{\rm issued}_{s,j}=A^{\rm candidate}_{s,j}\land M_{s,j+1},\label{eq:history-latch}
+\end{equation}
+Here $C$ is the original operational receiver check. Every receipt reads the updated latch after that check; earlier receipt objects in the trusted ledger are marked revoked. This is local service state, not a claim of network revocation notification. The full representation revokes a source-specific claim child of the reusable plan; the procedural comparator independently maintains a monotone Boolean. Earlier receipts receive revocation records, and later receipts return \texttt{PROVISIONAL} with an empty upper bound. The operational plan is preserved, so later valid numerical installation is unaffected. Scope comes from the trusted execution context, even if a packet falsely names another source. Ordinary admission refusal and scheduled statement expiry do not trip this latch.
+
+This monitor detects the specified invalid attempts. It does not detect an unobserved missing packet, an undeclared physical change or a malicious trusted producer. Such conditions lie outside the canonical execution/population assumptions. The monitor was sealed as an explicitly disclosed attachment amendment after numerical freeze F0 and before selection freeze F1; it preserves the numerical clock and event map (Section~\ref{sec:theory}). Its actual CPU is measured rather than claimed to have been characterized by the earlier pilot fit.
+
+\subsection{Task feedback and a fair procedural alternative}
+The service returns a numerical pose plus readiness and one of attached, provisional or refused evidence states. A consumer can request a different deadline/budget, wait for a new exogenous source, or initiate offline recalibration for a changed profile. It cannot manufacture a valid certificate by relabelling metadata. In complete-route experiments, the population is deliberately distinct: admission refuses episode evidence and the service continues explicitly provisional localization with a descriptive nearest-profile recommendation.
+
+The strongest comparator, \texttt{TaskAwareFlatValidated}, has the same catalogue, calibration costs, event requirements, risk allowances, budgets, precommit, source information and producer records. Its independently coded conjunction implements all current-version and history checks without the dependency graph. Equivalence is a meaningful outcome: it would show that executable semantics, rather than graph storage alone, cause the effect. We also test stripped checks as mechanism ablations, clearly separated from this fair competitor. Numerical accuracy, task feasibility and incorrect evidence attachment therefore have distinct denominators and conclusions.

@@ -1,0 +1,7 @@
+{
+  "geometry": "B767",
+  "geometry_sha256": "3571afe8dbf37110d2758285e9efb8d59d9bec6918c89ca09f69c0473b212f96",
+  "illustrative_pilot_seed": 8200000,
+  "cloud_sha256": "c9e53a330a142227e7b727d7cb602308fad912615aa663737485f9e4d6416da2",
+  "meaning": "exact geometry/observations with code-drawn transaction schematic; no metric inferred"
+}

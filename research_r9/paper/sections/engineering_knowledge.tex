@@ -1,0 +1,52 @@
+
+\section{Executable engineering decision knowledge}\label{sec:knowledge}
+\subsection{Entities, relations and their decision roles}
+The operating record
+\begin{equation}
+\mathcal K_j=(\mathcal S,\mathcal G,\mathcal Q_j,\mathcal W_j,
+\mathcal T,\mathcal B)\label{eq:knowledge-record}
+\end{equation}
+connects six kinds of information. $\mathcal S$ identifies the scan, immutable source-prior seal and version lineage. $\mathcal G$ identifies the geometric artifact and declared sensor/prior profile. $\mathcal Q_j$ contains measured correspondence, residual, observability and step evidence. $\mathcal W_j$ contains spent work, retained solver state and forecasts for reachable terminal caps. $\mathcal T$ specifies the queue, load, installation model and observation deadline. $\mathcal B$ identifies the frozen statistical event card and its distribution assumption.
+
+\begin{table}[t]\centering\small
+\caption{Executable knowledge has different numerical and semantic roles. No predicate reads true position error online.}\label{tab:knowledge}
+\begin{tabularx}{\linewidth}{@{}lXX@{}}\toprule
+Knowledge & Executed predicate or relation & Consequential decision\\\midrule
+Source lineage & Version shares sealed scan/prior; replaces its preceding version & Replace and replay; refuse inconsistent lineage\\
+Geometric quality & Descending step, sufficient pairs, residual/inlier eligibility & Candidate may be published\\
+Operating profile & Declared noise setting, prior covariance scale, registered geometry identity & Restrict reachable terminal caps when outside the development profile\\
+Processing service & Predicted remaining work under queue/load; actual installation completion & Screen refinement; expire observation requests after $D$\\
+Statistical scope & Match policy, forecast, profile, artifact, event and service & Attach applicable upper bound or return provisional/refused status\\\bottomrule
+\end{tabularx}
+\end{table}
+
+The record separates \emph{observed} quality from \emph{declared} configuration and \emph{assumed} distributional equality. A prior covariance is an input to the decision, not proof that the prior error has that covariance on a physical platform. Similarly, the declared noise multiplier describes the simulation sensor configuration; it is not an online estimator of an unknown noise distribution.
+
+\subsection{Rules that change computational actions}
+The learned model predicts outcomes, while two independent predicates alter the candidate set. The profile predicate restricts terminal computation to at most four iterations when the declared noise multiplier exceeds two, source position standard deviation exceeds 0.061~m, or the geometric artifact was excluded from forecast fitting. This bounded refinement mode was fixed on development evidence showing that final convergence can degrade under mismatch. It is provisional until a matching event card is available; limiting iterations does not prove recovery or safety.
+
+The time predicate tests whether forecast sender work would be available before the requested deadline. It removes forecast-infeasible caps and permits immediate stopping at the current eligible checkpoint when no deeper action remains. It is a predicted-work screen, rather than a worst-case execution-time guarantee: remaining registration cost is a conditional mean, and future decision/replay work is assessed by the installation service and empirical event calibration. The observation-pose assessment at $D$ counts only versions installed by $D$.
+
+These predicates operate before numerical action selection. Thus the same forecast vector can lead to a different action under a changed processing contract. Removing the profile or time predicate gives a concrete mechanism intervention with the same forecast model and operating price. Replacing CART by a 64-tree random forest while retaining both predicates gives a comparison of forecast implementations.
+
+\subsection{Event cards and authorization}
+An event card stores the frozen policy and implementation identifiers, forecast hash, geometric artifact hashes, declared sampling-profile identifier, event definition, queue/load and installation semantics, calibration count and upper risk. A service hash includes the numerical propagation cost and timestamp quantization. A request may attach the bound only when these fields match, its source-prior seal is consistent, and the bound meets a finite requested allowance in $[0,1]$. An observation statement request additionally specifies the assessment instant $D$ and supplies a finite, nonnegative elapsed time no greater than $D$. Authorization permits attachment of the policy-event statement for that scheduled assessment; it does not permit a current-time observation based on a bound for a different instant. Otherwise the service returns \texttt{PROVISIONAL\_OR\_REFUSED}, together with the failed predicate. A numerical pose can remain available as a provisional estimator result; its risk field is empty.
+
+The profile identifier describes the \emph{entire sampling mixture}, including aircraft identities, prior perturbations, noise settings, discrepancy levels and source sampling. It is not a promise about every distribution within the listed parameter ranges. Matching the identifier records the deployment-to-calibration assumption. Hidden changes that preserve metadata can still invalidate that assumption. The upper bound is population risk over this mixture, not a scan-specific, aircraft-specific or admission-conditional risk estimate.
+
+Two event cards are maintained: the sampled 0.5--4.0~s trajectory event and the 0.3~s observation-pose event. Substituting one for the other is an event mismatch. A newly calibrated geometry can receive its own card without retraining the forecast model; if no frozen policy meets the allowance, the correct result is an empty authorized set. Complete-route requests use a different distribution identifier and cannot inherit an episode card. The numerical experiments execute action predicates and source replacement/replay; event-card checking is a separate metadata-service prototype evaluated with deterministic requests and illustrative source seals, rather than attached online to every experimental publication.
+
+\subsection{A requested event selects a compatible policy}\label{sec:dispatch}
+The knowledge record also supports a decision before registration begins. Let a request $R=(g,\alpha,\mathcal E,\{\delta_e\}_{e\in\mathcal E})$ specify the declared mixture, service load, required event set and marginal risk allowances. The source, artifact and active implementation must match the cards. Define the compatible set
+\begin{equation}
+\Pi(R)=\{\pi\in\Pi_0:\operatorname{match}(\pi,R)\ \land\ U_{\pi,g,\alpha,e}\le\delta_e\text{ for every }e\in\mathcal E\},\label{eq:dispatch-set}
+\end{equation}
+where $\Pi_0$ is the frozen 20-policy catalogue and $0\le\delta_e\le0.15$. The dispatcher chooses
+\begin{equation}
+\pi^*(R)=\arg\min_{\pi\in\Pi(R)}\{\overline L_{\pi,g,\alpha}+\overline C_{\pi,g,\alpha}\},\label{eq:dispatch-choice}
+\end{equation}
+using calibration means and policy-ID tie-breaking. If the compatible set is empty, it returns \texttt{REFUSED}. Otherwise it returns one frozen policy and the vector of requested event bounds. The active source/configuration snapshot checks the policy, solver, forecast, executor and protocol hashes; it verifies the listed components rather than attesting a complete hardware environment.
+
+The requested task is configured before sensing. The selected policy remains constant across the entire declared mixture; dispatch does not inspect scan quality, true error or confirmation outcomes. Thus changing the event requirement can change the policy while retaining the population interpretation of its card. Requiring two marginal bounds at most 0.15 does not certify that the union of their failure events has probability at most 0.15. The additional dispatch evaluation is a secondary analysis of the frozen primary records (Section~\ref{sec:dispatch-evaluation}).
+
+Figure~\ref{fig:contracts} connects configured event selection, numerical execution and the separate statement service. Figure~\ref{fig:interface} details the fixed-prior and receiver-replacement semantics shared by these roles.

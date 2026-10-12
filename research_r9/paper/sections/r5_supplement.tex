@@ -1,0 +1,54 @@
+\FloatBarrier
+\section{Secondary event-driven dispatch}\label{supp:dispatch}
+The dispatcher forms the compatible policy set from the original 240 simultaneous cards. It minimizes calibration mean loss plus calibration mean CPU, with lexicographic policy-ID tie-breaking. Supported requested allowances are in $[0,0.15]$. Request events and declared profiles are specified before sensing; the selected policy is constant for the entire declared mixture, not conditioned on individual aircraft identity, scan quality or error. Bounds retain their population scope.
+
+This addition was designed after primary results had been inspected. Its selector uses calibration inputs only and is written to \texttt{data/r5\_dispatch/selector\_freeze.json} before this analysis program reads the existing confirmation records. That ordering does not make the additional question prospective. There are no new geometric samples, executed localization policies or risk cards. Confirmation analysis reuses 640 nominal and 480 procedural inputs across all requests and loads. The selector and every input hash are retained.
+
+Both-marginal requests require each upper bound at most 0.15. The original simultaneous-confidence event supports these two marginal statements together; it does not make the probability of their union at most 0.15. Only $\Pr(E_{\rm traj}\cup E_{\rm obs})\le\min\{1,U_{\rm traj}+U_{\rm obs}\}$ follows without a separately calibrated union event. The nominal selected pair therefore has union bound 0.19871. No procedural choice has both bounds at most 0.15.
+
+The two comparison interfaces are constructed diagnostics. Policy-level admission reuses a trajectory-certified policy for any requested event, which gives six unsupported assignments among 18 configurations. Checking its actual event cards eliminates those assignments but provides only 12 feasible services. Event-driven selection gives 15. The six unsupported assignments concern evidence applicability; this count does not show that their true risks exceed 0.15.
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Complete secondary request catalogue. Each marginal allowance is 0.15. Counts enumerate compatible policies, not independent samples or additional statistical tests.}\label{supp:dispatchcatalogue}
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+Mixture & $\alpha$ & Request & Eligible & Choice & $U_{\rm traj}$ & $U_{\rm obs}$\\\midrule
+Nominal & 1 & Trajectory & 20 & FlatCART3 & 0.11363 & ---\\
+Nominal & 1 & Observation & 18 & FlatCART3 & --- & 0.08508\\
+Nominal & 1 & Both marginals & 18 & FlatCART3 & 0.11363 & 0.08508\\
+Nominal & 10 & Trajectory & 20 & FlatCART3 & 0.11363 & ---\\
+Nominal & 10 & Observation & 18 & FlatCART3 & --- & 0.08508\\
+Nominal & 10 & Both marginals & 18 & FlatCART3 & 0.11363 & 0.08508\\
+Nominal & 20 & Trajectory & 20 & FlatCART3 & 0.11363 & ---\\
+Nominal & 20 & Observation & 17 & FlatCART3 & --- & 0.08508\\
+Nominal & 20 & Both marginals & 17 & FlatCART3 & 0.11363 & 0.08508\\
+Procedural & 1 & Trajectory & 2 & Final & 0.14739 & ---\\
+Procedural & 1 & Observation & 1 & FlatRF0.3 & --- & 0.14739\\
+Procedural & 1 & Both marginals & 0 & Refused & --- & ---\\
+Procedural & 10 & Trajectory & 2 & Fixed16 & 0.14739 & ---\\
+Procedural & 10 & Observation & 1 & FlatRF0.3 & --- & 0.14739\\
+Procedural & 10 & Both marginals & 0 & Refused & --- & ---\\
+Procedural & 20 & Trajectory & 2 & Fixed16 & 0.14739 & ---\\
+Procedural & 20 & Observation & 4 & KG0.3 & --- & 0.14739\\
+Procedural & 20 & Both marginals & 0 & Refused & --- & ---\\
+\bottomrule\end{tabular}\end{table}
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Event-selected minus trajectory-selected policy on 480 paired procedural inputs. Percentile 95\% intervals are descriptive secondary analyses, without correction for these comparisons.}\label{supp:dispatcheffects}
+\begin{tabular}{@{}lrrr@{}}\toprule
+$\alpha$ & Metric & Difference & 95\% interval\\\midrule
+1 & Obs. success (pp) & -0.62500 & -2.08333, +0.83333\\
+1 & CPU (ms) & -0.77229 & -0.93224, -0.61532\\
+1 & $L$ (m$^2$s) & +0.00221 & +0.00056, +0.00421\\
+1 & Traj. failures (pp) & +1.87500 & +0.41667, +3.33333\\
+10 & Obs. success (pp) & -0.62500 & -2.08333, +0.83333\\
+10 & CPU (ms) & -0.72689 & -0.89144, -0.56741\\
+10 & $L$ (m$^2$s) & +0.00192 & +0.00026, +0.00394\\
+10 & Traj. failures (pp) & +1.87500 & +0.41667, +3.33333\\
+20 & Obs. success (pp) & +6.04167 & +3.75000, +8.54167\\
+20 & CPU (ms) & -1.72638 & -1.90481, -1.54998\\
+20 & $L$ (m$^2$s) & +0.00227 & +0.00055, +0.00433\\
+20 & Traj. failures (pp) & +2.50000 & +1.04167, +4.16667\\
+\bottomrule\end{tabular}\end{table}
+
+The dispatch audit executes 97 deterministic cases with illustrative source seals, including changed runtime policy/forecast identities, service/profile/artifact mismatches, invalid numeric fields, expired or wrong-instant observation requests, event substitution, stricter allowance and uncalibrated contexts. No unexpected selection occurs. This is a separate metadata prototype, not an online authorization log from the simulated receiver and not a distribution-shift detector. Its indexed-call benchmark stores all scope and source identifiers in \texttt{dispatch\_cost.json}: 2,400 process-CPU calls, median 88.76 microseconds and 95th percentile 189.69 microseconds. Runtime/component initialization, scan hashing and transport are excluded. The benchmark is separate from the frozen numerical installation service; integrated receiver timing has not been measured for this dispatcher.
+
+Run \texttt{python3 source/r5\_dispatch.py} to reconstruct selection, audits and paired outcomes, then \texttt{python3 source/r5\_author.py} to rebuild the tables and risk-feasibility figure. Both programs leave the primary numerical source, forecasts and records unchanged. The primary work--loss figure appears in the main paper.
+

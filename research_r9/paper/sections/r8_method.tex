@@ -1,0 +1,53 @@
+\section{Retained numerical execution and calibrated policy family}\label{sec:method}
+\subsection{Registration and correlated checkpoints}
+We preserve the A19/A20 robust point-to-plane solve against a fixed source prior. For $d=x\boxminus x_s^-$,
+\begin{equation}
+\Phi_s(x)=d^\top(P_s^-)^{-1}d+\sigma^{-2}\left[\sum_{i\in\mathcal I(x)}\rho(r_i(x))+(n-|\mathcal I(x)|)\rho(r_{\rm out})\right].\label{eq:objective}
+\end{equation}
+Huber scale is 0.0625~m, $\sigma=0.025$~m and unmatched residual $r_{\rm out}=0.8$~m. The unmatched term prevents improvement by discarding difficult correspondences. The solve uses at most 96 deterministically thinned points and 25 iterations, with backtracking fractions $1,1/2,1/4,1/8,1/16$. Checkpoints occur at iterations $1,2,4,8,16,25$ or termination. Each curvature covariance is constructed from the same prior precision,
+\begin{equation}
+P_s^{(j)}=\operatorname{PSD}\left[(G_j^\top(P_s^-)^{-1}G_j+H_j^\top\Omega_jH_j)^{-1}\right],\label{eq:checkpoint-cov}
+\end{equation}
+including rotation perturbation Jacobians. It is a local curvature approximation, not an empirically calibrated error covariance.
+
+An eligible candidate requires a descending step, at least 12 pairs, clipped residual RMS below 0.065~m and more than 60\% of residuals within 0.10~m. Final acceptance additionally requires translation and orientation steps below 0.001~m and 0.0005~rad. An interrupted eligible candidate may be published without final convergence. Continuation retains the iterate, prior precision and computational prefix. A final rejection after transient publication restores the original source prior through the same version/replay interface.
+
+\subsection{Common predictors and module interventions}
+The retained CART and random forest use the same 1,120 source-grouped development inputs, with 926 training and 194 validation sources. They are not refitted in this revision. CART has depth seven and minimum leaf size 20; the forest averages 64 depth-eight trees with minimum leaf size 12. Inputs are causal prior uncertainty, weakest scaled pose-information eigenvalue, residual/inlier measures, step sizes, objective ratio, iteration, pair count, displacement and declared noise. Aircraft identity, source truth, future motion and true error are excluded.
+
+For reachable cap $a\in\{2,4,8,16,25\}$, the predictor supplies terminal MSE $\widehat v_{ja}$, development trajectory-event frequency $\widehat r_{ja}$ and remaining work $\widehat c_{ja}$. Current-candidate and source-prior MSE predictions govern publication. Effective terminal labels account for ineligible/rejected completion and prior rollback. The endpoint forecasts are heuristic; their event frequencies are not risk certificates. With constrained candidate set $\mathcal A_j$,
+\begin{equation}
+\widehat a_j=\arg\min_{a\in\mathcal A_j}
+\{T\max(\widehat v_{ja},0)+\lambda\max(\widehat c_{ja},0)+\omega\operatorname{clip}(\widehat r_{ja},0,1)\},\label{eq:stop-rule}
+\end{equation}
+where $\lambda\in\{0.3,1,3\}$~m$^2$ and $\omega=0.002$~m$^2$s. Forecast work retains its native development-label scale as a mean proxy; actual experiment availability and risk labels use the frozen operation clock. Matched variants use exactly the same forecasts and prices. At iteration two or later, selection of an already reached cap stops the job. Empty deadline-feasible sets and the profile cap may also stop it. Eligible interim candidates publish when their predicted MSE improves on the prior; eligible interrupted terminal candidates publish as well.
+
+The 22-policy catalogue contains contract-CART (KG), FlatCART, FlatRF and ContractRF at all three prices; Fixed2, Fixed4, Fixed8, Fixed16, Final, Residual, seeded Random2or4 and OldRAVC; and price-one CART/RF time-only interventions. The name KG is retained for trace continuity, without implying a learned knowledge-graph model. Flat predictors omit time/profile guards; time-only variants add only time; KG/ContractRF add time and profile. Evidence-match and full-lifecycle layers then operate on the same numerical trace. This sequence distinguishes action changes from statement changes. All methods receive the common budget wrapper, inputs, service and acquisition/replay semantics.
+
+OldRAVC retains the earlier six-output CART (480 training/120 validation inputs, depth six). It forecasts current/final MSE, their trajectory-event frequencies, remaining CPU and current-minus-prior MSE. An eligible candidate publishes if its forecast event frequency is at most 0.30 and its predicted MSE improves on the prior. From iteration two, an eligible candidate stops and publishes if its forecast event frequency is at most 0.30 and its predicted four-second MSE gain is no greater than remaining-work cost with price 1~m$^2$. Final acceptance follows the common solver. Unlike the new CART/RF features, this legacy model retains the binary C172 identity feature; the unfitted geometry uses the non-C172 value. Residual publishes an eligible checkpoint and stops at the first eligible checkpoint from iteration two. Random2or4 chooses cap four with frozen development continuation probability 0.4654427646, otherwise cap two, using a deterministic SHA-256 seed coin. Fixed caps publish an eligible reached cap, whereas Final waits for solver termination. Budget interruption can alter each nominal cap.
+
+\subsection{Exact finite-family calibration}
+For each fixed profile, service, policy and event, $k$ of $n$ independent input seeds produce failures. With $\beta=0.05$ and
+\begin{equation}
+K=22\times2\times4\times3=528,\qquad
+U=\begin{cases}1,&k=n,\\\operatorname{Beta}^{-1}(1-\beta/K;k+1,n-k),&k<n,\end{cases}\label{eq:cp}
+\end{equation}
+we store one card per combination. Trajectory, observation and union use their own binary counts on the same input, without multiplying the independent sample size. There are 4,096 calibration seeds per profile. Same-input correlations across methods, services and events are permitted by the simultaneous argument.
+
+All 96 profile/service/task/allowance requests are selected and sealed at F1 before confirmation generation. Requiring both marginals checks two cards; requiring union checks its directly calibrated card. The primary allowance is 0.15; 0.10 and 0.20 describe a frozen feasibility grid. Prefix sample-size and confidence analyses diagnose margin sensitivity and do not change a deployed plan. A card with a barely positive margin remains admissible but is reported as fragile rather than described as robust.
+
+\begin{table}[t]\centering\small
+\caption{One guarded source execution. All checks use causal inputs or declared specifications.}\label{tab:algorithm}
+\begin{tabularx}{\linewidth}{@{}rX@{}}\toprule
+1 & Validate the exogenous task and select a feasible policy/card set; refuse an empty catalogue and retain the propagated prior.\\
+2 & Precommit the plan, bind the actual scan and immutable joint prior, and register their seals.\\
+3 & Reserve the next stage under the common budget; execute only its new ICP prefix and checkpoint features.\\
+4 & Apply the matched predictor and time/profile predicates; stop, continue or produce a sealed candidate.\\
+5 & Validate the received version against producer records and active dependencies; reject malformed attempts and latch the source's claim status.\\
+6 & Replace the source version and replay acquired motion; include checking and replay in the execution ledgers.\\
+7 & Issue only a matching, unexpired population-event receipt from the source-scoped attachment layer.\\
+8 & Honor final rejection/rollback; report pose, readiness and evidence status to the task consumer.\\\bottomrule
+\end{tabularx}
+\end{table}
+
+OpenAI ChatGPT/Codex (GPT-6, developer OpenAI) assisted research-program and plotting-code development, computational analysis and exact schematic code. Archived programs produce the numerical observations from the specified geometric inputs; the figure scripts regenerate data plots and source/version schematics. The release records the actual assistance and authors must review and accept responsibility for the final content before submission.

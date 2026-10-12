@@ -1,0 +1,33 @@
+\subsection{Policy selection follows the requested event}\label{sec:dispatch-evaluation}
+The event dispatcher is a secondary analysis of the frozen primary records. The question was formulated after primary-study inspection; no new forecast, policy, card or geometric input is added. Selection reads calibration records only. Confirmation outcomes are joined from already executed policies, rather than used to tune the choice. The two applicable mixtures contribute 1,120 independent confirmation inputs, reused across loads and request types.
+
+Table~\ref{tab:dispatchchoices} evaluates 18 declared request configurations: two mixtures, three loads and three event requirements. Reusing a trajectory-certified choice as a policy-level admission label would accept all 18, with six assignments lacking the requested event evidence. Checking that same choice against each event admits 12. Selecting within the event-compatible set admits 15, recovering the three geometry observation configurations and refusing all three geometry requests for both marginals. These are catalogue coverage counts from constructed diagnostics, rather than sampled field reliability or a comparison with a complete published localization system.
+\begin{table}[!htbp]\centering\footnotesize
+\caption{Event-driven selection from the same frozen 20-policy catalogue. Each requested marginal has allowance 0.15; the last column requires both marginal bounds, not a joint-event bound of 0.15. No procedural-geometry policy meets both card requirements.}\label{tab:dispatchchoices}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+Mixture & $\alpha$ & Trajectory & Observation & Both marginals\\\midrule
+Nominal & 1 & FlatCART3 & FlatCART3 & FlatCART3\\
+Nominal & 10 & FlatCART3 & FlatCART3 & FlatCART3\\
+Nominal & 20 & FlatCART3 & FlatCART3 & FlatCART3\\
+Procedural & 1 & Final & FlatRF0.3 & Refused\\
+Procedural & 10 & Fixed16 & FlatRF0.3 & Refused\\
+Procedural & 20 & Fixed16 & KG0.3 & Refused\\
+\bottomrule\end{tabular}\end{table}
+
+Nominal requests choose FlatCART3 for all three requirements; its trajectory and observation bounds are 0.1136 and 0.0851. Geometry trajectory requests choose Final at load 1 and Fixed16 at loads 10 and 20. Observation requests choose FlatRF0.3 at loads 1 and 10 and KG0.3 at load 20. The same objective therefore changes the selected policy when its event constraints change. The load-20 compatible sets are disjoint (Fig.~\ref{fig:event-feasibility}); a request requiring both marginals has no compatible member.
+
+Table~\ref{tab:dispatchoutcomes} reports the resulting tradeoffs, including the less favorable low-load results. At load 20, KG0.3 has observation upper risk 0.1474 but trajectory upper risk 0.1583; Fixed16 has trajectory upper risk 0.1474 but observation upper risk 0.2055. Observation success changes from 407/480 to 436/480, a gain of 6.04 percentage points, with paired 95\% interval 3.75--8.54. CPU falls from 11.92 to 10.19 ms (14.5\%); trajectory loss rises from 0.01429 to 0.01656 m$^2$s (15.9\%), with 49 rather than 37 trajectory failures. At loads 1 and 10, observation success is three lower among 480 episodes, despite lower CPU and an applicable observation card. Calibration eligibility does not imply better realized performance in every confirmation block.
+\begin{table}[!htbp]\centering\scriptsize
+\caption{Secondary observation-request analysis on the same 480 procedural-geometry confirmation inputs at each load. Compare event-selected policy with the trajectory-selected policy. Success counts are event/trajectory choice; changes are event minus trajectory choice. Paired 95\% intervals use 10,000 seed resamples. The comparator lacks an applicable observation card.}\label{tab:dispatchoutcomes}
+\begin{tabular}{@{}lrrrrrrr@{}}\toprule
+$\alpha$ & Event choice & Traj. choice & Successes & Change (pp) & 95\% interval & CPU (\%) & $L$ (\%)\\\midrule
+1 & FlatRF0.3 & Final & 437/440 & -0.62 & -2.08, +0.83 & -6.5 & +16.4\\
+10 & FlatRF0.3 & Fixed16 & 437/440 & -0.62 & -2.08, +0.83 & -6.1 & +13.8\\
+20 & KG0.3 & Fixed16 & 436/407 & +6.04 & +3.75, +8.54 & -14.5 & +15.9\\
+\bottomrule\end{tabular}\end{table}
+
+The indexed metadata dispatcher has median 88.76 and 95th-percentile 189.69 microseconds process CPU across 2,400 calls cycling through the 18 request configurations. This separate interface benchmark includes candidate filtering and calibration-score selection, excluding startup/component hashing, scan hashing and transport. The numerical CPU and installation outcomes above belong to the executed frozen policies; they do not measure an integrated end-to-end dispatch service.
+
+\begin{figure}[t]\centering\includegraphics[width=.82\linewidth]{r5/events.pdf}
+\caption{Simultaneous risk bounds for all 20 frozen policies on procedural geometry at load 20. Dashed lines mark the marginal allowance 0.15. The lower-left region has no member. Trajectory and observation requests select different policies; neither choice satisfies both marginals. Coordinates are reconstructed from the frozen calibration records.}\label{fig:event-feasibility}
+\end{figure}

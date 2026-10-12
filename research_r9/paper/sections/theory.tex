@@ -1,0 +1,75 @@
+\section{What reusable checkpoints change}\label{sec:theory}
+The analysis separates three properties: estimator consistency when a result is revised, localization exposure while computation proceeds, and reliability after policy selection. These properties do not require checkpoint outcomes to be independent.
+
+\subsection{A source-version invariant}
+\begin{proposition}[Replacement preserves a common source prior]\label{prop:version}
+Suppose every candidate of a scan is computed from the same source prior, later optimization resumes the retained computational state, and delivery uses Eq.~\eqref{eq:replay}. In a serial job with no interleaved measurement update, replacing a delivered version by the final candidate produces the same live state and covariance as delivering that final candidate alone at the same time. Intermediate publication does not add a second likelihood factor to the final source posterior.
+\end{proposition}
+\begin{proof}
+The final optimization state is a deterministic function of the scan, source prior and executed computational prefix. Publication changes none of these inputs. Its final candidate is therefore identical under both delivery schedules. At final delivery, both live estimates are assigned the result of the same replay operator applied to that candidate and the same intervening motion inputs. The equality includes covariance because it is replayed from the identical source matrix. A rejected final job uses the source prior as its last version and follows the same argument.
+\end{proof}
+The proposition is an execution invariant, not a claim that an interrupted ICP estimate is unbiased. Recursively fusing every checkpoint as another measurement would violate its premise. The retained 1,120-case implementation audit compared this checkpoint engine with an independently implemented cold Converged solve; final states and covariances agree at stored precision. The final release additionally checks representative new inputs.
+
+\subsection{The value of delivery before solver completion}
+Consider a fixed job with checkpoint delivery at $\tau_c$ and final delivery at $\tau_f$, where $0\le\tau_c<\tau_f\le T$. These are availability times after queueing and timestamp quantization, not the times at which iterates are constructed. Compare two schedules with the same computational prefix and final candidate: one delivers the checkpoint at $\tau_c$; the other holds all results until $\tau_f$. Let $e_0(t)$ be the propagated old-prior error, and $e_c(t)$ the error obtained by replaying the checkpoint, with identical future motion inputs.
+\begin{proposition}[Delivery-exposure identity]\label{prop:exposure}
+With exogenous motion and no intervening measurement update,
+\begin{equation}
+\mathbb E[L_{\rm hold}-L_{\rm publish}]
+=\int_{\tau_c}^{\tau_f}\mathbb E\!\left[\|e_0(t)\|^2-\|e_c(t)\|^2\right]\,dt.\label{eq:exposure}
+\end{equation}
+For a constant linear map $A$ from source error to position error, unbiased source errors and common zero-mean future noise independent of both source errors, this equals $(\tau_f-\tau_c)\operatorname{tr}[A(\Sigma_0-\Sigma_c)A^\top]$. With source means $\mu_0,\mu_c$ and the same zero-mean noise assumption, the mean-square difference also contains $\|A\mu_0\|^2-\|A\mu_c\|^2$. Here $\Sigma_0,\Sigma_c$ are actual conditional error covariances, distinct from the solver's curvature approximation.
+\end{proposition}
+\begin{proof}
+Before $\tau_c$, both schedules propagate the same old estimate. After $\tau_f$, Proposition~\ref{prop:version} makes their estimates identical. Subtracting their loss integrals leaves only the stated interval. Under the linear assumptions, the common independent process-noise covariance cancels in the expected quadratic errors. Source covariance and mean terms remain. For nonconstant linear propagation $A(t)$, the covariance term is $\operatorname{tr}[A(t)(\Sigma_0-\Sigma_c)A(t)^\top]$ inside the integral.
+\end{proof}
+The identity describes one intermediate delivery. With multiple versions, its right side uses the actual live published error $e_{\rm live}(t)$ and is summed over intervals between deliveries; with random delivery times, the expectation also covers the corresponding random interval indicators. Publishing an eligible checkpoint can therefore help even when the final correction is unchanged. The sign depends on conditional mean-square error; a small ICP residual alone does not make Eq.~\eqref{eq:exposure} positive. Additional replay work enters the cost separately. The exposure identity compares aligned final installation times. The implemented hold-publication intervention keeps the stopping rule and recomputes service timing after removing earlier replay work; its full loss contrast can therefore also include a changed final installation time.
+
+\subsection{A decision state that retains correlated computation}
+Let $\mathcal H$ contain the scan, online checkpoint observations, immutable source prior, current live version, retained solver state, pending delivery queue and remaining horizon. A belief $b_{\mathcal H}$ over the jointly distributed future candidates retains correlations induced by the shared scan. For a finite discretization, an action is stop, publish, or continue to the next checkpoint. The standard semi-Markov recursion is
+\begin{equation}
+V(\mathcal H)=\min_{a\in\mathcal A(\mathcal H)}
+\left\{\lambda c(\mathcal H,a)+\mathbb E\!\left[\ell_{\rm wait}(\mathcal H,a,Z)+V(\mathcal H')\mid\mathcal H,a\right]\right\}.\label{eq:bellman}
+\end{equation}
+Stopping ends further solver work while honoring already committed pending deliveries and rollbacks; its terminal cost integrates the resulting live trajectory over the remaining horizon. Publishing changes the live version and charges replay; continuing pays only incremental solver work and accrues exposure while it runs. The recursion follows standard metareasoning and anytime decision principles \cite{russell1991meta,zilberstein1996anytime,hay2012}. The localization-specific issue is that a publication can change the loss trajectory without finishing or restarting the computation.
+
+An optimistic continuation bound can screen out work even when candidate outcomes are correlated. Let $\mathcal Z$ contain the source prior, every already computed version (including unpublished and pending candidates), and all future reachable versions and rollback results. Define $J_{\rm term}$ as the smallest conditional expected remaining loss-plus-work score among feasible terminal choices: retaining the live estimate or delivering an already computed eligible candidate and then ending the job. Its score includes delivery delay and replay. At current time $t$, define the ideal instantaneous oracle loss
+\begin{equation}
+L_{\rm orc}(\mathcal H)=\mathbb E\!\left[\int_t^T\min_{z\in\mathcal Z\cup\{z_{\rm live}\}}\|e_z(s)\|^2\,ds\mid\mathcal H\right].\label{eq:oracle}
+\end{equation}
+The oracle may use every future version immediately and may switch using true error. It is deliberately more powerful than an implementable policy.
+\begin{proposition}[A sufficient stopping condition]\label{prop:stop}
+If $\lambda\ge0$, every continuation requires at least $c_{\min}>0$ new work, all other costs are nonnegative, and
+\begin{equation}
+\lambda c_{\min}+L_{\rm orc}(\mathcal H)\ge J_{\rm term}(\mathcal H),\label{eq:stop-bound}
+\end{equation}
+then the best terminal choice is optimal for the conditional expected loss-plus-work objective among terminal choices and all continuations.
+\end{proposition}
+\begin{proof}
+For each realization, an implementable continuation uses only available reachable versions. Its instantaneous loss is at least the oracle's pointwise minimum; waiting and replay cannot reduce that lower bound. It also pays at least $c_{\min}$. Integration, conditioning and nonnegativity give the left side of Eq.~\eqref{eq:stop-bound} as a lower bound on every continuation. The best feasible terminal action attains $J_{\rm term}$.
+\end{proof}
+Equation~\eqref{eq:stop-rule} uses learned endpoint forecasts instead of the expensive oracle comparison. It is not assigned the proposition's optimality guarantee. The executable policy is assessed through frozen comparisons and calibration.
+
+\subsection{Reliability survives finite-family selection}
+\begin{theorem}[Simultaneous episode-risk certificate]\label{thm:calibration}
+Freeze $K$ policy--scenario--mixture--event combinations independently of the calibration outcomes. For each pair, assume the $n$ calibration episodes are independent draws from its deployment episode distribution. With $U$ from Eq.~\eqref{eq:cp}, with probability at least $1-\beta$ over the calibration sample, every combination satisfies $r_{\pi a}\le U_{\pi a}$. Consequently, any sample-dependent selection with $U_{\widehat\pi a}\le\delta$ has episode-event probability at most $\delta$ on that simultaneous-confidence event.
+\end{theorem}
+\begin{proof}
+For a fixed combination, its event count is binomial with parameter $r_{\pi a}$. Exact one-sided binomial inversion gives $\Pr\{r_{\pi a}>U_{\pi a}\}\le\beta/K$. Apply the union bound across combinations. On the complement of that union, all upper bounds hold, including the bound for a policy selected after observing calibration cost and events. Cross-policy and cross-scenario independence is not used.
+\end{proof}
+The confidence statement concerns uncertainty in the selected policy's population risk; $\delta$ is the probability of an episode event. They are different probabilities. No independence among time instants is assumed because each episode contributes one trajectory-event indicator. On the same simultaneous-confidence event, repeated deployment over $M$ episodes has only the general union bound $\Pr(\text{any event})\le\min\{1,M\delta\}$ without additional structure. A four-second certificate therefore cannot be reused as a full-route certificate.
+
+On that same confidence event, every policy in Eq.~\eqref{eq:dispatch-set} satisfies every requested marginal allowance. Selection by Eq.~\eqref{eq:dispatch-choice} therefore requires no further confidence-budget allocation. For two requested events, only $\Pr(E_1\cup E_2)\le\min\{1,U_1+U_2\}$ follows without additional assumptions or a separately calibrated union event. The claim applies to a fixed task and policy over its declared mixture; it does not provide conditional risk after selecting a task from the observed scan.
+
+\begin{proposition}[Reuse preserves the feasible policy set]\label{prop:reuse}
+If the retention interface can emulate every discard schedule at no greater total charged cost, including copying and replay, and can wait to reproduce its delivery, then optional retention cannot increase the minimum work under any common loss, risk and budget constraints.
+\end{proposition}
+\begin{proof}
+Emulate each discard policy's observations, final candidate and delivery schedule using the retained state. By hypothesis it pays no more total charged work and reproduces the same live trajectory. Thus every feasible discard policy remains feasible. Optimization over the larger retained-policy set proves the result.
+\end{proof}
+This set-inclusion property motivates optional reuse; it does not imply that the particular learned policy dominates every fixed iteration count. The experiment includes the strongest fixed controls explicitly.
+
+\subsection{Implementation invariant of contract checking}
+Authorization preserves the identity of the policy, forecast, event, profile, installation service, source lineage and geometric artifact by requiring every checked field to match. A certified card must also meet the finite requested allowance; observation requests require the matching assessment instant $D$ and finite elapsed time in $[0,D]$. The executable conjunction refuses a request whenever a binding or range predicate fails.
+
+This invariant governs attachment of a population event statement at its scheduled instant. It retains the independent-draw and deployment-distribution assumptions of Theorem~\ref{thm:calibration}; it does not turn the bound into current-time, scan-specific or admission-conditional risk. A syntactically matching profile whose physical distribution has changed falls outside those assumptions.

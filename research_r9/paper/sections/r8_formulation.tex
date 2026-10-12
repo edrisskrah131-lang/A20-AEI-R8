@@ -1,0 +1,44 @@
+\section{Localization service and engineering events}\label{sec:problem}
+\subsection{Joint state and immutable source}
+The robot localizes against a stationary airframe prior. The retained state is $x=(t,R,b,m_t,m_R)$, with translation, rotation, six motion-bias components and map translation/rotation. Its covariance $P$ spans an 18-dimensional local perturbation. Reported airframe-relative position error is
+\begin{equation}
+e_p=\widehat m_R^\top(\widehat t-\widehat m_t)-(m_R^\star)^\top(t^\star-m_t^\star).
+\label{eq:relative-error}
+\end{equation}
+Measured motion increments propagate the joint state and covariance through $x_{k+1}=f(x_k,u_k)$ and $P_{k+1}=F_kP_kF_k^\top+Q_k$, using an $SE(3)$ local linearization \cite{barfoot2014}. Bias follows a first-order Gauss--Markov model. Truth is available to the simulator and scorer, not to the online policy or contract checker.
+
+A source $s$ comprises a scan and an immutable source-time prior $(x_s^-,P_s^-)$. Registration checkpoint $j$ exposes candidate $(x_s^{(j)},P_s^{(j)})$, causal features $h_j$ and cumulative work. These candidates revise one likelihood evaluation against the same prior. On delivery at $t_d$, the receiver assigns
+\begin{equation}
+(x_{t_d}^{(j)},P_{t_d}^{(j)})=\mathcal R_{s\to t_d}(x_s^{(j)},P_s^{(j)};u_{s+1:t_d}).\label{eq:replay}
+\end{equation}
+The measured increments are replayed only to a time already acquired. Later candidates replace earlier source versions; they are not fused as independent measurements. A rejected completion after a transient publication emits the original source prior as an ordered rollback. The service admits one active source job. A job releases its slot after its computation and all pending publications, including rollback, have drained. Interleaved independent measurements would require rewind and reprocessing and are outside this serial interface.
+
+\subsection{Three explicit event requirements}
+For an episode of duration $T=4$~s, the loss is $L_\pi=\int_0^T\|e_p^\pi(t)\|^2dt$, reported as the right-endpoint sum $\widehat L_\pi=0.1\sum_{k=1}^{40}\|e_p^\pi(0.1k)\|^2$. The trajectory event is
+\begin{equation}
+E_{\rm tr}=\{\max_{t\in\{0.5,0.6,\ldots,4.0\}}\|e_p(t)\|>\epsilon\},\qquad\epsilon=0.10\ {\rm m}.\label{eq:episode-event}
+\end{equation}
+The first 0.5~s remains part of the reported loss and is identifiable as startup exposure. For an observation deadline $D$, define
+\begin{equation}
+E_{\rm obs}=\{\text{no positive scan version is active at }D\}\cup\{\|e_p(D)\|>\epsilon\},\qquad
+E_{\rm un}=E_{\rm tr}\cup E_{\rm obs}.\label{eq:observation-event}
+\end{equation}
+Same-tick ordered installation and rollback precede assessment. A superseded positive version does not count as ready. The observation event is a correction-availability/position proxy; it does not model camera orientation, image quality or defect detection. The 0.10-m threshold is a study metric, not an aircraft clearance standard.
+
+A request may require trajectory, observation, both \emph{marginal} bounds, or a directly calibrated union bound. These four requirements differ: $U_{\rm tr}\le\delta$ and $U_{\rm obs}\le\delta$ imply only a union bound of $\min(1,U_{\rm tr}+U_{\rm obs})$. A union request instead uses the binary event $E_{\rm un}$ in calibration.
+
+\subsection{Work, deadlines and measurement boundaries}
+We keep two ledgers. The deterministic operation clock assigns CPU-equivalent seconds to actual counted registration queries, checkpoints, forecast traversals, publication/checking, front-end processing and propagation. Its coefficients are characterized on 48 excluded pilot inputs and frozen before calibration. This clock defines the controlled experiment's sender budget and installation schedule. Separately, native process CPU records work that actually executed. Controlled comparisons charge the shared executed front end, solver prefix, forecast and odometry to each policy; integrated wrappers additionally time their measured claim bookkeeping and receiver components. Complete routes time the entire live online loop. Raycasting, file decompression and truth scoring are offline costs.
+
+The hard stage budget $B$ covers source sealing, registration, features, forecasts, rules and publication witnesses. It excludes the common front end and receiver/stream work, which remain included in total work and availability. A common conservative stage reservation prevents every policy, including a fixed cap, from starting unaffordable registration work. Thus an effective Fixed2 service may stop before two iterations when its budget binds; its newly calibrated card refers to that complete wrapper.
+
+For publication $j$, let $c_j$ be total sender work including the front end, $r_{<j}$ accumulated receiver work, $h$ propagation work per step and $r_0$ fixed receiver work. Queue delay is $q=0.05$~s and $\Delta t=0.1$~s. The controlled installation rule is
+\begin{equation}
+n_j=\max\left(1,\left\lceil\frac{q+\alpha(c_j+r_{<j}+r_0)}{\Delta t-\alpha h}\right\rceil\right),\qquad
+r_{<j+1}=r_{<j}+r_0+n_jh.\label{eq:delivery}
+\end{equation}
+The denominator is positive in the frozen services. Complete routes execute causal incremental replay and defer installation until the modeled work is available. The load factor $\alpha$ represents constructed contention. Neither clock characterization nor $\alpha$ is an embedded-device latency measurement or a worst-case execution-time guarantee.
+
+Selection minimizes $\overline L_\pi+\lambda_{\rm sel}\overline W_\pi$, with $\lambda_{\rm sel}=1$~m$^2$ and $W$ in CPU-equivalent seconds. The objective has units m$^2$s. Native CPU is reported separately and never added to loss without a stated weight.
+
+The controlled-prefix ledger sums measured native component CPU. A second ledger times the inclusive replay program and includes offline truth assertions and scoring; it is reported separately and is not presented as pure online service CPU. Complete-route experiments directly time the online computation loop with sensor raycasting, archive decompression and truth scoring outside that boundary.

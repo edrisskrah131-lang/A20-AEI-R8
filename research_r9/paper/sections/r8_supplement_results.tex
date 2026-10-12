@@ -1,0 +1,758 @@
+\section{Prospective result tables and additional figures}\label{supp:r8-results}
+All tables below are derived from completed frozen R8 records. Controlled policy outcomes share independent inputs; integrated task executions and route variants are paired repetitions. Counts and units are kept separate from the later retained historical study. Complete precision, every price variant and all CPU/event fields are available in the CSV tables and raw journals.
+\subsection{All primary calibration cards}
+Each row has n=4,096 for each event and K=528. T/O/U mean trajectory/observation/direct union; margins use allowance 0.15. No card is removed because its margin is negative. All policies are freshly calibrated under the common budget wrapper.
+\small\begin{longtable}{@{}llrrrrrrr@{}}
+\caption{Nominal calibration: failure counts, exact corrected upper bounds and union margin.}\label{supp:cards-nominal}\\\toprule
+Service & Policy & $k_T$ & $k_O$ & $k_U$ & $U_T$ & $U_O$ & $U_U$ & Margin\\\midrule\endfirsthead
+\toprule
+Service & Policy & $k_T$ & $k_O$ & $k_U$ & $U_T$ & $U_O$ & $U_U$ & Margin\\\midrule\endhead
+relaxed & KG0.3 & 228 & 237 & 283 & 0.07022 & 0.07266 & 0.08503 & +0.06497\\
+relaxed & KG1 & 244 & 229 & 278 & 0.07455 & 0.07049 & 0.08369 & +0.06631\\
+relaxed & KG3 & 281 & 230 & 285 & 0.08450 & 0.07077 & 0.08557 & +0.06443\\
+relaxed & FlatCART0.3 & 228 & 237 & 283 & 0.07022 & 0.07266 & 0.08503 & +0.06497\\
+relaxed & FlatCART & 244 & 229 & 278 & 0.07455 & 0.07049 & 0.08369 & +0.06631\\
+relaxed & FlatCART3 & 281 & 230 & 285 & 0.08450 & 0.07077 & 0.08557 & +0.06443\\
+relaxed & FlatRF0.3 & 217 & 226 & 267 & 0.06724 & 0.06968 & 0.08074 & +0.06926\\
+relaxed & FlatRF & 244 & 220 & 269 & 0.07455 & 0.06805 & 0.08128 & +0.06872\\
+relaxed & FlatRF3 & 283 & 231 & 286 & 0.08503 & 0.07104 & 0.08584 & +0.06416\\
+relaxed & ContractRF0.3 & 217 & 226 & 267 & 0.06724 & 0.06968 & 0.08074 & +0.06926\\
+relaxed & ContractRF & 244 & 220 & 269 & 0.07455 & 0.06805 & 0.08128 & +0.06872\\
+relaxed & ContractRF3 & 283 & 231 & 286 & 0.08503 & 0.07104 & 0.08584 & +0.06416\\
+relaxed & Fixed2 & 333 & 284 & 338 & 0.09835 & 0.08530 & 0.09968 & +0.05032\\
+relaxed & Fixed4 & 216 & 257 & 298 & 0.06697 & 0.07805 & 0.08904 & +0.06096\\
+relaxed & Fixed8 & 216 & 257 & 298 & 0.06697 & 0.07805 & 0.08904 & +0.06096\\
+relaxed & Fixed16 & 216 & 257 & 298 & 0.06697 & 0.07805 & 0.08904 & +0.06096\\
+relaxed & Final & 216 & 257 & 298 & 0.06697 & 0.07805 & 0.08904 & +0.06096\\
+relaxed & Residual & 331 & 278 & 332 & 0.09782 & 0.08369 & 0.09809 & +0.05191\\
+relaxed & Random2or4 & 275 & 266 & 310 & 0.08289 & 0.08047 & 0.09224 & +0.05776\\
+relaxed & OldRAVC & 279 & 227 & 283 & 0.08396 & 0.06995 & 0.08503 & +0.06497\\
+relaxed & CART\_Time & 244 & 229 & 278 & 0.07455 & 0.07049 & 0.08369 & +0.06631\\
+relaxed & RF\_Time & 244 & 220 & 269 & 0.07455 & 0.06805 & 0.08128 & +0.06872\\
+standard & KG0.3 & 226 & 211 & 263 & 0.06968 & 0.06560 & 0.07967 & +0.07033\\
+standard & KG1 & 242 & 209 & 263 & 0.07401 & 0.06506 & 0.07967 & +0.07033\\
+standard & KG3 & 281 & 228 & 286 & 0.08450 & 0.07022 & 0.08584 & +0.06416\\
+standard & FlatCART0.3 & 226 & 211 & 263 & 0.06968 & 0.06560 & 0.07967 & +0.07033\\
+standard & FlatCART & 242 & 209 & 263 & 0.07401 & 0.06506 & 0.07967 & +0.07033\\
+standard & FlatCART3 & 281 & 228 & 286 & 0.08450 & 0.07022 & 0.08584 & +0.06416\\
+standard & FlatRF0.3 & 333 & 285 & 341 & 0.09835 & 0.08557 & 0.10048 & +0.04952\\
+standard & FlatRF & 333 & 285 & 341 & 0.09835 & 0.08557 & 0.10048 & +0.04952\\
+standard & FlatRF3 & 333 & 285 & 341 & 0.09835 & 0.08557 & 0.10048 & +0.04952\\
+standard & ContractRF0.3 & 333 & 285 & 341 & 0.09835 & 0.08557 & 0.10048 & +0.04952\\
+standard & ContractRF & 333 & 285 & 341 & 0.09835 & 0.08557 & 0.10048 & +0.04952\\
+standard & ContractRF3 & 333 & 285 & 341 & 0.09835 & 0.08557 & 0.10048 & +0.04952\\
+standard & Fixed2 & 333 & 285 & 341 & 0.09835 & 0.08557 & 0.10048 & +0.04952\\
+standard & Fixed4 & 214 & 239 & 284 & 0.06642 & 0.07320 & 0.08530 & +0.06470\\
+standard & Fixed8 & 214 & 239 & 284 & 0.06642 & 0.07320 & 0.08530 & +0.06470\\
+standard & Fixed16 & 214 & 239 & 284 & 0.06642 & 0.07320 & 0.08530 & +0.06470\\
+standard & Final & 214 & 239 & 284 & 0.06642 & 0.07320 & 0.08530 & +0.06470\\
+standard & Residual & 331 & 278 & 335 & 0.09782 & 0.08369 & 0.09889 & +0.05111\\
+standard & Random2or4 & 275 & 258 & 307 & 0.08289 & 0.07832 & 0.09144 & +0.05856\\
+standard & OldRAVC & 279 & 226 & 285 & 0.08396 & 0.06968 & 0.08557 & +0.06443\\
+standard & CART\_Time & 242 & 209 & 263 & 0.07401 & 0.06506 & 0.07967 & +0.07033\\
+standard & RF\_Time & 333 & 285 & 341 & 0.09835 & 0.08557 & 0.10048 & +0.04952\\
+tight & KG0.3 & 536 & 3054 & 3079 & 0.15152 & 0.77053 & 0.77641 & -0.62641\\
+tight & KG1 & 536 & 3054 & 3079 & 0.15152 & 0.77053 & 0.77641 & -0.62641\\
+tight & KG3 & 536 & 3054 & 3079 & 0.15152 & 0.77053 & 0.77641 & -0.62641\\
+tight & FlatCART0.3 & 536 & 3054 & 3079 & 0.15152 & 0.77053 & 0.77641 & -0.62641\\
+tight & FlatCART & 536 & 3054 & 3079 & 0.15152 & 0.77053 & 0.77641 & -0.62641\\
+tight & FlatCART3 & 536 & 3054 & 3079 & 0.15152 & 0.77053 & 0.77641 & -0.62641\\
+tight & FlatRF0.3 & 536 & 3959 & 3961 & 0.15152 & 0.97607 & 0.97648 & -0.82648\\
+tight & FlatRF & 536 & 3959 & 3961 & 0.15152 & 0.97607 & 0.97648 & -0.82648\\
+tight & FlatRF3 & 536 & 3959 & 3961 & 0.15152 & 0.97607 & 0.97648 & -0.82648\\
+tight & ContractRF0.3 & 536 & 3959 & 3961 & 0.15152 & 0.97607 & 0.97648 & -0.82648\\
+tight & ContractRF & 536 & 3959 & 3961 & 0.15152 & 0.97607 & 0.97648 & -0.82648\\
+tight & ContractRF3 & 536 & 3959 & 3961 & 0.15152 & 0.97607 & 0.97648 & -0.82648\\
+tight & Fixed2 & 536 & 2983 & 3008 & 0.15152 & 0.75378 & 0.75968 & -0.60968\\
+tight & Fixed4 & 536 & 2983 & 3008 & 0.15152 & 0.75378 & 0.75968 & -0.60968\\
+tight & Fixed8 & 536 & 2983 & 3008 & 0.15152 & 0.75378 & 0.75968 & -0.60968\\
+tight & Fixed16 & 536 & 2983 & 3008 & 0.15152 & 0.75378 & 0.75968 & -0.60968\\
+tight & Final & 536 & 2983 & 3008 & 0.15152 & 0.75378 & 0.75968 & -0.60968\\
+tight & Residual & 536 & 2983 & 3008 & 0.15152 & 0.75378 & 0.75968 & -0.60968\\
+tight & Random2or4 & 536 & 2983 & 3008 & 0.15152 & 0.75378 & 0.75968 & -0.60968\\
+tight & OldRAVC & 536 & 3035 & 3060 & 0.15152 & 0.76605 & 0.77194 & -0.62194\\
+tight & CART\_Time & 536 & 3054 & 3079 & 0.15152 & 0.77053 & 0.77641 & -0.62641\\
+tight & RF\_Time & 536 & 3959 & 3961 & 0.15152 & 0.97607 & 0.97648 & -0.82648\\
+contended & KG0.3 & 536 & 2081 & 2124 & 0.15152 & 0.53729 & 0.54775 & -0.39775\\
+contended & KG1 & 536 & 2081 & 2124 & 0.15152 & 0.53729 & 0.54775 & -0.39775\\
+contended & KG3 & 536 & 2081 & 2124 & 0.15152 & 0.53729 & 0.54775 & -0.39775\\
+contended & FlatCART0.3 & 352 & 2162 & 2208 & 0.10339 & 0.55698 & 0.56814 & -0.41814\\
+contended & FlatCART & 351 & 2162 & 2208 & 0.10312 & 0.55698 & 0.56814 & -0.41814\\
+contended & FlatCART3 & 345 & 2162 & 2203 & 0.10154 & 0.55698 & 0.56693 & -0.41693\\
+contended & FlatRF0.3 & 368 & 2763 & 2789 & 0.10762 & 0.70157 & 0.70777 & -0.55777\\
+contended & FlatRF & 368 & 2763 & 2789 & 0.10762 & 0.70157 & 0.70777 & -0.55777\\
+contended & FlatRF3 & 368 & 2763 & 2789 & 0.10762 & 0.70157 & 0.70777 & -0.55777\\
+contended & ContractRF0.3 & 536 & 2729 & 2760 & 0.15152 & 0.69347 & 0.70086 & -0.55086\\
+contended & ContractRF & 536 & 2729 & 2760 & 0.15152 & 0.69347 & 0.70086 & -0.55086\\
+contended & ContractRF3 & 536 & 2729 & 2760 & 0.15152 & 0.69347 & 0.70086 & -0.55086\\
+contended & Fixed2 & 371 & 4096 & 4096 & 0.10841 & 1.00000 & 1.00000 & -0.85000\\
+contended & Fixed4 & 1083 & 4096 & 4096 & 0.29078 & 1.00000 & 1.00000 & -0.85000\\
+contended & Fixed8 & 1083 & 4096 & 4096 & 0.29078 & 1.00000 & 1.00000 & -0.85000\\
+contended & Fixed16 & 1083 & 4096 & 4096 & 0.29078 & 1.00000 & 1.00000 & -0.85000\\
+contended & Final & 1083 & 4096 & 4096 & 0.29078 & 1.00000 & 1.00000 & -0.85000\\
+contended & Residual & 340 & 2053 & 2092 & 0.10021 & 0.53048 & 0.53997 & -0.38997\\
+contended & Random2or4 & 718 & 4096 & 4096 & 0.19835 & 1.00000 & 1.00000 & -0.85000\\
+contended & OldRAVC & 423 & 2415 & 2438 & 0.12208 & 0.61817 & 0.62371 & -0.47371\\
+contended & CART\_Time & 536 & 2081 & 2124 & 0.15152 & 0.53729 & 0.54775 & -0.39775\\
+contended & RF\_Time & 536 & 2729 & 2760 & 0.15152 & 0.69347 & 0.70086 & -0.55086\\
+\bottomrule\end{longtable}\normalsize
+\small\begin{longtable}{@{}llrrrrrrr@{}}
+\caption{Unfitted calibration: failure counts, exact corrected upper bounds and union margin.}\label{supp:cards-unfitted}\\\toprule
+Service & Policy & $k_T$ & $k_O$ & $k_U$ & $U_T$ & $U_O$ & $U_U$ & Margin\\\midrule\endfirsthead
+\toprule
+Service & Policy & $k_T$ & $k_O$ & $k_U$ & $U_T$ & $U_O$ & $U_U$ & Margin\\\midrule\endhead
+relaxed & KG0.3 & 346 & 310 & 360 & 0.10180 & 0.09224 & 0.10550 & +0.04450\\
+relaxed & KG1 & 364 & 329 & 377 & 0.10656 & 0.09729 & 0.10999 & +0.04001\\
+relaxed & KG3 & 407 & 351 & 408 & 0.11788 & 0.10312 & 0.11814 & +0.03186\\
+relaxed & FlatCART0.3 & 346 & 310 & 360 & 0.10180 & 0.09224 & 0.10550 & +0.04450\\
+relaxed & FlatCART & 364 & 329 & 377 & 0.10656 & 0.09729 & 0.10999 & +0.04001\\
+relaxed & FlatCART3 & 407 & 351 & 408 & 0.11788 & 0.10312 & 0.11814 & +0.03186\\
+relaxed & FlatRF0.3 & 344 & 320 & 360 & 0.10127 & 0.09490 & 0.10550 & +0.04450\\
+relaxed & FlatRF & 365 & 329 & 373 & 0.10682 & 0.09729 & 0.10893 & +0.04107\\
+relaxed & FlatRF3 & 415 & 359 & 416 & 0.11998 & 0.10524 & 0.12024 & +0.02976\\
+relaxed & ContractRF0.3 & 344 & 320 & 360 & 0.10127 & 0.09490 & 0.10550 & +0.04450\\
+relaxed & ContractRF & 365 & 329 & 373 & 0.10682 & 0.09729 & 0.10893 & +0.04107\\
+relaxed & ContractRF3 & 415 & 359 & 416 & 0.11998 & 0.10524 & 0.12024 & +0.02976\\
+relaxed & Fixed2 & 441 & 387 & 442 & 0.12679 & 0.11262 & 0.12705 & +0.02295\\
+relaxed & Fixed4 & 343 & 323 & 368 & 0.10101 & 0.09570 & 0.10762 & +0.04238\\
+relaxed & Fixed8 & 343 & 323 & 368 & 0.10101 & 0.09570 & 0.10762 & +0.04238\\
+relaxed & Fixed16 & 343 & 323 & 368 & 0.10101 & 0.09570 & 0.10762 & +0.04238\\
+relaxed & Final & 343 & 323 & 368 & 0.10101 & 0.09570 & 0.10762 & +0.04238\\
+relaxed & Residual & 441 & 387 & 442 & 0.12679 & 0.11262 & 0.12705 & +0.02295\\
+relaxed & Random2or4 & 382 & 354 & 395 & 0.11131 & 0.10392 & 0.11473 & +0.03527\\
+relaxed & OldRAVC & 396 & 341 & 397 & 0.11499 & 0.10048 & 0.11525 & +0.03475\\
+relaxed & CART\_Time & 364 & 329 & 377 & 0.10656 & 0.09729 & 0.10999 & +0.04001\\
+relaxed & RF\_Time & 365 & 329 & 373 & 0.10682 & 0.09729 & 0.10893 & +0.04107\\
+standard & KG0.3 & 345 & 310 & 357 & 0.10154 & 0.09224 & 0.10471 & +0.04529\\
+standard & KG1 & 363 & 327 & 374 & 0.10630 & 0.09676 & 0.10920 & +0.04080\\
+standard & KG3 & 407 & 349 & 410 & 0.11788 & 0.10259 & 0.11867 & +0.03133\\
+standard & FlatCART0.3 & 345 & 310 & 357 & 0.10154 & 0.09224 & 0.10471 & +0.04529\\
+standard & FlatCART & 363 & 327 & 374 & 0.10630 & 0.09676 & 0.10920 & +0.04080\\
+standard & FlatCART3 & 407 & 349 & 410 & 0.11788 & 0.10259 & 0.11867 & +0.03133\\
+standard & FlatRF0.3 & 441 & 384 & 444 & 0.12679 & 0.11183 & 0.12758 & +0.02242\\
+standard & FlatRF & 441 & 384 & 444 & 0.12679 & 0.11183 & 0.12758 & +0.02242\\
+standard & FlatRF3 & 441 & 384 & 444 & 0.12679 & 0.11183 & 0.12758 & +0.02242\\
+standard & ContractRF0.3 & 441 & 384 & 444 & 0.12679 & 0.11183 & 0.12758 & +0.02242\\
+standard & ContractRF & 441 & 384 & 444 & 0.12679 & 0.11183 & 0.12758 & +0.02242\\
+standard & ContractRF3 & 441 & 384 & 444 & 0.12679 & 0.11183 & 0.12758 & +0.02242\\
+standard & Fixed2 & 441 & 384 & 444 & 0.12679 & 0.11183 & 0.12758 & +0.02242\\
+standard & Fixed4 & 340 & 321 & 363 & 0.10021 & 0.09517 & 0.10630 & +0.04370\\
+standard & Fixed8 & 340 & 321 & 363 & 0.10021 & 0.09517 & 0.10630 & +0.04370\\
+standard & Fixed16 & 340 & 321 & 363 & 0.10021 & 0.09517 & 0.10630 & +0.04370\\
+standard & Final & 340 & 321 & 363 & 0.10021 & 0.09517 & 0.10630 & +0.04370\\
+standard & Residual & 441 & 384 & 444 & 0.12679 & 0.11183 & 0.12758 & +0.02242\\
+standard & Random2or4 & 381 & 352 & 395 & 0.11104 & 0.10339 & 0.11473 & +0.03527\\
+standard & OldRAVC & 396 & 339 & 397 & 0.11499 & 0.09995 & 0.11525 & +0.03475\\
+standard & CART\_Time & 363 & 327 & 374 & 0.10630 & 0.09676 & 0.10920 & +0.04080\\
+standard & RF\_Time & 441 & 384 & 444 & 0.12679 & 0.11183 & 0.12758 & +0.02242\\
+tight & KG0.3 & 564 & 3875 & 3881 & 0.15876 & 0.95829 & 0.95959 & -0.80959\\
+tight & KG1 & 564 & 3875 & 3881 & 0.15876 & 0.95829 & 0.95959 & -0.80959\\
+tight & KG3 & 564 & 3875 & 3881 & 0.15876 & 0.95829 & 0.95959 & -0.80959\\
+tight & FlatCART0.3 & 564 & 3875 & 3881 & 0.15876 & 0.95829 & 0.95959 & -0.80959\\
+tight & FlatCART & 564 & 3875 & 3881 & 0.15876 & 0.95829 & 0.95959 & -0.80959\\
+tight & FlatCART3 & 564 & 3875 & 3881 & 0.15876 & 0.95829 & 0.95959 & -0.80959\\
+tight & FlatRF0.3 & 564 & 4091 & 4092 & 0.15876 & 0.99989 & 0.99994 & -0.84994\\
+tight & FlatRF & 564 & 4091 & 4092 & 0.15876 & 0.99989 & 0.99994 & -0.84994\\
+tight & FlatRF3 & 564 & 4091 & 4092 & 0.15876 & 0.99989 & 0.99994 & -0.84994\\
+tight & ContractRF0.3 & 564 & 4091 & 4092 & 0.15876 & 0.99989 & 0.99994 & -0.84994\\
+tight & ContractRF & 564 & 4091 & 4092 & 0.15876 & 0.99989 & 0.99994 & -0.84994\\
+tight & ContractRF3 & 564 & 4091 & 4092 & 0.15876 & 0.99989 & 0.99994 & -0.84994\\
+tight & Fixed2 & 564 & 3865 & 3871 & 0.15876 & 0.95614 & 0.95743 & -0.80743\\
+tight & Fixed4 & 564 & 3865 & 3871 & 0.15876 & 0.95614 & 0.95743 & -0.80743\\
+tight & Fixed8 & 564 & 3865 & 3871 & 0.15876 & 0.95614 & 0.95743 & -0.80743\\
+tight & Fixed16 & 564 & 3865 & 3871 & 0.15876 & 0.95614 & 0.95743 & -0.80743\\
+tight & Final & 564 & 3865 & 3871 & 0.15876 & 0.95614 & 0.95743 & -0.80743\\
+tight & Residual & 564 & 3865 & 3871 & 0.15876 & 0.95614 & 0.95743 & -0.80743\\
+tight & Random2or4 & 564 & 3865 & 3871 & 0.15876 & 0.95614 & 0.95743 & -0.80743\\
+tight & OldRAVC & 564 & 3874 & 3880 & 0.15876 & 0.95808 & 0.95937 & -0.80937\\
+tight & CART\_Time & 564 & 3875 & 3881 & 0.15876 & 0.95829 & 0.95959 & -0.80959\\
+tight & RF\_Time & 564 & 4091 & 4092 & 0.15876 & 0.99989 & 0.99994 & -0.84994\\
+contended & KG0.3 & 564 & 3187 & 3210 & 0.15876 & 0.80176 & 0.80714 & -0.65714\\
+contended & KG1 & 564 & 3187 & 3210 & 0.15876 & 0.80176 & 0.80714 & -0.65714\\
+contended & KG3 & 564 & 3187 & 3210 & 0.15876 & 0.80176 & 0.80714 & -0.65714\\
+contended & FlatCART0.3 & 442 & 3264 & 3295 & 0.12705 & 0.81974 & 0.82696 & -0.67696\\
+contended & FlatCART & 441 & 3264 & 3295 & 0.12679 & 0.81974 & 0.82696 & -0.67696\\
+contended & FlatCART3 & 443 & 3264 & 3291 & 0.12731 & 0.81974 & 0.82603 & -0.67603\\
+contended & FlatRF0.3 & 441 & 3807 & 3811 & 0.12679 & 0.94349 & 0.94436 & -0.79436\\
+contended & FlatRF & 441 & 3807 & 3811 & 0.12679 & 0.94349 & 0.94436 & -0.79436\\
+contended & FlatRF3 & 441 & 3807 & 3811 & 0.12679 & 0.94349 & 0.94436 & -0.79436\\
+contended & ContractRF0.3 & 564 & 3796 & 3805 & 0.15876 & 0.94107 & 0.94305 & -0.79305\\
+contended & ContractRF & 564 & 3796 & 3805 & 0.15876 & 0.94107 & 0.94305 & -0.79305\\
+contended & ContractRF3 & 564 & 3796 & 3805 & 0.15876 & 0.94107 & 0.94305 & -0.79305\\
+contended & Fixed2 & 442 & 4096 & 4096 & 0.12705 & 1.00000 & 1.00000 & -0.85000\\
+contended & Fixed4 & 1157 & 4096 & 4096 & 0.30934 & 1.00000 & 1.00000 & -0.85000\\
+contended & Fixed8 & 1157 & 4096 & 4096 & 0.30934 & 1.00000 & 1.00000 & -0.85000\\
+contended & Fixed16 & 1157 & 4096 & 4096 & 0.30934 & 1.00000 & 1.00000 & -0.85000\\
+contended & Final & 1157 & 4096 & 4096 & 0.30934 & 1.00000 & 1.00000 & -0.85000\\
+contended & Residual & 441 & 3153 & 3183 & 0.12679 & 0.79379 & 0.80082 & -0.65082\\
+contended & Random2or4 & 780 & 4096 & 4096 & 0.21417 & 1.00000 & 1.00000 & -0.85000\\
+contended & OldRAVC & 516 & 3403 & 3414 & 0.14633 & 0.85200 & 0.85454 & -0.70454\\
+contended & CART\_Time & 564 & 3187 & 3210 & 0.15876 & 0.80176 & 0.80714 & -0.65714\\
+contended & RF\_Time & 564 & 3796 & 3805 & 0.15876 & 0.94107 & 0.94305 & -0.79305\\
+\bottomrule\end{longtable}\normalsize
+\subsection{All task requests at the primary allowance}
+\small\begin{longtable}{@{}llllrrr@{}}
+\caption{All 32 primary-allowance profile/service/task requests. Full and independently implemented validated Flat return identical choices and witnesses.}\label{supp:requests}\\\toprule
+Profile & Service & Task & Policy & Eligible & Max U & Margin\\\midrule\endfirsthead
+\toprule
+Profile & Service & Task & Policy & Eligible & Max U & Margin\\\midrule\endhead
+nominal & relaxed & trajectory & FlatCART3 & 22 & 0.084497 & +0.065503\\
+nominal & relaxed & observation & FlatCART3 & 22 & 0.070765 & +0.079235\\
+nominal & relaxed & both\_marginals & FlatCART3 & 22 & 0.084497 & +0.065503\\
+nominal & relaxed & union & FlatCART3 & 22 & 0.085568 & +0.064432\\
+nominal & standard & trajectory & FlatCART3 & 22 & 0.084497 & +0.065503\\
+nominal & standard & observation & FlatCART3 & 22 & 0.070223 & +0.079777\\
+nominal & standard & both\_marginals & FlatCART3 & 22 & 0.084497 & +0.065503\\
+nominal & standard & union & FlatCART3 & 22 & 0.085836 & +0.064164\\
+nominal & tight & trajectory & Refused & 0 & -- & --\\
+nominal & tight & observation & Refused & 0 & -- & --\\
+nominal & tight & both\_marginals & Refused & 0 & -- & --\\
+nominal & tight & union & Refused & 0 & -- & --\\
+nominal & contended & trajectory & FlatCART3 & 9 & 0.101536 & +0.048464\\
+nominal & contended & observation & Refused & 0 & -- & --\\
+nominal & contended & both\_marginals & Refused & 0 & -- & --\\
+nominal & contended & union & Refused & 0 & -- & --\\
+unfitted & relaxed & trajectory & OldRAVC & 22 & 0.114992 & +0.035008\\
+unfitted & relaxed & observation & OldRAVC & 22 & 0.100476 & +0.049524\\
+unfitted & relaxed & both\_marginals & OldRAVC & 22 & 0.114992 & +0.035008\\
+unfitted & relaxed & union & OldRAVC & 22 & 0.115254 & +0.034746\\
+unfitted & standard & trajectory & OldRAVC & 22 & 0.114992 & +0.035008\\
+unfitted & standard & observation & OldRAVC & 22 & 0.099946 & +0.050054\\
+unfitted & standard & both\_marginals & OldRAVC & 22 & 0.114992 & +0.035008\\
+unfitted & standard & union & OldRAVC & 22 & 0.115254 & +0.034746\\
+unfitted & tight & trajectory & Refused & 0 & -- & --\\
+unfitted & tight & observation & Refused & 0 & -- & --\\
+unfitted & tight & both\_marginals & Refused & 0 & -- & --\\
+unfitted & tight & union & Refused & 0 & -- & --\\
+unfitted & contended & trajectory & OldRAVC & 9 & 0.146330 & +0.003670\\
+unfitted & contended & observation & Refused & 0 & -- & --\\
+unfitted & contended & both\_marginals & Refused & 0 & -- & --\\
+unfitted & contended & union & Refused & 0 & -- & --\\
+\bottomrule\end{longtable}\normalsize
+\subsection{Complete confirmation policy catalogue}
+\small\begin{longtable}{@{}llrrrrrr@{}}
+\caption{Nominal confirmation, 2,048 inputs/context. $L$: $10^{-3}$ m$^2$s; W: total modeled ms/input; success/failure percentages.}\label{supp:confirmation-nominal}\\\toprule
+Service & Policy & $L$ & W (ms) & Success & T fail & O fail & U fail\\\midrule\endfirsthead
+\toprule
+Service & Policy & $L$ & W (ms) & Success & T fail & O fail & U fail\\\midrule\endhead
+relaxed & KG0.3 & 11.002 & 11.389 & 94.14 & 5.37 & 5.86 & 6.88\\
+relaxed & KG1 & 11.408 & 10.619 & 94.24 & 5.76 & 5.76 & 6.93\\
+relaxed & KG3 & 12.031 & 9.646 & 94.19 & 6.74 & 5.81 & 7.08\\
+relaxed & FlatCART0.3 & 11.002 & 11.389 & 94.14 & 5.37 & 5.86 & 6.88\\
+relaxed & FlatCART & 11.408 & 10.619 & 94.24 & 5.76 & 5.76 & 6.93\\
+relaxed & FlatCART3 & 12.031 & 9.646 & 94.19 & 6.74 & 5.81 & 7.08\\
+relaxed & FlatRF0.3 & 10.706 & 12.446 & 93.95 & 5.42 & 6.05 & 7.13\\
+relaxed & FlatRF & 11.125 & 10.990 & 94.34 & 5.86 & 5.66 & 6.64\\
+relaxed & FlatRF3 & 12.152 & 10.031 & 94.19 & 6.88 & 5.81 & 7.23\\
+relaxed & ContractRF0.3 & 10.706 & 12.446 & 93.95 & 5.42 & 6.05 & 7.13\\
+relaxed & ContractRF & 11.125 & 10.990 & 94.34 & 5.86 & 5.66 & 6.64\\
+relaxed & ContractRF3 & 12.152 & 10.031 & 94.19 & 6.88 & 5.81 & 7.23\\
+relaxed & Fixed2 & 13.830 & 9.221 & 92.92 & 8.06 & 7.08 & 8.59\\
+relaxed & Fixed4 & 10.911 & 12.072 & 93.21 & 5.52 & 6.79 & 7.81\\
+relaxed & Fixed8 & 10.911 & 12.072 & 93.21 & 5.52 & 6.79 & 7.81\\
+relaxed & Fixed16 & 10.911 & 12.072 & 93.21 & 5.52 & 6.79 & 7.81\\
+relaxed & Final & 10.911 & 12.072 & 93.21 & 5.52 & 6.79 & 7.81\\
+relaxed & Residual & 13.590 & 9.403 & 93.12 & 8.11 & 6.88 & 8.45\\
+relaxed & Random2or4 & 12.254 & 10.507 & 92.58 & 6.98 & 7.42 & 8.50\\
+relaxed & OldRAVC & 11.950 & 9.600 & 94.58 & 6.40 & 5.42 & 6.74\\
+relaxed & CART\_Time & 11.408 & 10.619 & 94.24 & 5.76 & 5.76 & 6.93\\
+relaxed & RF\_Time & 11.125 & 10.990 & 94.34 & 5.86 & 5.66 & 6.64\\
+standard & KG0.3 & 11.269 & 11.495 & 94.38 & 5.32 & 5.62 & 6.79\\
+standard & KG1 & 11.664 & 10.705 & 94.48 & 5.71 & 5.52 & 6.84\\
+standard & KG3 & 12.301 & 9.721 & 94.24 & 6.74 & 5.76 & 7.13\\
+standard & FlatCART0.3 & 11.269 & 11.495 & 94.38 & 5.32 & 5.62 & 6.79\\
+standard & FlatCART & 11.664 & 10.705 & 94.48 & 5.71 & 5.52 & 6.84\\
+standard & FlatCART3 & 12.301 & 9.721 & 94.24 & 6.74 & 5.76 & 7.13\\
+standard & FlatRF0.3 & 13.844 & 9.973 & 92.82 & 8.06 & 7.18 & 8.64\\
+standard & FlatRF & 13.844 & 9.973 & 92.82 & 8.06 & 7.18 & 8.64\\
+standard & FlatRF3 & 13.844 & 9.973 & 92.82 & 8.06 & 7.18 & 8.64\\
+standard & ContractRF0.3 & 13.844 & 9.973 & 92.82 & 8.06 & 7.18 & 8.64\\
+standard & ContractRF & 13.844 & 9.973 & 92.82 & 8.06 & 7.18 & 8.64\\
+standard & ContractRF3 & 13.844 & 9.973 & 92.82 & 8.06 & 7.18 & 8.64\\
+standard & Fixed2 & 13.833 & 9.221 & 92.82 & 8.06 & 7.18 & 8.64\\
+standard & Fixed4 & 11.295 & 12.109 & 93.51 & 5.47 & 6.49 & 7.52\\
+standard & Fixed8 & 11.295 & 12.109 & 93.51 & 5.47 & 6.49 & 7.52\\
+standard & Fixed16 & 11.295 & 12.109 & 93.51 & 5.47 & 6.49 & 7.52\\
+standard & Final & 11.295 & 12.109 & 93.51 & 5.47 & 6.49 & 7.52\\
+standard & Residual & 13.817 & 9.476 & 93.02 & 8.11 & 6.98 & 8.50\\
+standard & Random2or4 & 12.379 & 10.520 & 92.87 & 6.93 & 7.13 & 8.25\\
+standard & OldRAVC & 12.199 & 9.666 & 94.58 & 6.40 & 5.42 & 6.79\\
+standard & CART\_Time & 11.664 & 10.705 & 94.48 & 5.71 & 5.52 & 6.84\\
+standard & RF\_Time & 13.844 & 9.973 & 92.82 & 8.06 & 7.18 & 8.64\\
+tight & KG0.3 & 17.401 & 7.522 & 26.56 & 10.69 & 73.44 & 73.63\\
+tight & KG1 & 17.401 & 7.522 & 26.56 & 10.69 & 73.44 & 73.63\\
+tight & KG3 & 17.401 & 7.522 & 26.56 & 10.69 & 73.44 & 73.63\\
+tight & FlatCART0.3 & 17.401 & 7.522 & 26.56 & 10.69 & 73.44 & 73.63\\
+tight & FlatCART & 17.401 & 7.522 & 26.56 & 10.69 & 73.44 & 73.63\\
+tight & FlatCART3 & 17.401 & 7.522 & 26.56 & 10.69 & 73.44 & 73.63\\
+tight & FlatRF0.3 & 17.474 & 7.784 & 3.56 & 10.69 & 96.44 & 96.44\\
+tight & FlatRF & 17.474 & 7.784 & 3.56 & 10.69 & 96.44 & 96.44\\
+tight & FlatRF3 & 17.474 & 7.784 & 3.56 & 10.69 & 96.44 & 96.44\\
+tight & ContractRF0.3 & 17.474 & 7.784 & 3.56 & 10.69 & 96.44 & 96.44\\
+tight & ContractRF & 17.474 & 7.784 & 3.56 & 10.69 & 96.44 & 96.44\\
+tight & ContractRF3 & 17.474 & 7.784 & 3.56 & 10.69 & 96.44 & 96.44\\
+tight & Fixed2 & 17.391 & 7.511 & 28.27 & 10.69 & 71.73 & 71.92\\
+tight & Fixed4 & 17.391 & 7.511 & 28.27 & 10.69 & 71.73 & 71.92\\
+tight & Fixed8 & 17.391 & 7.511 & 28.27 & 10.69 & 71.73 & 71.92\\
+tight & Fixed16 & 17.391 & 7.511 & 28.27 & 10.69 & 71.73 & 71.92\\
+tight & Final & 17.391 & 7.511 & 28.27 & 10.69 & 71.73 & 71.92\\
+tight & Residual & 17.391 & 7.511 & 28.27 & 10.69 & 71.73 & 71.92\\
+tight & Random2or4 & 17.391 & 7.511 & 28.27 & 10.69 & 71.73 & 71.92\\
+tight & OldRAVC & 17.397 & 7.519 & 27.15 & 10.69 & 72.85 & 73.05\\
+tight & CART\_Time & 17.401 & 7.522 & 26.56 & 10.69 & 73.44 & 73.63\\
+tight & RF\_Time & 17.474 & 7.784 & 3.56 & 10.69 & 96.44 & 96.44\\
+contended & KG0.3 & 17.620 & 7.583 & 50.78 & 10.69 & 49.22 & 49.95\\
+contended & KG1 & 17.620 & 7.583 & 50.78 & 10.69 & 49.22 & 49.95\\
+contended & KG3 & 17.620 & 7.583 & 50.78 & 10.69 & 49.22 & 49.95\\
+contended & FlatCART0.3 & 12.170 & 12.053 & 49.12 & 8.40 & 50.88 & 52.49\\
+contended & FlatCART & 12.527 & 11.183 & 49.12 & 8.30 & 50.88 & 52.39\\
+contended & FlatCART3 & 13.098 & 10.098 & 49.12 & 7.86 & 50.88 & 52.05\\
+contended & FlatRF0.3 & 14.577 & 10.351 & 33.15 & 8.84 & 66.85 & 67.82\\
+contended & FlatRF & 14.577 & 10.351 & 33.15 & 8.84 & 66.85 & 67.82\\
+contended & FlatRF3 & 14.577 & 10.351 & 33.15 & 8.84 & 66.85 & 67.82\\
+contended & ContractRF0.3 & 17.679 & 7.839 & 33.84 & 10.69 & 66.16 & 66.60\\
+contended & ContractRF & 17.679 & 7.839 & 33.84 & 10.69 & 66.16 & 66.60\\
+contended & ContractRF3 & 17.679 & 7.839 & 33.84 & 10.69 & 66.16 & 66.60\\
+contended & Fixed2 & 14.802 & 9.432 & 0.00 & 9.23 & 100.00 & 100.00\\
+contended & Fixed4 & 12.823 & 12.377 & 0.00 & 24.56 & 100.00 & 100.00\\
+contended & Fixed8 & 12.823 & 12.377 & 0.00 & 24.56 & 100.00 & 100.00\\
+contended & Fixed16 & 12.823 & 12.377 & 0.00 & 24.56 & 100.00 & 100.00\\
+contended & Final & 12.823 & 12.377 & 0.00 & 24.56 & 100.00 & 100.00\\
+contended & Residual & 14.481 & 9.838 & 51.22 & 8.40 & 48.78 & 50.00\\
+contended & Random2or4 & 13.608 & 10.756 & 0.00 & 15.38 & 100.00 & 100.00\\
+contended & OldRAVC & 13.106 & 10.007 & 43.46 & 9.77 & 56.54 & 57.03\\
+contended & CART\_Time & 17.620 & 7.583 & 50.78 & 10.69 & 49.22 & 49.95\\
+contended & RF\_Time & 17.679 & 7.839 & 33.84 & 10.69 & 66.16 & 66.60\\
+\bottomrule\end{longtable}\normalsize
+\small\begin{longtable}{@{}llrrrrrr@{}}
+\caption{Unfitted confirmation, 2,048 inputs/context. $L$: $10^{-3}$ m$^2$s; W: total modeled ms/input; success/failure percentages.}\label{supp:confirmation-unfitted}\\\toprule
+Service & Policy & $L$ & W (ms) & Success & T fail & O fail & U fail\\\midrule\endfirsthead
+\toprule
+Service & Policy & $L$ & W (ms) & Success & T fail & O fail & U fail\\\midrule\endhead
+relaxed & KG0.3 & 16.859 & 10.998 & 91.80 & 8.50 & 8.20 & 8.89\\
+relaxed & KG1 & 17.095 & 10.598 & 91.99 & 8.59 & 8.01 & 8.79\\
+relaxed & KG3 & 18.129 & 9.667 & 91.46 & 9.23 & 8.54 & 9.23\\
+relaxed & FlatCART0.3 & 16.859 & 10.998 & 91.80 & 8.50 & 8.20 & 8.89\\
+relaxed & FlatCART & 17.095 & 10.598 & 91.99 & 8.59 & 8.01 & 8.79\\
+relaxed & FlatCART3 & 18.129 & 9.667 & 91.46 & 9.23 & 8.54 & 9.23\\
+relaxed & FlatRF0.3 & 16.671 & 11.917 & 91.75 & 8.30 & 8.25 & 8.94\\
+relaxed & FlatRF & 17.086 & 11.054 & 91.65 & 8.69 & 8.35 & 8.94\\
+relaxed & FlatRF3 & 18.503 & 10.063 & 91.11 & 9.62 & 8.89 & 9.62\\
+relaxed & ContractRF0.3 & 16.671 & 11.917 & 91.75 & 8.30 & 8.25 & 8.94\\
+relaxed & ContractRF & 17.086 & 11.054 & 91.65 & 8.69 & 8.35 & 8.94\\
+relaxed & ContractRF3 & 18.503 & 10.063 & 91.11 & 9.62 & 8.89 & 9.62\\
+relaxed & Fixed2 & 19.937 & 9.219 & 90.87 & 10.01 & 9.13 & 10.06\\
+relaxed & Fixed4 & 17.030 & 11.688 & 91.26 & 8.45 & 8.74 & 9.47\\
+relaxed & Fixed8 & 17.030 & 11.688 & 91.26 & 8.45 & 8.74 & 9.47\\
+relaxed & Fixed16 & 17.030 & 11.688 & 91.26 & 8.45 & 8.74 & 9.47\\
+relaxed & Final & 17.030 & 11.688 & 91.26 & 8.45 & 8.74 & 9.47\\
+relaxed & Residual & 19.609 & 9.388 & 91.02 & 9.91 & 8.98 & 9.91\\
+relaxed & Random2or4 & 18.535 & 10.348 & 90.87 & 9.57 & 9.13 & 10.06\\
+relaxed & OldRAVC & 17.717 & 9.718 & 91.65 & 9.03 & 8.35 & 9.03\\
+relaxed & CART\_Time & 17.095 & 10.598 & 91.99 & 8.59 & 8.01 & 8.79\\
+relaxed & RF\_Time & 17.086 & 11.054 & 91.65 & 8.69 & 8.35 & 8.94\\
+standard & KG0.3 & 17.194 & 11.113 & 91.85 & 8.50 & 8.15 & 8.89\\
+standard & KG1 & 17.423 & 10.702 & 92.09 & 8.59 & 7.91 & 8.79\\
+standard & KG3 & 18.431 & 9.750 & 91.46 & 9.23 & 8.54 & 9.23\\
+standard & FlatCART0.3 & 17.194 & 11.113 & 91.85 & 8.50 & 8.15 & 8.89\\
+standard & FlatCART & 17.423 & 10.702 & 92.09 & 8.59 & 7.91 & 8.79\\
+standard & FlatCART3 & 18.431 & 9.750 & 91.46 & 9.23 & 8.54 & 9.23\\
+standard & FlatRF0.3 & 19.936 & 9.953 & 90.92 & 10.01 & 9.08 & 10.06\\
+standard & FlatRF & 19.936 & 9.953 & 90.92 & 10.01 & 9.08 & 10.06\\
+standard & FlatRF3 & 19.936 & 9.953 & 90.92 & 10.01 & 9.08 & 10.06\\
+standard & ContractRF0.3 & 19.936 & 9.953 & 90.92 & 10.01 & 9.08 & 10.06\\
+standard & ContractRF & 19.936 & 9.953 & 90.92 & 10.01 & 9.08 & 10.06\\
+standard & ContractRF3 & 19.936 & 9.953 & 90.92 & 10.01 & 9.08 & 10.06\\
+standard & Fixed2 & 19.938 & 9.220 & 90.92 & 10.01 & 9.08 & 10.06\\
+standard & Fixed4 & 17.350 & 11.736 & 91.46 & 8.40 & 8.54 & 9.28\\
+standard & Fixed8 & 17.350 & 11.736 & 91.46 & 8.40 & 8.54 & 9.28\\
+standard & Fixed16 & 17.350 & 11.736 & 91.46 & 8.40 & 8.54 & 9.28\\
+standard & Final & 17.350 & 11.736 & 91.46 & 8.40 & 8.54 & 9.28\\
+standard & Residual & 19.857 & 9.469 & 91.06 & 9.91 & 8.94 & 9.91\\
+standard & Random2or4 & 18.675 & 10.375 & 90.97 & 9.52 & 9.03 & 9.96\\
+standard & OldRAVC & 17.964 & 9.781 & 91.60 & 9.03 & 8.40 & 9.03\\
+standard & CART\_Time & 17.423 & 10.702 & 92.09 & 8.59 & 7.91 & 8.79\\
+standard & RF\_Time & 19.936 & 9.953 & 90.92 & 10.01 & 9.08 & 10.06\\
+tight & KG0.3 & 22.172 & 7.552 & 5.13 & 14.36 & 94.87 & 95.12\\
+tight & KG1 & 22.172 & 7.552 & 5.13 & 14.36 & 94.87 & 95.12\\
+tight & KG3 & 22.172 & 7.552 & 5.13 & 14.36 & 94.87 & 95.12\\
+tight & FlatCART0.3 & 22.172 & 7.552 & 5.13 & 14.36 & 94.87 & 95.12\\
+tight & FlatCART & 22.172 & 7.552 & 5.13 & 14.36 & 94.87 & 95.12\\
+tight & FlatCART3 & 22.172 & 7.552 & 5.13 & 14.36 & 94.87 & 95.12\\
+tight & FlatRF0.3 & 22.195 & 7.795 & 0.05 & 14.36 & 99.95 & 99.95\\
+tight & FlatRF & 22.195 & 7.795 & 0.05 & 14.36 & 99.95 & 99.95\\
+tight & FlatRF3 & 22.195 & 7.795 & 0.05 & 14.36 & 99.95 & 99.95\\
+tight & ContractRF0.3 & 22.195 & 7.795 & 0.05 & 14.36 & 99.95 & 99.95\\
+tight & ContractRF & 22.195 & 7.795 & 0.05 & 14.36 & 99.95 & 99.95\\
+tight & ContractRF3 & 22.195 & 7.795 & 0.05 & 14.36 & 99.95 & 99.95\\
+tight & Fixed2 & 22.168 & 7.542 & 5.47 & 14.36 & 94.53 & 94.78\\
+tight & Fixed4 & 22.168 & 7.542 & 5.47 & 14.36 & 94.53 & 94.78\\
+tight & Fixed8 & 22.168 & 7.542 & 5.47 & 14.36 & 94.53 & 94.78\\
+tight & Fixed16 & 22.168 & 7.542 & 5.47 & 14.36 & 94.53 & 94.78\\
+tight & Final & 22.168 & 7.542 & 5.47 & 14.36 & 94.53 & 94.78\\
+tight & Residual & 22.168 & 7.542 & 5.47 & 14.36 & 94.53 & 94.78\\
+tight & Random2or4 & 22.168 & 7.542 & 5.47 & 14.36 & 94.53 & 94.78\\
+tight & OldRAVC & 22.171 & 7.549 & 5.22 & 14.36 & 94.78 & 95.02\\
+tight & CART\_Time & 22.172 & 7.552 & 5.13 & 14.36 & 94.87 & 95.12\\
+tight & RF\_Time & 22.195 & 7.795 & 0.05 & 14.36 & 99.95 & 99.95\\
+contended & KG0.3 & 22.353 & 7.616 & 22.75 & 14.36 & 77.25 & 77.98\\
+contended & KG1 & 22.353 & 7.616 & 22.75 & 14.36 & 77.25 & 77.98\\
+contended & KG3 & 22.353 & 7.616 & 22.75 & 14.36 & 77.25 & 77.98\\
+contended & FlatCART0.3 & 17.967 & 11.653 & 20.85 & 10.55 & 79.15 & 79.64\\
+contended & FlatCART & 18.173 & 11.199 & 20.85 & 10.35 & 79.15 & 79.69\\
+contended & FlatCART3 & 19.078 & 10.148 & 20.85 & 10.11 & 79.15 & 79.64\\
+contended & FlatRF0.3 & 20.523 & 10.344 & 7.28 & 10.01 & 92.72 & 92.92\\
+contended & FlatRF & 20.523 & 10.344 & 7.28 & 10.01 & 92.72 & 92.92\\
+contended & FlatRF3 & 20.523 & 10.344 & 7.28 & 10.01 & 92.72 & 92.92\\
+contended & ContractRF0.3 & 22.405 & 7.869 & 7.57 & 14.36 & 92.43 & 92.77\\
+contended & ContractRF & 22.405 & 7.869 & 7.57 & 14.36 & 92.43 & 92.77\\
+contended & ContractRF3 & 22.405 & 7.869 & 7.57 & 14.36 & 92.43 & 92.77\\
+contended & Fixed2 & 20.763 & 9.453 & 0.00 & 10.01 & 100.00 & 100.00\\
+contended & Fixed4 & 18.559 & 12.001 & 0.00 & 29.25 & 100.00 & 100.00\\
+contended & Fixed8 & 18.559 & 12.001 & 0.00 & 29.25 & 100.00 & 100.00\\
+contended & Fixed16 & 18.559 & 12.001 & 0.00 & 29.25 & 100.00 & 100.00\\
+contended & Final & 18.559 & 12.001 & 0.00 & 29.25 & 100.00 & 100.00\\
+contended & Residual & 20.417 & 9.853 & 23.19 & 10.01 & 76.81 & 77.44\\
+contended & Random2or4 & 19.659 & 10.623 & 0.00 & 19.29 & 100.00 & 100.00\\
+contended & OldRAVC & 18.611 & 10.139 & 17.09 & 11.96 & 82.91 & 83.06\\
+contended & CART\_Time & 22.353 & 7.616 & 22.75 & 14.36 & 77.25 & 77.98\\
+contended & RF\_Time & 22.405 & 7.869 & 7.57 & 14.36 & 92.43 & 92.77\\
+\bottomrule\end{longtable}\normalsize
+\subsection{Module attribution, including binding stress}
+\small\begin{longtable}{@{}lllrrrrr@{}}
+\caption{Matched numerical modules: changed stopping count / input count and paired changes in loss ($10^{-3}$ m$^2$s), work (ms) and observation failure (pp). Profile changes are zero throughout this study; those rows are retained.}\label{supp:ablations}\\\toprule
+Stratum & Service & Module & Changed & n & $\Delta L$ & $\Delta W$ & $\Delta O$\\\midrule\endfirsthead
+\toprule
+Stratum & Service & Module & Changed & n & $\Delta L$ & $\Delta W$ & $\Delta O$\\\midrule\endhead
+degeneracy & contended & Time/CART & 384 & 384 & +6.990 & -3.371 & -3.12\\
+degeneracy & contended & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & contended & Time/RF & 384 & 384 & +3.303 & -2.519 & -3.65\\
+degeneracy & contended & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & relaxed & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & relaxed & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & relaxed & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & relaxed & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & standard & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & standard & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & standard & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & standard & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & tight & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & tight & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & tight & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+degeneracy & tight & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+geometry & contended & Time/CART & 2048 & 2048 & +4.179 & -3.583 & -1.90\\
+geometry & contended & Profile/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & contended & Time/RF & 2048 & 2048 & +1.882 & -2.476 & -0.29\\
+geometry & contended & Profile/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & relaxed & Time/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & relaxed & Profile/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & relaxed & Time/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & relaxed & Profile/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & standard & Time/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & standard & Profile/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & standard & Time/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & standard & Profile/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & tight & Time/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & tight & Profile/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & tight & Time/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+geometry & tight & Profile/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+map\_shift & contended & Time/CART & 384 & 384 & -4.215 & -4.645 & -4.43\\
+map\_shift & contended & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & contended & Time/RF & 384 & 384 & -4.715 & -2.470 & -1.30\\
+map\_shift & contended & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & relaxed & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & relaxed & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & relaxed & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & relaxed & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & standard & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & standard & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & standard & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & standard & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & tight & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & tight & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & tight & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+map\_shift & tight & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+nominal & contended & Time/CART & 2048 & 2048 & +5.094 & -3.600 & -1.66\\
+nominal & contended & Profile/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & contended & Time/RF & 2048 & 2048 & +3.102 & -2.511 & -0.68\\
+nominal & contended & Profile/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & relaxed & Time/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & relaxed & Profile/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & relaxed & Time/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & relaxed & Profile/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & standard & Time/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & standard & Profile/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & standard & Time/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & standard & Profile/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & tight & Time/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & tight & Profile/CART & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & tight & Time/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+nominal & tight & Profile/RF & 0 & 2048 & +0.000 & +0.000 & +0.00\\
+occlusion & contended & Time/CART & 328 & 384 & +5.777 & -3.142 & -1.30\\
+occlusion & contended & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & contended & Time/RF & 328 & 384 & +4.468 & -2.159 & -0.52\\
+occlusion & contended & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & relaxed & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & relaxed & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & relaxed & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & relaxed & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & standard & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & standard & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & standard & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & standard & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & tight & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & tight & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & tight & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+occlusion & tight & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & contended & Time/CART & 384 & 384 & +44.844 & -5.143 & +0.00\\
+prior\_shift & contended & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & contended & Time/RF & 384 & 384 & +36.695 & -2.488 & +0.00\\
+prior\_shift & contended & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & relaxed & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & relaxed & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & relaxed & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & relaxed & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & standard & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & standard & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & standard & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & standard & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & tight & Time/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & tight & Profile/CART & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & tight & Time/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+prior\_shift & tight & Profile/RF & 0 & 384 & +0.000 & +0.000 & +0.00\\
+\bottomrule\end{longtable}\normalsize
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth]{r8/binding_stress.pdf}
+\caption{Binding-constraint stress interventions on all 384 inputs/stratum. R/S/T/C denote the four services. Time screening changes many endpoints under contention and can increase or decrease loss; profile addition remains numerically redundant. These unsupported profiles receive no primary risk card.}\label{fig:stress-ablations}
+\end{figure}
+\subsection{Integrated CPU and evidence accounting}
+\small\begin{longtable}{@{}lllrrrrr@{}}
+\caption{Actual Full confirmation. Coverage requires at least one valid issued receipt during execution for each requested event. Dispatch/extra claim columns are microseconds; component and inclusive program ledgers are milliseconds. Inclusive replay contains offline assertion/scoring and is not pure online CPU. Validated Flat has identical numeric/receipt outcomes and its independent CPU rows remain in integrated\_summary.csv.}\label{supp:integrated}\\\toprule
+Profile & Service & Task & Coverage & Dispatch $\mu$s & Extra $\mu$s & Component & Inclusive\\\midrule\endfirsthead
+\toprule
+Profile & Service & Task & Coverage & Dispatch $\mu$s & Extra $\mu$s & Component & Inclusive\\\midrule\endhead
+nominal & contended & both\_marginals & 0.000 & 53.0 & 39.4 & 3.512 & 3.551\\
+nominal & contended & observation & 0.000 & 44.7 & 32.5 & 3.496 & 3.565\\
+nominal & contended & trajectory & 100.000 & 146.2 & 93.1 & 10.683 & 10.776\\
+nominal & contended & union & 0.000 & 39.6 & 22.1 & 3.481 & 3.529\\
+nominal & relaxed & both\_marginals & 100.000 & 196.2 & 102.8 & 10.349 & 10.395\\
+nominal & relaxed & observation & 100.000 & 166.4 & 102.9 & 10.219 & 10.290\\
+nominal & relaxed & trajectory & 100.000 & 233.9 & 117.8 & 10.419 & 10.459\\
+nominal & relaxed & union & 100.000 & 150.5 & 100.1 & 10.202 & 10.284\\
+nominal & standard & both\_marginals & 100.000 & 192.1 & 104.5 & 10.366 & 10.413\\
+nominal & standard & observation & 100.000 & 156.6 & 99.7 & 10.289 & 10.369\\
+nominal & standard & trajectory & 100.000 & 186.2 & 99.6 & 10.312 & 10.364\\
+nominal & standard & union & 100.000 & 145.8 & 100.1 & 10.289 & 10.378\\
+nominal & tight & both\_marginals & 0.000 & 29.3 & 22.0 & 3.470 & 3.535\\
+nominal & tight & observation & 0.000 & 44.9 & 24.5 & 3.489 & 3.538\\
+nominal & tight & trajectory & 0.000 & 72.0 & 32.4 & 3.524 & 3.587\\
+nominal & tight & union & 0.000 & 40.7 & 30.1 & 3.490 & 3.533\\
+unfitted & contended & both\_marginals & 0.000 & 56.7 & 24.7 & 3.578 & 3.617\\
+unfitted & contended & observation & 0.000 & 51.2 & 32.5 & 3.581 & 3.649\\
+unfitted & contended & trajectory & 99.951 & 155.4 & 97.0 & 10.700 & 10.787\\
+unfitted & contended & union & 0.000 & 43.3 & 23.7 & 3.564 & 3.612\\
+unfitted & relaxed & both\_marginals & 99.951 & 209.4 & 108.1 & 10.319 & 10.356\\
+unfitted & relaxed & observation & 99.951 & 171.2 & 107.2 & 10.238 & 10.310\\
+unfitted & relaxed & trajectory & 99.951 & 224.7 & 122.6 & 10.387 & 10.466\\
+unfitted & relaxed & union & 99.951 & 155.4 & 105.5 & 10.225 & 10.305\\
+unfitted & standard & both\_marginals & 99.951 & 203.8 & 107.7 & 10.365 & 10.404\\
+unfitted & standard & observation & 99.951 & 161.3 & 105.3 & 10.382 & 10.460\\
+unfitted & standard & trajectory & 99.951 & 179.6 & 105.2 & 10.320 & 10.375\\
+unfitted & standard & union & 99.951 & 156.4 & 104.0 & 10.304 & 10.383\\
+unfitted & tight & both\_marginals & 0.000 & 32.1 & 24.2 & 3.553 & 3.621\\
+unfitted & tight & observation & 0.000 & 48.0 & 25.9 & 3.571 & 3.625\\
+unfitted & tight & trajectory & 0.000 & 70.0 & 32.3 & 3.599 & 3.665\\
+unfitted & tight & union & 0.000 & 46.6 & 112.6 & 3.656 & 3.703\\
+\bottomrule\end{longtable}\normalsize
+\subsection{All complete-route methods and strata}
+\small\begin{longtable}{@{}lllrrrrr@{}}
+\caption{All twelve live route variants: descriptive means of four matched realizations per geometry/condition. Error units cm; CPU s/600-s route; success \%; no route certificate. Four raw replicate differences per comparison remain in route\_paired\_descriptive.csv.}\label{supp:all-routes}\\\toprule
+Geometry & Condition & Method & RMSE & p99 & Success & CPU & Switch\\\midrule\endfirsthead
+\toprule
+Geometry & Condition & Method & RMSE & p99 & Success & CPU & Switch\\\midrule\endhead
+B767 & ordinary & Fixed2 & 3.806 & 9.790 & 97.07 & 2.450 & 0\\
+B767 & ordinary & Fixed4 & 3.719 & 9.189 & 94.57 & 3.176 & 0\\
+B767 & ordinary & Final & 3.719 & 9.189 & 94.57 & 3.228 & 0\\
+B767 & ordinary & FlatCART & 3.706 & 8.875 & 96.49 & 2.711 & 0\\
+B767 & ordinary & FlatRF & 3.805 & 9.759 & 97.07 & 2.596 & 0\\
+B767 & ordinary & ContractRF & 3.805 & 9.759 & 97.07 & 2.728 & 0\\
+B767 & ordinary & OldRAVC & 3.722 & 9.019 & 97.07 & 2.500 & 0\\
+B767 & ordinary & KG1 & 3.706 & 8.875 & 96.49 & 2.809 & 0\\
+B767 & ordinary & CART\_Time & 3.706 & 8.875 & 96.49 & 2.767 & 0\\
+B767 & ordinary & KG1 held & 3.712 & 8.972 & 96.32 & 2.562 & 0\\
+B767 & ordinary & Full & 3.715 & 9.036 & 97.24 & 2.514 & 0\\
+B767 & ordinary & Validated Flat & 3.715 & 9.036 & 97.24 & 2.504 & 0\\
+B767 & contention & Fixed2 & 3.555 & 8.093 & 46.99 & 2.322 & 0\\
+B767 & contention & Fixed4 & 3.605 & 8.219 & 45.48 & 2.607 & 0\\
+B767 & contention & Final & 3.605 & 8.219 & 45.48 & 2.566 & 0\\
+B767 & contention & FlatCART & 3.581 & 8.233 & 54.10 & 2.505 & 0\\
+B767 & contention & FlatRF & 3.549 & 8.098 & 44.57 & 2.576 & 0\\
+B767 & contention & ContractRF & 3.523 & 8.123 & 44.57 & 2.345 & 0\\
+B767 & contention & OldRAVC & 3.550 & 8.095 & 54.85 & 2.299 & 0\\
+B767 & contention & KG1 & 3.543 & 8.059 & 54.43 & 2.246 & 0\\
+B767 & contention & CART\_Time & 3.543 & 8.059 & 54.43 & 2.038 & 0\\
+B767 & contention & KG1 held & 3.545 & 8.065 & 54.43 & 2.325 & 0\\
+B767 & contention & Full & 3.531 & 8.090 & 55.02 & 2.019 & 48\\
+B767 & contention & Validated Flat & 3.531 & 8.090 & 55.02 & 2.158 & 48\\
+B767 & stress & Fixed2 & 8.185 & 15.492 & 42.22 & 2.154 & 0\\
+B767 & stress & Fixed4 & 8.215 & 15.547 & 39.97 & 2.557 & 0\\
+B767 & stress & Final & 8.215 & 15.547 & 39.97 & 2.668 & 0\\
+B767 & stress & FlatCART & 8.215 & 15.581 & 53.85 & 2.583 & 0\\
+B767 & stress & FlatRF & 8.187 & 15.514 & 47.41 & 2.450 & 0\\
+B767 & stress & ContractRF & 8.186 & 15.537 & 47.74 & 2.136 & 0\\
+B767 & stress & OldRAVC & 8.212 & 15.527 & 53.18 & 2.440 & 0\\
+B767 & stress & KG1 & 8.200 & 15.384 & 55.85 & 2.207 & 0\\
+B767 & stress & CART\_Time & 8.200 & 15.384 & 55.85 & 2.213 & 0\\
+B767 & stress & KG1 held & 8.205 & 15.384 & 55.60 & 2.199 & 0\\
+B767 & stress & Full & 8.158 & 15.541 & 56.19 & 2.300 & 48\\
+B767 & stress & Validated Flat & 8.158 & 15.541 & 56.19 & 2.175 & 48\\
+C172 & ordinary & Fixed2 & 4.787 & 10.404 & 94.15 & 2.297 & 0\\
+C172 & ordinary & Fixed4 & 4.836 & 11.084 & 91.64 & 3.189 & 0\\
+C172 & ordinary & Final & 4.836 & 11.084 & 91.64 & 2.941 & 0\\
+C172 & ordinary & FlatCART & 4.832 & 10.478 & 93.06 & 2.378 & 0\\
+C172 & ordinary & FlatRF & 4.787 & 10.404 & 94.15 & 2.651 & 0\\
+C172 & ordinary & ContractRF & 4.787 & 10.404 & 94.15 & 2.675 & 0\\
+C172 & ordinary & OldRAVC & 4.837 & 10.760 & 93.65 & 2.267 & 0\\
+C172 & ordinary & KG1 & 4.832 & 10.478 & 93.06 & 2.589 & 0\\
+C172 & ordinary & CART\_Time & 4.832 & 10.478 & 93.06 & 2.607 & 0\\
+C172 & ordinary & KG1 held & 4.832 & 10.475 & 93.06 & 2.562 & 0\\
+C172 & ordinary & Full & 4.805 & 10.436 & 93.81 & 2.518 & 0\\
+C172 & ordinary & Validated Flat & 4.805 & 10.436 & 93.81 & 2.491 & 0\\
+C172 & contention & Fixed2 & 5.237 & 10.604 & 53.01 & 2.121 & 0\\
+C172 & contention & Fixed4 & 5.388 & 11.451 & 51.76 & 2.659 & 0\\
+C172 & contention & Final & 5.388 & 11.451 & 51.76 & 2.734 & 0\\
+C172 & contention & FlatCART & 5.321 & 10.828 & 81.02 & 2.374 & 0\\
+C172 & contention & FlatRF & 5.236 & 10.604 & 53.68 & 2.288 & 0\\
+C172 & contention & ContractRF & 5.256 & 10.616 & 53.93 & 2.090 & 0\\
+C172 & contention & OldRAVC & 5.193 & 10.582 & 81.77 & 2.173 & 0\\
+C172 & contention & KG1 & 5.341 & 10.842 & 80.94 & 2.194 & 0\\
+C172 & contention & CART\_Time & 5.341 & 10.842 & 80.94 & 2.162 & 0\\
+C172 & contention & KG1 held & 5.342 & 10.843 & 80.85 & 2.096 & 0\\
+C172 & contention & Full & 5.234 & 10.569 & 81.61 & 2.028 & 48\\
+C172 & contention & Validated Flat & 5.234 & 10.569 & 81.61 & 2.230 & 48\\
+C172 & stress & Fixed2 & 14.488 & 28.613 & 10.20 & 2.168 & 0\\
+C172 & stress & Fixed4 & 14.333 & 27.971 & 10.03 & 2.545 & 0\\
+C172 & stress & Final & 14.333 & 27.971 & 10.03 & 2.754 & 0\\
+C172 & stress & FlatCART & 14.494 & 28.595 & 11.62 & 2.432 & 0\\
+C172 & stress & FlatRF & 14.490 & 28.606 & 6.19 & 2.285 & 0\\
+C172 & stress & ContractRF & 14.398 & 28.363 & 6.27 & 2.342 & 0\\
+C172 & stress & OldRAVC & 14.403 & 28.828 & 11.45 & 2.480 & 0\\
+C172 & stress & KG1 & 14.439 & 28.348 & 11.45 & 2.198 & 0\\
+C172 & stress & CART\_Time & 14.439 & 28.348 & 11.45 & 2.054 & 0\\
+C172 & stress & KG1 held & 14.440 & 28.348 & 11.45 & 2.120 & 0\\
+C172 & stress & Full & 14.414 & 28.056 & 11.20 & 2.221 & 48\\
+C172 & stress & Validated Flat & 14.414 & 28.056 & 11.20 & 2.189 & 48\\
+Unfitted & ordinary & Fixed2 & 2.997 & 6.103 & 99.41 & 2.413 & 0\\
+Unfitted & ordinary & Fixed4 & 3.022 & 6.256 & 98.91 & 2.688 & 0\\
+Unfitted & ordinary & Final & 3.022 & 6.256 & 98.91 & 2.674 & 0\\
+Unfitted & ordinary & FlatCART & 3.018 & 6.230 & 99.25 & 2.635 & 0\\
+Unfitted & ordinary & FlatRF & 2.997 & 6.103 & 99.41 & 2.521 & 0\\
+Unfitted & ordinary & ContractRF & 2.997 & 6.103 & 99.41 & 2.673 & 0\\
+Unfitted & ordinary & OldRAVC & 3.006 & 6.137 & 99.25 & 2.290 & 0\\
+Unfitted & ordinary & KG1 & 3.018 & 6.230 & 99.25 & 2.618 & 0\\
+Unfitted & ordinary & CART\_Time & 3.018 & 6.230 & 99.25 & 2.507 & 0\\
+Unfitted & ordinary & KG1 held & 3.027 & 6.255 & 99.16 & 2.577 & 0\\
+Unfitted & ordinary & Full & 3.006 & 6.137 & 99.25 & 2.395 & 0\\
+Unfitted & ordinary & Validated Flat & 3.006 & 6.137 & 99.25 & 2.235 & 0\\
+Unfitted & contention & Fixed2 & 3.064 & 6.134 & 39.21 & 2.108 & 0\\
+Unfitted & contention & Fixed4 & 3.071 & 6.206 & 39.21 & 2.353 & 0\\
+Unfitted & contention & Final & 3.071 & 6.206 & 39.21 & 2.694 & 0\\
+Unfitted & contention & FlatCART & 3.054 & 6.153 & 43.73 & 2.382 & 0\\
+Unfitted & contention & FlatRF & 3.057 & 6.111 & 40.22 & 2.322 & 0\\
+Unfitted & contention & ContractRF & 2.993 & 5.868 & 40.38 & 2.319 & 0\\
+Unfitted & contention & OldRAVC & 3.048 & 6.118 & 43.81 & 2.383 & 0\\
+Unfitted & contention & KG1 & 2.993 & 5.903 & 43.65 & 2.078 & 0\\
+Unfitted & contention & CART\_Time & 2.993 & 5.903 & 43.65 & 2.027 & 0\\
+Unfitted & contention & KG1 held & 2.996 & 5.909 & 43.65 & 1.934 & 0\\
+Unfitted & contention & Full & 2.994 & 5.869 & 43.65 & 1.975 & 48\\
+Unfitted & contention & Validated Flat & 2.994 & 5.869 & 43.65 & 2.090 & 48\\
+Unfitted & stress & Fixed2 & 9.665 & 27.479 & 38.21 & 2.017 & 0\\
+Unfitted & stress & Fixed4 & 9.283 & 24.449 & 37.04 & 2.519 & 0\\
+Unfitted & stress & Final & 9.283 & 24.449 & 37.04 & 2.531 & 0\\
+Unfitted & stress & FlatCART & 9.672 & 27.692 & 45.07 & 2.500 & 0\\
+Unfitted & stress & FlatRF & 9.661 & 27.564 & 42.14 & 2.451 & 0\\
+Unfitted & stress & ContractRF & 9.633 & 27.118 & 42.56 & 1.907 & 0\\
+Unfitted & stress & OldRAVC & 9.269 & 24.467 & 44.82 & 2.464 & 0\\
+Unfitted & stress & KG1 & 9.649 & 27.115 & 46.49 & 2.147 & 0\\
+Unfitted & stress & CART\_Time & 9.649 & 27.115 & 46.49 & 2.207 & 0\\
+Unfitted & stress & KG1 held & 9.654 & 27.115 & 46.49 & 2.042 & 0\\
+Unfitted & stress & Full & 9.663 & 27.116 & 45.74 & 2.211 & 48\\
+Unfitted & stress & Validated Flat & 9.663 & 27.116 & 45.74 & 2.401 & 48\\
+\bottomrule\end{longtable}\normalsize
+\subsection{Tail and influence evidence}
+\small\begin{longtable}{@{}lllrrrl@{}}
+\caption{KG1 influence diagnostics. Gain is baseline minus KG1 ($10^{-3}$ m$^2$s); top-two share is descriptive. I/W/T counts improved/worsened/tied inputs and retains all n=2,048. No top contributor is excluded from primary inference.}\label{supp:influence}\\\toprule
+Profile & Service & Baseline & Gain & Top 2 (\%) & Rest gain & I/W/T\\\midrule\endfirsthead
+\toprule
+Profile & Service & Baseline & Gain & Top 2 (\%) & Rest gain & I/W/T\\\midrule\endhead
+geometry & contended & Fixed2 & -1.589 & -22.63 & -1.951 & 851/1194/3\\
+geometry & contended & FlatCART & -4.179 & -7.37 & -4.492 & 666/1382/0\\
+geometry & contended & FlatRF & -1.830 & -19.66 & -2.192 & 694/1351/3\\
+geometry & relaxed & Fixed2 & 2.842 & 8.94 & 2.591 & 1456/515/77\\
+geometry & relaxed & FlatCART & 0.000 & -- & 0.000 & 0/0/2048\\
+geometry & relaxed & FlatRF & -0.009 & -1137.37 & -0.112 & 277/292/1479\\
+geometry & standard & Fixed2 & 2.514 & 10.02 & 2.265 & 458/366/1224\\
+geometry & standard & FlatCART & 0.000 & -- & 0.000 & 0/0/2048\\
+geometry & standard & FlatRF & 2.512 & 10.03 & 2.262 & 455/365/1228\\
+geometry & tight & Fixed2 & -0.004 & -0.00 & -0.004 & 0/7/2041\\
+geometry & tight & FlatCART & 0.000 & -- & 0.000 & 0/0/2048\\
+geometry & tight & FlatRF & 0.023 & 19.51 & 0.019 & 85/28/1935\\
+nominal & contended & Fixed2 & -2.818 & -15.79 & -3.266 & 860/1182/6\\
+nominal & contended & FlatCART & -5.094 & -2.11 & -5.206 & 750/1298/0\\
+nominal & contended & FlatRF & -3.043 & -14.62 & -3.492 & 779/1263/6\\
+nominal & relaxed & Fixed2 & 2.422 & 25.72 & 1.801 & 1202/637/209\\
+nominal & relaxed & FlatCART & 0.000 & -- & 0.000 & 0/0/2048\\
+nominal & relaxed & FlatRF & -0.283 & -33.03 & -0.377 & 271/292/1485\\
+nominal & standard & Fixed2 & 2.169 & 27.99 & 1.563 & 442/374/1232\\
+nominal & standard & FlatCART & 0.000 & -- & 0.000 & 0/0/2048\\
+nominal & standard & FlatRF & 2.180 & 27.85 & 1.575 & 497/373/1178\\
+nominal & tight & Fixed2 & -0.011 & -2.75 & -0.011 & 4/31/2013\\
+nominal & tight & FlatCART & 0.000 & -- & 0.000 & 0/0/2048\\
+nominal & tight & FlatRF & 0.073 & 5.40 & 0.069 & 372/153/1523\\
+\bottomrule\end{longtable}\normalsize
+\small\begin{longtable}{@{}llrrrrr@{}}
+\caption{Standard-service tails. Loss columns use $10^{-3}$ m$^2$s; error columns cm. Largest-5\% means are descriptive order statistics over every source.}\label{supp:tails}\\\toprule
+Profile & Policy & L p95 & L p99 & L top 5\% & Error p99 & Worst error\\\midrule\endfirsthead
+\toprule
+Profile & Policy & L p95 & L p99 & L top 5\% & Error p99 & Worst error\\\midrule\endhead
+nominal & Fixed2 & 47.252 & 105.101 & 95.488 & 16.862 & 52.980\\
+nominal & Fixed4 & 37.359 & 76.244 & 65.348 & 14.654 & 25.083\\
+nominal & Final & 37.359 & 76.244 & 65.348 & 14.654 & 25.083\\
+nominal & FlatCART & 37.550 & 77.893 & 67.486 & 14.654 & 25.083\\
+nominal & FlatRF & 47.252 & 105.459 & 95.513 & 16.862 & 52.980\\
+nominal & ContractRF & 47.252 & 105.459 & 95.513 & 16.862 & 52.980\\
+nominal & OldRAVC & 39.557 & 87.184 & 74.421 & 15.294 & 25.083\\
+nominal & KG1 & 37.550 & 77.893 & 67.486 & 14.654 & 25.083\\
+unfitted & Fixed2 & 82.222 & 286.196 & 215.495 & 27.364 & 43.740\\
+unfitted & Fixed4 & 71.743 & 239.320 & 183.938 & 25.776 & 44.647\\
+unfitted & Final & 71.743 & 239.320 & 183.938 & 25.776 & 44.647\\
+unfitted & FlatCART & 69.775 & 242.270 & 187.717 & 25.776 & 44.647\\
+unfitted & FlatRF & 82.222 & 286.196 & 215.467 & 27.364 & 43.740\\
+unfitted & ContractRF & 82.222 & 286.196 & 215.467 & 27.364 & 43.740\\
+unfitted & OldRAVC & 72.850 & 246.840 & 190.171 & 26.276 & 44.647\\
+unfitted & KG1 & 69.775 & 242.270 & 187.717 & 25.776 & 44.647\\
+\bottomrule\end{longtable}\normalsize
+\subsection{Audit evidence and retained earlier result displays}
+The preflight reports 12 cold-solve equivalence cases, 384 live-prefix/service-budget comparisons, 48 full/procedural equivalence cases and 1,632 constructed fault checks, plus 12 invalid card-schema and five dependency-invalidation fixtures. The final V3 audit covers 16,896 paired pilot contexts and 5,632 first-calibration-chunk policy/service projections, 14 named fault/rollback contexts and entry-point restoration. These software counts are not geometric calibration sample sizes. The real-card audit adds 16 invalid and two valid constructed cases: incorrect attachments 16/4/2/0/0 for no checks/matching/current/history/validated procedural. The normal cases pass all layers. Its deterministic scenario selection supports conformance attribution, not an unbiased field-fault prevalence estimate.
+
+The archive-provider audit reexecutes two complete inputs in both modes. All trace/capture arrays and non-CPU jobs/work/events agree exactly. It adds four executions and zero independent route observations; native CPU differences illustrate archive-boundary contamination rather than a method improvement. Historical metadata checker/dispatcher microbenchmarks retain their original measurement scope and are not combined with current online timing. All review defects, corrections, recovery records and original histories remain in the release.
+
+The following valid R4/R5 experimental displays remain visible with their original populations and timing, separate from new confirmation evidence. Supplied simulation screenshots and all four original physical photos appear in the main paper, with originals retained byte-for-byte.
+\begin{figure}[!htbp]\centering\includegraphics[width=.97\linewidth]{r4/frontier.pdf}\caption{Retained R4 work--loss frontier; Fixed2 and matched Flat controls remain visible.}
+\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=.97\linewidth]{r4/influence.pdf}\caption{Retained R4 influence diagnostic; its contributor concentration is not substituted for R8.}
+\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=.97\linewidth]{r4/workload.pdf}\caption{Retained R4 unsupported workload results; no old card is transferred to the new service.}
+\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=.97\linewidth]{r4/routes.pdf}\caption{Retained R4 nine-input/81-execution complete routes; these are separate from the 36 new inputs.}
+\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=.97\linewidth]{r4/contracts.pdf}\caption{Retained R4 operating-constraint/card comparison with its original finite family.}
+\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=.97\linewidth]{r7/population_cards.pdf}\caption{All 240 retained R4 population cards; separate from the 528 new cards.}
+\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=.97\linewidth]{r5/events.pdf}\caption{Retained R5 post-primary event-selection analysis; explicitly secondary rather than new confirmation.}
+\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=.97\linewidth]{r6/source_versions.pdf}\caption{Retained explanatory source-version replacement and replay interface.}
+\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=.97\linewidth]{platform_routes.pdf}\caption{Retained original platform photographs and prescribed aircraft route geometry.}
+\end{figure}
