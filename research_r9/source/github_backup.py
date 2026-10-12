@@ -33,6 +33,29 @@ def credential():
 
 class API:
     def __init__(self,secret):self.secret=secret
+    def upload_path(self,url,path):
+        # Native cURL streams the file directly. Credentials enter through
+        # standard input only, never command-line arguments or a config file.
+        if not url.startswith('https://uploads.github.com/'):
+            raise ValueError('Unexpected upload destination')
+        def quoted(value):return '"'+str(value).replace('\\','\\\\').replace('"','\\"')+'"'
+        config='\n'.join([
+            'url = '+quoted(url),'request = "POST"',
+            'header = '+quoted('Authorization: Bearer '+self.secret),
+            'header = "Accept: application/vnd.github+json"',
+            'header = "X-GitHub-Api-Version: 2026-03-10"',
+            'header = "Content-Type: application/octet-stream"',
+            'user-agent = "A20-R9-verified-backup"',
+            'connect-timeout = 30','max-time = 1200','speed-time = 120',
+            'speed-limit = 1024','silent','show-error'])+'\n'
+        begin=__import__('time').perf_counter()
+        result=subprocess.run(['curl.exe','-q','--config','-','--data-binary','@'+str(path)],
+            input=config,capture_output=True,text=True,timeout=1230)
+        if result.returncode:raise RuntimeError('Native upload transport failed: curl exit '+str(result.returncode))
+        data=json.loads(result.stdout)
+        if data.get('state')!='uploaded':raise RuntimeError('Native upload did not return an uploaded asset')
+        print('NATIVE_UPLOAD_COMPLETE',path.name,round(__import__('time').perf_counter()-begin,1),flush=True)
+        return data
     def request(self,url,method='GET',body=None,content_type='application/json'):
         if not url.startswith(('https://api.github.com/','https://uploads.github.com/')):
             raise ValueError('Unexpected credential destination')
@@ -87,7 +110,7 @@ def publish_assets(api,assets,commit):
             # Archive sizes are kept below 1 GB by the stage packager.
             if path.stat().st_size>1024**3:raise ValueError('Split this checkpoint before publication.')
             url=release['upload_url'].split('{')[0]+'?name='+quote(path.name)
-            asset=api.request(url,'POST',path.read_bytes(),'application/octet-stream')
+            asset=api.upload_path(url,path) if path.stat().st_size>8*1024*1024 and os.name=='nt' else api.request(url,'POST',path.read_bytes(),'application/octet-stream')
         fresh=api.request(base+'/releases/assets/'+str(asset['id']))
         if fresh.get('state')!='uploaded':raise RuntimeError('Remote asset is not a completed upload')
         server=fresh.get('digest')

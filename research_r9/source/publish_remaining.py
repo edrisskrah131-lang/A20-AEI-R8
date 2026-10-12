@@ -7,20 +7,27 @@ from github_backup import API,credential,publish_assets,REPOSITORY,BRANCH,sha
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--directory',type=Path,required=True)
     ap.add_argument('--commit',required=True);ap.add_argument('--record',type=Path,required=True)
+    ap.add_argument('--prefix');ap.add_argument('--workers',type=int,default=3)
     args=ap.parse_args();api=API(credential())
     assert api.request('https://api.github.com/user')['login']=='edrisskrah131-lang'
     base='https://api.github.com/repos/'+REPOSITORY
     assert api.request(base)['permissions']['push']
     assert api.request(base+'/git/ref/heads/'+BRANCH)['object']['sha']==args.commit
     groups=[]
-    for study,phase in (('A','confirmation'),('A','stress'),('B','confirmation'),('B','stress')):
+    if args.prefix:
+        files=sorted(args.directory.glob(args.prefix+'*'))
+        assert files and all(p.suffix in ('.json','.zip') for p in files)
+        groups=[[] for _ in range(args.workers)];weights=[0]*args.workers
+        for path in sorted(files,key=lambda p:p.stat().st_size,reverse=True):
+            group=min(range(args.workers),key=lambda i:weights[i]);groups[group].append(path);weights[group]+=path.stat().st_size
+    for study,phase in (() if args.prefix else (('A','confirmation'),('A','stress'),('B','confirmation'),('B','stress'))):
         files=sorted(args.directory.glob(f'A20_R9_{study}_{phase}_complete_*'))
         indexes=[p for p in files if p.name.endswith('_INDEX.json')]
         assert len(indexes)==1,(study,phase)
         index=json.loads(indexes[0].read_text());assert index['all_files_covered']
         groups.append(files)
     assets=[]
-    with ThreadPoolExecutor(max_workers=3) as pool:
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures=[pool.submit(publish_assets,api,group,args.commit) for group in groups]
         for future in as_completed(futures):
             release,verified=future.result();assets+=verified
