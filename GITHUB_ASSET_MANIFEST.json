@@ -1,0 +1,72 @@
+[
+  {
+    "filename": "A20_R8_01_Core_Code_Results_Handoff.zip",
+    "bytes": 437192755,
+    "sha256": "bb2911b3d6ab0effefe5a6311fa756147d48adf5b2b89db2dc42b4203c824473"
+  },
+  {
+    "filename": "A20_AEI_R8_Episode_Raw_Part01.zip",
+    "bytes": 422025659,
+    "sha256": "30125798045c692ee18ba0d8ebac339193b62a9cb0297698814f297da68c9303"
+  },
+  {
+    "filename": "A20_AEI_R8_Episode_Raw_Part02.zip",
+    "bytes": 317708396,
+    "sha256": "fe27897c9faa1af75b85ab89211139c40cf6b8c33621f52f81560e54661e23db"
+  },
+  {
+    "filename": "A20_R8_04_All_Complete_Routes.zip",
+    "bytes": 420371782,
+    "sha256": "46d4f6a4fd58f9e4f49784ec7e738820dec741b39d5bc9bb9e0bb4eea9bd4bd7"
+  },
+  {
+    "filename": "A20_AEI_R8_Historical_Assets_Part01.zip",
+    "bytes": 227607447,
+    "sha256": "f8e0eb83b68f773a6228f21f1f55a441261b32556c9ed9a06109aec4716efebd"
+  },
+  {
+    "filename": "A20_AEI_R8_Historical_Assets_Part02.zip",
+    "bytes": 307150412,
+    "sha256": "620ab695f96d9efbc4084ec2ac57109e7256bce2831d0ea4622523d293fa5a5a"
+  },
+  {
+    "filename": "A20_AEI_R8_Historical_Assets_Part03.zip",
+    "bytes": 260000860,
+    "sha256": "a527b5d260fdb98c843e2f86b0cbaa05057a8707cbab873c375bb151050839a3"
+  },
+  {
+    "filename": "A20_AEI_R8_Historical_Assets_Part04.zip",
+    "bytes": 324260215,
+    "sha256": "f5c4794866d240e0d8dca94ed110a9de58a7c0d6c3ef32899ca8122fd63cf11d"
+  },
+  {
+    "filename": "A20_R8_Start_Paper_Code_History.zip",
+    "bytes": 35218560,
+    "sha256": "c52a1e1a9d416b82289741972333ece9e45aeea7a6587d174a9d2d5b36cbd491"
+  },
+  {
+    "filename": "A20_AEI_R8_Editable_LaTeX.zip",
+    "bytes": 27926025,
+    "sha256": "18db7e7b947c3c9fd17cb24521a785a95d31063333b253810edf80eee317a486"
+  },
+  {
+    "filename": "A20_AEI_R8_Manuscript.pdf",
+    "bytes": 7759360,
+    "sha256": "8c0828b711d00dd29e46d863c5c5dc028f63fe627ccacf7cf6efaf8a4464905f"
+  },
+  {
+    "filename": "A20_AEI_R8_Supplement.pdf",
+    "bytes": 1701830,
+    "sha256": "59f6194ae3cc9f57fdcee70e23dcb152adfa71edcd0c67c5f2553147a570556b"
+  },
+  {
+    "filename": "A20_AEI_R8_Revision_Report_CN.pdf",
+    "bytes": 247975,
+    "sha256": "98d7a9e756501f9885053857f63ff5b7f7109ed833f4a6db9ef303ffca01a36a"
+  },
+  {
+    "filename": "A20_AEI_R8_Independent_Review_CN.pdf",
+    "bytes": 360165,
+    "sha256": "4d10092ab84eed9d3423851fa94b4fd441c1ee74a86053cefc93254a57e40e6a"
+  }
+]
