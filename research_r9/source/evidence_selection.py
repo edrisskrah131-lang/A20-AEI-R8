@@ -127,10 +127,10 @@ def calibrate():
     (output/'cards.json').write_text(json.dumps(cards,indent=2),encoding='utf-8')
     (output/'plans.json').write_text(json.dumps(plans,indent=2),encoding='utf-8')
     pd.DataFrame(prep).to_csv(output/'calibration_preparation.csv',index=False)
-    files={str(f.relative_to(HERE)):sha(f) for f in sorted(output.glob('*'))}
+    files={f.relative_to(HERE).as_posix():sha(f) for f in sorted(output.glob('*'))}
     for study in ('A','B'):
         for name in ['manifest.json','outcomes.csv.gz']:
-            path=HERE/'data'/study/'calibration'/name;files[str(path.relative_to(HERE))]=sha(path)
+            path=HERE/'data'/study/'calibration'/name;files[path.relative_to(HERE).as_posix()]=sha(path)
     (HERE/'protocol/selection_freeze.json').write_text(json.dumps(dict(files=files,
         cards=len(cards),plan_queries=len(plans),confirmation_inputs_before_seal=0),indent=2),encoding='utf-8')
     print('CALIBRATION_SEALED',len(cards),len(plans),flush=True)

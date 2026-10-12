@@ -7,7 +7,7 @@ from task_requirements import TASKS,VARIANTS,ANCHORS,POLICIES,requirement,ALLOWA
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 def draft():
-    return dict(version='R9-prospective-1',status='FROZEN_BEFORE_FORMAL_CALIBRATION',
+    return dict(version='R9-prospective-1.1-format-amendment',status='FROZEN_BEFORE_FORMAL_CALIBRATION',
       studies={'A':{'roi':[192,144]},'B':{'roi':[288,216]}},
       counts={'calibration_per_population':2048,'confirmation_per_population':1024,'stress_per_profile':64},
       seeds={'A':{'nominal_calibration':13000000,'unfitted_calibration':13100000,
@@ -64,12 +64,12 @@ def freeze():
                           pilot_manifest_sha256=sha(pilot/'manifest.json'))
     protocol=draft();protocol['camera_clock']=clock
     (HERE/'protocol/protocol.json').write_text(json.dumps(protocol,indent=2,ensure_ascii=False),encoding='utf-8')
-    files={str(p.relative_to(HERE)):sha(p) for p in sorted((HERE/'source').glob('*.py'))
+    files={p.relative_to(HERE).as_posix():sha(p) for p in sorted((HERE/'source').glob('*.py'))
            if p.name not in ('github_backup.py','checkpoint_archive.py')}
     files['native/bvh_windows.dll']=sha(HERE/'native/bvh_windows.dll')
-    components={str(p.relative_to(R8)):sha(p) for p in sorted((R8/'source').glob('*.py'))}
+    components={p.relative_to(R8).as_posix():sha(p) for p in sorted((R8/'source').glob('*.py'))}
     for folder in ['data/r4_final','data/r8_final/geometry']:
-        for p in sorted((R8/folder).glob('*.npz')):components[str(p.relative_to(R8))]=sha(p)
+        for p in sorted((R8/folder).glob('*.npz')):components[p.relative_to(R8).as_posix()]=sha(p)
     for rel in ['data/checkpoint_model.npz','data/r4_final/freeze.json',
                 'data/r8_final/clock_profile.json','data/r8_final/runtime_bindings.json']:
         components[rel]=sha(R8/rel)
