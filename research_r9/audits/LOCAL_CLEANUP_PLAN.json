@@ -1,0 +1,12 @@
+{
+  "status": "PLANNED_NOT_EXECUTED",
+  "condition": "Only execute after FINAL_REMOTE_CLOSURE PASS and all source/audit changes pushed to R9 branch",
+  "targets": [
+    "C:\\Users\\21882\\Documents\\Codex\\2026-10-12\\sci\\work",
+    "C:\\Users\\21882\\Documents\\Codex\\2026-10-12\\sci\\outputs",
+    "D:\\Codex_A20_AEI_R9_20261012"
+  ],
+  "excluded": "User Downloads, unrelated projects and Codex account/configuration files",
+  "retained": "C:/Users/21882/Documents/Codex/2026-10-12/sci/GITHUB_HANDOFF: small links, verification and cleanup receipts",
+  "basis": "User explicitly requested upload then delete this task local copies to free disk; cloud continuation planned."
+}

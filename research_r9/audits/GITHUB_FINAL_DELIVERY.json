@@ -1,0 +1,179 @@
+{
+  "repository": "edrisskrah131-lang/A20-AEI-R8",
+  "branch": "r9-rebuild-20261012",
+  "commit": "f66d5f5e86044343f9584397a1d7f7da4b1c673f",
+  "release_url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/tag/r9-data-complete-20261012",
+  "remote_upload_verified": true,
+  "requested_assets": 21,
+  "verified_assets": [
+    {
+      "file": "R91_PDF_QA.json",
+      "sha256": "8af0f47543b92d1a6273f0f9aea1187e4d8a94f55afa89dffbbbd39ff1c6d87b",
+      "bytes": 456,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/R91_PDF_QA.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "R9_REVISION_STATUS_CN.md",
+      "sha256": "ab2818ffd51484f1ce6e1e61a4287ec9371e8a4e13b51023c69bad0141ce6f8c",
+      "bytes": 1015,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/R9_REVISION_STATUS_CN.md",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "environment.json",
+      "sha256": "6c08122b4cf48b667624b3ec4b23fb46252ceeb0e622d0f6ee7063f7069e75a6",
+      "bytes": 466,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/environment.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "R91_PRESERVATION_AUDIT.json",
+      "sha256": "197fde553583057d1c078ccea119e6451cbc541a232a25599d0717cb5e34879d",
+      "bytes": 1643,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/R91_PRESERVATION_AUDIT.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "final_execution_audit.json",
+      "sha256": "2534213cd1e0135c2888c224c48b5dec748ecca77e104c82ffe48389d7e4219e",
+      "bytes": 1369,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/final_execution_audit.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "REPRODUCE_R9_CN.md",
+      "sha256": "457d333a603b2cf9aca717526d8342230845baf1bff840917ac8d1666638a3a9",
+      "bytes": 2393,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/REPRODUCE_R9_CN.md",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "source_replay.json",
+      "sha256": "f1e08100b02ddd995f1a0dccf7241115fa26410b59f01e142a07baeb7c6874a7",
+      "bytes": 2395,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/source_replay.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "R9_DATA_DOWNLOAD_CN.md",
+      "sha256": "3f124db76e9429e06398abd62c72e03a3ef08b74d2e110f4a0a302b6c4ff0259",
+      "bytes": 3075,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/R9_DATA_DOWNLOAD_CN.md",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Restored_Reading_And_Handoff.json",
+      "sha256": "25d40c7c70db3b1ca383c09934a7640b700d7380bac8c3e411d8a75e91115594",
+      "bytes": 3868,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Restored_Reading_And_Handoff.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "READ_FIRST_R9_CN.md",
+      "sha256": "b2c99c635a71947b3712269f8a31a986b1c09e005740f6a9f178eb3adc14a748",
+      "bytes": 4508,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/READ_FIRST_R9_CN.md",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "RESULT_FACTS.json",
+      "sha256": "e6967d19bf9d43cd29a7ab1f3f80436517cb7b303d1936c78be5b88342f9e45c",
+      "bytes": 7884,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/RESULT_FACTS.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Figures.json",
+      "sha256": "51f089cc2e910866d0c1c7846bec338e3810f5653b41003dd7858e0aad1861fe",
+      "bytes": 27006,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Figures.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Restored_Editable_Source.json",
+      "sha256": "bf82f59af45c441811d54620cbe1e68e805d960cd94b60f5b42042200c862cb2",
+      "bytes": 68849,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Restored_Editable_Source.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "R9_DATA_CATALOG.json",
+      "sha256": "3314a99f545d939e91571f6bb25759b1513045c40deb9d95cccea4988953148d",
+      "bytes": 93723,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/R9_DATA_CATALOG.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Internal_Review_CN.pdf",
+      "sha256": "6c687572c90e0d17333bb9acea92b0f9ab6ad5acb88da4ea9f69ece1ca547911",
+      "bytes": 188964,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Internal_Review_CN.pdf",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Revision_Report_CN.pdf",
+      "sha256": "f404317b0efd741dc06391b948ec4053a5c667a8a46710b98160dde1209127f3",
+      "bytes": 199382,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Revision_Report_CN.pdf",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Supplement.pdf",
+      "sha256": "93e4421801aeb56b35b3d087d53ab766dd0e4c51357b9482eb983526be7af2a2",
+      "bytes": 1658622,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Supplement.pdf",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Restored_Draft.pdf",
+      "sha256": "c937d9a5b7fba076adc0711bf2400413bbc4f70fc865154b231aa182514bead4",
+      "bytes": 8131864,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Restored_Draft.pdf",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Restored_Reading_And_Handoff.zip",
+      "sha256": "a9b3749e967b93d13c1060ce04f02b1cd8680e99568fd2f58fdc1e11a60c4bfc",
+      "bytes": 10210317,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Restored_Reading_And_Handoff.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Restored_Editable_Source.zip",
+      "sha256": "6e92eae2e3f499e1c9a817f30d4b95f4a0bf7e90b728d108cc84bb8b59d78ce5",
+      "bytes": 104133898,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Restored_Editable_Source.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Figures.zip",
+      "sha256": "069014e4f4ed6ff980fc71c37c5b95fa550b69d8b7c1ba0e5377ea030d70aeda",
+      "bytes": 97955108,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Figures.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    }
+  ],
+  "failed": []
+}

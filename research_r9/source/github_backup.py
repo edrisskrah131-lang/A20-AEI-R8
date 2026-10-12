@@ -5,7 +5,7 @@ No token is accepted as a command argument, stored in a file, or printed.
 Default mode is read-only. --publish uploads only the named validated assets.
 """
 from pathlib import Path
-import argparse, hashlib, json, os, subprocess, urllib.request, urllib.error, http.client, time
+import argparse, hashlib, json, os, subprocess, urllib.request, urllib.error, http.client, time, gzip
 from urllib.parse import quote
 
 REPOSITORY = 'edrisskrah131-lang/A20-AEI-R8'
@@ -63,7 +63,7 @@ class API:
         headers={
             'Authorization':'Bearer '+self.secret,'Accept':'application/vnd.github+json',
             'X-GitHub-Api-Version':'2026-03-10','Content-Type':content_type,
-            'User-Agent':'A20-R9-verified-backup'}
+            'User-Agent':'A20-R9-verified-backup','Accept-Encoding':'gzip'}
         if isinstance(body,bytes) and len(body)>8*1024*1024:
             # A single SSL sendall has one aggregate write timeout. Streaming
             # bounded blocks keeps each write bounded on a slow connection.
@@ -78,7 +78,7 @@ class API:
         for attempt in range(4):
             try:
                 with urllib.request.urlopen(req,timeout=120) as r:
-                    return None if r.status==204 else json.load(r)
+                    return None if r.status==204 else json.load(gzip.GzipFile(fileobj=r) if r.headers.get('Content-Encoding')=='gzip' else r)
             except urllib.error.HTTPError as e:
                 if method=='GET' and e.code in (429,500,502,503,504) and attempt<3:
                     time.sleep(2*(attempt+1));continue
@@ -125,7 +125,7 @@ def publish_assets(api,assets,commit):
             check='GitHub server SHA256 and byte count'
         else:
             h=hashlib.sha256()
-            req=urllib.request.Request(fresh['browser_download_url'],headers={'User-Agent':'A20-R9-verified-backup'})
+            req=urllib.request.Request(fresh['browser_download_url'],headers={'User-Agent':'A20-R9-verified-backup','Accept-Encoding':'gzip'})
             with urllib.request.urlopen(req,timeout=600) as r:
                 for data in iter(lambda:r.read(1024*1024),b''):h.update(data)
             if h.hexdigest()!=digest:raise RuntimeError('Downloaded checkpoint digest differs')

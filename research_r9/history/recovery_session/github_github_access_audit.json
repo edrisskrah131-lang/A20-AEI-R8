@@ -1,0 +1,124 @@
+{
+  "repo": "edrisskrah131-lang/A20-AEI-R8",
+  "commit": "7aab75fb41533afba11f53f601373be5d3d9e07c",
+  "visibility": "public",
+  "release_tag": "r8-handoff-2026-10-12",
+  "release_assets": 16,
+  "manifest_assets": 14,
+  "checks": [
+    {
+      "filename": "A20_R8_01_Core_Code_Results_Handoff.zip",
+      "bytes": 437192755,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Episode_Raw_Part01.zip",
+      "bytes": 422025659,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Episode_Raw_Part02.zip",
+      "bytes": 317708396,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_R8_04_All_Complete_Routes.zip",
+      "bytes": 420371782,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Historical_Assets_Part01.zip",
+      "bytes": 227607447,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Historical_Assets_Part02.zip",
+      "bytes": 307150412,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Historical_Assets_Part03.zip",
+      "bytes": 260000860,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Historical_Assets_Part04.zip",
+      "bytes": 324260215,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_R8_Start_Paper_Code_History.zip",
+      "bytes": 35218560,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Editable_LaTeX.zip",
+      "bytes": 27926025,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Manuscript.pdf",
+      "bytes": 7759360,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Supplement.pdf",
+      "bytes": 1701830,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Revision_Report_CN.pdf",
+      "bytes": 247975,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    },
+    {
+      "filename": "A20_AEI_R8_Independent_Review_CN.pdf",
+      "bytes": 360165,
+      "present": true,
+      "uploaded": true,
+      "size_matches": true,
+      "sha256_matches": true
+    }
+  ],
+  "full_archive_bytes": 2716317526,
+  "scope": "Compared GitHub uploaded asset metadata and server digests with the repository manifest; large release files not downloaded or locally inspected in this check."
+}

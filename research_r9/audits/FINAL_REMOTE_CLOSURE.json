@@ -1,0 +1,1803 @@
+{
+  "status": "PASS",
+  "remote_upload_verified": true,
+  "branch": "r9-rebuild-20261012",
+  "code_commit": "f66d5f5e86044343f9584397a1d7f7da4b1c673f",
+  "verified_release_assets": [
+    {
+      "file": "A20_R9_design_draft_20261012T095654Z.zip",
+      "sha256": "7a064f46be4e2d98adc5a7db3e2de14643659d214777e2fa8765146014e0033f",
+      "bytes": 5840,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_design_draft_20261012T095654Z.zip",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_design_draft_20261012T095654Z.json",
+      "sha256": "a813e02017ab1dc05bde8fda1b5265ede8511774dd2a716e5398e6d22e07c69b",
+      "bytes": 1007,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_design_draft_20261012T095654Z.json",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_semantic_native_preflight_20261012T101217Z.zip",
+      "sha256": "20bd908ff0a72720e3d17e388b80907723d34c56655135880a25bd40288cd09e",
+      "bytes": 151856,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_semantic_native_preflight_20261012T101217Z.zip",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_semantic_native_preflight_20261012T101217Z.json",
+      "sha256": "e34676be5038efa7009ea616818953e1da3030d6a63cfd006b86d0cd2366ee8b",
+      "bytes": 2037,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_semantic_native_preflight_20261012T101217Z.json",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_excluded_pilot_v2_20261012T102423Z.zip",
+      "sha256": "c791f9f3833ea868095cd4f4be76f183426fdd8de1f4de5c6fba6d76bc3a6de6",
+      "bytes": 59860336,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_excluded_pilot_v2_20261012T102423Z.zip",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_excluded_pilot_v2_20261012T102423Z.json",
+      "sha256": "d987bbcf076aab366e3bcfa15b0f966707b0214cacdacf67cdef655dc5692e48",
+      "bytes": 41531,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_excluded_pilot_v2_20261012T102423Z.json",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_protocol_v1_1_code_20261012T110245Z.zip",
+      "sha256": "ab92c5cf7f595437c61beb00cc8b6c97cf15f69266080f1d36d39747e27ff257",
+      "bytes": 219127,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_protocol_v1_1_code_20261012T110245Z.zip",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_protocol_v1_1_code_20261012T110245Z.json",
+      "sha256": "4f7b2e03a5c0fe28a5f4fcf38c7e835ab7a124b91fe0252de8296f5f31058478",
+      "bytes": 6848,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_protocol_v1_1_code_20261012T110245Z.json",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_protocol_freeze_all_pilots_20261012T105852Z.zip",
+      "sha256": "9496a3e71709e7c670e7aaa76b017d5566334597ee80c314b863457da920d234",
+      "bytes": 175269884,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_protocol_freeze_all_pilots_20261012T105852Z.zip",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_protocol_freeze_all_pilots_20261012T105852Z.json",
+      "sha256": "e2fa4891dc57bdfdb5ca203d26442150e0c00d465539baa32a67ce591ace5ed8",
+      "bytes": 117627,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_protocol_freeze_all_pilots_20261012T105852Z.json",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_A_calibration_first16_20261012T110917Z.zip",
+      "sha256": "2dc5ad4336cbae8dfb3b708d77d04178f6691d5ea9a42e52434ff2bb950c497f",
+      "bytes": 6392154,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_first16_20261012T110917Z.zip",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_A_calibration_first16_20261012T110917Z.json",
+      "sha256": "e7c9ca9587b1ebedbc54c9efe6c517d2fdec3751232e263eef582c5a3175de96",
+      "bytes": 8610,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_first16_20261012T110917Z.json",
+      "verification": "GitHub server SHA256 and byte count"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_INDEX.json",
+      "sha256": "4012fc65710c4020407f95d27f824383abd7f4ed04248ccbd4f277adf9689727",
+      "bytes": 2270818,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_INDEX.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_001.json",
+      "sha256": "878dc8699a5c8bbfc3b538125ffa4b63124e78995a0cd360dd7f999a9b0e2ce2",
+      "bytes": 295504,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_001.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_001.zip",
+      "sha256": "cbf260c4cb78fafa7e331b62d0c9e3b3b6960c8b1104d7072a5c83d62b25be32",
+      "bytes": 240742484,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_001.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_002.json",
+      "sha256": "8d9c3bbe8d192799c186088db381a6f899097b0083d26c3ecfa6888d2f3a9ce0",
+      "bytes": 303378,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_002.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_002.zip",
+      "sha256": "187e3c302710ac3cb3a4b9767ba6d827225c66b2067c444619254b2cd319bd57",
+      "bytes": 240067800,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_002.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_003.json",
+      "sha256": "f2902167ef3330b8601bcd1624ef74f82d6448877894ecd3ba8c12c578810d77",
+      "bytes": 295507,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_003.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_003.zip",
+      "sha256": "590019642de152726762eb27d54eca7444edc1966f60a69f8257623edbd5b3ff",
+      "bytes": 240561540,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_003.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_004.json",
+      "sha256": "c80f3882066f2aa5a57151d832c1f316feb006ca60c4e34df18ca83c553a1af0",
+      "bytes": 272845,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_004.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_004.zip",
+      "sha256": "f78e9a4167f8de29f69e13fa5e458b08841aa764a367c2f701942d78b8c06ae7",
+      "bytes": 242590261,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_004.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_005.json",
+      "sha256": "404038c8f84f92843aa9882c7548923c23adfb61ebd7bcc5cc0a8c1ce79aec2b",
+      "bytes": 260665,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_005.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_005.zip",
+      "sha256": "64d819dccdb694d07b58310493ef87c640c9da8f9ffcb16d93dcd758aadd3fc9",
+      "bytes": 243809459,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_005.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_006.json",
+      "sha256": "bf40a0c90fb4bc124e45d452cd1c7faa0c4961bf437ba1a30f3fc9cd8f219fb8",
+      "bytes": 260170,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_006.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_006.zip",
+      "sha256": "c9833682526eb2f9842a903274e599572f9be28e2f5a1a7572e87edd3edda534",
+      "bytes": 243674978,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_006.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_007.json",
+      "sha256": "3120431a5f59c5e71363f4c93a4bb99a03b2d0a90f665e38a153888b47aa516b",
+      "bytes": 258685,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_007.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_007.zip",
+      "sha256": "67c92867be1880806eb26ed1620b9c4a0a15ac19000cfb8e5d0a8f63347aa7a6",
+      "bytes": 243999837,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_007.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_008.json",
+      "sha256": "8b120f4b09912b82bfb2428bd84bfeb256dc4e8cf6500f7049086d26dee17ee9",
+      "bytes": 77019,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_008.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_008.zip",
+      "sha256": "e70622f577d418646f80a68601943f18c04ba7ebc9a915651de7a0ed7b49a29c",
+      "bytes": 72046514,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_008.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_tables.json",
+      "sha256": "927aaba93cf833ef4bd52e5d1cf49cfb37b464c8a71dfb52a00bc87fad5ebfce",
+      "bytes": 606,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_tables.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_tables.zip",
+      "sha256": "9b132604157ead00ff231c3c3bee23929665303b2ed1e59d39542df0aa88855e",
+      "bytes": 3880048,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_tables.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_stress_complete_20261012T125249Z_tables.json",
+      "sha256": "31f446176fb55c2a574f583a6e4f64fd998059e3297fc75ecb566936af153311",
+      "bytes": 592,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_stress_complete_20261012T125249Z_tables.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_stress_complete_20261012T125208Z_tables.json",
+      "sha256": "65f72295dbd27beba245e9e3b07c6682560858d708081da576b5ce137bd3665c",
+      "bytes": 592,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_stress_complete_20261012T125208Z_tables.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_tables.json",
+      "sha256": "548671bfbdb848bb49c7473c148a5f15c24c639ad2046834de49b8d6eb808d81",
+      "bytes": 767,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_tables.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_tables.json",
+      "sha256": "558a81d07a19321bcc2ec5348038fddc7b4e24bf8e836b0d9826c1529acff2ec",
+      "bytes": 767,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_tables.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_05.json",
+      "sha256": "ca5c1a5a0bb48732df76cad4a8232aabb9fa452cf81077ae127f729a60fb46ca",
+      "bytes": 798,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_05.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_tables.json",
+      "sha256": "773543d14aa46084cf4c8449548a10a6031805e81fb41463cfe7d88538c040c6",
+      "bytes": 606,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_tables.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_05.json",
+      "sha256": "705c11250c21698b0f0ffd8dfdac52c498764ea5dde59f643667c39354f44ca2",
+      "bytes": 798,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_05.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_05.json",
+      "sha256": "b7a1766c6e0c153ce189bd5d24fded56024ce75357be19080752d51c3cbcc3b8",
+      "bytes": 1286,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_05.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_05.json",
+      "sha256": "be5b7dd9eab0ed4ca3f2884931be6edce4a67761b451efd662281a526647d4fd",
+      "bytes": 1286,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_05.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_05.json",
+      "sha256": "d600748a77477641369aebdcbf5c22147a9e5e43644521dec4ae2a1868707ddb",
+      "bytes": 1287,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_05.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_05.json",
+      "sha256": "1c79b8ce577c584535beb7b3a9a04adbaeae33de7fe4c0164920b112380c09f4",
+      "bytes": 1292,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_05.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_05.json",
+      "sha256": "bd633913ca885ce307fe32db58ab537f30874dddfd52b9663e9944a7ce9d7ac3",
+      "bytes": 1292,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_05.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_05.json",
+      "sha256": "a3f1adb482637bf5720bea301191a419674194866e2d3f22756392e5215e6dea",
+      "bytes": 1292,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_05.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_05.json",
+      "sha256": "d129f34214644c7949babd42b6bf913806195d6a59b7d91388962d67ed39c4e1",
+      "bytes": 1293,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_05.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_03.json",
+      "sha256": "49aebc63b6f01a3cad2d534965998fdd4437389e9a62567e50aace50ac71a81d",
+      "bytes": 23580,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_02.json",
+      "sha256": "a7d841e6a7060d5a538079859b89b8b81640f656fc08221272bc579f5c25b759",
+      "bytes": 34468,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_04.json",
+      "sha256": "23f3fbc26d0fee3f1116c27909780510283adeb543d561b8b98b114d37d49ef7",
+      "bytes": 34469,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_01.json",
+      "sha256": "61f6036308060af31a8ca78db1e5087aec23ffe15344c51bf6b8edbb5c3f5d64",
+      "bytes": 34966,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_03.json",
+      "sha256": "e15e16cad29a7bfb13b476244cef884afec16f033a2575a31787f8ccb2a68a4a",
+      "bytes": 34965,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_03.json",
+      "sha256": "265fdf2009e2e0bf05f5e44a9c35a475f24de2cff765640c138cd263135c33f6",
+      "bytes": 34968,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_02.json",
+      "sha256": "ca1fe89aafef1e62de1ad91d5df4b1196b4df7bc72fc2f0736adaaeb9118af41",
+      "bytes": 34968,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_01.json",
+      "sha256": "f9e153e3f8316b3e69470d132f5269214513203d21d629fb84b35243fc4f2630",
+      "bytes": 34968,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_03.json",
+      "sha256": "21aaab8ddf8da5f6203131b66dca4fb38928554c916991e71df0689aac2089d6",
+      "bytes": 35456,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_04.json",
+      "sha256": "2751922f84ac8bc17151ad11c418be8ffc96930337b82564ee63ab0af1e2e3e3",
+      "bytes": 35458,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_01.json",
+      "sha256": "dc467260e110aedadfba2109a39a50b22725f248ea8aa0427ee01665aac96415",
+      "bytes": 35460,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_04.json",
+      "sha256": "c810dbe5b68b5a9cc3534d6fc4267f1f8fad5c9e39b327faf62b33258b6e1e8c",
+      "bytes": 35459,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_01.json",
+      "sha256": "0d4841584388a679f78f159076ac7a83185a1e251d6ca5d28b61bdb3626bfb23",
+      "bytes": 35461,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_03.json",
+      "sha256": "c4231137c975f9abd0d90a43c60cb8eba7ed67672a7dac8ad9ab15bd8c6f9b79",
+      "bytes": 35461,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_04.json",
+      "sha256": "cd194e0766a367abf02490db94e9bd09c2b03ef2d6fb5767f4b5a9a5f07f5011",
+      "bytes": 35461,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_01.json",
+      "sha256": "d302bc9594475862964036e68fab5adb3a39144fa253765caa7673e3651e1f3c",
+      "bytes": 35463,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_01.json",
+      "sha256": "6f61fcfe39b7d076c30914978ef00f203d2e4633ccf239c9588c434d08f8af86",
+      "bytes": 35463,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_04.json",
+      "sha256": "788531bd029c01710fc4b13b3b1150aeb0309a0cea520ebce395f8dc686f0f79",
+      "bytes": 35464,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_02.json",
+      "sha256": "a4889e8a77d484ddeeaf47ca280f6cbafb3baf7bf2b0b27d9827cde552ecb55c",
+      "bytes": 35954,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_04.json",
+      "sha256": "dfe980fc01c2596534101204f883718e292e61a3f8cc4bb7cb10db32f68c56d1",
+      "bytes": 35954,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_01.json",
+      "sha256": "8bb745dd887a7a60fefd606aeb8fc96d476d2e324c5c64178eee6a4b8e90c60d",
+      "bytes": 35956,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_04.json",
+      "sha256": "c1007bd7329db4322a0a9f87d297d32d243c07d7b642cd3429173f4b5f0f87ff",
+      "bytes": 36448,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_01.json",
+      "sha256": "4a8056eb916f3c2eeef08522684ed671b457e873f4ae1f430850dd13eb439195",
+      "bytes": 36450,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_03.json",
+      "sha256": "7c23d96a099ac329a5f6589f3b1fdb39655f20e62244d5f8a7e0c0b0e7271031",
+      "bytes": 36449,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_03.json",
+      "sha256": "7d19f9fef9e4182b8bc19d25f169dcdb583feb5e2949dfbbe94a7246c1a6d632",
+      "bytes": 36451,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_03.json",
+      "sha256": "262ea94e71dc3bf9177ae3bcce8b27dd75aa401cbceeca0a21fbf4b4dce959ad",
+      "bytes": 36450,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_03.json",
+      "sha256": "4616efe1bfc83b89eb99d072c337b5a934e38c71e143f3269d00938f0b3ed9df",
+      "bytes": 36938,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_02.json",
+      "sha256": "905844f33a849ca04716f2987b22b1eb64f04eb30a40d376e39f59ca83a4e540",
+      "bytes": 36945,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_02.json",
+      "sha256": "3991baf9189ef576a7d0b5921aaac1deb4e9a0aef64caae04a12d846f47019af",
+      "bytes": 36450,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_02.json",
+      "sha256": "8ca0385e466b72b08d9fe94cadebf6742f29ff31b4e2bfb5a3d423c4a45b5bb0",
+      "bytes": 37437,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_02.json",
+      "sha256": "5913c8e82e6d88f1a316647fc4a6c8c9af6ab7cea5673e3954e1db17cb07ae9f",
+      "bytes": 37438,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_04.json",
+      "sha256": "2d1a6f609b7ec07cb0da71e222810c25bc280586258ffe5dc15fcba82f26e5a4",
+      "bytes": 37436,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_01.json",
+      "sha256": "8c4565e842c6b13b9ab1142d151ddcda4bd3612323fa4c84b0f798f190c9f64c",
+      "bytes": 38203,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_04.json",
+      "sha256": "430b90dda3abab44ce8f80ab15b5004e660dde17b78c1a14253132eea5ac2e47",
+      "bytes": 37709,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_02.json",
+      "sha256": "73b817489b832cbcd7a5cc4838cd2b8d90aef8d97b322e5791cb6471a3b9c4be",
+      "bytes": 37440,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_02.json",
+      "sha256": "4ae12cb2213442daf1f0b6162c6bd29f9071696e0591cc271f30d02ecd22f45f",
+      "bytes": 39179,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_02.json",
+      "sha256": "696e7e4ae78fbd2f7f59413ce44858796441c9e70e40f04a265c738e96e7fca8",
+      "bytes": 38353,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_01.json",
+      "sha256": "503d2a7e9cc5ae4a72a825ad5e1c61ce3c3a071ad65534d3f71974693153edfd",
+      "bytes": 38694,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_02.json",
+      "sha256": "71f54397da64c680b2baca92246f30255804d8e7883c811b5f4876ae3c68709c",
+      "bytes": 39184,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_01.json",
+      "sha256": "52e4c343feb5dd393fc0eb68c76d07f4e63390772eaa1be12146d06500987284",
+      "bytes": 39189,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_01.json",
+      "sha256": "921c0f8ba463a59ac6f369473a55af6dd3d94d3ce5c906d391103ed3a4b7ab22",
+      "bytes": 39182,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_01.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_02.json",
+      "sha256": "b09dfbb4387d92c82a8586bf2bb50b4cef7ed959eb1645c39e5d703644f30d9a",
+      "bytes": 39669,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_02.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_03.json",
+      "sha256": "c57082e70b8308ea15f834fc34d8a28a4b33d2d9ded9b9e1c7c2767c86a76176",
+      "bytes": 40663,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_04.json",
+      "sha256": "eb62c87d79b5227778676aead0e539953ab361cdc4bdbbc3d06022ec732c4f9a",
+      "bytes": 41150,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_04.json",
+      "sha256": "f27093fe574b121d161f418493d8b8cc3734bdbcdcf70052dbda0737afd6d9a1",
+      "bytes": 40166,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_04.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_03.json",
+      "sha256": "8c8b769f33621a8ba12451dc6473dde39758d54bebf29a8cb4cb81e80e370a3d",
+      "bytes": 41154,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_stress_complete_20261012T125208Z_raw_001.json",
+      "sha256": "dcd061959f161a099726d76f3e3b1fb00307fef30471034b658ea0b811b7573f",
+      "bytes": 128343,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_stress_complete_20261012T125208Z_raw_001.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_03.json",
+      "sha256": "9067843f886ac1597a6cf5e53a199c70aee5c7852bbd0ec47dc146604c9c83b2",
+      "bytes": 41644,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_03.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_stress_complete_20261012T125249Z_raw_001.json",
+      "sha256": "846c6a6110e908d11a32d63403cda765ec64f115689b5aa0c4498138b06e017c",
+      "bytes": 128379,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_stress_complete_20261012T125249Z_raw_001.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_stress_complete_20261012T125208Z_INDEX.json",
+      "sha256": "294aeec4ada48abf4cf2e7e7c0eb5f59f72b9e320bc03927fdc9c018cdc3fb2d",
+      "bytes": 144688,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_stress_complete_20261012T125208Z_INDEX.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_stress_complete_20261012T125249Z_INDEX.json",
+      "sha256": "91a4782a7d5710ebf77c6f6fb5f473f76d5900d313218206bb565b7e0b352269",
+      "bytes": 144724,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_stress_complete_20261012T125249Z_INDEX.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_004.json",
+      "sha256": "08e5539fa32b4094aeaf767d7063e6febcd8d05d86dcfae28fc82c956f3dfb4c",
+      "bytes": 146226,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_004.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_005.json",
+      "sha256": "5c43d33b9689deb3a0f0d29322636fef96770b3b7e07f4c6088b75329de56b54",
+      "bytes": 146853,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_005.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_002.json",
+      "sha256": "518777a27ecbe259b620f3296f667ff7628a675b9a397b95268cfb03584661c7",
+      "bytes": 158285,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_002.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_raw_004.json",
+      "sha256": "b9ee773e7e1694e3766f1a4581ce86cb4379232f4c144bb263eaf822547a7436",
+      "bytes": 159192,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_raw_004.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_003.json",
+      "sha256": "7d36eab2583aeb908de12a07247d93f7682e39a6e34083e1e5c6b1abe9c49350",
+      "bytes": 159264,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_003.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_002.json",
+      "sha256": "04bfdf4169ead4eefb1f559b26bc81920c2316ddd1e58b530f4dc28ed78b9a1d",
+      "bytes": 161222,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_002.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_003.json",
+      "sha256": "583d3ef4b6f888f6ccddf3b14d43d96031ffa9a40ba31a92f74fcb8e2106636b",
+      "bytes": 161721,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_003.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_001.json",
+      "sha256": "c41aade1187b7d390c4c4aaf3be8c130c629b1f2ca3a1894279f6320f969bc9f",
+      "bytes": 161725,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_001.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_001.json",
+      "sha256": "5473385441fbdf9491fb436864a63cb592ce7ee182d867e245a22bc4a3ce5d0e",
+      "bytes": 162698,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_001.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_raw_003.json",
+      "sha256": "c0f775ac696e12455cad74fcfd308c415ff313fa056e5e70878eabc875f3bdab",
+      "bytes": 260172,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_raw_003.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_raw_002.json",
+      "sha256": "182a01d0f660d45b4759c314b13a3ae45dbef6eb1293f3006ceba11a3492137e",
+      "bytes": 289639,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_raw_002.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_raw_001.json",
+      "sha256": "ab9452bb6772b9c6e44d966ab9cc50bf5f975a5d45cebd52202f87186b454f22",
+      "bytes": 302894,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_raw_001.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_INDEX.json",
+      "sha256": "ac19fd5b8088504d728cf37dfe45bb44bd2b12d7d0a2633b58fc042be043fd98",
+      "bytes": 1136088,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_INDEX.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_014.json",
+      "sha256": "e340dca5e5b58a1199e6a861df14f2614d155c0e94179d70b911c23ce3758926",
+      "bytes": 57728,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_014.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_stress_complete_20261012T125208Z_tables.zip",
+      "sha256": "d042e6b62973748320f8d05b1239f7890448b37b74dd5f567f3e9c5b0afc0136",
+      "bytes": 240442,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_stress_complete_20261012T125208Z_tables.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_stress_complete_20261012T125249Z_tables.zip",
+      "sha256": "a859f678b35e8125434d5e50bf84569ed8f1afc11a24f9752bf3822502a9b639",
+      "bytes": 241662,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_stress_complete_20261012T125249Z_tables.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_SMALL_INDEX.json",
+      "sha256": "2f58c92726d73a869e4071942ee116e353738b8185b270968fc4a81c8b4ab0e2",
+      "bytes": 2286773,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_SMALL_INDEX.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_05.zip",
+      "sha256": "634177122db5c617aa3450b6605bd39f19561a4e99285535a13e6a15429538b8",
+      "bytes": 763226,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_05.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_05.zip",
+      "sha256": "a839a1020776ead7d7141baba4ad856dc11d672b9a5b09d43c3095c0158d3eb6",
+      "bytes": 1071907,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_05.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_SMALL_INDEX.json",
+      "sha256": "5214b2aa512ba8c3a0560b924c2e534599ad4b432bd2f468a7b0eca5b5b1338a",
+      "bytes": 1139726,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_SMALL_INDEX.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_05.zip",
+      "sha256": "2ebe1353b013be87ecda92e6304120007f762065cd586ce8b84356c0d33af308",
+      "bytes": 1086850,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_05.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_05.zip",
+      "sha256": "40c0e1c3d832ad6d668beedd5c0a527503017fb099cf6c8c52439f3929b0b6fc",
+      "bytes": 1437325,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_05.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_05.zip",
+      "sha256": "feed0ef19917a03058946e55e363f27ce77ac70daf472638c274897085b2f975",
+      "bytes": 1523143,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_05.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_05.zip",
+      "sha256": "b4b4ddea66fc70525f32e870323639e719673a5bf9c047d9982d9bf3e400b2b6",
+      "bytes": 1552168,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_05.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_05.zip",
+      "sha256": "b8fd2ebb0272a0b994a0d5aa4e2ec71b8e2ae3a97ad0ddc38d50a8291888012f",
+      "bytes": 1551839,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_05.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_05.zip",
+      "sha256": "613206bacecaeab1596e298b0e39331543cb5d3710c80d65c3971fea86de4b9a",
+      "bytes": 1707887,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_05.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_tables.zip",
+      "sha256": "bd8c9c58b033da65ce1841246d718e8cc337fad12491317a9adcad14bd9c66c9",
+      "bytes": 22446781,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_tables.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_tables.zip",
+      "sha256": "436817d4dfcf32187e52626e9ff9307a8be898cea8a17060174a1ff54e74ebad",
+      "bytes": 24306354,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_tables.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_05.zip",
+      "sha256": "0114be8763125037617cf46920d308de6ab99691ac4f99da35cc04d43be1ba7d",
+      "bytes": 2086504,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_05.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_tables.zip",
+      "sha256": "ef9f5e2eaa3fc9f3da6b85904ff6f780e5e896f48b7f6d6590b0d84ad755e365",
+      "bytes": 3928307,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_tables.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_03.zip",
+      "sha256": "2885479621b01cdfe033fa86f23b0340d5a85acb31ea37bad5fdbe9f63f59b01",
+      "bytes": 41960950,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_01.zip",
+      "sha256": "2dd745a188f7c36ffbe67fe231c4a7677f1be15454dc0da2c82ebd7ab69de514",
+      "bytes": 62556029,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_04.zip",
+      "sha256": "5fdc2e44eb7debddb771429e2055fe6b0d243bf017714146fcb0235205fec99c",
+      "bytes": 62597350,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_04.zip",
+      "sha256": "0f182169985eef647d4eb5adce4907ccf821c8214dc79677f7e1067e271e5a95",
+      "bytes": 62824462,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_04.zip",
+      "sha256": "4a7c1b5efba102119db0a5e8b6de128fcced469a7cef95eb84e9c3a40f0ca8fc",
+      "bytes": 62734733,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_03.zip",
+      "sha256": "e4c48947c945065a2dade7a07ae75c638b27f32241a2f026ca1ff96d06e375d3",
+      "bytes": 62708496,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_04.zip",
+      "sha256": "14807d378b19f592da68a774538e9a013077497f645b9f76c4c2a9f5162e3d15",
+      "bytes": 62875095,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_02.zip",
+      "sha256": "f447422444bce0474cfbc28ed497d7795a57be93f2d9dc3544d4162697d86c82",
+      "bytes": 62910950,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_01.zip",
+      "sha256": "04ead938d7db753058f7ff857e62496fac4fb3265fdb9388851d254e41041ac4",
+      "bytes": 62893755,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_02.zip",
+      "sha256": "e87f81647d039b09d092dd1f731d4403cda4e36aba7bdca5a931329a611a927f",
+      "bytes": 62915755,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_04.zip",
+      "sha256": "723cb840a8c369b0a03962eb9de76eac30ce6e0899d60ebdfbfedf3f2d698bc5",
+      "bytes": 62914971,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_03.zip",
+      "sha256": "2378c02b1e01a4e5ba07463cb4478449679fc5208b5a1ae8f1cebc46cf8a3530",
+      "bytes": 62984499,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_03.zip",
+      "sha256": "f06cff162ac08bd65896c6d95a1291e2e90ef0ef395a8ebb1a06a7ab0ae2c44d",
+      "bytes": 63060171,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_03.zip",
+      "sha256": "29bd14fb7410d4a8bde5af47ba59e57dc1e0cb001b21da864ce5286ec8ab2b58",
+      "bytes": 63089688,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_01.zip",
+      "sha256": "f041a99be88091899be58b562a7fa6634f68458411ac6e749e2ddb6ddf9746f7",
+      "bytes": 63115986,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_02.zip",
+      "sha256": "34b2c7228c391dea3fe40c941be1aa3555292c2f2cb2aea9717b6eacdb6bb62f",
+      "bytes": 63185662,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_01.zip",
+      "sha256": "1c6f70051d7f462a9899e90b3382386d52bfc1524154c82bd9a1b71fe65d4b56",
+      "bytes": 63127891,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_04.zip",
+      "sha256": "b673bea7fb584beb575625c43c2902ec3efc7f7b2a3dfb89eb6eef42fd061851",
+      "bytes": 63170515,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_02.zip",
+      "sha256": "e801fcef02a48aae8a5b539517bf35572d6837da675c9788698d70d6d4c19ed2",
+      "bytes": 63192057,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_02.zip",
+      "sha256": "ff3e85851dcc1f6d3cf146d25d9241921bff509fbb69c62aa81c219fb4258b87",
+      "bytes": 63222861,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_02.zip",
+      "sha256": "14dba4879ad1ed352480a87f0c3aefbcbdf6c8c2d06b58bcdfffcf68c440c82e",
+      "bytes": 63299802,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_03.zip",
+      "sha256": "af09be82f7cfc8183ce729efd61d2f796c9466ac9359a992e06410d7106455df",
+      "bytes": 63313586,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_02.zip",
+      "sha256": "0ca5e41b4b245fadab3bac8d68bd1d67b7e9357a7ed9a9dae5a9ae6771266ca7",
+      "bytes": 63198190,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_01.zip",
+      "sha256": "20e626e12cf4d821169bdccabc39a5d368424f9bb5a7661a200ac93a39c4423c",
+      "bytes": 63341666,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_01.zip",
+      "sha256": "b7f17e4c7acf75f7d36e4c0147a5498a0d356f5a5321c98ffcf9df5f70d888bd",
+      "bytes": 63338894,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_005_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_03.zip",
+      "sha256": "a6c9fa7dcbeaf4c1465d8b44c3775b6572f6a3829c02808db0deeaa31e7c60ac",
+      "bytes": 63356515,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_010_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_02.zip",
+      "sha256": "6d4b2e09da72f9304ff046a27e9aef1fd3a6dea35844eb5523e07e5853a18013",
+      "bytes": 63384951,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_004_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_03.zip",
+      "sha256": "58fb549f70b1c217633c7f694c8b290fac4a6055c209501d5f32d8e86ae12e8d",
+      "bytes": 63405631,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_04.zip",
+      "sha256": "3be14e125af803c9b77fdc069fb400b80dece67415011329eb8d862d296b69c6",
+      "bytes": 63378632,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_006_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_02.zip",
+      "sha256": "2830c10c4122a1b1d005ee96f52c7e3b6d2327a793d868e2174c2ab3241e255a",
+      "bytes": 63364340,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_02.zip",
+      "sha256": "68859c57a4d23d7787fccace9d1dac8d377b98622fe864b42d4f73e8124a6dde",
+      "bytes": 63405786,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_01.zip",
+      "sha256": "c45b020b9f8cffdf9919c2f0d00ade69c725444a523b67909b8243cb5575092b",
+      "bytes": 63411255,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_01.zip",
+      "sha256": "7ffbd2edd5070abfaf4dcb0c3d409092453a43c9b6a1b3784f7eac4ee2107707",
+      "bytes": 63433912,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_03.zip",
+      "sha256": "104f8f736875a3d2866803e9fa64030ac319e77c92abbc6c6986cb9bc9cd508a",
+      "bytes": 63439698,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_007_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_04.zip",
+      "sha256": "7193aa0f566140adddd67541e6ed693722ab6466ab8ed3ca6ad9cc88ddb6621f",
+      "bytes": 63519545,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_01.zip",
+      "sha256": "0f9f142af48b4a1d5fbc9cb663eebb978962848d3821f5d91b432edb8b32a4cc",
+      "bytes": 63494279,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_008_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_02.zip",
+      "sha256": "f9128e99a8cf046d5b991d83dcdd54bef93081eff939dde49667d8cf2aad9135",
+      "bytes": 63567432,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_03.zip",
+      "sha256": "99d5310f44571720a6d9d58054af78ac6ef35c5bf3a7e5604384b2bef36636f1",
+      "bytes": 63464612,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_013_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_04.zip",
+      "sha256": "e1fbbfbb149a302554f0f5b2fe00131d12b87767d675bfe558d4f927b22cd7c0",
+      "bytes": 63616814,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_01.zip",
+      "sha256": "9d52688c28143db564eb890a0cdcd756934afc21f00be73f0baeac7be904de90",
+      "bytes": 63698628,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_02.zip",
+      "sha256": "80ad0853fbe0fec1c588654d8d3b5a05558b616405767cb000a6c1ed8ec03811",
+      "bytes": 63660010,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_02.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_04.zip",
+      "sha256": "f5848b321a8335dee62ced697fa938aad794549647f666d763da07cd329ea919",
+      "bytes": 63701021,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_009_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_04.zip",
+      "sha256": "5e9d537abd1381f46ef2e7860bbb58f7a6016adbfa33ec55d84893c87cc9bc64",
+      "bytes": 63760808,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_04.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_03.zip",
+      "sha256": "986e00993a82db83c68e1a2cbde00525ea813bc3c0360a2b6523566df47ed24d",
+      "bytes": 63637315,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_012_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_01.zip",
+      "sha256": "41aa94e34dea2224800bc6b33a186b539fb33ccc3f08a17175e57baece57d209",
+      "bytes": 63814492,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_006_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_stress_complete_20261012T125208Z_raw_001.zip",
+      "sha256": "5b64e3290524e60669fd39c04e719739113e3bc9403c6bc8cef94723971baa88",
+      "bytes": 99733976,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_stress_complete_20261012T125208Z_raw_001.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_014.zip",
+      "sha256": "afb9f30aec6842c958793a287ac416f8e93caa1313b30de047d0d49540fd9512",
+      "bytes": 100955302,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_014.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_raw_004.zip",
+      "sha256": "7c887d7b3c4412571ad2f932f61fa186e8ae63216225dc0ea82119e7f54a999e",
+      "bytes": 149373633,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_raw_004.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_stress_complete_20261012T125249Z_raw_001.zip",
+      "sha256": "6a2dc08bd6ea100b7587216a6115016226b97683551b41349f9005357711937f",
+      "bytes": 194356807,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_stress_complete_20261012T125249Z_raw_001.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_raw_001.zip",
+      "sha256": "161e1ed1ad3957e93a7d4a50defb9cffd7f69c82e0861712d265940d660f20a0",
+      "bytes": 239767669,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_raw_001.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_raw_002.zip",
+      "sha256": "de732e4cedf26ed74fcee4fa6358c1f98193c35b77549e4acd73094c1311dfb5",
+      "bytes": 241478221,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_raw_002.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_A_confirmation_complete_20261012T125135Z_raw_003.zip",
+      "sha256": "7f897695301ecc66ed0d9dc59f9a1ee504d8880697f688644b43714a4045b54c",
+      "bytes": 244006839,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_confirmation_complete_20261012T125135Z_raw_003.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_003.zip",
+      "sha256": "7811ac03f7983d43ef12c308ab7578af25847583a35b9507957fc6acea4b77c7",
+      "bytes": 252642584,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_003.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_002.zip",
+      "sha256": "9f150dcf4848103e3892b0768524014b68efd55f1d02ec62dfb7c7dc63cda075",
+      "bytes": 252720507,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_002.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_001.zip",
+      "sha256": "0c67f91f8aca3302e2f24b214e738b942e0c8b89f769f6471f1bcf9af5baac18",
+      "bytes": 253099133,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_001.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_001.zip",
+      "sha256": "dc75fbeaa15d9bb422be6f77483d836d95a1e5abb7474d0211b41508c99a4231",
+      "bytes": 253210295,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_001.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_002.zip",
+      "sha256": "95876401df06cb7148d947474ef5490540f61d9dfa644fc8eae3376e2adce719",
+      "bytes": 253313847,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_002.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_003.zip",
+      "sha256": "0dc882eb5e10f0d1898c62b621feb8bbc1e82d2289aa22f5a8bf65849c0c990d",
+      "bytes": 253396201,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_003.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_005.zip",
+      "sha256": "bfee8007f940171bd6237e378637e29300500bec9519106eab1b829ffb61f7a0",
+      "bytes": 254247073,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_005.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_004.zip",
+      "sha256": "9dc5708344241208917050500ed409d0e1f3b4f30b079710efed7d615be3283e",
+      "bytes": 254419758,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_004.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_01.zip",
+      "sha256": "99bcdb690094664169170bbb73eecc990248dd6d5cace8e6b46c622668b27cea",
+      "bytes": 63778340,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_confirmation_complete_20261012T125211Z_raw_007_small_01.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_03.zip",
+      "sha256": "615bf6246d16076e916fc0b0b1371a529dfc751d03be153cd3c35054466a09f3",
+      "bytes": 63829998,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_B_calibration_complete_20261012T115213Z_raw_011_small_03.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Reading_And_Handoff.zip",
+      "sha256": "e61dcea3583c038f1db7ecd6bd2a21494cc2b482a7a84a1f711e3faea7a139e6",
+      "bytes": 3198914,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_AEI_R9_Reading_And_Handoff.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Reading_And_Handoff.json",
+      "sha256": "23783a1a671d16df806f15822c00dd8484b66fcf5b2261687b32b2b0ddd28b45",
+      "bytes": 3202,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_AEI_R9_Reading_And_Handoff.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "R91_PDF_QA.json",
+      "sha256": "8af0f47543b92d1a6273f0f9aea1187e4d8a94f55afa89dffbbbd39ff1c6d87b",
+      "bytes": 456,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/R91_PDF_QA.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "R9_REVISION_STATUS_CN.md",
+      "sha256": "ab2818ffd51484f1ce6e1e61a4287ec9371e8a4e13b51023c69bad0141ce6f8c",
+      "bytes": 1015,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/R9_REVISION_STATUS_CN.md",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "environment.json",
+      "sha256": "6c08122b4cf48b667624b3ec4b23fb46252ceeb0e622d0f6ee7063f7069e75a6",
+      "bytes": 466,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/environment.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "R91_PRESERVATION_AUDIT.json",
+      "sha256": "197fde553583057d1c078ccea119e6451cbc541a232a25599d0717cb5e34879d",
+      "bytes": 1643,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/R91_PRESERVATION_AUDIT.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "final_execution_audit.json",
+      "sha256": "2534213cd1e0135c2888c224c48b5dec748ecca77e104c82ffe48389d7e4219e",
+      "bytes": 1369,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/final_execution_audit.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "REPRODUCE_R9_CN.md",
+      "sha256": "457d333a603b2cf9aca717526d8342230845baf1bff840917ac8d1666638a3a9",
+      "bytes": 2393,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/REPRODUCE_R9_CN.md",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "source_replay.json",
+      "sha256": "f1e08100b02ddd995f1a0dccf7241115fa26410b59f01e142a07baeb7c6874a7",
+      "bytes": 2395,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/source_replay.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "R9_DATA_DOWNLOAD_CN.md",
+      "sha256": "3f124db76e9429e06398abd62c72e03a3ef08b74d2e110f4a0a302b6c4ff0259",
+      "bytes": 3075,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/R9_DATA_DOWNLOAD_CN.md",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Restored_Reading_And_Handoff.json",
+      "sha256": "25d40c7c70db3b1ca383c09934a7640b700d7380bac8c3e411d8a75e91115594",
+      "bytes": 3868,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Restored_Reading_And_Handoff.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "READ_FIRST_R9_CN.md",
+      "sha256": "b2c99c635a71947b3712269f8a31a986b1c09e005740f6a9f178eb3adc14a748",
+      "bytes": 4508,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/READ_FIRST_R9_CN.md",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "RESULT_FACTS.json",
+      "sha256": "e6967d19bf9d43cd29a7ab1f3f80436517cb7b303d1936c78be5b88342f9e45c",
+      "bytes": 7884,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/RESULT_FACTS.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Figures.json",
+      "sha256": "51f089cc2e910866d0c1c7846bec338e3810f5653b41003dd7858e0aad1861fe",
+      "bytes": 27006,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Figures.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Restored_Editable_Source.json",
+      "sha256": "bf82f59af45c441811d54620cbe1e68e805d960cd94b60f5b42042200c862cb2",
+      "bytes": 68849,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Restored_Editable_Source.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "R9_DATA_CATALOG.json",
+      "sha256": "3314a99f545d939e91571f6bb25759b1513045c40deb9d95cccea4988953148d",
+      "bytes": 93723,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/R9_DATA_CATALOG.json",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Internal_Review_CN.pdf",
+      "sha256": "6c687572c90e0d17333bb9acea92b0f9ab6ad5acb88da4ea9f69ece1ca547911",
+      "bytes": 188964,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Internal_Review_CN.pdf",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Revision_Report_CN.pdf",
+      "sha256": "f404317b0efd741dc06391b948ec4053a5c667a8a46710b98160dde1209127f3",
+      "bytes": 199382,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Revision_Report_CN.pdf",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Supplement.pdf",
+      "sha256": "93e4421801aeb56b35b3d087d53ab766dd0e4c51357b9482eb983526be7af2a2",
+      "bytes": 1658622,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Supplement.pdf",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Restored_Draft.pdf",
+      "sha256": "c937d9a5b7fba076adc0711bf2400413bbc4f70fc865154b231aa182514bead4",
+      "bytes": 8131864,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Restored_Draft.pdf",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Restored_Reading_And_Handoff.zip",
+      "sha256": "a9b3749e967b93d13c1060ce04f02b1cd8680e99568fd2f58fdc1e11a60c4bfc",
+      "bytes": 10210317,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Restored_Reading_And_Handoff.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Restored_Editable_Source.zip",
+      "sha256": "6e92eae2e3f499e1c9a817f30d4b95f4a0bf7e90b728d108cc84bb8b59d78ce5",
+      "bytes": 104133898,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Restored_Editable_Source.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    },
+    {
+      "file": "A20_AEI_R9_Figures.zip",
+      "sha256": "069014e4f4ed6ff980fc71c37c5b95fa550b69d8b7c1ba0e5377ea030d70aeda",
+      "bytes": 97955108,
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-data-complete-20261012/A20_AEI_R9_Figures.zip",
+      "verification": "GitHub server SHA256 and byte count",
+      "state": "uploaded"
+    }
+  ],
+  "historical_remote_assets": [
+    {
+      "file": "A20_AEI_R8_Editable_LaTeX.zip",
+      "bytes": 27926025,
+      "sha256": "sha256:18db7e7b947c3c9fd17cb24521a785a95d31063333b253810edf80eee317a486",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Editable_LaTeX.zip"
+    },
+    {
+      "file": "A20_AEI_R8_Episode_Raw_Part01.zip",
+      "bytes": 422025659,
+      "sha256": "sha256:30125798045c692ee18ba0d8ebac339193b62a9cb0297698814f297da68c9303",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Episode_Raw_Part01.zip"
+    },
+    {
+      "file": "A20_AEI_R8_Episode_Raw_Part02.zip",
+      "bytes": 317708396,
+      "sha256": "sha256:fe27897c9faa1af75b85ab89211139c40cf6b8c33621f52f81560e54661e23db",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Episode_Raw_Part02.zip"
+    },
+    {
+      "file": "A20_AEI_R8_Historical_Assets_Part01.zip",
+      "bytes": 227607447,
+      "sha256": "sha256:f8e0eb83b68f773a6228f21f1f55a441261b32556c9ed9a06109aec4716efebd",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Historical_Assets_Part01.zip"
+    },
+    {
+      "file": "A20_AEI_R8_Historical_Assets_Part02.zip",
+      "bytes": 307150412,
+      "sha256": "sha256:620ab695f96d9efbc4084ec2ac57109e7256bce2831d0ea4622523d293fa5a5a",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Historical_Assets_Part02.zip"
+    },
+    {
+      "file": "A20_AEI_R8_Historical_Assets_Part03.zip",
+      "bytes": 260000860,
+      "sha256": "sha256:a527b5d260fdb98c843e2f86b0cbaa05057a8707cbab873c375bb151050839a3",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Historical_Assets_Part03.zip"
+    },
+    {
+      "file": "A20_AEI_R8_Historical_Assets_Part04.zip",
+      "bytes": 324260215,
+      "sha256": "sha256:f5c4794866d240e0d8dca94ed110a9de58a7c0d6c3ef32899ca8122fd63cf11d",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Historical_Assets_Part04.zip"
+    },
+    {
+      "file": "A20_AEI_R8_Independent_Review_CN.pdf",
+      "bytes": 360165,
+      "sha256": "sha256:4d10092ab84eed9d3423851fa94b4fd441c1ee74a86053cefc93254a57e40e6a",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Independent_Review_CN.pdf"
+    },
+    {
+      "file": "A20_AEI_R8_Manuscript.pdf",
+      "bytes": 7759360,
+      "sha256": "sha256:8c0828b711d00dd29e46d863c5c5dc028f63fe627ccacf7cf6efaf8a4464905f",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Manuscript.pdf"
+    },
+    {
+      "file": "A20_AEI_R8_Revision_Report_CN.pdf",
+      "bytes": 247975,
+      "sha256": "sha256:98d7a9e756501f9885053857f63ff5b7f7109ed833f4a6db9ef303ffca01a36a",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Revision_Report_CN.pdf"
+    },
+    {
+      "file": "A20_AEI_R8_Supplement.pdf",
+      "bytes": 1701830,
+      "sha256": "sha256:59f6194ae3cc9f57fdcee70e23dcb152adfa71edcd0c67c5f2553147a570556b",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_AEI_R8_Supplement.pdf"
+    },
+    {
+      "file": "A20_R8_01_Core_Code_Results_Handoff.zip",
+      "bytes": 437192755,
+      "sha256": "sha256:bb2911b3d6ab0effefe5a6311fa756147d48adf5b2b89db2dc42b4203c824473",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_R8_01_Core_Code_Results_Handoff.zip"
+    },
+    {
+      "file": "A20_R8_04_All_Complete_Routes.zip",
+      "bytes": 420371782,
+      "sha256": "sha256:46d4f6a4fd58f9e4f49784ec7e738820dec741b39d5bc9bb9e0bb4eea9bd4bd7",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_R8_04_All_Complete_Routes.zip"
+    },
+    {
+      "file": "A20_R8_Start_Paper_Code_History.zip",
+      "bytes": 35218560,
+      "sha256": "sha256:c52a1e1a9d416b82289741972333ece9e45aeea7a6587d174a9d2d5b36cbd491",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/A20_R8_Start_Paper_Code_History.zip"
+    },
+    {
+      "file": "GITHUB_ASSET_MANIFEST.json",
+      "bytes": 2344,
+      "sha256": "sha256:10a1247487b128d69161132a3515ae9d5b6a709cbf2655c91aa3c27ff73dc1dc",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/GITHUB_ASSET_MANIFEST.json"
+    },
+    {
+      "file": "GITHUB_ASSET_SHA256SUMS.txt",
+      "bytes": 1415,
+      "sha256": "sha256:72f328b0dab606e1ade39de22c44f3de094b6c9e1fcaf0de3d61be1dbe779d35",
+      "state": "uploaded",
+      "url": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r8-handoff-2026-10-12/GITHUB_ASSET_SHA256SUMS.txt"
+    }
+  ],
+  "public_reading_download_sha256": "a9b3749e967b93d13c1060ce04f02b1cd8680e99568fd2f58fdc1e11a60c4bfc",
+  "raw_independent_inputs": 12800,
+  "canonical_raw_assets": 176,
+  "all_local_deletion_requires_this_record": true,
+  "paper_status": "45-page restored draft, not submission-ready or author-approved final"
+}
