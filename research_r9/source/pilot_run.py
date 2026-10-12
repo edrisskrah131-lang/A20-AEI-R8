@@ -7,13 +7,13 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 from runtime import HERE, initialize
-from camera_renderer import render
+from camera_renderer import render,detect_fiducials
 from target_metrics import plan_targets, target_geometry, score_image, score_association, planned_gimbal
 from r8_protocol import PROTOCOL
 
 def run(n):
     rt = initialize()
-    folder = HERE/'data/pilot_v2'
+    folder = HERE/'data/pilot_v4'
     folder.mkdir(parents=True, exist_ok=True)
     start=time.perf_counter()
     records=[]
@@ -35,13 +35,14 @@ def run(n):
         camera_records=[]
         for producer,width,height in [('native_roi',192,144),('wide_roi',288,216)]:
             frame=render(rt['meshes'][rec['mesh'],rec['level']],capture_pose,z['map_t'],z['map_R'],
-                         np.random.default_rng(seed+60000000),rt['exp'],width,height,1800.,.006,speed,gimbal)
+                         np.random.default_rng(seed+60000000),rt['exp'],width,height,1800.,.006,speed,gimbal,geometry)
+            detected,detect_cpu=detect_fiducials(frame['rgb'],len(targets['faces']))
             np.savez_compressed(folder/f'{seed}_{producer}.npz',**{k:v for k,v in frame.items() if k not in ('model',) },
                                 target_faces=targets['faces'],target_bary=targets['bary'],target_cad=targets['cad_points'],
-                                target_gsd=geometry['gsd'],target_xy=geometry['xy'])
+                                target_gsd=geometry['gsd'],target_xy=geometry['xy'],detected_xy=detected)
             if i<4:Image.fromarray(frame['rgb']).save(folder/f'{seed}_{producer}.png')
-            image=score_image(frame,geometry,width,height)
-            camera_records.append(dict(producer=producer,cpu_s=frame['cpu_s'],**image))
+            image=score_image(frame,geometry,width,height,detected)
+            camera_records.append(dict(producer=producer,cpu_s=frame['cpu_s'],detect_cpu_s=detect_cpu,**image))
             for service in PROTOCOL['services']:
                 for policy in rt['policies']:
                     out=rt['controlled'](rec,z,policy,cache,rt['clock'],service,rt['bindings'])
@@ -56,7 +57,7 @@ def run(n):
                         active=next((a+1 for a,s in enumerate(rec['trace']) if s['iteration']==it),0)
                     state=rt['state_from'](z,active)
                     for t in range(capture_tick):state=rt['propagate'](state,.1,z['increment'][t])
-                    assoc=score_association(state,targets,geometry,rt['exp'],width,height,1800.,gimbal)
+                    assoc=score_association(state,targets,geometry,rt['exp'],width,height,1800.,gimbal,detected)
                     observations.append(dict(producer=producer,policy=policy['id'],service=service['id'],
                                              active_index=active,capture_tick=capture_tick,**assoc,
                                              rmse_m=out['rmse_m'],work_s=out['work_s'],

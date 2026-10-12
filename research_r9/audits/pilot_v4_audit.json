@@ -1,0 +1,400 @@
+{
+  "status": "PASS",
+  "unique_pilot_seeds": 48,
+  "excluded_from_inference": true,
+  "pilot_archive_files": 200,
+  "paired_fixed_target_GSD_max_difference": 0.0,
+  "target_identity_unchanged": true,
+  "actual_RGB_raster_shapes_verified": true,
+  "native_coverage_median": 0.2857142857142857,
+  "wide_coverage_median": 1.0,
+  "timing_resolution_note": "Native Windows thread/process CPU counter samples show 15.625-ms quantization. Pilot medians characterize the declared simulation clock only; not embedded runtime guarantees.",
+  "formal_calibration_inputs": 0,
+  "formal_confirmation_inputs": 0,
+  "paired": [
+    {
+      "seed": 12000000,
+      "mesh": "C172",
+      "native_coverage": 0.2857142857142857,
+      "wide_coverage": 0.7142857142857143,
+      "native_cpu_s": 0.015625,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000001,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.2,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.015625,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000002,
+      "mesh": "B767",
+      "native_coverage": 0.2,
+      "wide_coverage": 0.8,
+      "native_cpu_s": 0.015625,
+      "wide_cpu_s": 0.046875
+    },
+    {
+      "seed": 12000003,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.046875,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000004,
+      "mesh": "C172",
+      "native_coverage": 0.25,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.015625,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000005,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 0.7,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000006,
+      "mesh": "C172",
+      "native_coverage": 0.2857142857142857,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.046875,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000007,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.078125
+    },
+    {
+      "seed": 12000008,
+      "mesh": "C172",
+      "native_coverage": 0.42857142857142855,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.015625,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000009,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.2727272727272727,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.09375
+    },
+    {
+      "seed": 12000010,
+      "mesh": "C172",
+      "native_coverage": 0.21428571428571427,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.078125,
+      "wide_cpu_s": 0.15625
+    },
+    {
+      "seed": 12000011,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.046875,
+      "wide_cpu_s": 0.109375
+    },
+    {
+      "seed": 12000012,
+      "mesh": "B767",
+      "native_coverage": 0.42857142857142855,
+      "wide_coverage": 0.6428571428571429,
+      "native_cpu_s": 0.15625,
+      "wide_cpu_s": 0.421875
+    },
+    {
+      "seed": 12000013,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.23076923076923078,
+      "wide_coverage": 0.8461538461538461,
+      "native_cpu_s": 0.046875,
+      "wide_cpu_s": 0.078125
+    },
+    {
+      "seed": 12000014,
+      "mesh": "B767",
+      "native_coverage": 0.25,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000015,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.2727272727272727,
+      "wide_coverage": 0.7272727272727273,
+      "native_cpu_s": 0.0625,
+      "wide_cpu_s": 0.1875
+    },
+    {
+      "seed": 12000016,
+      "mesh": "B767",
+      "native_coverage": 0.25,
+      "wide_coverage": 0.75,
+      "native_cpu_s": 0.015625,
+      "wide_cpu_s": 0.078125
+    },
+    {
+      "seed": 12000017,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3333333333333333,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.015625,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000018,
+      "mesh": "C172",
+      "native_coverage": 0.375,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.046875,
+      "wide_cpu_s": 0.125
+    },
+    {
+      "seed": 12000019,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000020,
+      "mesh": "C172",
+      "native_coverage": 0.2,
+      "wide_coverage": 0.8,
+      "native_cpu_s": 0.125,
+      "wide_cpu_s": 0.28125
+    },
+    {
+      "seed": 12000021,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.046875,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000022,
+      "mesh": "C172",
+      "native_coverage": 0.5,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.0625,
+      "wide_cpu_s": 0.109375
+    },
+    {
+      "seed": 12000023,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.2,
+      "wide_coverage": 0.7333333333333333,
+      "native_cpu_s": 0.203125,
+      "wide_cpu_s": 0.390625
+    },
+    {
+      "seed": 12000024,
+      "mesh": "B767",
+      "native_coverage": 0.3,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.078125,
+      "wide_cpu_s": 0.1875
+    },
+    {
+      "seed": 12000025,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 0.5,
+      "native_cpu_s": 0.0625,
+      "wide_cpu_s": 0.125
+    },
+    {
+      "seed": 12000026,
+      "mesh": "B767",
+      "native_coverage": 0.25,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000027,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.23076923076923078,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000028,
+      "mesh": "B767",
+      "native_coverage": 0.21428571428571427,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.203125,
+      "wide_cpu_s": 0.5
+    },
+    {
+      "seed": 12000029,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.046875,
+      "wide_cpu_s": 0.078125
+    },
+    {
+      "seed": 12000030,
+      "mesh": "C172",
+      "native_coverage": 0.2857142857142857,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.046875
+    },
+    {
+      "seed": 12000031,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.375,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.046875,
+      "wide_cpu_s": 0.09375
+    },
+    {
+      "seed": 12000032,
+      "mesh": "B767",
+      "native_coverage": 0.25,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.046875,
+      "wide_cpu_s": 0.109375
+    },
+    {
+      "seed": 12000033,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.046875,
+      "wide_cpu_s": 0.109375
+    },
+    {
+      "seed": 12000034,
+      "mesh": "C172",
+      "native_coverage": 0.2857142857142857,
+      "wide_coverage": 0.8571428571428571,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000035,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.125
+    },
+    {
+      "seed": 12000036,
+      "mesh": "B767",
+      "native_coverage": 0.375,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000037,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.2857142857142857,
+      "wide_coverage": 0.42857142857142855,
+      "native_cpu_s": 0.015625,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000038,
+      "mesh": "C172",
+      "native_coverage": 0.13333333333333333,
+      "wide_coverage": 0.6666666666666666,
+      "native_cpu_s": 0.15625,
+      "wide_cpu_s": 0.359375
+    },
+    {
+      "seed": 12000039,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.25,
+      "wide_coverage": 0.375,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000040,
+      "mesh": "C172",
+      "native_coverage": 0.4,
+      "wide_coverage": 0.6666666666666666,
+      "native_cpu_s": 0.23437500000000003,
+      "wide_cpu_s": 0.625
+    },
+    {
+      "seed": 12000041,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.2,
+      "wide_coverage": 0.9333333333333333,
+      "native_cpu_s": 0.21875,
+      "wide_cpu_s": 0.390625
+    },
+    {
+      "seed": 12000042,
+      "mesh": "C172",
+      "native_coverage": 0.13333333333333333,
+      "wide_coverage": 0.8666666666666667,
+      "native_cpu_s": 0.125,
+      "wide_cpu_s": 0.3125
+    },
+    {
+      "seed": 12000043,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.3,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.0625
+    },
+    {
+      "seed": 12000044,
+      "mesh": "C172",
+      "native_coverage": 0.2,
+      "wide_coverage": 0.8666666666666667,
+      "native_cpu_s": 0.171875,
+      "wide_cpu_s": 0.390625
+    },
+    {
+      "seed": 12000045,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.5,
+      "wide_coverage": 0.8333333333333334,
+      "native_cpu_s": 0.0625,
+      "wide_cpu_s": 0.09375
+    },
+    {
+      "seed": 12000046,
+      "mesh": "C172",
+      "native_coverage": 0.2,
+      "wide_coverage": 0.6666666666666666,
+      "native_cpu_s": 0.1875,
+      "wide_cpu_s": 0.4375
+    },
+    {
+      "seed": 12000047,
+      "mesh": "UnfittedAirframe",
+      "native_coverage": 0.25,
+      "wide_coverage": 1.0,
+      "native_cpu_s": 0.03125,
+      "wide_cpu_s": 0.078125
+    }
+  ]
+}

@@ -61,7 +61,7 @@ def target_geometry(mesh, targets, pose, map_t, map_R, exp, focal_px, speed_m_s,
     return dict(local=local, world=world, xy=xy, visible=visible, gsd=gsd,
                 blur=speed_m_s*exposure_s/np.maximum(gsd, 1e-12), distance=distance)
 
-def score_image(frame, geometry, width, height):
+def score_image(frame, geometry, width, height,detected=None):
     xy = geometry['xy']
     inside = (np.abs(xy[:, 0]) < width/2-.5) & (np.abs(xy[:, 1]) < height/2-.5)
     seen = geometry['visible'] & inside
@@ -75,12 +75,18 @@ def score_image(frame, geometry, width, height):
             if frame['valid'][row, col]:
                 pixel_count += 1
     count = len(xy)
+    if detected is not None:
+        # Offline quality labels require the right landmark to be acquired.
+        # Detection itself never consumes these ground-truth target locations.
+        tolerance=np.maximum(2.,.025/np.maximum(geometry['gsd'],1e-12))
+        correct=np.linalg.norm(detected-xy,axis=1)<=tolerance
+        pixel_count=int(np.sum(np.all(np.isfinite(detected),axis=1)&correct&seen))
     return dict(gsd_m=float(np.max(geometry['gsd'])) if count else np.inf,
                 blur_px=float(np.max(geometry['blur'])) if count else np.inf,
                 coverage=pixel_count/count if count else 0., targets=count,
                 acquired_targets=pixel_count)
 
-def score_association(state, targets, geometry, exp, width, height, focal_px,gimbal_R=None):
+def score_association(state, targets, geometry, exp, width, height, focal_px,gimbal_R=None,detected=None):
     """Predict CAD-target pixels using the active causal localization state."""
     pose = np.r_[state.t, np.zeros(3)]
     # camera_frame takes a pose rotation vector; supply the state matrix directly.
@@ -91,9 +97,10 @@ def score_association(state, targets, geometry, exp, width, height, focal_px,gim
     xy = -focal_px*rel[:, 1:] / np.maximum(rel[:, :1], 1e-12)
     inside = (np.abs(geometry['xy'][:, 0]) < width/2-.5) & (np.abs(geometry['xy'][:, 1]) < height/2-.5)
     valid = geometry['visible'] & inside & (rel[:, 0] > .3)
+    if detected is not None:valid&=np.all(np.isfinite(detected),axis=1)
     if not len(xy) or not np.any(valid):
         return {'reprojection_px':np.inf, 'association_m':np.inf}
-    pixel_error = np.linalg.norm(xy-geometry['xy'], axis=1)
+    pixel_error = np.linalg.norm(xy-(geometry['xy'] if detected is None else detected), axis=1)
     # Surface association error is the predicted target's displacement from
     # its physical counterpart, not pixel error multiplied by guessed GSD.
     spatial_error = np.linalg.norm(predicted-geometry['world'], axis=1)

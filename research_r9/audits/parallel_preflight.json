@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "excluded_fixtures": true,
+  "formal_inputs_generated": 0,
+  "worker_count": 2,
+  "resume_raw_hashes_verified": true,
+  "cases": [
+    {
+      "study": "A",
+      "profile": "nominal",
+      "seed": 12000002,
+      "outcomes": 32,
+      "files": {
+        "12000002.npz": "fbd0646b06201dfd97af3c6a7ec2cd09dccb8f57fef84b6367940d73850274f6",
+        "12000002_camera.npz": "28de0183bbc59e96349dad206f6a34d4d78b5d3b032ce0f7d80afc5118346291"
+      }
+    },
+    {
+      "study": "B",
+      "profile": "unfitted",
+      "seed": 12000003,
+      "outcomes": 32,
+      "files": {
+        "12000003.npz": "413d3ca54dd71d4a7424fa1de813039888f5abd0ebd79f4abbf0c11df05e4077",
+        "12000003_camera.npz": "7e9411c6a3690c913ee6636ba7b8fe29e9ee16d4054fa5ab8c54af3993ad8db0"
+      }
+    },
+    {
+      "study": "A",
+      "profile": "occlusion",
+      "seed": 12000004,
+      "outcomes": 32,
+      "files": {
+        "12000004.npz": "f7b765fed4c590471f8f5dc4c77a047419b0abec6bc9428bfe8f05f0c695a413",
+        "12000004_camera.npz": "aa5dd5213264546b355039f74a8dbc9f97f3a1eca5d8613d7e1352ab50c4ab85"
+      }
+    },
+    {
+      "study": "B",
+      "profile": "map_shift",
+      "seed": 12000005,
+      "outcomes": 32,
+      "files": {
+        "12000005.npz": "ebba33d7b0684e58358a203c44671cfa66d23ec18e1851f60ce77cbc70d15015",
+        "12000005_camera.npz": "d9c43b0a8a2330eec687007bb19a772003524f64739c33420eb631e7d45e7f17"
+      }
+    }
+  ]
+}

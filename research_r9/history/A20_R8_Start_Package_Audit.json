@@ -1,0 +1,425 @@
+{
+  "archive_path": "C:\\Users\\21882\\Downloads\\A20_R8_Start_Paper_Code_History.zip",
+  "archive_bytes": 35218560,
+  "archive_sha256": "c52a1e1a9d416b82289741972333ece9e45aeea7a6587d174a9d2d5b36cbd491",
+  "files": 851,
+  "crc_check": "PASS",
+  "manifest_entries": 850,
+  "manifest_missing": [],
+  "manifest_mismatch": [],
+  "unmanifested": [
+    "ESSENTIAL_CONTENT_SHA256.json"
+  ],
+  "python_files": 99,
+  "python_syntax_errors": [],
+  "cpp_files": [
+    "A20_release/work/a19/RAS_A19/source/rcp/bvh.cpp"
+  ],
+  "shared_libraries": [
+    "A20_release/work/a19/RAS_A19/source/rcp/libbvh.so"
+  ],
+  "full_core_expected_members": 1645,
+  "full_core_present": 844,
+  "full_core_missing": 801,
+  "full_core_missing_extensions": {
+    ".jsonl": 6,
+    ".npz": 164,
+    ".gz": 281,
+    ".log": 65,
+    ".png": 200,
+    ".svg": 42,
+    ".tiff": 18,
+    ".pdf": 14,
+    ".jpeg": 4,
+    ".bbl": 1,
+    ".spl": 1,
+    ".ac": 2,
+    "": 3
+  },
+  "full_core_missing_examples": [
+    "A20_release/output/A20_AEI_R8/data/r8_final/episodes.jsonl",
+    "A20_release/output/A20_AEI_R8/data/r8_final/execution_ledger.jsonl",
+    "A20_release/output/A20_AEI_R8/data/r8_final/geometry/B767_world_discrepancy_3.npz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/geometry/C172_world_discrepancy_3.npz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/geometry/route.npz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/geometry/world_discrepancy_0.npz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/geometry/world_discrepancy_1.npz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/geometry/world_discrepancy_2.npz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/geometry/world_discrepancy_3.npz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_000.csv.gz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_001.csv.gz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_002.csv.gz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_003.csv.gz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_004.csv.gz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_005.csv.gz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_006.csv.gz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_007.csv.gz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_008.csv.gz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_009.csv.gz",
+    "A20_release/output/A20_AEI_R8/data/r8_final/integrated/geometry_confirmation/chunk_010.csv.gz"
+  ],
+  "full_restore_groups": [
+    {
+      "id": "G01_Core",
+      "filename": "A20_R8_01_Core_Code_Results_Handoff.zip",
+      "bytes": 437192755,
+      "parts": 5
+    },
+    {
+      "id": "G02_Raw1",
+      "filename": "A20_AEI_R8_Episode_Raw_Part01.zip",
+      "bytes": 422025659,
+      "parts": 5
+    },
+    {
+      "id": "G03_Raw2",
+      "filename": "A20_AEI_R8_Episode_Raw_Part02.zip",
+      "bytes": 317708396,
+      "parts": 4
+    },
+    {
+      "id": "G04_Routes",
+      "filename": "A20_R8_04_All_Complete_Routes.zip",
+      "bytes": 420371782,
+      "parts": 5
+    },
+    {
+      "id": "G05_History1",
+      "filename": "A20_AEI_R8_Historical_Assets_Part01.zip",
+      "bytes": 227607447,
+      "parts": 3
+    },
+    {
+      "id": "G06_History2",
+      "filename": "A20_AEI_R8_Historical_Assets_Part02.zip",
+      "bytes": 307150412,
+      "parts": 4
+    },
+    {
+      "id": "G07_History3",
+      "filename": "A20_AEI_R8_Historical_Assets_Part03.zip",
+      "bytes": 260000860,
+      "parts": 3
+    },
+    {
+      "id": "G08_History4",
+      "filename": "A20_AEI_R8_Historical_Assets_Part04.zip",
+      "bytes": 324260215,
+      "parts": 4
+    }
+  ],
+  "full_restore_parts": 33,
+  "full_restore_total_bytes": 2716317526,
+  "main_pdfs": [
+    {
+      "name": "A20_release/output/A20_AEI_R8/main.pdf",
+      "pages": 30,
+      "title": "Executable Operating Contracts Linking Anytime Localization to Engineering Task Evidence",
+      "opening": "Executable Operating Contracts Linking Anytime Localization to\nEngineering Task Evidence\nChuansu Penga, Haoran Donga, Ruoxuan Wua, Peipei Zengb\naSchool of Aeronautical Engineering, Civil Aviation University of China, China\nbEngineering Training Center, Civil Aviation University of China, China\nAbstract\nAircraft inspection requires a timely airframe-relative pose and evidence matched to the consuming task.\nWe develop executable operating contracts linking pre-sensing event requirements, computati"
+    },
+    {
+      "name": "A20_release/output/A20_AEI_R8/supplement.pdf",
+      "pages": 41,
+      "title": "Supplementary Material: Executable Operating Contracts Linking Anytime Localization to Engineering Task Evidence",
+      "opening": "Supplementary Material: Executable Operating Contracts Linking Anytime\nLocalization to Engineering Task Evidence\nChuansu Penga, Haoran Donga, Ruoxuan Wua, Peipei Zengb\naSchool of Aeronautical Engineering, Civil Aviation University of China, China\nbEngineering Training Center, Civil Aviation University of China, China\nS1. Prospective protocol and execution provenance\nThis section concerns the R8 prospective study. The later sections labelled retained describe earlier\nA19/A20, R4 and secondary R5 "
+    }
+  ],
+  "csv_counts": {
+    "calibration.csv": {
+      "rows": 528,
+      "columns": [
+        "profile",
+        "service",
+        "policy",
+        "event",
+        "n",
+        "k",
+        "upper",
+        "margin",
+        "loss_m2s",
+        "work_s",
+        "native_cpu_s",
+        "score_m2s"
+      ],
+      "sample": [
+        "nominal",
+        "contended",
+        "CART_Time",
+        "observation",
+        "4096",
+        "2081",
+        "0.5372912442125337",
+        "-0.3872912442125337",
+        "0.018667785918226158",
+        "0.007592465868535774",
+        "0.009332639988281238",
+        "0.02626025178676193"
+      ]
+    },
+    "route_results.csv": {
+      "rows": 432,
+      "columns": [
+        "mesh",
+        "condition",
+        "rep",
+        "variant",
+        "duration_s",
+        "calls",
+        "dropped",
+        "opportunities",
+        "capture_ready",
+        "capture_success",
+        "rmse_cm",
+        "p95_cm",
+        "p99_cm",
+        "max_cm",
+        "fail_samples",
+        "event_after_5s",
+        "loss_m2s",
+        "direct_online_cpu_s",
+        "prop_cpu_s",
+        "receiver_cpu_s",
+        "correction_cpu_s",
+        "dispatch_cpu_s",
+        "coordinator_cpu_s",
+        "work_equivalent_s",
+        "front_cpu_s",
+        "decision_cpu_s",
+        "policy_switches",
+        "mean_iterations",
+        "scope_refusals",
+        "authorized_episode_cards",
+        "certificate_scope"
+      ],
+      "sample": [
+        "B767",
+        "contention",
+        "0",
+        "CART_Time",
+        "600.0",
+        "299",
+        "0",
+        "299",
+        "167",
+        "167",
+        "2.1812734140211427",
+        "3.8955385276859023",
+        "5.189514442010801",
+        "9.245548357375144",
+        "0",
+        "0",
+        "0.285477222402927",
+        "1.8898849679999992",
+        "0.465202834000001",
+        "0.101330893",
+        "1.2895427790000018",
+        "0.013378515",
+        "0.0204299469999963",
+        "2.135121871126464",
+        "0.28206039",
+        "0.030535396",
+        "0",
+        "1.4214046822742474",
+        "0",
+        "0",
+        "route population differs; descriptive outcomes only"
+      ]
+    },
+    "analysis/request_feasibility.csv": {
+      "rows": 96,
+      "columns": [
+        "profile",
+        "service",
+        "task",
+        "allowance",
+        "status",
+        "policy",
+        "eligible",
+        "max_requested_upper",
+        "margin",
+        "trajectory_only",
+        "same_as_validated_flat"
+      ],
+      "sample": [
+        "nominal",
+        "relaxed",
+        "trajectory",
+        "0.1",
+        "SELECTED",
+        "FlatCART3",
+        "22",
+        "0.08449747317315809",
+        "0.015502526826841917",
+        "FlatCART3",
+        "True"
+      ]
+    },
+    "analysis/controlled_summary.csv": {
+      "rows": 528,
+      "columns": [
+        "phase",
+        "profile",
+        "service",
+        "policy",
+        "loss_m2s",
+        "work_s",
+        "native_charged_cpu_s",
+        "sender_work_s",
+        "rmse_m",
+        "p95_m",
+        "max_m",
+        "trajectory_failure",
+        "observation_failure",
+        "union_failure",
+        "capture_ready",
+        "capture_success",
+        "stop_iteration",
+        "publications",
+        "installed",
+        "budget_stop",
+        "profile_guard",
+        "deadline_guard",
+        "first_delivery_s",
+        "front_cpu_s",
+        "solver_cpu_s",
+        "decision_cpu_s",
+        "receiver_cpu_s",
+        "stream_cpu_s",
+        "seal_cpu_s",
+        "n"
+      ],
+      "sample": [
+        "degeneracy_stress",
+        "degeneracy",
+        "contended",
+        "CART_Time",
+        "0.024999290108197233",
+        "0.006889112970089507",
+        "0.008568591869791658",
+        "0.003003069470523929",
+        "0.0632497323935229",
+        "0.0679053146880176",
+        "0.0688700555815155",
+        "0.16145833333333334",
+        "0.15104166666666666",
+        "0.171875",
+        "0.9869791666666666",
+        "0.8489583333333334",
+        "1.0",
+        "0.9869791666666666",
+        "0.9869791666666666",
+        "0.0",
+        "0.0",
+        "1.0",
+        "0.3494791666666666",
+        "0.0004621384296875",
+        "0.0029373009375",
+        "6.137753385416666e-05",
+        "0.001602826260416665",
+        "0.00341345374218748",
+        "9.044007812500001e-05",
+        "384"
+      ]
+    }
+  },
+  "npz_files": 0,
+  "pkl_files": [
+    "A20_release/work/a19/RAS_A19/data/compiled_models.pkl",
+    "A20_release/work/a19/RAS_A19/data/reuse_models.pkl"
+  ],
+  "nested_checkpoint_zip": [
+    "handoff/preserved_checkpoints/A20_AEI_R8_F0_Research_Checkpoint.zip"
+  ],
+  "handoff_files": [
+    "handoff/DOWNLOAD_INDEX_CN.md",
+    "handoff/IMPORT_TO_NEW_CHAT.txt",
+    "handoff/LATEST_TASK_BRIEF_CN.md",
+    "handoff/PROJECT_HISTORY_CN.md",
+    "handoff/START_HERE_CN.md",
+    "handoff/VISIBLE_HISTORY_582_629_CN.md"
+  ],
+  "extracted_root": "C:\\Users\\21882\\Documents\\Codex\\2026-10-12\\sci\\work\\A20_R8_start",
+  "new_simulations_run": false,
+  "restoration_scripts_executed": false,
+  "CP_recalculation": {
+    "rows": 528,
+    "family_size": 528,
+    "family_error": 0.05,
+    "max_absolute_difference": 1.1102230246251565e-16,
+    "matched_at_1e-12": true,
+    "scope": "recalculated bounds from archived n,k only; raw event counts and input independence not revalidated"
+  },
+  "additional_original_archives_found": [
+    {
+      "path": "C:\\Users\\21882\\Downloads\\A20_AEI_R8_Historical_Assets_Part01.zip",
+      "bytes": 227607447,
+      "sha256_matches": true,
+      "group": "G05_History1",
+      "files": 2844,
+      "uncompressed_bytes": 413279495,
+      "extensions": {
+        ".csv": 16,
+        ".json": 79,
+        ".npz": 2747,
+        ".jsonl": 2
+      },
+      "examples": [
+        "A20_release/output/A20_AEI_R8/data/aei_context_predictor_ablation.csv",
+        "A20_release/output/A20_AEI_R8/data/aei_context_strata.csv",
+        "A20_release/output/A20_AEI_R8/data/audit.json",
+        "A20_release/output/A20_AEI_R8/data/checkpoint_ablations.csv",
+        "A20_release/output/A20_AEI_R8/data/checkpoint_model.npz",
+        "A20_release/output/A20_AEI_R8/data/deployment_envelope.csv",
+        "A20_release/output/A20_AEI_R8/data/episodes.jsonl",
+        "A20_release/output/A20_AEI_R8/data/frozen_policies.json",
+        "A20_release/output/A20_AEI_R8/data/manuscript_numbers.json",
+        "A20_release/output/A20_AEI_R8/data/native_route_results.csv"
+      ]
+    },
+    {
+      "path": "C:\\Users\\21882\\Downloads\\A20_AEI_R8_Historical_Assets_Part03.zip",
+      "bytes": 260000860,
+      "sha256_matches": true,
+      "group": "G07_History3",
+      "files": 2,
+      "uncompressed_bytes": 260000565,
+      "extensions": {
+        ".part01": 1,
+        ".json": 1
+      },
+      "examples": [
+        "A20_release/output/A20_AEI_R8/preserved/latest_AEI_25p_baseline/A20_AEI_Editable_Source.zip.part01",
+        "PACKAGE_MANIFESTS/A20_AEI_R8_Historical_Assets_Part03.zip.json"
+      ]
+    }
+  ],
+  "full_original_archives_available": 2,
+  "full_original_archives_missing": [
+    "A20_R8_01_Core_Code_Results_Handoff.zip",
+    "A20_AEI_R8_Episode_Raw_Part01.zip",
+    "A20_AEI_R8_Episode_Raw_Part02.zip",
+    "A20_R8_04_All_Complete_Routes.zip",
+    "A20_AEI_R8_Historical_Assets_Part02.zip",
+    "A20_AEI_R8_Historical_Assets_Part04.zip"
+  ],
+  "history_scope": "project history summary plus visible conversation items 582-629; earlier messages not a full verbatim export",
+  "additional_archives_extraction": [
+    {
+      "archive": "A20_AEI_R8_Historical_Assets_Part01.zip",
+      "crc": "PASS",
+      "files_present": 2844,
+      "new_files_extracted_this_pass": 0,
+      "inner_manifest_checks": 2843,
+      "failures": []
+    },
+    {
+      "archive": "A20_AEI_R8_Historical_Assets_Part03.zip",
+      "crc": "PASS",
+      "files_present": 2,
+      "new_files_extracted_this_pass": 2,
+      "inner_manifest_checks": 1,
+      "failures": []
+    }
+  ],
+  "historical_npz_files_recovered": 2747
+}

@@ -1,0 +1,761 @@
+{
+  "version": "R9-prospective-1",
+  "status": "FROZEN_BEFORE_FORMAL_CALIBRATION",
+  "studies": {
+    "A": {
+      "roi": [
+        192,
+        144
+      ]
+    },
+    "B": {
+      "roi": [
+        288,
+        216
+      ]
+    }
+  },
+  "counts": {
+    "calibration_per_population": 2048,
+    "confirmation_per_population": 1024,
+    "stress_per_profile": 64
+  },
+  "seeds": {
+    "A": {
+      "nominal_calibration": 13000000,
+      "unfitted_calibration": 13100000,
+      "nominal_confirmation": 13200000,
+      "unfitted_confirmation": 13300000,
+      "stress": 13400000
+    },
+    "B": {
+      "nominal_calibration": 14000000,
+      "unfitted_calibration": 14100000,
+      "nominal_confirmation": 14200000,
+      "unfitted_confirmation": 14300000,
+      "stress": 14400000
+    }
+  },
+  "pilot_seeds": [
+    12000000,
+    12000001,
+    12000002,
+    12000003,
+    12000004,
+    12000005,
+    12000006,
+    12000007,
+    12000008,
+    12000009,
+    12000010,
+    12000011,
+    12000012,
+    12000013,
+    12000014,
+    12000015,
+    12000016,
+    12000017,
+    12000018,
+    12000019,
+    12000020,
+    12000021,
+    12000022,
+    12000023,
+    12000024,
+    12000025,
+    12000026,
+    12000027,
+    12000028,
+    12000029,
+    12000030,
+    12000031,
+    12000032,
+    12000033,
+    12000034,
+    12000035,
+    12000036,
+    12000037,
+    12000038,
+    12000039,
+    12000040,
+    12000041,
+    12000042,
+    12000043,
+    12000044,
+    12000045,
+    12000046,
+    12000047
+  ],
+  "pilot_excluded": true,
+  "policies": [
+    "Fixed2",
+    "Fixed4",
+    "Final",
+    "FlatCART",
+    "FlatRF",
+    "KG1",
+    "ContractRF",
+    "OldRAVC"
+  ],
+  "tasks": [
+    "acquisition",
+    "association",
+    "report"
+  ],
+  "variants": [
+    "full",
+    "coarser_gsd",
+    "more_blur",
+    "partial",
+    "partial_relaxed",
+    "stricter",
+    "late_report",
+    "single_service"
+  ],
+  "anchors": [
+    "full",
+    "partial",
+    "single_service"
+  ],
+  "events": {
+    "acquisition": {
+      "full": [
+        [
+          "blur_px",
+          null,
+          0.5
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.02
+        ]
+      ],
+      "coarser_gsd": [
+        [
+          "blur_px",
+          null,
+          0.5
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.04
+        ]
+      ],
+      "more_blur": [
+        [
+          "blur_px",
+          null,
+          0.75
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.02
+        ]
+      ],
+      "partial": [
+        [
+          "blur_px",
+          null,
+          0.75
+        ],
+        [
+          "coverage",
+          0.2,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.04
+        ]
+      ],
+      "partial_relaxed": [
+        [
+          "blur_px",
+          null,
+          0.75
+        ],
+        [
+          "coverage",
+          0.2,
+          null
+        ]
+      ],
+      "stricter": [
+        [
+          "blur_px",
+          null,
+          0.35
+        ],
+        [
+          "coverage",
+          0.7,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.01
+        ]
+      ],
+      "late_report": [
+        [
+          "blur_px",
+          null,
+          0.5
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.02
+        ]
+      ],
+      "single_service": [
+        [
+          "blur_px",
+          null,
+          0.75
+        ],
+        [
+          "gsd_m",
+          null,
+          0.04
+        ]
+      ]
+    },
+    "association": {
+      "full": [
+        [
+          "association_m",
+          null,
+          0.1
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "reprojection_px",
+          null,
+          30.0
+        ]
+      ],
+      "coarser_gsd": [
+        [
+          "association_m",
+          null,
+          0.1
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "reprojection_px",
+          null,
+          30.0
+        ]
+      ],
+      "more_blur": [
+        [
+          "association_m",
+          null,
+          0.1
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "reprojection_px",
+          null,
+          30.0
+        ]
+      ],
+      "partial": [
+        [
+          "association_m",
+          null,
+          0.15
+        ],
+        [
+          "coverage",
+          0.2,
+          null
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "reprojection_px",
+          null,
+          50.0
+        ]
+      ],
+      "partial_relaxed": [
+        [
+          "association_m",
+          null,
+          0.15
+        ],
+        [
+          "coverage",
+          0.2,
+          null
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ]
+      ],
+      "stricter": [
+        [
+          "association_m",
+          null,
+          0.06
+        ],
+        [
+          "coverage",
+          0.7,
+          null
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "reprojection_px",
+          null,
+          15.0
+        ]
+      ],
+      "late_report": [
+        [
+          "association_m",
+          null,
+          0.1
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "reprojection_px",
+          null,
+          30.0
+        ]
+      ],
+      "single_service": [
+        [
+          "association_m",
+          null,
+          0.15
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ]
+      ]
+    },
+    "report": {
+      "full": [
+        [
+          "association_m",
+          null,
+          0.1
+        ],
+        [
+          "blur_px",
+          null,
+          0.5
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.02
+        ],
+        [
+          "image_age_s",
+          null,
+          1.8
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "report_delay_s",
+          null,
+          2.0
+        ],
+        [
+          "reprojection_px",
+          null,
+          30.0
+        ]
+      ],
+      "coarser_gsd": [
+        [
+          "association_m",
+          null,
+          0.1
+        ],
+        [
+          "blur_px",
+          null,
+          0.5
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.04
+        ],
+        [
+          "image_age_s",
+          null,
+          1.8
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "report_delay_s",
+          null,
+          2.0
+        ],
+        [
+          "reprojection_px",
+          null,
+          30.0
+        ]
+      ],
+      "more_blur": [
+        [
+          "association_m",
+          null,
+          0.1
+        ],
+        [
+          "blur_px",
+          null,
+          0.75
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.02
+        ],
+        [
+          "image_age_s",
+          null,
+          1.8
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "report_delay_s",
+          null,
+          2.0
+        ],
+        [
+          "reprojection_px",
+          null,
+          30.0
+        ]
+      ],
+      "partial": [
+        [
+          "association_m",
+          null,
+          0.15
+        ],
+        [
+          "blur_px",
+          null,
+          0.75
+        ],
+        [
+          "coverage",
+          0.2,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.04
+        ],
+        [
+          "image_age_s",
+          null,
+          2.8
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "report_delay_s",
+          null,
+          3.0
+        ],
+        [
+          "reprojection_px",
+          null,
+          50.0
+        ]
+      ],
+      "partial_relaxed": [
+        [
+          "association_m",
+          null,
+          0.15
+        ],
+        [
+          "blur_px",
+          null,
+          0.75
+        ],
+        [
+          "coverage",
+          0.2,
+          null
+        ],
+        [
+          "image_age_s",
+          null,
+          3.8
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "report_delay_s",
+          null,
+          4.0
+        ]
+      ],
+      "stricter": [
+        [
+          "association_m",
+          null,
+          0.06
+        ],
+        [
+          "blur_px",
+          null,
+          0.35
+        ],
+        [
+          "coverage",
+          0.7,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.01
+        ],
+        [
+          "image_age_s",
+          null,
+          0.8
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "report_delay_s",
+          null,
+          1.0
+        ],
+        [
+          "reprojection_px",
+          null,
+          15.0
+        ]
+      ],
+      "late_report": [
+        [
+          "association_m",
+          null,
+          0.1
+        ],
+        [
+          "blur_px",
+          null,
+          0.5
+        ],
+        [
+          "coverage",
+          0.5,
+          null
+        ],
+        [
+          "gsd_m",
+          null,
+          0.02
+        ],
+        [
+          "image_age_s",
+          null,
+          3.8
+        ],
+        [
+          "localization_ready",
+          1.0,
+          null
+        ],
+        [
+          "report_delay_s",
+          null,
+          4.0
+        ],
+        [
+          "reprojection_px",
+          null,
+          30.0
+        ]
+      ],
+      "single_service": [
+        [
+          "image_age_s",
+          null,
+          2.8
+        ],
+        [
+          "report_delay_s",
+          null,
+          3.0
+        ]
+      ]
+    }
+  },
+  "primary_allowance": 0.15,
+  "allowances": [
+    0.1,
+    0.15,
+    0.2,
+    0.25
+  ],
+  "family_alpha": 0.05,
+  "family_size": 4608,
+  "family_note": "Reserve both studies, two populations, 32 policy/services and up to 36 events per cell. Anchor duplicates need no extra cards; unused budget is not reassigned.",
+  "selection_objective": "mean calibration loss_m2s + 1 m2 * mean normalized total_work_s",
+  "selection_tie": "lexicographic (objective, policy ID)",
+  "calibration": "Fresh independent draws; no fitting of retained R8 predictor. Exact CP upper with alpha=.05/4608.",
+  "confirmation": "No input generated or inspected until ALL A/B calibration cards and choices sealed.",
+  "timing": "R8 retained deterministic operation clock for localization. Pilot median camera+decoder CPU times frozen separately for each ROI, multiplied by the same declared service load. Synthetic report delay=max(first positive localization delivery,capture time+queue+load*camera work). Image age=report time-capture time. Native Windows timing is quantized; not embedded WCET.",
+  "scoring": "Camera pixels actually raycast and processed by synthetic palette detector. Geotag uses the causally active positive localization version at capture. Source truth only enters rendering and offline event labels. Fixed-target GSD uses identical face/barycentric CAD addresses across ROI; it is not a frame-dependent pixel quantile.",
+  "producer_transfer": "Target-event dependency closure unchanged plus pointwise old-anchor cover. Only implemented pure program invariants, no OOD or real distribution claim.",
+  "pooled_calibration": "Only predeclared A/B requests with identical pure event dependencies may pool the independent same-population calibration draws. All baselines receive the same pool and pooled anchors; full raw-manifest lineage is retained.",
+  "baselines": [
+    "ContractCover",
+    "ProceduralCoverValidated",
+    "DirectRecertCached",
+    "ExactCard"
+  ],
+  "baseline_fairness": "All methods receive all card/data/request caches, dependency knowledge and same objective/alpha. Direct renewal evaluates any predeclared request. Procedural cover implements all semantic/dependency rules.",
+  "stress_profiles": [
+    "occlusion",
+    "degeneracy",
+    "prior_shift",
+    "map_shift"
+  ],
+  "stress_certificates": false,
+  "primary_inference": "Independent seed is sampling unit; per-request repetitions do not increase n. Confirmation per-population empirical failures and exact intervals. Paired Contract-Procedural equality; Contract-Direct differences retained.",
+  "human_effort_claim": false,
+  "physical_trials": 0,
+  "route_guarantee": false,
+  "camera_clock": {
+    "A": {
+      "render_s": 0.046875,
+      "detector_s": 0.015625,
+      "total_s": 0.0625,
+      "pilot_manifest_sha256": "d9aef52e987dba2e8e3d13784300110ebb3f9378e2e9d54d5d14b84f42909c7b"
+    },
+    "B": {
+      "render_s": 0.078125,
+      "detector_s": 0.046875,
+      "total_s": 0.125,
+      "pilot_manifest_sha256": "d9aef52e987dba2e8e3d13784300110ebb3f9378e2e9d54d5d14b84f42909c7b"
+    }
+  }
+}

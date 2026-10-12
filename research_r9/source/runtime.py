@@ -1,12 +1,12 @@
 """Load retained R8 without modifying its sources, models or result directory."""
 from pathlib import Path
-import os, sys, json
+import os, sys, json, platform
 
 os.environ['OPENBLAS_NUM_THREADS'] = '1'
 os.environ['OMP_NUM_THREADS'] = '1'
 HERE = Path(__file__).resolve().parents[1]
 WORKSPACE = HERE.parents[2]
-R8 = WORKSPACE / 'work/A20_R8_start/A20_release/output/A20_AEI_R8'
+R8 = Path(os.environ.get('A20_R8_ROOT',str(WORKSPACE / 'work/A20_R8_start/A20_release/output/A20_AEI_R8'))).resolve()
 sys.path.insert(0, str(R8 / 'source'))
 
 def initialize():
@@ -17,7 +17,10 @@ def initialize():
     from r8_service import controlled, prediction_cache, load_models, state_from
     from r8_policy import policies
     import numpy as np
-    PortableMesh.library_path = HERE / 'native/bvh_windows.dll'
+    if platform.system()=='Windows':PortableMesh.library_path=HERE/'native/bvh_windows.dll'
+    else:
+        from r8_protocol import A19
+        PortableMesh.library_path=A19/'source/rcp/libbvh.so'
     PortableMesh.prior_map_class = PriorMap
     meshes = {(m, level): PortableMesh(geometry(m, level))
               for m in ('B767', 'C172', 'UnfittedAirframe') for level in range(4)}

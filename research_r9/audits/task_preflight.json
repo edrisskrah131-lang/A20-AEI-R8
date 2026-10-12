@@ -1,0 +1,1023 @@
+{
+  "status": "PASS",
+  "fixtures_not_observations": true,
+  "schema_decisions": 144,
+  "semantic_procedural_agreement": true,
+  "wrong_population_refused": true,
+  "corrupted_card_refused": true,
+  "optical_ROI_invariance": true,
+  "focal_change_invalidates_optical": true,
+  "full_report_ROI_change_invalidates": true,
+  "formal_calibration_inputs": 0,
+  "formal_confirmation_inputs": 0,
+  "decisions": [
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "full",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "full",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "coarser_gsd",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "coarser_gsd",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "more_blur",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "more_blur",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "partial",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "partial",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "partial_relaxed",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "partial_relaxed",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "stricter",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "stricter",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "late_report",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "late_report",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "single_service",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "full",
+      "variant": "single_service",
+      "roi_changed": true,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "full",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "full",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "coarser_gsd",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "coarser_gsd",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "more_blur",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "more_blur",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "partial",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "partial",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "partial_relaxed",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "partial_relaxed",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "stricter",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "stricter",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "late_report",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "late_report",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "single_service",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "partial",
+      "variant": "single_service",
+      "roi_changed": true,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "full",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "full",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "coarser_gsd",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "coarser_gsd",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "more_blur",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "more_blur",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "partial",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "partial",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "partial_relaxed",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "partial_relaxed",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "stricter",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "stricter",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "late_report",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "late_report",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "single_service",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "acquisition",
+      "anchor": "single_service",
+      "variant": "single_service",
+      "roi_changed": true,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "full",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "full",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "coarser_gsd",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "coarser_gsd",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "more_blur",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "more_blur",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "partial",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "partial",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "partial_relaxed",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "partial_relaxed",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "stricter",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "stricter",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "late_report",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "late_report",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "single_service",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "full",
+      "variant": "single_service",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "full",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "full",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "coarser_gsd",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "coarser_gsd",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "more_blur",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "more_blur",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "partial",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "partial",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "partial_relaxed",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "partial_relaxed",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "stricter",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "stricter",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "late_report",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "late_report",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "single_service",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "partial",
+      "variant": "single_service",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "full",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "full",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "coarser_gsd",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "coarser_gsd",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "more_blur",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "more_blur",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "partial",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "partial",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "partial_relaxed",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "partial_relaxed",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "stricter",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "stricter",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "late_report",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "late_report",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "single_service",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "association",
+      "anchor": "single_service",
+      "variant": "single_service",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "full",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "full",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "coarser_gsd",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "coarser_gsd",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "more_blur",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "more_blur",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "partial",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "partial",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "partial_relaxed",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "partial_relaxed",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "stricter",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "stricter",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "late_report",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "late_report",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "single_service",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "full",
+      "variant": "single_service",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "full",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "full",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "coarser_gsd",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "coarser_gsd",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "more_blur",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "more_blur",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "partial",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "partial",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "partial_relaxed",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "partial_relaxed",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "stricter",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "stricter",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "late_report",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "late_report",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "single_service",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "partial",
+      "variant": "single_service",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "full",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "full",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "coarser_gsd",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "coarser_gsd",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "more_blur",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "more_blur",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "partial",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "partial",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "partial_relaxed",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "partial_relaxed",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "stricter",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "stricter",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "late_report",
+      "roi_changed": false,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "late_report",
+      "roi_changed": true,
+      "authorized": false
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "single_service",
+      "roi_changed": false,
+      "authorized": true
+    },
+    {
+      "task": "report",
+      "anchor": "single_service",
+      "variant": "single_service",
+      "roi_changed": true,
+      "authorized": false
+    }
+  ]
+}

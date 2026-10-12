@@ -32,6 +32,8 @@ class Atom:
 
     @classmethod
     def quantity(cls, metric, unit, lower=None, upper=None):
+        if any(v is not None and (isinstance(v,bool) or not isinstance(v,(int,float))) for v in (lower,upper)):
+            raise ValueError('Quantities require numeric, non-Boolean thresholds')
         dimension, scale = UNITS[unit]
         if METRICS.get(metric) != dimension:
             raise ValueError('Incompatible engineering units')
@@ -43,6 +45,8 @@ class Event:
     atoms: tuple[Atom, ...]
 
     def __post_init__(self):
+        if not all(isinstance(a,Atom) for a in self.atoms):
+            raise ValueError('Event requires typed atoms')
         if not self.atoms or len({a.metric for a in self.atoms}) != len(self.atoms):
             raise ValueError('Use one canonical interval per required metric')
         object.__setattr__(self, 'atoms', tuple(sorted(self.atoms, key=lambda a:a.metric)))
