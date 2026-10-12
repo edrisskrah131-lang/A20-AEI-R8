@@ -1,0 +1,20 @@
+{
+  "study": "A",
+  "rows": 3145728,
+  "independent_confirmation_sources": 2048,
+  "formatter": "stream of frozen evidence_selection.confirm fields and predicates",
+  "changed_methods": false,
+  "source_bound_receipt_checks": {
+    "ContractCover": 97280,
+    "ProceduralCoverValidated": 97280,
+    "DirectRecertCached": 119808,
+    "ExactCard": 72704
+  },
+  "measured_receipt_wall_s": {
+    "ContractCover": 2.2745539000000057,
+    "ProceduralCoverValidated": 1.9777571000001857,
+    "DirectRecertCached": 2.592098899999969,
+    "ExactCard": 1.598747300000083
+  },
+  "sha256": "9bd897a5cce39dedc0ce7f19ff51bd9f43d3be2a07ed6dd81d93569fdd7806b5"
+}

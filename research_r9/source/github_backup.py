@@ -37,10 +37,21 @@ class API:
         if not url.startswith(('https://api.github.com/','https://uploads.github.com/')):
             raise ValueError('Unexpected credential destination')
         if body is not None and not isinstance(body,bytes):body=json.dumps(body).encode()
-        req=urllib.request.Request(url,data=body,method=method,headers={
+        headers={
             'Authorization':'Bearer '+self.secret,'Accept':'application/vnd.github+json',
             'X-GitHub-Api-Version':'2026-03-10','Content-Type':content_type,
-            'User-Agent':'A20-R9-verified-backup'})
+            'User-Agent':'A20-R9-verified-backup'}
+        if isinstance(body,bytes) and len(body)>8*1024*1024:
+            # A single SSL sendall has one aggregate write timeout. Streaming
+            # bounded blocks keeps each write bounded on a slow connection.
+            payload=body;headers['Content-Length']=str(len(payload))
+            def blocks():
+                for offset in range(0,len(payload),1024*1024):
+                    yield payload[offset:offset+1024*1024]
+                    if offset and offset%(32*1024*1024)==0:
+                        print('UPLOAD_PROGRESS_MB',offset//(1024*1024),len(payload)//(1024*1024),flush=True)
+            body=blocks()
+        req=urllib.request.Request(url,data=body,method=method,headers=headers)
         try:
             with urllib.request.urlopen(req,timeout=600) as r:
                 return None if r.status==204 else json.load(r)

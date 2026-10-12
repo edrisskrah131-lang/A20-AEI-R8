@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "data_preloaded_equally": true,
+  "event_identity_deduplicated_for_every_method": true,
+  "developer_effort_measured": false,
+  "additional_independent_inputs": 0,
+  "scope": "CPU/wall diagnostic; first query includes numeric-card validation and plan generation; warm lookup is identical dictionary caching.",
+  "trials": 3,
+  "sha256": "88235950c80afd11c75df651e8798210d25691b78c6f0a8a122d531eef412b88",
+  "seed_families_unchanged": true
+}

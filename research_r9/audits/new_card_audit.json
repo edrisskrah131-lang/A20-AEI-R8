@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "cards": 3072,
+  "family_reserve": 4608,
+  "max_CP_error": 0.0,
+  "confirmation_not_used_in_selection": true,
+  "diagnostic_grid_not_simultaneously_certified": true
+}
