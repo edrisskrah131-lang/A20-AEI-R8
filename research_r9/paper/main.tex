@@ -10,7 +10,7 @@
 \journal{Advanced Engineering Informatics}
 \begin{document}
 \begin{frontmatter}
-\title{Executable Operating Contracts Linking Anytime Localization to Engineering Task Evidence}
+\title{Typed Engineering Evidence for Changing Inspection Requirements: Reuse, Renewal and Refusal}
 \author[ae]{Chuansu Peng}
 \author[ae]{Haoran Dong}
 \author[ae]{Ruoxuan Wu}
@@ -18,32 +18,33 @@
 \address[ae]{School of Aeronautical Engineering, Civil Aviation University of China, China}
 \address[etc]{Engineering Training Center, Civil Aviation University of China, China}
 \begin{abstract}
-\input{sections/r8_abstract}
+\input{sections/r9_abstract}
 \end{abstract}
 \begin{keyword}
-Executable operating contracts \sep Engineering decision knowledge \sep Anytime localization \sep Evidence applicability \sep Risk calibration \sep Aircraft inspection
+Engineering knowledge representation \sep Inspection requirements \sep Evidence transfer \sep Risk calibration \sep Anytime localization
 \end{keyword}
 \end{frontmatter}
-\input{sections/r8_introduction}
-\input{sections/r8_related}
-\input{sections/r8_formulation}
-\input{sections/r8_knowledge}
-\input{sections/r8_method}
-\input{sections/r8_theory}
-\input{sections/r8_design}
-\input{sections/r8_results}
-\input{sections/r8_discussion}
-\input{sections/r8_conclusion}
+\input{sections/r9_introduction}
+\input{sections/r9_related}
+\input{sections/r9_executor}
+\input{sections/r9_knowledge}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{r9/knowledge_flow.pdf}
+\caption{Executed engineering evidence interface. The dependency projection and event-containment witness provide separate checks. Matching metadata alone does not establish equality of calibration and deployment distributions.}\label{fig:r9-knowledge}\end{figure}
+\input{sections/r9_theory}
+\input{sections/r9_design}
+\input{sections/r9_results}
+\input{sections/r9_discussion}
+\input{sections/r9_conclusion}
 \FloatBarrier
 \section*{Evidence and applicability boundary}
-The prospective study contains 13,824 distinct synthetic episode inputs: 8,192 calibration, 4,096 confirmation and 1,536 unsupported stress inputs. Forty-eight additional pilot inputs are excluded from inference. Repeated policy, service and task executions add no independent sample size. The 36 complete-route inputs yield 432 executions and carry no episode-to-mission certificate. The operation clock and contention factors are declared simulation services; native CPU ledgers have explicitly different controlled and whole-online-route boundaries. Cards concern unconditional frozen-policy/population events, assume independent source draws and matched deployment distributions, and do not provide scan-conditional risk, OOD detection, physical safety or embedded worst-case timing. The attachment amendment preserves numerical/clock/event traces and withholds statements after detected invalid attempts. Original photographs and supplied simulation images are qualitative context. No new physical robot localization experiment is reported.
+The new studies contain 12,800 distinct synthetic inputs: 8,192 calibration, 4,096 confirmation and 512 unsupported stress. Forty-eight pilot seeds, repeated development fixtures and five source replays add no independent evidence sample size. The 409,600 policy/service outcomes and 6,291,456 confirmation request rows are paired repetitions. Historical R8 inputs and 36 routes/432 executions remain a separate evidence block. Certificates concern unconditional frozen-policy/population events under iid sampling, matched distributions and trusted implemented event maps. They do not provide per-image conditional risk, unknown-drift detection, physical safety or embedded worst-case timing. The raster/decoder clock describes a virtual producer; receipt-observer and numerical timing boundaries are reported separately. No new real-robot experiment or route-level inspection certificate is asserted.
 \section*{Funding}
 This work was supported by the Civil Aviation Safety Capacity Building Fund Project (RJ2025073), ``Pilot-scale development of civil aircraft walk-around inspection and on-wing aero-engine cleaning equipment.''
 \section*{Data and code availability}
-The reproducibility release contains the frozen prospective protocol, all synthetic input seeds and raw arrays, native solver/predictors, policy and service specifications, calibration/confirmation/stress outcomes, complete route inputs and executions, event cards, attachment-amendment history, execution and asset hashes, analysis and vector-figure scripts, and editable publisher source. Original A19/A20 releases, four original platform photographs, five supplied simulation views and the earlier 2,680-input/81-execution study remain preserved separately. No new physical localization dataset is asserted.
+Code, editable sources, result tables and handoff instructions are available in the public \href{https://github.com/edrisskrah131-lang/A20-AEI-R8/tree/r9-rebuild-20261012}{R9 research branch}. Raw arrays, actual rasters, publication journals, phase manifests and SHA256-verified archives are available in its \href{https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/tag/r9-checkpoints-20261012}{checkpoint release}; the final delivery index identifies the complete reading package. The \href{https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/tag/r8-handoff-2026-10-12}{historical R8 release} preserves A19/A20 sources, original data, route results, four real photographs and five original simulation views. Small reading and analysis packages permit continuation without downloading the entire raw dataset.
 \section*{Declaration of generative AI and AI-assisted technologies}
 OpenAI ChatGPT/Codex (GPT-6) assisted research-code development and reconstruction, computational analysis, manuscript drafting and revision, literature organization, and code for exact schematics and data visualizations. Numerical observations were produced by the archived geometric simulation and executed localization code. The authors must review the work and confirm responsibility before submission.
 \bibliographystyle{elsarticle-num}
-\bibliography{references}
+\bibliography{references,references_r9}
 \FloatBarrier
 \end{document}

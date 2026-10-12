@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "documents": [
+    {
+      "document": "main",
+      "pages": 17,
+      "bytes": 1112491,
+      "outside_page_text": []
+    },
+    {
+      "document": "supplement",
+      "pages": 53,
+      "bytes": 1657685,
+      "outside_page_text": []
+    },
+    {
+      "document": "revision_report_cn",
+      "pages": 2,
+      "bytes": 187782,
+      "outside_page_text": []
+    },
+    {
+      "document": "internal_review_cn",
+      "pages": 2,
+      "bytes": 182726,
+      "outside_page_text": []
+    }
+  ],
+  "all_70_English_pages_rendered_and_contact_sheets_reviewed": true,
+  "Chinese_pages_rendered": true,
+  "revised_figures_checked": true
+}

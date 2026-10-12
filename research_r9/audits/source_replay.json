@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "additional_independent_inputs": 0,
+  "scope": "Same platform cold numerical/pixel replay; native measured timings are not expected bitwise equal.",
+  "sources": [
+    {
+      "study": "A",
+      "profile": "nominal",
+      "seed": 13200000,
+      "status": "PASS",
+      "array_keys": 34,
+      "max_absolute_difference": 0.0,
+      "policy_service_outcomes": 32,
+      "source_sha256": "69ea0a60b7d6c8a166770e875a09adb20e86a1239eeb11eebd6bcb2ecca9ba47",
+      "replay_sha256": "7a65a8bf9a2fa16c7b1389533b8666ff5c01a60fa7819388163d0895cd44a59b",
+      "timing_fields_excluded": true
+    },
+    {
+      "study": "A",
+      "profile": "nominal",
+      "seed": 13201023,
+      "status": "PASS",
+      "array_keys": 34,
+      "max_absolute_difference": 0.0,
+      "policy_service_outcomes": 32,
+      "source_sha256": "71a674c8c9a744f67ad4511c7ffdba364cbb2c0bc1cb4c77edbe618dd163a7d7",
+      "replay_sha256": "2788b78759b10528e389f04647c566702b08865d07460db0d2a14c371bbe17f6",
+      "timing_fields_excluded": true
+    },
+    {
+      "study": "A",
+      "profile": "unfitted",
+      "seed": 13300000,
+      "status": "PASS",
+      "array_keys": 34,
+      "max_absolute_difference": 0.0,
+      "policy_service_outcomes": 32,
+      "source_sha256": "7c84cf2c69eb8437dd1aff347a35afe3b6c7e7ca87ca3640bc0b4ed4f74f2089",
+      "replay_sha256": "52fa4a788d9ecffdece59fee6ac99034a2c42d56063024d9ce1d075d255107f4",
+      "timing_fields_excluded": true
+    },
+    {
+      "study": "B",
+      "profile": "nominal",
+      "seed": 14200000,
+      "status": "PASS",
+      "array_keys": 34,
+      "max_absolute_difference": 0.0,
+      "policy_service_outcomes": 32,
+      "source_sha256": "5a0d1e47ea7cb3758bd3133ca37d491704eda4ed5d99d4f695e32e3ab9b9acbf",
+      "replay_sha256": "02dd46013bab9ce83d998fc218b08f7784ca9092dcc5cb5c952ed3d1709d232d",
+      "timing_fields_excluded": true
+    },
+    {
+      "study": "B",
+      "profile": "unfitted",
+      "seed": 14300000,
+      "status": "PASS",
+      "array_keys": 34,
+      "max_absolute_difference": 0.0,
+      "policy_service_outcomes": 32,
+      "source_sha256": "25af43131bb257def8a62213ff7037d2162a2e40ad45e2a5af9ff0f87f4a22ae",
+      "replay_sha256": "996077a612e269265fa6a6b384c71b7584e674ca7f5cb095da1ea7d4b4b15272",
+      "timing_fields_excluded": true
+    }
+  ]
+}

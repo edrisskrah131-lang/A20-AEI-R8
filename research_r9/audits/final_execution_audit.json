@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "independent_inputs": 12800,
+  "raw_files_checked": 38400,
+  "repeated_policy_service_outcomes": 409600,
+  "repeated_confirmation_requests": 6291456,
+  "CP_independent_log_binomial_inversion_max_error": 7.804503709962773e-09,
+  "phases": [
+    {
+      "study": "A",
+      "phase": "calibration",
+      "unique_inputs": 4096,
+      "repeated_outcomes": 131072,
+      "wall_s": 756.400894800001
+    },
+    {
+      "study": "A",
+      "phase": "confirmation",
+      "unique_inputs": 2048,
+      "repeated_outcomes": 65536,
+      "wall_s": 313.9835127000006
+    },
+    {
+      "study": "A",
+      "phase": "stress",
+      "unique_inputs": 256,
+      "repeated_outcomes": 8192,
+      "wall_s": 45.75369850000061
+    },
+    {
+      "study": "B",
+      "phase": "calibration",
+      "unique_inputs": 4096,
+      "repeated_outcomes": 131072,
+      "wall_s": 1925.3961426000023
+    },
+    {
+      "study": "B",
+      "phase": "confirmation",
+      "unique_inputs": 2048,
+      "repeated_outcomes": 65536,
+      "wall_s": 719.522883499998
+    },
+    {
+      "study": "B",
+      "phase": "stress",
+      "unique_inputs": 256,
+      "repeated_outcomes": 8192,
+      "wall_s": 96.67782770000122
+    }
+  ],
+  "observer_fixtures_not_probability_observations": true,
+  "hidden_drift_detection_claim": false
+}

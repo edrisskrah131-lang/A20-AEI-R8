@@ -1,0 +1,9 @@
+\begin{table}[!htbp]\centering\small
+\caption{Executed computation diagnostics with equally preloaded records and event-identity deduplication. Cold event preparation is the median of three trials; the first batch contains 384 primary queries. Warm time is per shared-cache lookup. These are not developer-effort or embedded worst-case measurements.}\label{tab:r9-cost}
+\begin{tabular}{@{}llllll@{}}\toprule
+Method & Cards & Record visits & Prep. (s) & First batch (s) & Warm ($\mu$s)\\\midrule
+ContractCover & 1,152 & 2,490,368 & 0.179 & 6.408 & 0.091\\
+ProceduralCover & 1,152 & 2,490,368 & 0.176 & 6.225 & 0.111\\
+DirectRenewal & 2,560 & 5,373,952 & 0.365 & 9.991 & 0.098\\
+ExactCard & 1,152 & 2,490,368 & 0.186 & 8.747 & 0.103\\
+\bottomrule\end{tabular}\end{table}

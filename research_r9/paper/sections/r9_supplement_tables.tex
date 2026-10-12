@@ -1,0 +1,718 @@
+\subsection{Complete geometry-separated confirmation means}
+\scriptsize\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}llllllllll@{}}
+\caption{Complete geometry-separated confirmation means. Errors are in meters; $Q_{.95}$ is the 95th percentile of episode maxima. Loss is m$^2$s; work is milliseconds where present. Independent counts remain explicit.}\\\toprule
+Study & Mesh & Service & Policy & $n$ & RMSE & $L$ & Work & Success & $Q_{.95}$\\\midrule\endfirsthead
+\toprule
+Study & Mesh & Service & Policy & $n$ & RMSE & $L$ & Work & Success & $Q_{.95}$\\\midrule\endhead
+A & B767 & contended & ContractRF & 515 & 0.0626 & 0.0234 & 70.6976 & 0.1301 & 0.1446\\
+A & B767 & contended & Final & 515 & 0.0453 & 0.0132 & 75.2598 & 0.0000 & 0.1574\\
+A & B767 & contended & Fixed2 & 515 & 0.0489 & 0.0156 & 72.3033 & 0.0000 & 0.1278\\
+A & B767 & contended & Fixed4 & 515 & 0.0453 & 0.0132 & 75.2598 & 0.0000 & 0.1574\\
+A & B767 & contended & FlatCART & 515 & 0.0441 & 0.0129 & 74.1447 & 0.1612 & 0.1248\\
+A & B767 & contended & FlatRF & 515 & 0.0489 & 0.0155 & 73.2096 & 0.1107 & 0.1226\\
+A & B767 & contended & KG1 & 515 & 0.0626 & 0.0233 & 70.4517 & 0.2019 & 0.1446\\
+A & B767 & contended & OldRAVC & 515 & 0.0469 & 0.0142 & 72.9677 & 0.1417 & 0.1395\\
+A & B767 & relaxed & ContractRF & 515 & 0.0424 & 0.0110 & 74.1182 & 0.9515 & 0.1014\\
+A & B767 & relaxed & Final & 515 & 0.0417 & 0.0111 & 74.9920 & 0.9262 & 0.1055\\
+A & B767 & relaxed & Fixed2 & 515 & 0.0487 & 0.0145 & 72.0720 & 0.9223 & 0.1216\\
+A & B767 & relaxed & Fixed4 & 515 & 0.0417 & 0.0111 & 74.9920 & 0.9262 & 0.1055\\
+A & B767 & relaxed & FlatCART & 515 & 0.0436 & 0.0117 & 73.6212 & 0.9340 & 0.1078\\
+A & B767 & relaxed & FlatRF & 515 & 0.0424 & 0.0110 & 74.1182 & 0.9515 & 0.1014\\
+A & B767 & relaxed & KG1 & 515 & 0.0436 & 0.0117 & 73.6212 & 0.9340 & 0.1078\\
+A & B767 & relaxed & OldRAVC & 515 & 0.0462 & 0.0129 & 72.5481 & 0.9379 & 0.1119\\
+A & B767 & standard & ContractRF & 515 & 0.0487 & 0.0145 & 72.8159 & 0.9204 & 0.1216\\
+A & B767 & standard & Final & 515 & 0.0415 & 0.0114 & 74.9736 & 0.9320 & 0.1010\\
+A & B767 & standard & Fixed2 & 515 & 0.0487 & 0.0145 & 72.0736 & 0.9204 & 0.1216\\
+A & B767 & standard & Fixed4 & 515 & 0.0415 & 0.0114 & 74.9736 & 0.9320 & 0.1010\\
+A & B767 & standard & FlatCART & 515 & 0.0433 & 0.0117 & 73.6292 & 0.9417 & 0.1059\\
+A & B767 & standard & FlatRF & 515 & 0.0487 & 0.0145 & 72.8159 & 0.9204 & 0.1216\\
+A & B767 & standard & KG1 & 515 & 0.0433 & 0.0117 & 73.6292 & 0.9417 & 0.1059\\
+A & B767 & standard & OldRAVC & 515 & 0.0462 & 0.0131 & 72.5950 & 0.9340 & 0.1119\\
+A & B767 & tight & ContractRF & 515 & 0.0626 & 0.0232 & 70.6270 & 0.0000 & 0.1446\\
+A & B767 & tight & Final & 515 & 0.0626 & 0.0232 & 70.3676 & 0.1223 & 0.1446\\
+A & B767 & tight & Fixed2 & 515 & 0.0626 & 0.0232 & 70.3676 & 0.1223 & 0.1446\\
+A & B767 & tight & Fixed4 & 515 & 0.0626 & 0.0232 & 70.3676 & 0.1223 & 0.1446\\
+A & B767 & tight & FlatCART & 515 & 0.0626 & 0.0232 & 70.3769 & 0.1204 & 0.1446\\
+A & B767 & tight & FlatRF & 515 & 0.0626 & 0.0232 & 70.6270 & 0.0000 & 0.1446\\
+A & B767 & tight & KG1 & 515 & 0.0626 & 0.0232 & 70.3769 & 0.1204 & 0.1446\\
+A & B767 & tight & OldRAVC & 515 & 0.0626 & 0.0232 & 70.3739 & 0.1223 & 0.1446\\
+A & C172 & contended & ContractRF & 509 & 0.0491 & 0.0140 & 69.9457 & 0.5776 & 0.1072\\
+A & C172 & contended & Final & 509 & 0.0456 & 0.0127 & 74.4874 & 0.0000 & 0.1490\\
+A & C172 & contended & Fixed2 & 509 & 0.0461 & 0.0130 & 71.5151 & 0.0000 & 0.1049\\
+A & C172 & contended & Fixed4 & 509 & 0.0456 & 0.0127 & 74.4874 & 0.0000 & 0.1490\\
+A & C172 & contended & FlatCART & 509 & 0.0452 & 0.0121 & 72.9930 & 0.8409 & 0.1067\\
+A & C172 & contended & FlatRF & 509 & 0.0461 & 0.0127 & 72.4441 & 0.5756 & 0.1049\\
+A & C172 & contended & KG1 & 509 & 0.0491 & 0.0139 & 69.6783 & 0.8448 & 0.1072\\
+A & C172 & contended & OldRAVC & 509 & 0.0458 & 0.0126 & 71.9656 & 0.7387 & 0.1127\\
+A & C172 & relaxed & ContractRF & 509 & 0.0453 & 0.0115 & 72.6240 & 0.9568 & 0.1053\\
+A & C172 & relaxed & Final & 509 & 0.0438 & 0.0112 & 74.1613 & 0.9430 & 0.1002\\
+A & C172 & relaxed & Fixed2 & 509 & 0.0461 & 0.0121 & 71.3297 & 0.9509 & 0.1049\\
+A & C172 & relaxed & Fixed4 & 509 & 0.0438 & 0.0112 & 74.1613 & 0.9430 & 0.1002\\
+A & C172 & relaxed & FlatCART & 509 & 0.0450 & 0.0112 & 72.4617 & 0.9528 & 0.1055\\
+A & C172 & relaxed & FlatRF & 509 & 0.0453 & 0.0115 & 72.6240 & 0.9568 & 0.1053\\
+A & C172 & relaxed & KG1 & 509 & 0.0450 & 0.0112 & 72.4617 & 0.9528 & 0.1055\\
+A & C172 & relaxed & OldRAVC & 509 & 0.0457 & 0.0117 & 71.5810 & 0.9548 & 0.1036\\
+A & C172 & standard & ContractRF & 509 & 0.0461 & 0.0121 & 72.0868 & 0.9509 & 0.1049\\
+A & C172 & standard & Final & 509 & 0.0438 & 0.0116 & 74.2366 & 0.9450 & 0.1002\\
+A & C172 & standard & Fixed2 & 509 & 0.0461 & 0.0121 & 71.3299 & 0.9509 & 0.1049\\
+A & C172 & standard & Fixed4 & 509 & 0.0438 & 0.0116 & 74.2366 & 0.9450 & 0.1002\\
+A & C172 & standard & FlatCART & 509 & 0.0450 & 0.0116 & 72.5677 & 0.9548 & 0.1055\\
+A & C172 & standard & FlatRF & 509 & 0.0461 & 0.0121 & 72.0868 & 0.9509 & 0.1049\\
+A & C172 & standard & KG1 & 509 & 0.0450 & 0.0116 & 72.5677 & 0.9548 & 0.1055\\
+A & C172 & standard & OldRAVC & 509 & 0.0457 & 0.0120 & 71.6542 & 0.9548 & 0.1036\\
+A & C172 & tight & ContractRF & 509 & 0.0491 & 0.0139 & 69.9081 & 0.0766 & 0.1072\\
+A & C172 & tight & Final & 509 & 0.0491 & 0.0138 & 69.6217 & 0.4460 & 0.1072\\
+A & C172 & tight & Fixed2 & 509 & 0.0491 & 0.0138 & 69.6217 & 0.4460 & 0.1072\\
+A & C172 & tight & Fixed4 & 509 & 0.0491 & 0.0138 & 69.6217 & 0.4460 & 0.1072\\
+A & C172 & tight & FlatCART & 509 & 0.0491 & 0.0138 & 69.6335 & 0.4145 & 0.1072\\
+A & C172 & tight & FlatRF & 509 & 0.0491 & 0.0139 & 69.9081 & 0.0766 & 0.1072\\
+A & C172 & tight & KG1 & 509 & 0.0491 & 0.0138 & 69.6335 & 0.4145 & 0.1072\\
+A & C172 & tight & OldRAVC & 509 & 0.0491 & 0.0138 & 69.6305 & 0.4204 & 0.1072\\
+A & Unfitted & contended & ContractRF & 1024 & 0.0558 & 0.0207 & 70.3713 & 0.0723 & 0.1418\\
+A & Unfitted & contended & Final & 1024 & 0.0480 & 0.0183 & 74.5284 & 0.0000 & 0.1804\\
+A & Unfitted & contended & Fixed2 & 1024 & 0.0486 & 0.0198 & 71.9522 & 0.0000 & 0.1515\\
+A & Unfitted & contended & Fixed4 & 1024 & 0.0480 & 0.0183 & 74.5284 & 0.0000 & 0.1804\\
+A & Unfitted & contended & FlatCART & 1024 & 0.0467 & 0.0179 & 73.7349 & 0.2197 & 0.1535\\
+A & Unfitted & contended & FlatRF & 1024 & 0.0486 & 0.0195 & 72.8462 & 0.0693 & 0.1515\\
+A & Unfitted & contended & KG1 & 1024 & 0.0558 & 0.0206 & 70.1173 & 0.2373 & 0.1418\\
+A & Unfitted & contended & OldRAVC & 1024 & 0.0475 & 0.0184 & 72.6075 & 0.1738 & 0.1611\\
+A & Unfitted & relaxed & ContractRF & 1024 & 0.0466 & 0.0173 & 73.5629 & 0.9160 & 0.1475\\
+A & Unfitted & relaxed & Final & 1024 & 0.0450 & 0.0168 & 74.2024 & 0.9102 & 0.1463\\
+A & Unfitted & relaxed & Fixed2 & 1024 & 0.0486 & 0.0190 & 71.7184 & 0.9072 & 0.1515\\
+A & Unfitted & relaxed & Fixed4 & 1024 & 0.0450 & 0.0168 & 74.2024 & 0.9102 & 0.1463\\
+A & Unfitted & relaxed & FlatCART & 1024 & 0.0464 & 0.0170 & 73.1353 & 0.9121 & 0.1462\\
+A & Unfitted & relaxed & FlatRF & 1024 & 0.0466 & 0.0173 & 73.5629 & 0.9160 & 0.1475\\
+A & Unfitted & relaxed & KG1 & 1024 & 0.0464 & 0.0170 & 73.1353 & 0.9121 & 0.1462\\
+A & Unfitted & relaxed & OldRAVC & 1024 & 0.0473 & 0.0176 & 72.1803 & 0.9189 & 0.1451\\
+A & Unfitted & standard & ContractRF & 1024 & 0.0486 & 0.0190 & 72.4540 & 0.9082 & 0.1515\\
+A & Unfitted & standard & Final & 1024 & 0.0450 & 0.0171 & 74.2634 & 0.9111 & 0.1463\\
+A & Unfitted & standard & Fixed2 & 1024 & 0.0486 & 0.0190 & 71.7186 & 0.9082 & 0.1515\\
+A & Unfitted & standard & Fixed4 & 1024 & 0.0450 & 0.0171 & 74.2634 & 0.9111 & 0.1463\\
+A & Unfitted & standard & FlatCART & 1024 & 0.0464 & 0.0173 & 73.2355 & 0.9131 & 0.1462\\
+A & Unfitted & standard & FlatRF & 1024 & 0.0486 & 0.0190 & 72.4540 & 0.9082 & 0.1515\\
+A & Unfitted & standard & KG1 & 1024 & 0.0464 & 0.0173 & 73.2355 & 0.9131 & 0.1462\\
+A & Unfitted & standard & OldRAVC & 1024 & 0.0473 & 0.0178 & 72.2487 & 0.9189 & 0.1451\\
+A & Unfitted & tight & ContractRF & 1024 & 0.0558 & 0.0205 & 70.2970 & 0.0000 & 0.1418\\
+A & Unfitted & tight & Final & 1024 & 0.0558 & 0.0204 & 70.0435 & 0.0566 & 0.1418\\
+A & Unfitted & tight & Fixed2 & 1024 & 0.0558 & 0.0204 & 70.0435 & 0.0566 & 0.1418\\
+A & Unfitted & tight & Fixed4 & 1024 & 0.0558 & 0.0204 & 70.0435 & 0.0566 & 0.1418\\
+A & Unfitted & tight & FlatCART & 1024 & 0.0558 & 0.0204 & 70.0529 & 0.0537 & 0.1418\\
+A & Unfitted & tight & FlatRF & 1024 & 0.0558 & 0.0205 & 70.2970 & 0.0000 & 0.1418\\
+A & Unfitted & tight & KG1 & 1024 & 0.0558 & 0.0204 & 70.0529 & 0.0537 & 0.1418\\
+A & Unfitted & tight & OldRAVC & 1024 & 0.0558 & 0.0204 & 70.0501 & 0.0537 & 0.1418\\
+B & B767 & contended & ContractRF & 513 & 0.0634 & 0.0243 & 133.2033 & 0.1306 & 0.1523\\
+B & B767 & contended & Final & 513 & 0.0472 & 0.0140 & 137.8414 & 0.0000 & 0.1640\\
+B & B767 & contended & Fixed2 & 513 & 0.0518 & 0.0178 & 134.8270 & 0.0000 & 0.1317\\
+B & B767 & contended & Fixed4 & 513 & 0.0472 & 0.0140 & 137.8414 & 0.0000 & 0.1640\\
+B & B767 & contended & FlatCART & 513 & 0.0457 & 0.0135 & 136.9991 & 0.1462 & 0.1300\\
+B & B767 & contended & FlatRF & 513 & 0.0519 & 0.0177 & 135.7265 & 0.1209 & 0.1363\\
+B & B767 & contended & KG1 & 513 & 0.0634 & 0.0243 & 132.9595 & 0.1793 & 0.1523\\
+B & B767 & contended & OldRAVC & 513 & 0.0479 & 0.0147 & 135.5509 & 0.1150 & 0.1441\\
+B & B767 & relaxed & ContractRF & 513 & 0.0444 & 0.0116 & 136.8031 & 0.9357 & 0.1046\\
+B & B767 & relaxed & Final & 513 & 0.0433 & 0.0113 & 137.5137 & 0.9240 & 0.1046\\
+B & B767 & relaxed & Fixed2 & 513 & 0.0516 & 0.0166 & 134.5953 & 0.9045 & 0.1297\\
+B & B767 & relaxed & Fixed4 & 513 & 0.0433 & 0.0113 & 137.5137 & 0.9240 & 0.1046\\
+B & B767 & relaxed & FlatCART & 513 & 0.0449 & 0.0118 & 136.3716 & 0.9279 & 0.1134\\
+B & B767 & relaxed & FlatRF & 513 & 0.0444 & 0.0116 & 136.8031 & 0.9357 & 0.1046\\
+B & B767 & relaxed & KG1 & 513 & 0.0449 & 0.0118 & 136.3716 & 0.9279 & 0.1134\\
+B & B767 & relaxed & OldRAVC & 513 & 0.0470 & 0.0130 & 135.1326 & 0.9318 & 0.1161\\
+B & B767 & standard & ContractRF & 513 & 0.0516 & 0.0166 & 135.3361 & 0.9045 & 0.1297\\
+B & B767 & standard & Final & 513 & 0.0433 & 0.0119 & 137.5530 & 0.9220 & 0.1046\\
+B & B767 & standard & Fixed2 & 513 & 0.0516 & 0.0166 & 134.5965 & 0.9045 & 0.1297\\
+B & B767 & standard & Fixed4 & 513 & 0.0433 & 0.0119 & 137.5530 & 0.9220 & 0.1046\\
+B & B767 & standard & FlatCART & 513 & 0.0449 & 0.0120 & 136.4553 & 0.9376 & 0.1134\\
+B & B767 & standard & FlatRF & 513 & 0.0516 & 0.0166 & 135.3361 & 0.9045 & 0.1297\\
+B & B767 & standard & KG1 & 513 & 0.0449 & 0.0120 & 136.4553 & 0.9376 & 0.1134\\
+B & B767 & standard & OldRAVC & 513 & 0.0470 & 0.0132 & 135.1844 & 0.9318 & 0.1161\\
+B & B767 & tight & ContractRF & 513 & 0.0634 & 0.0240 & 133.1351 & 0.0000 & 0.1523\\
+B & B767 & tight & Final & 513 & 0.0634 & 0.0240 & 132.8771 & 0.1228 & 0.1523\\
+B & B767 & tight & Fixed2 & 513 & 0.0634 & 0.0240 & 132.8771 & 0.1228 & 0.1523\\
+B & B767 & tight & Fixed4 & 513 & 0.0634 & 0.0240 & 132.8771 & 0.1228 & 0.1523\\
+B & B767 & tight & FlatCART & 513 & 0.0634 & 0.0240 & 132.8862 & 0.1228 & 0.1523\\
+B & B767 & tight & FlatRF & 513 & 0.0634 & 0.0240 & 133.1351 & 0.0000 & 0.1523\\
+B & B767 & tight & KG1 & 513 & 0.0634 & 0.0240 & 132.8862 & 0.1228 & 0.1523\\
+B & B767 & tight & OldRAVC & 513 & 0.0634 & 0.0240 & 132.8833 & 0.1228 & 0.1523\\
+B & C172 & contended & ContractRF & 511 & 0.0471 & 0.0128 & 132.4518 & 0.5969 & 0.1029\\
+B & C172 & contended & Final & 511 & 0.0437 & 0.0116 & 137.0043 & 0.0000 & 0.1600\\
+B & C172 & contended & Fixed2 & 511 & 0.0435 & 0.0114 & 134.0198 & 0.0000 & 0.0939\\
+B & C172 & contended & Fixed4 & 511 & 0.0437 & 0.0116 & 137.0043 & 0.0000 & 0.1600\\
+B & C172 & contended & FlatCART & 511 & 0.0433 & 0.0109 & 135.6893 & 0.8258 & 0.0989\\
+B & C172 & contended & FlatRF & 511 & 0.0435 & 0.0111 & 134.9453 & 0.5930 & 0.0939\\
+B & C172 & contended & KG1 & 511 & 0.0471 & 0.0127 & 132.1878 & 0.8317 & 0.1029\\
+B & C172 & contended & OldRAVC & 511 & 0.0433 & 0.0110 & 134.4199 & 0.7221 & 0.0981\\
+B & C172 & relaxed & ContractRF & 511 & 0.0428 & 0.0096 & 135.2634 & 0.9765 & 0.0938\\
+B & C172 & relaxed & Final & 511 & 0.0416 & 0.0096 & 136.6881 & 0.9609 & 0.0908\\
+B & C172 & relaxed & Fixed2 & 511 & 0.0435 & 0.0103 & 133.8308 & 0.9726 & 0.0939\\
+B & C172 & relaxed & Fixed4 & 511 & 0.0416 & 0.0096 & 136.6881 & 0.9609 & 0.0908\\
+B & C172 & relaxed & FlatCART & 511 & 0.0433 & 0.0098 & 135.1381 & 0.9746 & 0.0955\\
+B & C172 & relaxed & FlatRF & 511 & 0.0428 & 0.0096 & 135.2634 & 0.9765 & 0.0938\\
+B & C172 & relaxed & KG1 & 511 & 0.0433 & 0.0098 & 135.1381 & 0.9746 & 0.0955\\
+B & C172 & relaxed & OldRAVC & 511 & 0.0431 & 0.0099 & 134.0406 & 0.9765 & 0.0929\\
+B & C172 & standard & ContractRF & 511 & 0.0435 & 0.0103 & 134.5880 & 0.9726 & 0.0939\\
+B & C172 & standard & Final & 511 & 0.0415 & 0.0101 & 136.7532 & 0.9648 & 0.0908\\
+B & C172 & standard & Fixed2 & 511 & 0.0435 & 0.0103 & 133.8310 & 0.9726 & 0.0939\\
+B & C172 & standard & Fixed4 & 511 & 0.0415 & 0.0101 & 136.7532 & 0.9648 & 0.0908\\
+B & C172 & standard & FlatCART & 511 & 0.0433 & 0.0103 & 135.2484 & 0.9765 & 0.0955\\
+B & C172 & standard & FlatRF & 511 & 0.0435 & 0.0103 & 134.5880 & 0.9726 & 0.0939\\
+B & C172 & standard & KG1 & 511 & 0.0433 & 0.0103 & 135.2484 & 0.9765 & 0.0955\\
+B & C172 & standard & OldRAVC & 511 & 0.0431 & 0.0102 & 134.1113 & 0.9765 & 0.0929\\
+B & C172 & tight & ContractRF & 511 & 0.0471 & 0.0126 & 132.4147 & 0.0783 & 0.1029\\
+B & C172 & tight & Final & 511 & 0.0471 & 0.0125 & 132.1283 & 0.4618 & 0.1029\\
+B & C172 & tight & Fixed2 & 511 & 0.0471 & 0.0125 & 132.1283 & 0.4618 & 0.1029\\
+B & C172 & tight & Fixed4 & 511 & 0.0471 & 0.0125 & 132.1283 & 0.4618 & 0.1029\\
+B & C172 & tight & FlatCART & 511 & 0.0471 & 0.0125 & 132.1407 & 0.4227 & 0.1029\\
+B & C172 & tight & FlatRF & 511 & 0.0471 & 0.0126 & 132.4147 & 0.0783 & 0.1029\\
+B & C172 & tight & KG1 & 511 & 0.0471 & 0.0125 & 132.1407 & 0.4227 & 0.1029\\
+B & C172 & tight & OldRAVC & 511 & 0.0471 & 0.0125 & 132.1373 & 0.4325 & 0.1029\\
+B & Unfitted & contended & ContractRF & 1024 & 0.0544 & 0.0204 & 132.8651 & 0.0771 & 0.1443\\
+B & Unfitted & contended & Final & 1024 & 0.0472 & 0.0175 & 137.0263 & 0.0000 & 0.1800\\
+B & Unfitted & contended & Fixed2 & 1024 & 0.0483 & 0.0194 & 134.4453 & 0.0000 & 0.1489\\
+B & Unfitted & contended & Fixed4 & 1024 & 0.0472 & 0.0175 & 137.0263 & 0.0000 & 0.1800\\
+B & Unfitted & contended & FlatCART & 1024 & 0.0458 & 0.0171 & 136.1921 & 0.2158 & 0.1505\\
+B & Unfitted & contended & FlatRF & 1024 & 0.0483 & 0.0192 & 135.3383 & 0.0732 & 0.1489\\
+B & Unfitted & contended & KG1 & 1024 & 0.0544 & 0.0204 & 132.6114 & 0.2354 & 0.1443\\
+B & Unfitted & contended & OldRAVC & 1024 & 0.0469 & 0.0178 & 135.1704 & 0.1719 & 0.1644\\
+B & Unfitted & relaxed & ContractRF & 1024 & 0.0450 & 0.0160 & 135.9985 & 0.9209 & 0.1433\\
+B & Unfitted & relaxed & Final & 1024 & 0.0443 & 0.0160 & 136.7105 & 0.9199 & 0.1445\\
+B & Unfitted & relaxed & Fixed2 & 1024 & 0.0483 & 0.0186 & 134.2116 & 0.9053 & 0.1489\\
+B & Unfitted & relaxed & Fixed4 & 1024 & 0.0443 & 0.0160 & 136.7105 & 0.9199 & 0.1445\\
+B & Unfitted & relaxed & FlatCART & 1024 & 0.0455 & 0.0161 & 135.6060 & 0.9219 & 0.1397\\
+B & Unfitted & relaxed & FlatRF & 1024 & 0.0450 & 0.0160 & 136.0017 & 0.9209 & 0.1433\\
+B & Unfitted & relaxed & KG1 & 1024 & 0.0455 & 0.0161 & 135.6060 & 0.9219 & 0.1397\\
+B & Unfitted & relaxed & OldRAVC & 1024 & 0.0466 & 0.0170 & 134.7336 & 0.9189 & 0.1396\\
+B & Unfitted & standard & ContractRF & 1024 & 0.0483 & 0.0186 & 134.9468 & 0.9062 & 0.1489\\
+B & Unfitted & standard & Final & 1024 & 0.0443 & 0.0164 & 136.7589 & 0.9199 & 0.1445\\
+B & Unfitted & standard & Fixed2 & 1024 & 0.0483 & 0.0186 & 134.2116 & 0.9062 & 0.1489\\
+B & Unfitted & standard & Fixed4 & 1024 & 0.0443 & 0.0164 & 136.7589 & 0.9199 & 0.1445\\
+B & Unfitted & standard & FlatCART & 1024 & 0.0455 & 0.0164 & 135.6940 & 0.9229 & 0.1397\\
+B & Unfitted & standard & FlatRF & 1024 & 0.0483 & 0.0186 & 134.9468 & 0.9062 & 0.1489\\
+B & Unfitted & standard & KG1 & 1024 & 0.0455 & 0.0164 & 135.6940 & 0.9229 & 0.1397\\
+B & Unfitted & standard & OldRAVC & 1024 & 0.0466 & 0.0172 & 134.8051 & 0.9189 & 0.1396\\
+B & Unfitted & tight & ContractRF & 1024 & 0.0544 & 0.0202 & 132.7914 & 0.0010 & 0.1443\\
+B & Unfitted & tight & Final & 1024 & 0.0544 & 0.0202 & 132.5375 & 0.0586 & 0.1443\\
+B & Unfitted & tight & Fixed2 & 1024 & 0.0544 & 0.0202 & 132.5375 & 0.0586 & 0.1443\\
+B & Unfitted & tight & Fixed4 & 1024 & 0.0544 & 0.0202 & 132.5375 & 0.0586 & 0.1443\\
+B & Unfitted & tight & FlatCART & 1024 & 0.0544 & 0.0202 & 132.5468 & 0.0566 & 0.1443\\
+B & Unfitted & tight & FlatRF & 1024 & 0.0544 & 0.0202 & 132.7914 & 0.0010 & 0.1443\\
+B & Unfitted & tight & KG1 & 1024 & 0.0544 & 0.0202 & 132.5468 & 0.0566 & 0.1443\\
+B & Unfitted & tight & OldRAVC & 1024 & 0.0544 & 0.0202 & 132.5438 & 0.0586 & 0.1443\\
+\bottomrule\end{longtable}\normalsize\setlength{\tabcolsep}{6pt}
+\subsection{All unsupported stress means; no transferred certificate}
+\scriptsize\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}lllllllll@{}}
+\caption{All unsupported stress means; no transferred certificate. Errors are in meters; $Q_{.95}$ is the 95th percentile of episode maxima. Loss is m$^2$s; work is milliseconds where present. Independent counts remain explicit.}\\\toprule
+Study & Stress & Mesh & Service & Policy & $n$ & RMSE & $Q_{.95}$ & Union fail\\\midrule\endfirsthead
+\toprule
+Study & Stress & Mesh & Service & Policy & $n$ & RMSE & $Q_{.95}$ & Union fail\\\midrule\endhead
+A & degeneracy & B767 & contended & ContractRF & 28 & 0.0639 & 0.1437 & 0.2500\\
+A & degeneracy & B767 & contended & Final & 28 & 0.0534 & 0.1614 & 1.0000\\
+A & degeneracy & B767 & contended & Fixed2 & 28 & 0.0592 & 0.1621 & 1.0000\\
+A & degeneracy & B767 & contended & Fixed4 & 28 & 0.0534 & 0.1614 & 1.0000\\
+A & degeneracy & B767 & contended & FlatCART & 28 & 0.0525 & 0.1621 & 0.1786\\
+A & degeneracy & B767 & contended & FlatRF & 28 & 0.0592 & 0.1621 & 0.1786\\
+A & degeneracy & B767 & contended & KG1 & 28 & 0.0639 & 0.1437 & 0.2500\\
+A & degeneracy & B767 & contended & OldRAVC & 28 & 0.0580 & 0.1566 & 0.2857\\
+A & degeneracy & B767 & relaxed & ContractRF & 28 & 0.0530 & 0.1161 & 0.2143\\
+A & degeneracy & B767 & relaxed & Final & 28 & 0.0523 & 0.1142 & 0.1786\\
+A & degeneracy & B767 & relaxed & Fixed2 & 28 & 0.0592 & 0.1621 & 0.1429\\
+A & degeneracy & B767 & relaxed & Fixed4 & 28 & 0.0523 & 0.1142 & 0.1786\\
+A & degeneracy & B767 & relaxed & FlatCART & 28 & 0.0522 & 0.1142 & 0.1786\\
+A & degeneracy & B767 & relaxed & FlatRF & 28 & 0.0530 & 0.1161 & 0.2143\\
+A & degeneracy & B767 & relaxed & KG1 & 28 & 0.0522 & 0.1142 & 0.1786\\
+A & degeneracy & B767 & relaxed & OldRAVC & 28 & 0.0580 & 0.1566 & 0.1429\\
+A & degeneracy & B767 & standard & ContractRF & 28 & 0.0592 & 0.1621 & 0.1429\\
+A & degeneracy & B767 & standard & Final & 28 & 0.0523 & 0.1142 & 0.1786\\
+A & degeneracy & B767 & standard & Fixed2 & 28 & 0.0592 & 0.1621 & 0.1429\\
+A & degeneracy & B767 & standard & Fixed4 & 28 & 0.0523 & 0.1142 & 0.1786\\
+A & degeneracy & B767 & standard & FlatCART & 28 & 0.0522 & 0.1142 & 0.1786\\
+A & degeneracy & B767 & standard & FlatRF & 28 & 0.0592 & 0.1621 & 0.1429\\
+A & degeneracy & B767 & standard & KG1 & 28 & 0.0522 & 0.1142 & 0.1786\\
+A & degeneracy & B767 & standard & OldRAVC & 28 & 0.0580 & 0.1566 & 0.1429\\
+A & degeneracy & B767 & tight & ContractRF & 28 & 0.0639 & 0.1437 & 0.9286\\
+A & degeneracy & B767 & tight & Final & 28 & 0.0639 & 0.1437 & 0.2500\\
+A & degeneracy & B767 & tight & Fixed2 & 28 & 0.0639 & 0.1437 & 0.2500\\
+A & degeneracy & B767 & tight & Fixed4 & 28 & 0.0639 & 0.1437 & 0.2500\\
+A & degeneracy & B767 & tight & FlatCART & 28 & 0.0639 & 0.1437 & 0.2500\\
+A & degeneracy & B767 & tight & FlatRF & 28 & 0.0639 & 0.1437 & 0.9286\\
+A & degeneracy & B767 & tight & KG1 & 28 & 0.0639 & 0.1437 & 0.2500\\
+A & degeneracy & B767 & tight & OldRAVC & 28 & 0.0639 & 0.1437 & 0.2500\\
+A & degeneracy & C172 & contended & ContractRF & 36 & 0.0429 & 0.0909 & 0.0556\\
+A & degeneracy & C172 & contended & Final & 36 & 0.0423 & 0.1439 & 1.0000\\
+A & degeneracy & C172 & contended & Fixed2 & 36 & 0.0370 & 0.0767 & 1.0000\\
+A & degeneracy & C172 & contended & Fixed4 & 36 & 0.0423 & 0.1439 & 1.0000\\
+A & degeneracy & C172 & contended & FlatCART & 36 & 0.0378 & 0.0734 & 0.0556\\
+A & degeneracy & C172 & contended & FlatRF & 36 & 0.0370 & 0.0767 & 0.0556\\
+A & degeneracy & C172 & contended & KG1 & 36 & 0.0429 & 0.0909 & 0.0556\\
+A & degeneracy & C172 & contended & OldRAVC & 36 & 0.0372 & 0.0767 & 0.1944\\
+A & degeneracy & C172 & relaxed & ContractRF & 36 & 0.0375 & 0.0734 & 0.0278\\
+A & degeneracy & C172 & relaxed & Final & 36 & 0.0405 & 0.0832 & 0.0556\\
+A & degeneracy & C172 & relaxed & Fixed2 & 36 & 0.0370 & 0.0767 & 0.0278\\
+A & degeneracy & C172 & relaxed & Fixed4 & 36 & 0.0405 & 0.0832 & 0.0556\\
+A & degeneracy & C172 & relaxed & FlatCART & 36 & 0.0378 & 0.0734 & 0.0278\\
+A & degeneracy & C172 & relaxed & FlatRF & 36 & 0.0375 & 0.0734 & 0.0278\\
+A & degeneracy & C172 & relaxed & KG1 & 36 & 0.0378 & 0.0734 & 0.0278\\
+A & degeneracy & C172 & relaxed & OldRAVC & 36 & 0.0372 & 0.0767 & 0.0278\\
+A & degeneracy & C172 & standard & ContractRF & 36 & 0.0370 & 0.0767 & 0.0278\\
+A & degeneracy & C172 & standard & Final & 36 & 0.0405 & 0.0832 & 0.0556\\
+A & degeneracy & C172 & standard & Fixed2 & 36 & 0.0370 & 0.0767 & 0.0278\\
+A & degeneracy & C172 & standard & Fixed4 & 36 & 0.0405 & 0.0832 & 0.0556\\
+A & degeneracy & C172 & standard & FlatCART & 36 & 0.0378 & 0.0734 & 0.0278\\
+A & degeneracy & C172 & standard & FlatRF & 36 & 0.0370 & 0.0767 & 0.0278\\
+A & degeneracy & C172 & standard & KG1 & 36 & 0.0378 & 0.0734 & 0.0278\\
+A & degeneracy & C172 & standard & OldRAVC & 36 & 0.0372 & 0.0767 & 0.0278\\
+A & degeneracy & C172 & tight & ContractRF & 36 & 0.0429 & 0.0909 & 0.5556\\
+A & degeneracy & C172 & tight & Final & 36 & 0.0429 & 0.0909 & 0.0556\\
+A & degeneracy & C172 & tight & Fixed2 & 36 & 0.0429 & 0.0909 & 0.0556\\
+A & degeneracy & C172 & tight & Fixed4 & 36 & 0.0429 & 0.0909 & 0.0556\\
+A & degeneracy & C172 & tight & FlatCART & 36 & 0.0429 & 0.0909 & 0.0556\\
+A & degeneracy & C172 & tight & FlatRF & 36 & 0.0429 & 0.0909 & 0.5556\\
+A & degeneracy & C172 & tight & KG1 & 36 & 0.0429 & 0.0909 & 0.0556\\
+A & degeneracy & C172 & tight & OldRAVC & 36 & 0.0429 & 0.0909 & 0.0556\\
+A & map\_shift & B767 & contended & ContractRF & 29 & 0.0738 & 0.1332 & 0.9310\\
+A & map\_shift & B767 & contended & Final & 29 & 0.0660 & 0.1801 & 1.0000\\
+A & map\_shift & B767 & contended & Fixed2 & 29 & 0.0702 & 0.1200 & 1.0000\\
+A & map\_shift & B767 & contended & Fixed4 & 29 & 0.0660 & 0.1801 & 1.0000\\
+A & map\_shift & B767 & contended & FlatCART & 29 & 0.0654 & 0.1253 & 0.9655\\
+A & map\_shift & B767 & contended & FlatRF & 29 & 0.0701 & 0.1244 & 0.9655\\
+A & map\_shift & B767 & contended & KG1 & 29 & 0.0738 & 0.1332 & 0.8966\\
+A & map\_shift & B767 & contended & OldRAVC & 29 & 0.0687 & 0.2092 & 0.9655\\
+A & map\_shift & B767 & relaxed & ContractRF & 29 & 0.0637 & 0.1251 & 0.2414\\
+A & map\_shift & B767 & relaxed & Final & 29 & 0.0644 & 0.1246 & 0.2759\\
+A & map\_shift & B767 & relaxed & Fixed2 & 29 & 0.0701 & 0.1200 & 0.2069\\
+A & map\_shift & B767 & relaxed & Fixed4 & 29 & 0.0644 & 0.1246 & 0.2759\\
+A & map\_shift & B767 & relaxed & FlatCART & 29 & 0.0650 & 0.1251 & 0.2069\\
+A & map\_shift & B767 & relaxed & FlatRF & 29 & 0.0637 & 0.1251 & 0.2414\\
+A & map\_shift & B767 & relaxed & KG1 & 29 & 0.0650 & 0.1251 & 0.2069\\
+A & map\_shift & B767 & relaxed & OldRAVC & 29 & 0.0680 & 0.1251 & 0.2069\\
+A & map\_shift & B767 & standard & ContractRF & 29 & 0.0701 & 0.1200 & 0.2069\\
+A & map\_shift & B767 & standard & Final & 29 & 0.0644 & 0.1246 & 0.2759\\
+A & map\_shift & B767 & standard & Fixed2 & 29 & 0.0701 & 0.1200 & 0.2069\\
+A & map\_shift & B767 & standard & Fixed4 & 29 & 0.0644 & 0.1246 & 0.2759\\
+A & map\_shift & B767 & standard & FlatCART & 29 & 0.0650 & 0.1251 & 0.2069\\
+A & map\_shift & B767 & standard & FlatRF & 29 & 0.0701 & 0.1200 & 0.2069\\
+A & map\_shift & B767 & standard & KG1 & 29 & 0.0650 & 0.1251 & 0.2069\\
+A & map\_shift & B767 & standard & OldRAVC & 29 & 0.0680 & 0.1251 & 0.2069\\
+A & map\_shift & B767 & tight & ContractRF & 29 & 0.0738 & 0.1332 & 1.0000\\
+A & map\_shift & B767 & tight & Final & 29 & 0.0738 & 0.1332 & 0.9310\\
+A & map\_shift & B767 & tight & Fixed2 & 29 & 0.0738 & 0.1332 & 0.9310\\
+A & map\_shift & B767 & tight & Fixed4 & 29 & 0.0738 & 0.1332 & 0.9310\\
+A & map\_shift & B767 & tight & FlatCART & 29 & 0.0738 & 0.1332 & 0.9310\\
+A & map\_shift & B767 & tight & FlatRF & 29 & 0.0738 & 0.1332 & 1.0000\\
+A & map\_shift & B767 & tight & KG1 & 29 & 0.0738 & 0.1332 & 0.9310\\
+A & map\_shift & B767 & tight & OldRAVC & 29 & 0.0738 & 0.1332 & 0.9310\\
+A & map\_shift & C172 & contended & ContractRF & 35 & 0.0968 & 0.1472 & 0.7143\\
+A & map\_shift & C172 & contended & Final & 35 & 0.1068 & 0.1559 & 1.0000\\
+A & map\_shift & C172 & contended & Fixed2 & 35 & 0.1104 & 0.1429 & 1.0000\\
+A & map\_shift & C172 & contended & Fixed4 & 35 & 0.1068 & 0.1559 & 1.0000\\
+A & map\_shift & C172 & contended & FlatCART & 35 & 0.1080 & 0.1553 & 0.9143\\
+A & map\_shift & C172 & contended & FlatRF & 35 & 0.1105 & 0.1429 & 0.9429\\
+A & map\_shift & C172 & contended & KG1 & 35 & 0.0968 & 0.1472 & 0.6571\\
+A & map\_shift & C172 & contended & OldRAVC & 35 & 0.1110 & 0.1519 & 0.9143\\
+A & map\_shift & C172 & relaxed & ContractRF & 35 & 0.1099 & 0.1453 & 0.8571\\
+A & map\_shift & C172 & relaxed & Final & 35 & 0.1077 & 0.1553 & 0.8000\\
+A & map\_shift & C172 & relaxed & Fixed2 & 35 & 0.1105 & 0.1429 & 0.8286\\
+A & map\_shift & C172 & relaxed & Fixed4 & 35 & 0.1077 & 0.1553 & 0.8000\\
+A & map\_shift & C172 & relaxed & FlatCART & 35 & 0.1075 & 0.1553 & 0.8571\\
+A & map\_shift & C172 & relaxed & FlatRF & 35 & 0.1099 & 0.1453 & 0.8571\\
+A & map\_shift & C172 & relaxed & KG1 & 35 & 0.1075 & 0.1553 & 0.8571\\
+A & map\_shift & C172 & relaxed & OldRAVC & 35 & 0.1111 & 0.1429 & 0.8286\\
+A & map\_shift & C172 & standard & ContractRF & 35 & 0.1105 & 0.1429 & 0.8286\\
+A & map\_shift & C172 & standard & Final & 35 & 0.1077 & 0.1553 & 0.8571\\
+A & map\_shift & C172 & standard & Fixed2 & 35 & 0.1105 & 0.1429 & 0.8286\\
+A & map\_shift & C172 & standard & Fixed4 & 35 & 0.1077 & 0.1553 & 0.8571\\
+A & map\_shift & C172 & standard & FlatCART & 35 & 0.1075 & 0.1553 & 0.8857\\
+A & map\_shift & C172 & standard & FlatRF & 35 & 0.1105 & 0.1429 & 0.8286\\
+A & map\_shift & C172 & standard & KG1 & 35 & 0.1075 & 0.1553 & 0.8857\\
+A & map\_shift & C172 & standard & OldRAVC & 35 & 0.1111 & 0.1429 & 0.8571\\
+A & map\_shift & C172 & tight & ContractRF & 35 & 0.0968 & 0.1472 & 1.0000\\
+A & map\_shift & C172 & tight & Final & 35 & 0.0968 & 0.1472 & 0.8286\\
+A & map\_shift & C172 & tight & Fixed2 & 35 & 0.0968 & 0.1472 & 0.8286\\
+A & map\_shift & C172 & tight & Fixed4 & 35 & 0.0968 & 0.1472 & 0.8286\\
+A & map\_shift & C172 & tight & FlatCART & 35 & 0.0968 & 0.1472 & 0.8571\\
+A & map\_shift & C172 & tight & FlatRF & 35 & 0.0968 & 0.1472 & 1.0000\\
+A & map\_shift & C172 & tight & KG1 & 35 & 0.0968 & 0.1472 & 0.8571\\
+A & map\_shift & C172 & tight & OldRAVC & 35 & 0.0968 & 0.1472 & 0.8571\\
+A & occlusion & B767 & contended & ContractRF & 35 & 0.0663 & 0.1418 & 0.6286\\
+A & occlusion & B767 & contended & Final & 35 & 0.0515 & 0.1688 & 1.0000\\
+A & occlusion & B767 & contended & Fixed2 & 35 & 0.0563 & 0.1243 & 1.0000\\
+A & occlusion & B767 & contended & Fixed4 & 35 & 0.0515 & 0.1688 & 1.0000\\
+A & occlusion & B767 & contended & FlatCART & 35 & 0.0495 & 0.1148 & 0.7143\\
+A & occlusion & B767 & contended & FlatRF & 35 & 0.0564 & 0.1253 & 0.7143\\
+A & occlusion & B767 & contended & KG1 & 35 & 0.0663 & 0.1418 & 0.6000\\
+A & occlusion & B767 & contended & OldRAVC & 35 & 0.0510 & 0.1222 & 0.7429\\
+A & occlusion & B767 & relaxed & ContractRF & 35 & 0.0482 & 0.1058 & 0.1714\\
+A & occlusion & B767 & relaxed & Final & 35 & 0.0484 & 0.1058 & 0.2000\\
+A & occlusion & B767 & relaxed & Fixed2 & 35 & 0.0563 & 0.1243 & 0.2857\\
+A & occlusion & B767 & relaxed & Fixed4 & 35 & 0.0484 & 0.1058 & 0.2000\\
+A & occlusion & B767 & relaxed & FlatCART & 35 & 0.0488 & 0.1058 & 0.2286\\
+A & occlusion & B767 & relaxed & FlatRF & 35 & 0.0482 & 0.1058 & 0.1714\\
+A & occlusion & B767 & relaxed & KG1 & 35 & 0.0488 & 0.1058 & 0.2286\\
+A & occlusion & B767 & relaxed & OldRAVC & 35 & 0.0504 & 0.1100 & 0.2286\\
+A & occlusion & B767 & standard & ContractRF & 35 & 0.0563 & 0.1243 & 0.2857\\
+A & occlusion & B767 & standard & Final & 35 & 0.0484 & 0.1058 & 0.2000\\
+A & occlusion & B767 & standard & Fixed2 & 35 & 0.0563 & 0.1243 & 0.2857\\
+A & occlusion & B767 & standard & Fixed4 & 35 & 0.0484 & 0.1058 & 0.2000\\
+A & occlusion & B767 & standard & FlatCART & 35 & 0.0488 & 0.1058 & 0.2286\\
+A & occlusion & B767 & standard & FlatRF & 35 & 0.0563 & 0.1243 & 0.2857\\
+A & occlusion & B767 & standard & KG1 & 35 & 0.0488 & 0.1058 & 0.2286\\
+A & occlusion & B767 & standard & OldRAVC & 35 & 0.0504 & 0.1100 & 0.2286\\
+A & occlusion & B767 & tight & ContractRF & 35 & 0.0663 & 0.1418 & 0.7714\\
+A & occlusion & B767 & tight & Final & 35 & 0.0663 & 0.1418 & 0.6571\\
+A & occlusion & B767 & tight & Fixed2 & 35 & 0.0663 & 0.1418 & 0.6571\\
+A & occlusion & B767 & tight & Fixed4 & 35 & 0.0663 & 0.1418 & 0.6571\\
+A & occlusion & B767 & tight & FlatCART & 35 & 0.0663 & 0.1418 & 0.6571\\
+A & occlusion & B767 & tight & FlatRF & 35 & 0.0663 & 0.1418 & 0.7714\\
+A & occlusion & B767 & tight & KG1 & 35 & 0.0663 & 0.1418 & 0.6571\\
+A & occlusion & B767 & tight & OldRAVC & 35 & 0.0663 & 0.1418 & 0.6571\\
+A & occlusion & C172 & contended & ContractRF & 29 & 0.0639 & 0.1239 & 0.4483\\
+A & occlusion & C172 & contended & Final & 29 & 0.0578 & 0.1228 & 1.0000\\
+A & occlusion & C172 & contended & Fixed2 & 29 & 0.0594 & 0.1163 & 1.0000\\
+A & occlusion & C172 & contended & Fixed4 & 29 & 0.0578 & 0.1228 & 1.0000\\
+A & occlusion & C172 & contended & FlatCART & 29 & 0.0592 & 0.1163 & 0.3448\\
+A & occlusion & C172 & contended & FlatRF & 29 & 0.0594 & 0.1163 & 0.4138\\
+A & occlusion & C172 & contended & KG1 & 29 & 0.0639 & 0.1239 & 0.3793\\
+A & occlusion & C172 & contended & OldRAVC & 29 & 0.0594 & 0.1163 & 0.3448\\
+A & occlusion & C172 & relaxed & ContractRF & 29 & 0.0592 & 0.1163 & 0.3103\\
+A & occlusion & C172 & relaxed & Final & 29 & 0.0568 & 0.1152 & 0.3103\\
+A & occlusion & C172 & relaxed & Fixed2 & 29 & 0.0594 & 0.1163 & 0.3103\\
+A & occlusion & C172 & relaxed & Fixed4 & 29 & 0.0568 & 0.1152 & 0.3103\\
+A & occlusion & C172 & relaxed & FlatCART & 29 & 0.0592 & 0.1163 & 0.3103\\
+A & occlusion & C172 & relaxed & FlatRF & 29 & 0.0592 & 0.1163 & 0.3103\\
+A & occlusion & C172 & relaxed & KG1 & 29 & 0.0592 & 0.1163 & 0.3103\\
+A & occlusion & C172 & relaxed & OldRAVC & 29 & 0.0594 & 0.1163 & 0.3103\\
+A & occlusion & C172 & standard & ContractRF & 29 & 0.0594 & 0.1163 & 0.3103\\
+A & occlusion & C172 & standard & Final & 29 & 0.0568 & 0.1152 & 0.3103\\
+A & occlusion & C172 & standard & Fixed2 & 29 & 0.0594 & 0.1163 & 0.3103\\
+A & occlusion & C172 & standard & Fixed4 & 29 & 0.0568 & 0.1152 & 0.3103\\
+A & occlusion & C172 & standard & FlatCART & 29 & 0.0592 & 0.1163 & 0.3103\\
+A & occlusion & C172 & standard & FlatRF & 29 & 0.0594 & 0.1163 & 0.3103\\
+A & occlusion & C172 & standard & KG1 & 29 & 0.0592 & 0.1163 & 0.3103\\
+A & occlusion & C172 & standard & OldRAVC & 29 & 0.0594 & 0.1163 & 0.3103\\
+A & occlusion & C172 & tight & ContractRF & 29 & 0.0639 & 0.1239 & 0.8966\\
+A & occlusion & C172 & tight & Final & 29 & 0.0639 & 0.1239 & 0.4828\\
+A & occlusion & C172 & tight & Fixed2 & 29 & 0.0639 & 0.1239 & 0.4828\\
+A & occlusion & C172 & tight & Fixed4 & 29 & 0.0639 & 0.1239 & 0.4828\\
+A & occlusion & C172 & tight & FlatCART & 29 & 0.0639 & 0.1239 & 0.5172\\
+A & occlusion & C172 & tight & FlatRF & 29 & 0.0639 & 0.1239 & 0.8966\\
+A & occlusion & C172 & tight & KG1 & 29 & 0.0639 & 0.1239 & 0.5172\\
+A & occlusion & C172 & tight & OldRAVC & 29 & 0.0639 & 0.1239 & 0.4828\\
+A & prior\_shift & B767 & contended & ContractRF & 30 & 0.1058 & 0.2049 & 0.9333\\
+A & prior\_shift & B767 & contended & Final & 30 & 0.0591 & 0.3048 & 1.0000\\
+A & prior\_shift & B767 & contended & Fixed2 & 30 & 0.0734 & 0.3030 & 1.0000\\
+A & prior\_shift & B767 & contended & Fixed4 & 30 & 0.0591 & 0.3048 & 1.0000\\
+A & prior\_shift & B767 & contended & FlatCART & 30 & 0.0459 & 0.1838 & 0.8667\\
+A & prior\_shift & B767 & contended & FlatRF & 30 & 0.0723 & 0.1838 & 0.9333\\
+A & prior\_shift & B767 & contended & KG1 & 30 & 0.1058 & 0.2049 & 0.9000\\
+A & prior\_shift & B767 & contended & OldRAVC & 30 & 0.0621 & 0.3031 & 0.9667\\
+A & prior\_shift & B767 & relaxed & ContractRF & 30 & 0.0434 & 0.0952 & 0.0667\\
+A & prior\_shift & B767 & relaxed & Final & 30 & 0.0432 & 0.0952 & 0.0667\\
+A & prior\_shift & B767 & relaxed & Fixed2 & 30 & 0.0716 & 0.1460 & 0.2667\\
+A & prior\_shift & B767 & relaxed & Fixed4 & 30 & 0.0432 & 0.0952 & 0.0667\\
+A & prior\_shift & B767 & relaxed & FlatCART & 30 & 0.0419 & 0.0957 & 0.0667\\
+A & prior\_shift & B767 & relaxed & FlatRF & 30 & 0.0434 & 0.0952 & 0.0667\\
+A & prior\_shift & B767 & relaxed & KG1 & 30 & 0.0419 & 0.0957 & 0.0667\\
+A & prior\_shift & B767 & relaxed & OldRAVC & 30 & 0.0535 & 0.1398 & 0.1333\\
+A & prior\_shift & B767 & standard & ContractRF & 30 & 0.0716 & 0.1460 & 0.2667\\
+A & prior\_shift & B767 & standard & Final & 30 & 0.0433 & 0.0952 & 0.0667\\
+A & prior\_shift & B767 & standard & Fixed2 & 30 & 0.0716 & 0.1460 & 0.2667\\
+A & prior\_shift & B767 & standard & Fixed4 & 30 & 0.0433 & 0.0952 & 0.0667\\
+A & prior\_shift & B767 & standard & FlatCART & 30 & 0.0419 & 0.0957 & 0.0667\\
+A & prior\_shift & B767 & standard & FlatRF & 30 & 0.0716 & 0.1460 & 0.2667\\
+A & prior\_shift & B767 & standard & KG1 & 30 & 0.0419 & 0.0957 & 0.0667\\
+A & prior\_shift & B767 & standard & OldRAVC & 30 & 0.0535 & 0.1398 & 0.1333\\
+A & prior\_shift & B767 & tight & ContractRF & 30 & 0.1058 & 0.2049 & 1.0000\\
+A & prior\_shift & B767 & tight & Final & 30 & 0.1058 & 0.2049 & 0.9333\\
+A & prior\_shift & B767 & tight & Fixed2 & 30 & 0.1058 & 0.2049 & 0.9333\\
+A & prior\_shift & B767 & tight & Fixed4 & 30 & 0.1058 & 0.2049 & 0.9333\\
+A & prior\_shift & B767 & tight & FlatCART & 30 & 0.1058 & 0.2049 & 0.9333\\
+A & prior\_shift & B767 & tight & FlatRF & 30 & 0.1058 & 0.2049 & 1.0000\\
+A & prior\_shift & B767 & tight & KG1 & 30 & 0.1058 & 0.2049 & 0.9333\\
+A & prior\_shift & B767 & tight & OldRAVC & 30 & 0.1058 & 0.2049 & 0.9333\\
+A & prior\_shift & C172 & contended & ContractRF & 34 & 0.0935 & 0.1847 & 0.5882\\
+A & prior\_shift & C172 & contended & Final & 34 & 0.0641 & 0.2517 & 1.0000\\
+A & prior\_shift & C172 & contended & Fixed2 & 34 & 0.0710 & 0.1757 & 1.0000\\
+A & prior\_shift & C172 & contended & Fixed4 & 34 & 0.0641 & 0.2517 & 1.0000\\
+A & prior\_shift & C172 & contended & FlatCART & 34 & 0.0577 & 0.1741 & 0.5000\\
+A & prior\_shift & C172 & contended & FlatRF & 34 & 0.0710 & 0.1757 & 0.6176\\
+A & prior\_shift & C172 & contended & KG1 & 34 & 0.0935 & 0.1847 & 0.5000\\
+A & prior\_shift & C172 & contended & OldRAVC & 34 & 0.0648 & 0.2517 & 0.7059\\
+A & prior\_shift & C172 & relaxed & ContractRF & 34 & 0.0553 & 0.1189 & 0.1471\\
+A & prior\_shift & C172 & relaxed & Final & 34 & 0.0555 & 0.1189 & 0.1471\\
+A & prior\_shift & C172 & relaxed & Fixed2 & 34 & 0.0710 & 0.1757 & 0.2941\\
+A & prior\_shift & C172 & relaxed & Fixed4 & 34 & 0.0555 & 0.1189 & 0.1471\\
+A & prior\_shift & C172 & relaxed & FlatCART & 34 & 0.0561 & 0.1189 & 0.1471\\
+A & prior\_shift & C172 & relaxed & FlatRF & 34 & 0.0553 & 0.1189 & 0.1471\\
+A & prior\_shift & C172 & relaxed & KG1 & 34 & 0.0561 & 0.1189 & 0.1471\\
+A & prior\_shift & C172 & relaxed & OldRAVC & 34 & 0.0627 & 0.1286 & 0.2059\\
+A & prior\_shift & C172 & standard & ContractRF & 34 & 0.0710 & 0.1757 & 0.2941\\
+A & prior\_shift & C172 & standard & Final & 34 & 0.0555 & 0.1189 & 0.1471\\
+A & prior\_shift & C172 & standard & Fixed2 & 34 & 0.0710 & 0.1757 & 0.2941\\
+A & prior\_shift & C172 & standard & Fixed4 & 34 & 0.0555 & 0.1189 & 0.1471\\
+A & prior\_shift & C172 & standard & FlatCART & 34 & 0.0561 & 0.1189 & 0.1471\\
+A & prior\_shift & C172 & standard & FlatRF & 34 & 0.0710 & 0.1757 & 0.2941\\
+A & prior\_shift & C172 & standard & KG1 & 34 & 0.0561 & 0.1189 & 0.1471\\
+A & prior\_shift & C172 & standard & OldRAVC & 34 & 0.0627 & 0.1286 & 0.2059\\
+A & prior\_shift & C172 & tight & ContractRF & 34 & 0.0935 & 0.1847 & 1.0000\\
+A & prior\_shift & C172 & tight & Final & 34 & 0.0935 & 0.1847 & 0.6471\\
+A & prior\_shift & C172 & tight & Fixed2 & 34 & 0.0935 & 0.1847 & 0.6471\\
+A & prior\_shift & C172 & tight & Fixed4 & 34 & 0.0935 & 0.1847 & 0.6471\\
+A & prior\_shift & C172 & tight & FlatCART & 34 & 0.0935 & 0.1847 & 0.6471\\
+A & prior\_shift & C172 & tight & FlatRF & 34 & 0.0935 & 0.1847 & 1.0000\\
+A & prior\_shift & C172 & tight & KG1 & 34 & 0.0935 & 0.1847 & 0.6471\\
+A & prior\_shift & C172 & tight & OldRAVC & 34 & 0.0935 & 0.1847 & 0.6471\\
+B & degeneracy & B767 & contended & ContractRF & 31 & 0.1005 & 0.2117 & 0.3871\\
+B & degeneracy & B767 & contended & Final & 31 & 0.0753 & 0.1927 & 1.0000\\
+B & degeneracy & B767 & contended & Fixed2 & 31 & 0.0920 & 0.2408 & 1.0000\\
+B & degeneracy & B767 & contended & Fixed4 & 31 & 0.0753 & 0.1927 & 1.0000\\
+B & degeneracy & B767 & contended & FlatCART & 31 & 0.0778 & 0.2370 & 0.4516\\
+B & degeneracy & B767 & contended & FlatRF & 31 & 0.0920 & 0.2408 & 0.4516\\
+B & degeneracy & B767 & contended & KG1 & 31 & 0.1005 & 0.2117 & 0.3871\\
+B & degeneracy & B767 & contended & OldRAVC & 31 & 0.0840 & 0.1967 & 0.4839\\
+B & degeneracy & B767 & relaxed & ContractRF & 31 & 0.0798 & 0.1967 & 0.2581\\
+B & degeneracy & B767 & relaxed & Final & 31 & 0.0758 & 0.1900 & 0.2581\\
+B & degeneracy & B767 & relaxed & Fixed2 & 31 & 0.0920 & 0.2408 & 0.3226\\
+B & degeneracy & B767 & relaxed & Fixed4 & 31 & 0.0758 & 0.1900 & 0.2581\\
+B & degeneracy & B767 & relaxed & FlatCART & 31 & 0.0791 & 0.1967 & 0.2903\\
+B & degeneracy & B767 & relaxed & FlatRF & 31 & 0.0798 & 0.1967 & 0.2581\\
+B & degeneracy & B767 & relaxed & KG1 & 31 & 0.0791 & 0.1967 & 0.2903\\
+B & degeneracy & B767 & relaxed & OldRAVC & 31 & 0.0836 & 0.1967 & 0.2903\\
+B & degeneracy & B767 & standard & ContractRF & 31 & 0.0920 & 0.2408 & 0.3226\\
+B & degeneracy & B767 & standard & Final & 31 & 0.0736 & 0.1900 & 0.2258\\
+B & degeneracy & B767 & standard & Fixed2 & 31 & 0.0920 & 0.2408 & 0.3226\\
+B & degeneracy & B767 & standard & Fixed4 & 31 & 0.0736 & 0.1900 & 0.2258\\
+B & degeneracy & B767 & standard & FlatCART & 31 & 0.0770 & 0.1967 & 0.2581\\
+B & degeneracy & B767 & standard & FlatRF & 31 & 0.0920 & 0.2408 & 0.3226\\
+B & degeneracy & B767 & standard & KG1 & 31 & 0.0770 & 0.1967 & 0.2581\\
+B & degeneracy & B767 & standard & OldRAVC & 31 & 0.0836 & 0.1967 & 0.2903\\
+B & degeneracy & B767 & tight & ContractRF & 31 & 0.1005 & 0.2117 & 0.8710\\
+B & degeneracy & B767 & tight & Final & 31 & 0.1005 & 0.2117 & 0.3871\\
+B & degeneracy & B767 & tight & Fixed2 & 31 & 0.1005 & 0.2117 & 0.3871\\
+B & degeneracy & B767 & tight & Fixed4 & 31 & 0.1005 & 0.2117 & 0.3871\\
+B & degeneracy & B767 & tight & FlatCART & 31 & 0.1005 & 0.2117 & 0.3871\\
+B & degeneracy & B767 & tight & FlatRF & 31 & 0.1005 & 0.2117 & 0.8710\\
+B & degeneracy & B767 & tight & KG1 & 31 & 0.1005 & 0.2117 & 0.3871\\
+B & degeneracy & B767 & tight & OldRAVC & 31 & 0.1005 & 0.2117 & 0.3871\\
+B & degeneracy & C172 & contended & ContractRF & 33 & 0.0457 & 0.1015 & 0.0606\\
+B & degeneracy & C172 & contended & Final & 33 & 0.0424 & 0.1635 & 1.0000\\
+B & degeneracy & C172 & contended & Fixed2 & 33 & 0.0438 & 0.1117 & 1.0000\\
+B & degeneracy & C172 & contended & Fixed4 & 33 & 0.0424 & 0.1635 & 1.0000\\
+B & degeneracy & C172 & contended & FlatCART & 33 & 0.0423 & 0.1080 & 0.0606\\
+B & degeneracy & C172 & contended & FlatRF & 33 & 0.0438 & 0.1117 & 0.0606\\
+B & degeneracy & C172 & contended & KG1 & 33 & 0.0457 & 0.1015 & 0.0606\\
+B & degeneracy & C172 & contended & OldRAVC & 33 & 0.0438 & 0.1117 & 0.1515\\
+B & degeneracy & C172 & relaxed & ContractRF & 33 & 0.0433 & 0.1058 & 0.0606\\
+B & degeneracy & C172 & relaxed & Final & 33 & 0.0411 & 0.1058 & 0.0909\\
+B & degeneracy & C172 & relaxed & Fixed2 & 33 & 0.0438 & 0.1117 & 0.0606\\
+B & degeneracy & C172 & relaxed & Fixed4 & 33 & 0.0411 & 0.1058 & 0.0909\\
+B & degeneracy & C172 & relaxed & FlatCART & 33 & 0.0422 & 0.1058 & 0.0606\\
+B & degeneracy & C172 & relaxed & FlatRF & 33 & 0.0433 & 0.1058 & 0.0606\\
+B & degeneracy & C172 & relaxed & KG1 & 33 & 0.0422 & 0.1058 & 0.0606\\
+B & degeneracy & C172 & relaxed & OldRAVC & 33 & 0.0438 & 0.1117 & 0.0606\\
+B & degeneracy & C172 & standard & ContractRF & 33 & 0.0438 & 0.1117 & 0.0606\\
+B & degeneracy & C172 & standard & Final & 33 & 0.0411 & 0.1058 & 0.0909\\
+B & degeneracy & C172 & standard & Fixed2 & 33 & 0.0438 & 0.1117 & 0.0606\\
+B & degeneracy & C172 & standard & Fixed4 & 33 & 0.0411 & 0.1058 & 0.0909\\
+B & degeneracy & C172 & standard & FlatCART & 33 & 0.0422 & 0.1058 & 0.0606\\
+B & degeneracy & C172 & standard & FlatRF & 33 & 0.0438 & 0.1117 & 0.0606\\
+B & degeneracy & C172 & standard & KG1 & 33 & 0.0422 & 0.1058 & 0.0606\\
+B & degeneracy & C172 & standard & OldRAVC & 33 & 0.0438 & 0.1117 & 0.0606\\
+B & degeneracy & C172 & tight & ContractRF & 33 & 0.0457 & 0.1015 & 0.5152\\
+B & degeneracy & C172 & tight & Final & 33 & 0.0457 & 0.1015 & 0.0606\\
+B & degeneracy & C172 & tight & Fixed2 & 33 & 0.0457 & 0.1015 & 0.0606\\
+B & degeneracy & C172 & tight & Fixed4 & 33 & 0.0457 & 0.1015 & 0.0606\\
+B & degeneracy & C172 & tight & FlatCART & 33 & 0.0457 & 0.1015 & 0.0606\\
+B & degeneracy & C172 & tight & FlatRF & 33 & 0.0457 & 0.1015 & 0.5152\\
+B & degeneracy & C172 & tight & KG1 & 33 & 0.0457 & 0.1015 & 0.0606\\
+B & degeneracy & C172 & tight & OldRAVC & 33 & 0.0457 & 0.1015 & 0.0606\\
+B & map\_shift & B767 & contended & ContractRF & 26 & 0.0840 & 0.1569 & 0.9615\\
+B & map\_shift & B767 & contended & Final & 26 & 0.0795 & 0.1637 & 1.0000\\
+B & map\_shift & B767 & contended & Fixed2 & 26 & 0.0845 & 0.1812 & 1.0000\\
+B & map\_shift & B767 & contended & Fixed4 & 26 & 0.0795 & 0.1637 & 1.0000\\
+B & map\_shift & B767 & contended & FlatCART & 26 & 0.0785 & 0.1774 & 1.0000\\
+B & map\_shift & B767 & contended & FlatRF & 26 & 0.0845 & 0.1812 & 0.9615\\
+B & map\_shift & B767 & contended & KG1 & 26 & 0.0840 & 0.1569 & 0.9615\\
+B & map\_shift & B767 & contended & OldRAVC & 26 & 0.0788 & 0.1635 & 1.0000\\
+B & map\_shift & B767 & relaxed & ContractRF & 26 & 0.0797 & 0.1621 & 0.2692\\
+B & map\_shift & B767 & relaxed & Final & 26 & 0.0787 & 0.1637 & 0.3077\\
+B & map\_shift & B767 & relaxed & Fixed2 & 26 & 0.0844 & 0.1812 & 0.3462\\
+B & map\_shift & B767 & relaxed & Fixed4 & 26 & 0.0787 & 0.1637 & 0.3077\\
+B & map\_shift & B767 & relaxed & FlatCART & 26 & 0.0783 & 0.1621 & 0.3077\\
+B & map\_shift & B767 & relaxed & FlatRF & 26 & 0.0797 & 0.1621 & 0.2692\\
+B & map\_shift & B767 & relaxed & KG1 & 26 & 0.0783 & 0.1621 & 0.3077\\
+B & map\_shift & B767 & relaxed & OldRAVC & 26 & 0.0788 & 0.1621 & 0.3077\\
+B & map\_shift & B767 & standard & ContractRF & 26 & 0.0844 & 0.1812 & 0.3462\\
+B & map\_shift & B767 & standard & Final & 26 & 0.0787 & 0.1637 & 0.3077\\
+B & map\_shift & B767 & standard & Fixed2 & 26 & 0.0844 & 0.1812 & 0.3462\\
+B & map\_shift & B767 & standard & Fixed4 & 26 & 0.0787 & 0.1637 & 0.3077\\
+B & map\_shift & B767 & standard & FlatCART & 26 & 0.0783 & 0.1621 & 0.3077\\
+B & map\_shift & B767 & standard & FlatRF & 26 & 0.0844 & 0.1812 & 0.3462\\
+B & map\_shift & B767 & standard & KG1 & 26 & 0.0783 & 0.1621 & 0.3077\\
+B & map\_shift & B767 & standard & OldRAVC & 26 & 0.0788 & 0.1621 & 0.3077\\
+B & map\_shift & B767 & tight & ContractRF & 26 & 0.0840 & 0.1569 & 1.0000\\
+B & map\_shift & B767 & tight & Final & 26 & 0.0840 & 0.1569 & 0.9615\\
+B & map\_shift & B767 & tight & Fixed2 & 26 & 0.0840 & 0.1569 & 0.9615\\
+B & map\_shift & B767 & tight & Fixed4 & 26 & 0.0840 & 0.1569 & 0.9615\\
+B & map\_shift & B767 & tight & FlatCART & 26 & 0.0840 & 0.1569 & 0.9615\\
+B & map\_shift & B767 & tight & FlatRF & 26 & 0.0840 & 0.1569 & 1.0000\\
+B & map\_shift & B767 & tight & KG1 & 26 & 0.0840 & 0.1569 & 0.9615\\
+B & map\_shift & B767 & tight & OldRAVC & 26 & 0.0840 & 0.1569 & 0.9615\\
+B & map\_shift & C172 & contended & ContractRF & 38 & 0.0927 & 0.1357 & 0.6316\\
+B & map\_shift & C172 & contended & Final & 38 & 0.1004 & 0.1744 & 1.0000\\
+B & map\_shift & C172 & contended & Fixed2 & 38 & 0.1039 & 0.1746 & 1.0000\\
+B & map\_shift & C172 & contended & Fixed4 & 38 & 0.1004 & 0.1744 & 1.0000\\
+B & map\_shift & C172 & contended & FlatCART & 38 & 0.1009 & 0.1916 & 0.6316\\
+B & map\_shift & C172 & contended & FlatRF & 38 & 0.1039 & 0.1746 & 0.7368\\
+B & map\_shift & C172 & contended & KG1 & 38 & 0.0927 & 0.1357 & 0.4737\\
+B & map\_shift & C172 & contended & OldRAVC & 38 & 0.1009 & 0.1724 & 0.7632\\
+B & map\_shift & C172 & relaxed & ContractRF & 38 & 0.1002 & 0.1610 & 0.5000\\
+B & map\_shift & C172 & relaxed & Final & 38 & 0.1006 & 0.1610 & 0.5263\\
+B & map\_shift & C172 & relaxed & Fixed2 & 38 & 0.1039 & 0.1746 & 0.4474\\
+B & map\_shift & C172 & relaxed & Fixed4 & 38 & 0.1006 & 0.1610 & 0.5263\\
+B & map\_shift & C172 & relaxed & FlatCART & 38 & 0.1004 & 0.1610 & 0.5263\\
+B & map\_shift & C172 & relaxed & FlatRF & 38 & 0.1002 & 0.1610 & 0.5000\\
+B & map\_shift & C172 & relaxed & KG1 & 38 & 0.1004 & 0.1610 & 0.5263\\
+B & map\_shift & C172 & relaxed & OldRAVC & 38 & 0.1007 & 0.1584 & 0.4474\\
+B & map\_shift & C172 & standard & ContractRF & 38 & 0.1039 & 0.1746 & 0.4474\\
+B & map\_shift & C172 & standard & Final & 38 & 0.1006 & 0.1610 & 0.5263\\
+B & map\_shift & C172 & standard & Fixed2 & 38 & 0.1039 & 0.1746 & 0.4474\\
+B & map\_shift & C172 & standard & Fixed4 & 38 & 0.1006 & 0.1610 & 0.5263\\
+B & map\_shift & C172 & standard & FlatCART & 38 & 0.1004 & 0.1610 & 0.5263\\
+B & map\_shift & C172 & standard & FlatRF & 38 & 0.1039 & 0.1746 & 0.4474\\
+B & map\_shift & C172 & standard & KG1 & 38 & 0.1004 & 0.1610 & 0.5263\\
+B & map\_shift & C172 & standard & OldRAVC & 38 & 0.1007 & 0.1584 & 0.4474\\
+B & map\_shift & C172 & tight & ContractRF & 38 & 0.0927 & 0.1357 & 0.9737\\
+B & map\_shift & C172 & tight & Final & 38 & 0.0927 & 0.1357 & 0.8421\\
+B & map\_shift & C172 & tight & Fixed2 & 38 & 0.0927 & 0.1357 & 0.8421\\
+B & map\_shift & C172 & tight & Fixed4 & 38 & 0.0927 & 0.1357 & 0.8421\\
+B & map\_shift & C172 & tight & FlatCART & 38 & 0.0927 & 0.1357 & 0.8421\\
+B & map\_shift & C172 & tight & FlatRF & 38 & 0.0927 & 0.1357 & 0.9737\\
+B & map\_shift & C172 & tight & KG1 & 38 & 0.0927 & 0.1357 & 0.8421\\
+B & map\_shift & C172 & tight & OldRAVC & 38 & 0.0927 & 0.1357 & 0.8421\\
+B & occlusion & B767 & contended & ContractRF & 34 & 0.0755 & 0.1860 & 0.7941\\
+B & occlusion & B767 & contended & Final & 34 & 0.0588 & 0.1516 & 1.0000\\
+B & occlusion & B767 & contended & Fixed2 & 34 & 0.0648 & 0.1615 & 1.0000\\
+B & occlusion & B767 & contended & Fixed4 & 34 & 0.0588 & 0.1516 & 1.0000\\
+B & occlusion & B767 & contended & FlatCART & 34 & 0.0611 & 0.1507 & 0.7059\\
+B & occlusion & B767 & contended & FlatRF & 34 & 0.0649 & 0.1615 & 0.7941\\
+B & occlusion & B767 & contended & KG1 & 34 & 0.0755 & 0.1860 & 0.6765\\
+B & occlusion & B767 & contended & OldRAVC & 34 & 0.0599 & 0.1507 & 0.7059\\
+B & occlusion & B767 & relaxed & ContractRF & 34 & 0.0573 & 0.1379 & 0.3235\\
+B & occlusion & B767 & relaxed & Final & 34 & 0.0569 & 0.1379 & 0.3529\\
+B & occlusion & B767 & relaxed & Fixed2 & 34 & 0.0648 & 0.1615 & 0.3529\\
+B & occlusion & B767 & relaxed & Fixed4 & 34 & 0.0569 & 0.1379 & 0.3529\\
+B & occlusion & B767 & relaxed & FlatCART & 34 & 0.0609 & 0.1379 & 0.3529\\
+B & occlusion & B767 & relaxed & FlatRF & 34 & 0.0573 & 0.1379 & 0.3235\\
+B & occlusion & B767 & relaxed & KG1 & 34 & 0.0609 & 0.1379 & 0.3529\\
+B & occlusion & B767 & relaxed & OldRAVC & 34 & 0.0596 & 0.1507 & 0.3529\\
+B & occlusion & B767 & standard & ContractRF & 34 & 0.0648 & 0.1615 & 0.3529\\
+B & occlusion & B767 & standard & Final & 34 & 0.0569 & 0.1379 & 0.3529\\
+B & occlusion & B767 & standard & Fixed2 & 34 & 0.0648 & 0.1615 & 0.3529\\
+B & occlusion & B767 & standard & Fixed4 & 34 & 0.0569 & 0.1379 & 0.3529\\
+B & occlusion & B767 & standard & FlatCART & 34 & 0.0609 & 0.1379 & 0.3529\\
+B & occlusion & B767 & standard & FlatRF & 34 & 0.0648 & 0.1615 & 0.3529\\
+B & occlusion & B767 & standard & KG1 & 34 & 0.0609 & 0.1379 & 0.3529\\
+B & occlusion & B767 & standard & OldRAVC & 34 & 0.0596 & 0.1507 & 0.3529\\
+B & occlusion & B767 & tight & ContractRF & 34 & 0.0755 & 0.1860 & 0.9412\\
+B & occlusion & B767 & tight & Final & 34 & 0.0755 & 0.1860 & 0.8235\\
+B & occlusion & B767 & tight & Fixed2 & 34 & 0.0755 & 0.1860 & 0.8235\\
+B & occlusion & B767 & tight & Fixed4 & 34 & 0.0755 & 0.1860 & 0.8235\\
+B & occlusion & B767 & tight & FlatCART & 34 & 0.0755 & 0.1860 & 0.8235\\
+B & occlusion & B767 & tight & FlatRF & 34 & 0.0755 & 0.1860 & 0.9412\\
+B & occlusion & B767 & tight & KG1 & 34 & 0.0755 & 0.1860 & 0.8235\\
+B & occlusion & B767 & tight & OldRAVC & 34 & 0.0755 & 0.1860 & 0.8235\\
+B & occlusion & C172 & contended & ContractRF & 30 & 0.0484 & 0.0919 & 0.3667\\
+B & occlusion & C172 & contended & Final & 30 & 0.0485 & 0.1409 & 1.0000\\
+B & occlusion & C172 & contended & Fixed2 & 30 & 0.0472 & 0.0835 & 1.0000\\
+B & occlusion & C172 & contended & Fixed4 & 30 & 0.0485 & 0.1409 & 1.0000\\
+B & occlusion & C172 & contended & FlatCART & 30 & 0.0490 & 0.0999 & 0.2667\\
+B & occlusion & C172 & contended & FlatRF & 30 & 0.0472 & 0.0835 & 0.3667\\
+B & occlusion & C172 & contended & KG1 & 30 & 0.0484 & 0.0919 & 0.2000\\
+B & occlusion & C172 & contended & OldRAVC & 30 & 0.0472 & 0.0835 & 0.4333\\
+B & occlusion & C172 & relaxed & ContractRF & 30 & 0.0477 & 0.0999 & 0.2000\\
+B & occlusion & C172 & relaxed & Final & 30 & 0.0463 & 0.1011 & 0.2000\\
+B & occlusion & C172 & relaxed & Fixed2 & 30 & 0.0472 & 0.0835 & 0.1667\\
+B & occlusion & C172 & relaxed & Fixed4 & 30 & 0.0463 & 0.1011 & 0.2000\\
+B & occlusion & C172 & relaxed & FlatCART & 30 & 0.0490 & 0.0999 & 0.2000\\
+B & occlusion & C172 & relaxed & FlatRF & 30 & 0.0477 & 0.0999 & 0.2000\\
+B & occlusion & C172 & relaxed & KG1 & 30 & 0.0490 & 0.0999 & 0.2000\\
+B & occlusion & C172 & relaxed & OldRAVC & 30 & 0.0472 & 0.0835 & 0.1667\\
+B & occlusion & C172 & standard & ContractRF & 30 & 0.0472 & 0.0835 & 0.1667\\
+B & occlusion & C172 & standard & Final & 30 & 0.0463 & 0.1011 & 0.2000\\
+B & occlusion & C172 & standard & Fixed2 & 30 & 0.0472 & 0.0835 & 0.1667\\
+B & occlusion & C172 & standard & Fixed4 & 30 & 0.0463 & 0.1011 & 0.2000\\
+B & occlusion & C172 & standard & FlatCART & 30 & 0.0490 & 0.0999 & 0.2000\\
+B & occlusion & C172 & standard & FlatRF & 30 & 0.0472 & 0.0835 & 0.1667\\
+B & occlusion & C172 & standard & KG1 & 30 & 0.0490 & 0.0999 & 0.2000\\
+B & occlusion & C172 & standard & OldRAVC & 30 & 0.0472 & 0.0835 & 0.1667\\
+B & occlusion & C172 & tight & ContractRF & 30 & 0.0484 & 0.0919 & 0.7333\\
+B & occlusion & C172 & tight & Final & 30 & 0.0484 & 0.0919 & 0.5333\\
+B & occlusion & C172 & tight & Fixed2 & 30 & 0.0484 & 0.0919 & 0.5333\\
+B & occlusion & C172 & tight & Fixed4 & 30 & 0.0484 & 0.0919 & 0.5333\\
+B & occlusion & C172 & tight & FlatCART & 30 & 0.0484 & 0.0919 & 0.5333\\
+B & occlusion & C172 & tight & FlatRF & 30 & 0.0484 & 0.0919 & 0.7333\\
+B & occlusion & C172 & tight & KG1 & 30 & 0.0484 & 0.0919 & 0.5333\\
+B & occlusion & C172 & tight & OldRAVC & 30 & 0.0484 & 0.0919 & 0.5333\\
+B & prior\_shift & B767 & contended & ContractRF & 29 & 0.0822 & 0.2718 & 0.8966\\
+B & prior\_shift & B767 & contended & Final & 29 & 0.0645 & 0.2887 & 1.0000\\
+B & prior\_shift & B767 & contended & Fixed2 & 29 & 0.0587 & 0.2761 & 1.0000\\
+B & prior\_shift & B767 & contended & Fixed4 & 29 & 0.0645 & 0.2887 & 1.0000\\
+B & prior\_shift & B767 & contended & FlatCART & 29 & 0.0532 & 0.2287 & 0.8276\\
+B & prior\_shift & B767 & contended & FlatRF & 29 & 0.0573 & 0.1535 & 0.8966\\
+B & prior\_shift & B767 & contended & KG1 & 29 & 0.0822 & 0.2718 & 0.8621\\
+B & prior\_shift & B767 & contended & OldRAVC & 29 & 0.0589 & 0.2887 & 0.9310\\
+B & prior\_shift & B767 & relaxed & ContractRF & 29 & 0.0510 & 0.1103 & 0.1034\\
+B & prior\_shift & B767 & relaxed & Final & 29 & 0.0511 & 0.1103 & 0.1034\\
+B & prior\_shift & B767 & relaxed & Fixed2 & 29 & 0.0570 & 0.1535 & 0.1034\\
+B & prior\_shift & B767 & relaxed & Fixed4 & 29 & 0.0511 & 0.1103 & 0.1034\\
+B & prior\_shift & B767 & relaxed & FlatCART & 29 & 0.0512 & 0.1103 & 0.1034\\
+B & prior\_shift & B767 & relaxed & FlatRF & 29 & 0.0510 & 0.1103 & 0.1034\\
+B & prior\_shift & B767 & relaxed & KG1 & 29 & 0.0512 & 0.1103 & 0.1034\\
+B & prior\_shift & B767 & relaxed & OldRAVC & 29 & 0.0523 & 0.1008 & 0.0690\\
+B & prior\_shift & B767 & standard & ContractRF & 29 & 0.0570 & 0.1535 & 0.1034\\
+B & prior\_shift & B767 & standard & Final & 29 & 0.0511 & 0.1103 & 0.1379\\
+B & prior\_shift & B767 & standard & Fixed2 & 29 & 0.0570 & 0.1535 & 0.1034\\
+B & prior\_shift & B767 & standard & Fixed4 & 29 & 0.0511 & 0.1103 & 0.1379\\
+B & prior\_shift & B767 & standard & FlatCART & 29 & 0.0512 & 0.1103 & 0.1034\\
+B & prior\_shift & B767 & standard & FlatRF & 29 & 0.0570 & 0.1535 & 0.1034\\
+B & prior\_shift & B767 & standard & KG1 & 29 & 0.0512 & 0.1103 & 0.1034\\
+B & prior\_shift & B767 & standard & OldRAVC & 29 & 0.0523 & 0.1008 & 0.0690\\
+B & prior\_shift & B767 & tight & ContractRF & 29 & 0.0822 & 0.2718 & 1.0000\\
+B & prior\_shift & B767 & tight & Final & 29 & 0.0822 & 0.2718 & 0.8966\\
+B & prior\_shift & B767 & tight & Fixed2 & 29 & 0.0822 & 0.2718 & 0.8966\\
+B & prior\_shift & B767 & tight & Fixed4 & 29 & 0.0822 & 0.2718 & 0.8966\\
+B & prior\_shift & B767 & tight & FlatCART & 29 & 0.0822 & 0.2718 & 0.8966\\
+B & prior\_shift & B767 & tight & FlatRF & 29 & 0.0822 & 0.2718 & 1.0000\\
+B & prior\_shift & B767 & tight & KG1 & 29 & 0.0822 & 0.2718 & 0.8966\\
+B & prior\_shift & B767 & tight & OldRAVC & 29 & 0.0822 & 0.2718 & 0.8966\\
+B & prior\_shift & C172 & contended & ContractRF & 35 & 0.1009 & 0.2954 & 0.5714\\
+B & prior\_shift & C172 & contended & Final & 35 & 0.0585 & 0.2882 & 1.0000\\
+B & prior\_shift & C172 & contended & Fixed2 & 35 & 0.0647 & 0.1545 & 1.0000\\
+B & prior\_shift & C172 & contended & Fixed4 & 35 & 0.0585 & 0.2882 & 1.0000\\
+B & prior\_shift & C172 & contended & FlatCART & 35 & 0.0507 & 0.1499 & 0.4571\\
+B & prior\_shift & C172 & contended & FlatRF & 35 & 0.0647 & 0.1545 & 0.5714\\
+B & prior\_shift & C172 & contended & KG1 & 35 & 0.1009 & 0.2954 & 0.4571\\
+B & prior\_shift & C172 & contended & OldRAVC & 35 & 0.0564 & 0.2781 & 0.6571\\
+B & prior\_shift & C172 & relaxed & ContractRF & 35 & 0.0485 & 0.1184 & 0.0857\\
+B & prior\_shift & C172 & relaxed & Final & 35 & 0.0485 & 0.1184 & 0.0857\\
+B & prior\_shift & C172 & relaxed & Fixed2 & 35 & 0.0647 & 0.1545 & 0.1714\\
+B & prior\_shift & C172 & relaxed & Fixed4 & 35 & 0.0485 & 0.1184 & 0.0857\\
+B & prior\_shift & C172 & relaxed & FlatCART & 35 & 0.0495 & 0.1184 & 0.0857\\
+B & prior\_shift & C172 & relaxed & FlatRF & 35 & 0.0485 & 0.1184 & 0.0857\\
+B & prior\_shift & C172 & relaxed & KG1 & 35 & 0.0495 & 0.1184 & 0.0857\\
+B & prior\_shift & C172 & relaxed & OldRAVC & 35 & 0.0535 & 0.1121 & 0.0571\\
+B & prior\_shift & C172 & standard & ContractRF & 35 & 0.0647 & 0.1545 & 0.1714\\
+B & prior\_shift & C172 & standard & Final & 35 & 0.0485 & 0.1184 & 0.0857\\
+B & prior\_shift & C172 & standard & Fixed2 & 35 & 0.0647 & 0.1545 & 0.1714\\
+B & prior\_shift & C172 & standard & Fixed4 & 35 & 0.0485 & 0.1184 & 0.0857\\
+B & prior\_shift & C172 & standard & FlatCART & 35 & 0.0495 & 0.1184 & 0.0857\\
+B & prior\_shift & C172 & standard & FlatRF & 35 & 0.0647 & 0.1545 & 0.1714\\
+B & prior\_shift & C172 & standard & KG1 & 35 & 0.0495 & 0.1184 & 0.0857\\
+B & prior\_shift & C172 & standard & OldRAVC & 35 & 0.0535 & 0.1121 & 0.0571\\
+B & prior\_shift & C172 & tight & ContractRF & 35 & 0.1009 & 0.2954 & 1.0000\\
+B & prior\_shift & C172 & tight & Final & 35 & 0.1009 & 0.2954 & 0.7429\\
+B & prior\_shift & C172 & tight & Fixed2 & 35 & 0.1009 & 0.2954 & 0.7429\\
+B & prior\_shift & C172 & tight & Fixed4 & 35 & 0.1009 & 0.2954 & 0.7429\\
+B & prior\_shift & C172 & tight & FlatCART & 35 & 0.1009 & 0.2954 & 0.7714\\
+B & prior\_shift & C172 & tight & FlatRF & 35 & 0.1009 & 0.2954 & 1.0000\\
+B & prior\_shift & C172 & tight & KG1 & 35 & 0.1009 & 0.2954 & 0.7714\\
+B & prior\_shift & C172 & tight & OldRAVC & 35 & 0.1009 & 0.2954 & 0.7714\\
+\bottomrule\end{longtable}\normalsize\setlength{\tabcolsep}{6pt}

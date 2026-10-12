@@ -1,3 +1,19 @@
+# A20–AEI R9 research delivery
+
+New simulations and manuscripts completed; large raw backup verification is in progress. Unverified local data are retained.
+
+- [R9 main paper: 17 pages](A20_AEI_R9_Manuscript.pdf)
+- [R9 supplement: 53 pages](A20_AEI_R9_Supplement.pdf)
+- [Chinese revision report](A20_AEI_R9_Revision_Report_CN.pdf)
+- [Internal review; not external peer review](A20_AEI_R9_Internal_Review_CN.pdf)
+- [Web Work handoff](READ_FIRST_R9_CN.md)
+- [Complete R9 code, editable sources, tables and audits](research_r9/)
+- [Raw checkpoints](https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/tag/r9-checkpoints-20261012)
+
+12,800 independent new inputs; repeated outcomes and requests add no sample size. At risk allowance 0.15, semantic/procedural support is 24/192 in A and 26/192 in B; direct renewal is 30/192 and 32/192. Full reporting remains uncertified. No claim of 9/10 or Strong Accept.
+
+---
+
 # A20–AEI R8 research archive
 
 Private backup of the frozen aircraft inspection localization research. Main manuscript: **30 pages**; independent supplement: **41 pages**. Existing review score: **8.2/10**. This archival transfer introduces no new experiments and changes no frozen conclusions.

@@ -1,0 +1,323 @@
+{
+  "new_independent_inputs": 12800,
+  "new_policy_service_outcomes": 409600,
+  "new_confirmation_request_rows": 6291456,
+  "cards": 3072,
+  "plans": 6144,
+  "full_primary_semantic_rows": [
+    {
+      "study": "B",
+      "profile": "unfitted",
+      "service": "relaxed",
+      "task": "association",
+      "variant": "full",
+      "method": "ContractCover",
+      "allowance": 0.15,
+      "status": "AUTHORIZED",
+      "policy": "FlatCART",
+      "upper": 0.14397310714093464,
+      "n": 1024,
+      "k": 103.0,
+      "observed_failure": 0.1005859375,
+      "margin": 0.0060268928590653525,
+      "rmse_m": 0.04551689878160546,
+      "work_ms": 135.60598141354714
+    }
+  ],
+  "semantic_procedural_equal": true,
+  "support": [
+    {
+      "study": "A",
+      "method": "ContractCover",
+      "allowance": 0.1,
+      "configurations": 192,
+      "supported": 9,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ContractCover",
+      "allowance": 0.15,
+      "configurations": 192,
+      "supported": 24,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ContractCover",
+      "allowance": 0.2,
+      "configurations": 192,
+      "supported": 24,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ContractCover",
+      "allowance": 0.25,
+      "configurations": 192,
+      "supported": 38,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ProceduralCoverValidated",
+      "allowance": 0.1,
+      "configurations": 192,
+      "supported": 9,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ProceduralCoverValidated",
+      "allowance": 0.15,
+      "configurations": 192,
+      "supported": 24,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ProceduralCoverValidated",
+      "allowance": 0.2,
+      "configurations": 192,
+      "supported": 24,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ProceduralCoverValidated",
+      "allowance": 0.25,
+      "configurations": 192,
+      "supported": 38,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "DirectRecertCached",
+      "allowance": 0.1,
+      "configurations": 192,
+      "supported": 18,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "DirectRecertCached",
+      "allowance": 0.15,
+      "configurations": 192,
+      "supported": 30,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "DirectRecertCached",
+      "allowance": 0.2,
+      "configurations": 192,
+      "supported": 30,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "DirectRecertCached",
+      "allowance": 0.25,
+      "configurations": 192,
+      "supported": 39,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ExactCard",
+      "allowance": 0.1,
+      "configurations": 192,
+      "supported": 8,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ExactCard",
+      "allowance": 0.15,
+      "configurations": 192,
+      "supported": 18,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ExactCard",
+      "allowance": 0.2,
+      "configurations": 192,
+      "supported": 18,
+      "full_supported": 0
+    },
+    {
+      "study": "A",
+      "method": "ExactCard",
+      "allowance": 0.25,
+      "configurations": 192,
+      "supported": 27,
+      "full_supported": 0
+    },
+    {
+      "study": "B",
+      "method": "ContractCover",
+      "allowance": 0.1,
+      "configurations": 192,
+      "supported": 8,
+      "full_supported": 0
+    },
+    {
+      "study": "B",
+      "method": "ContractCover",
+      "allowance": 0.15,
+      "configurations": 192,
+      "supported": 26,
+      "full_supported": 1
+    },
+    {
+      "study": "B",
+      "method": "ContractCover",
+      "allowance": 0.2,
+      "configurations": 192,
+      "supported": 30,
+      "full_supported": 1
+    },
+    {
+      "study": "B",
+      "method": "ContractCover",
+      "allowance": 0.25,
+      "configurations": 192,
+      "supported": 46,
+      "full_supported": 2
+    },
+    {
+      "study": "B",
+      "method": "ProceduralCoverValidated",
+      "allowance": 0.1,
+      "configurations": 192,
+      "supported": 8,
+      "full_supported": 0
+    },
+    {
+      "study": "B",
+      "method": "ProceduralCoverValidated",
+      "allowance": 0.15,
+      "configurations": 192,
+      "supported": 26,
+      "full_supported": 1
+    },
+    {
+      "study": "B",
+      "method": "ProceduralCoverValidated",
+      "allowance": 0.2,
+      "configurations": 192,
+      "supported": 30,
+      "full_supported": 1
+    },
+    {
+      "study": "B",
+      "method": "ProceduralCoverValidated",
+      "allowance": 0.25,
+      "configurations": 192,
+      "supported": 46,
+      "full_supported": 2
+    },
+    {
+      "study": "B",
+      "method": "DirectRecertCached",
+      "allowance": 0.1,
+      "configurations": 192,
+      "supported": 19,
+      "full_supported": 0
+    },
+    {
+      "study": "B",
+      "method": "DirectRecertCached",
+      "allowance": 0.15,
+      "configurations": 192,
+      "supported": 32,
+      "full_supported": 1
+    },
+    {
+      "study": "B",
+      "method": "DirectRecertCached",
+      "allowance": 0.2,
+      "configurations": 192,
+      "supported": 36,
+      "full_supported": 1
+    },
+    {
+      "study": "B",
+      "method": "DirectRecertCached",
+      "allowance": 0.25,
+      "configurations": 192,
+      "supported": 46,
+      "full_supported": 2
+    },
+    {
+      "study": "B",
+      "method": "ExactCard",
+      "allowance": 0.1,
+      "configurations": 192,
+      "supported": 7,
+      "full_supported": 0
+    },
+    {
+      "study": "B",
+      "method": "ExactCard",
+      "allowance": 0.15,
+      "configurations": 192,
+      "supported": 20,
+      "full_supported": 1
+    },
+    {
+      "study": "B",
+      "method": "ExactCard",
+      "allowance": 0.2,
+      "configurations": 192,
+      "supported": 24,
+      "full_supported": 1
+    },
+    {
+      "study": "B",
+      "method": "ExactCard",
+      "allowance": 0.25,
+      "configurations": 192,
+      "supported": 34,
+      "full_supported": 2
+    }
+  ],
+  "benchmarks": [
+    {
+      "method": "ContractCover",
+      "wall_s": 0.1790285,
+      "visits": 2490368,
+      "cards": 1152
+    },
+    {
+      "method": "DirectRecertCached",
+      "wall_s": 0.3653462,
+      "visits": 5373952,
+      "cards": 2560
+    },
+    {
+      "method": "ExactCard",
+      "wall_s": 0.1864732,
+      "visits": 2490368,
+      "cards": 1152
+    },
+    {
+      "method": "ProceduralCoverValidated",
+      "wall_s": 0.1763421,
+      "visits": 2490368,
+      "cards": 1152
+    }
+  ],
+  "full_report_primary_supported": 0,
+  "primary_authorized_max_observed_failure": 0.1201171875,
+  "files": {
+    "all_frozen_plans.csv": "3fb26b62c1cf06c3628c5a9beff7dda1be04e659850e7a0690c4f8d587928388",
+    "all_risk_cards.csv": "4f8385080ff2fbab1b8368fe90cd3f6867648df502246d0ffb955d3235ab91d1",
+    "certificate_prefix_sensitivity.csv": "0a036b989c9002824200cb12cbf37f607f24e946f2e9593e660d8fbe76048c57",
+    "configured_support.csv": "22da8c8c614b354b4b4fbabdc848feb4c280473a9950f3e9230e50259d217329",
+    "confirmation_geometry_statistics.csv": "154ef2cbe733277c39217abe3837c6067f845b16fa880a2d40a0f55293cdc437",
+    "confirmation_plan_statistics.csv": "49691ffb1ee32a0b51fecf23bdd45fac0a51b380c699381f0cf2e6113dd50923",
+    "unsupported_stress_statistics.csv": "770135b497149254e22e6acfd86177ee9f5cbb5b13ac0e1b3fd306fb50320cab"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "selection": "Fixed first/last A nominal and first A/B population sources before replay inspection",
+  "sources": [
+    [
+      "A",
+      "nominal",
+      13200000
+    ],
+    [
+      "A",
+      "nominal",
+      13201023
+    ],
+    [
+      "A",
+      "unfitted",
+      13300000
+    ],
+    [
+      "B",
+      "nominal",
+      14200000
+    ],
+    [
+      "B",
+      "unfitted",
+      14300000
+    ]
+  ],
+  "additional_independent_inputs": 0
+}

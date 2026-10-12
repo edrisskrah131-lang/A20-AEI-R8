@@ -15,7 +15,7 @@ from event_semantics import cp_upper
 
 FIG=HERE/'paper/figures/r9';TAB=HERE/'tables'
 COLORS=['#0072B2','#D55E00','#009E73','#777777']
-plt.rcParams.update({'font.size':9,'axes.spines.top':False,'axes.spines.right':False,
+plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,
                     'pdf.fonttype':42,'ps.fonttype':42,'savefig.bbox':'tight'})
 def save(fig,name):
     for suffix in ('pdf','svg','png'):fig.savefig(FIG/(name+'.'+suffix),dpi=220)
@@ -48,9 +48,9 @@ def calibration():
         f=supp.query('study==@study and method==@method')
         ax.plot(f.allowance,f.supported,marker=['o','x','s','^'][i],ls=['-','--',':','-.'][i],color=COLORS[i],label=method)
       ax.set(title='Study '+study,xlabel='Risk allowance',xticks=[.1,.15,.2,.25],ylim=(0,52));ax.axvline(.15,color='.7',lw=.8)
-    axes[0].set_ylabel('Supported configured requests / 192');axes[1].legend(fontsize=7,loc='upper left');fig.tight_layout();save(fig,'support')
+    axes[0].set_ylabel('Supported configured requests / 192');axes[1].legend(fontsize=8,loc='upper left');fig.tight_layout();save(fig,'support')
     # All primary contexts remain present. Direct-only support is marked, not hidden.
-    fig,axes=plt.subplots(2,1,figsize=(11,5.9))
+    fig,axes=plt.subplots(2,1,figsize=(7.2,5.9))
     keyed={(q['study'],q['profile'],q['service'],q['task'],q['variant'],q['method']):q for q in plans if q['allowance']==.15}
     contexts=[(pr,se) for pr in ('nominal','unfitted') for se in ('relaxed','standard','tight','contended')]
     events=[(ta,va) for ta in TASKS for va in VARIANTS]
@@ -62,9 +62,9 @@ def calibration():
         a[y,x]=1 if c['status']=='AUTHORIZED' else 0
         if d['status']=='AUTHORIZED' and c['status']!='AUTHORIZED':ax.plot(x,y,'o',mfc='none',mec='#D55E00',ms=5,lw=.5)
       ax.imshow(a,cmap=matplotlib.colors.ListedColormap(['#eeeeee','#0072B2']),vmin=0,vmax=1,aspect='auto',zorder=0)
-      ax.set_yticks(range(8),[f'{pr[:3]}/{se[:3]}' for pr,se in contexts]);ax.set_xticks(range(24),[v.replace('_','\n') for t,v in events],fontsize=6)
+      ax.set_yticks(range(8),[f'{pr[:3]}/{se[:3]}' for pr,se in contexts]);ax.set_xticks(range(24),[f'V{i%8+1}' for i in range(24)],fontsize=8)
       for x in (7.5,15.5):ax.axvline(x,color='white',lw=2)
-      ax.set_title('Study '+study+'; blue: semantic support; orange circle: direct renewal only')
+      ax.set_title('Study '+study+'; semantic support (blue); direct only (open)',fontsize=10)
       for pos,ta in zip((3.5,11.5,19.5),TASKS):ax.text(pos,-1.45,ta,ha='center',fontweight='bold')
     fig.tight_layout();save(fig,'primary_matrix')
     # Explicitly excluded first pilot is an illustration, not confirmation evidence.
@@ -75,7 +75,7 @@ def calibration():
     fig,ax=plt.subplots(figsize=(10,3.8));ax.axis('off');ax.set_xlim(0,10);ax.set_ylim(0,4)
     boxes=[(.15,2.2,2.3,1.2,'Engineering requirement\nquantity + unit + interval'),(3.15,2.2,2.6,1.2,'Compiled event + dependencies\npointwise containment witness'),(6.65,2.2,2.9,1.2,'Applicable anchor card\nproducer + population + lineage'),(3.15,.15,2.6,1.15,'Unchanged requested projection?\nSame supported population?'),(6.65,.15,2.9,1.15,'Reuse / direct renewal / refuse\nsource-bound population receipt')]
     for x,y,w,h,label in boxes:
-      ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=.08',fc='#e9f2f6',ec='#34566b'));ax.text(x+w/2,y+h/2,label,ha='center',va='center')
+      ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=.08',fc='#e9f2f6',ec='#34566b'));ax.text(x+w/2,y+h/2,label,ha='center',va='center',fontsize=11)
     for a,b in [((2.55,2.8),(3.05,2.8)),((5.85,2.8),(6.55,2.8)),((4.45,2.1),(4.45,1.4)),((5.85,.7),(6.55,.7)),((8.1,2.1),(8.1,1.4))]:ax.annotate('',b,a,arrowprops=dict(arrowstyle='->',lw=1.5))
     fig.tight_layout();save(fig,'knowledge_flow')
     # Prefix/confidence grid is diagnostic only, never a revised F1 selector.
@@ -94,8 +94,8 @@ def calibration():
     sen=pd.DataFrame(sensitivity);sen.to_csv(TAB/'certificate_prefix_sensitivity.csv',index=False)
     fig,ax=plt.subplots(figsize=(8,3.3))
     for i,ident in enumerate(identifiers):
-      f=sen.query('id==@ident and beta==.05');ax.plot(f.n,f.upper,'o-',color=COLORS[i],label=ident)
-    ax.axhline(.15,c='.4',ls='--',lw=1);ax.set(xlabel='Nested calibration prefix size',ylabel='One-sided upper bound',ylim=(0,.65));ax.legend(fontsize=6);fig.tight_layout();save(fig,'certificate_prefix')
+      f=sen.query('id==@ident and beta==.05');ax.plot(f.n,f.upper,'o-',color=COLORS[i],label=['A nominal: component optical','B unfitted: full association','B nominal: full acquisition'][i])
+    ax.axhline(.15,c='.4',ls='--',lw=1);ax.set(xlabel='Nested calibration prefix size',ylabel='One-sided upper bound',ylim=(0,.65));ax.legend(fontsize=8);fig.tight_layout();save(fig,'certificate_prefix')
     (HERE/'audits/new_card_audit.json').write_text(json.dumps(dict(status='PASS',cards=len(cards),family_reserve=p['family_size'],max_CP_error=0.0,confirmation_not_used_in_selection=True,diagnostic_grid_not_simultaneously_certified=True),indent=2),encoding='utf-8')
     return cards,plans,supp
 
@@ -134,7 +134,7 @@ def full(cards,plans,supp):
         nondom=sorted(nondom,key=lambda r:r.numerical_work_ms)
         ax.plot([r.numerical_work_ms for r in nondom],[1000*r.loss_m2s for r in nondom],color='.65',lw=.8)
         ax.set_title(mesh+' / '+service);ax.set_xlabel('Numerical work (ms)');ax.set_ylabel('Trajectory loss ($10^{-3}$ m² s)')
-    axes[0,1].legend(fontsize=6,ncol=2);fig.tight_layout();save(fig,'geometry_pareto')
+    axes[0,1].legend(fontsize=8,ncol=2);fig.tight_layout();save(fig,'geometry_pareto')
     fig,axes=plt.subplots(1,2,figsize=(9,3.5))
     for ax,study in zip(axes,('A','B')):
       f=frames[study].query('policy=="Fixed2" and service=="relaxed"')
@@ -149,7 +149,8 @@ def full(cards,plans,supp):
         rows.append([study,method.replace('ProceduralCoverValidated','ProceduralCover').replace('DirectRecertCached','DirectRenewal'),f'{int(f.supported)}/192',f'{int(f.full_supported)}/24'])
     texframe(pd.DataFrame(rows),['Study','Method','All requests','Full tasks'],HERE/'paper/sections/r9_support_table.tex','Primary-allowance configured support. Each denominator retains every task, variant, population and service. Full-task support counts only the original complete requirement.','tab:r9-support')
     primary=req.query('method=="ContractCover" and allowance==.15 and status=="AUTHORIZED"')
-    representative=primary.drop_duplicates(['study','profile','service','task','policy','upper']).head(16)
+    representative=primary.query('service=="relaxed" and variant in ["full","partial","single_service"]')
+    representative=representative.drop_duplicates(['study','profile','service','task','policy','upper'])
     rows=[[r.study,r.profile[:3],r.service[:3],r.task[:5],r.variant.replace('_',' '),r.policy,f'{r.upper:.4f}',f'{int(r.k)}/{int(r.n)}'] for _,r in representative.iterrows()]
     texframe(pd.DataFrame(rows),['Study','Pop.','Service','Task','Variant','Policy','$U$','Confirm. $k/n$'],HERE/'paper/sections/r9_selected_table.tex','Fixed before-sensing plans and independent confirmation counts; the rows are representative configured services, not independent copies of the source sample. All plans are supplied as CSV.','tab:r9-selected')
     selected_full=primary.query('variant=="full"')
