@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "random_event_pairs": 10000,
+  "metric_vectors_checked": 1000000,
+  "procedural_witness_agreement": true,
+  "nonfinite_failure_closed": true,
+  "unit_mismatch_rejected": true,
+  "producer_population_mismatch_rejected": true,
+  "adaptive_anchor_counterexample": {
+    "marginal_A": 0.1,
+    "marginal_B": 0.1,
+    "union": 0.2
+  },
+  "formal_calibration_inputs_generated": 0,
+  "formal_confirmation_inputs_generated": 0
+}

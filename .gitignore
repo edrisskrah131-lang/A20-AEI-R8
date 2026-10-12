@@ -1,0 +1,5 @@
+# Raw research is preserved in verified release checkpoints, not omitted from delivery.
+research_r9/data/
+research_r9/paper/build/
+__pycache__/
+*.pyc

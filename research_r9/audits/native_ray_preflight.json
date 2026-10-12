@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "ray_ranges": [
+    1.0,
+    2.0,
+    "miss"
+  ],
+  "face_ids": [
+    0,
+    0,
+    -1
+  ],
+  "source_cpp_sha256": "c034b5d2a7c93347d17b39510bf9ec1c77678a1538c4939aa58ac36121921fa7",
+  "windows_dll_sha256": "03fff556c694232d730fe86f187be718e2261cda3dd63a3b1b9bebd2b32101a1",
+  "new_calibration_samples": 0,
+  "new_confirmation_samples": 0
+}
