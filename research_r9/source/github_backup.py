@@ -78,8 +78,10 @@ def publish_assets(api,assets,commit):
     for path in assets:
         digest=sha(path)
         asset=existing.get(path.name)
-        if asset is not None and asset.get('state')=='starter' and asset.get('size')==0:
-            # An interrupted upload of this exact named checkpoint left no data.
+        if asset is not None and asset.get('state')=='starter':
+            # GitHub's failed-upload placeholder can expose the advertised
+            # Content-Length even though no downloadable data were uploaded.
+            # Replace only this exact explicitly requested failed asset.
             api.request(base+'/releases/assets/'+str(asset['id']),'DELETE');asset=None
         if asset is None:
             # Archive sizes are kept below 1 GB by the stage packager.
@@ -87,6 +89,7 @@ def publish_assets(api,assets,commit):
             url=release['upload_url'].split('{')[0]+'?name='+quote(path.name)
             asset=api.request(url,'POST',path.read_bytes(),'application/octet-stream')
         fresh=api.request(base+'/releases/assets/'+str(asset['id']))
+        if fresh.get('state')!='uploaded':raise RuntimeError('Remote asset is not a completed upload')
         server=fresh.get('digest')
         if fresh['size']!=path.stat().st_size:raise RuntimeError('Remote checkpoint byte count differs')
         if server:
