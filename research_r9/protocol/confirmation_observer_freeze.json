@@ -1,13 +1,14 @@
 {
   "files": {
     "analysis/confirmation_guard.py": "8d77681384f76cff744c3790a686a861081373ffbcfc941e6492dbb19ab2b3b9",
+    "analysis/fair_selection.py": "a47e738d2973e85b45fe85743ee882fa5df69fb374b4c4f053efc27aa956c623",
     "analysis/receipt_preflight.py": "f1352734ffafdb1facdfe0bbf7767c09569a4a41c800e393cc3c9bed3691aed9",
     "analysis/run_evidence.py": "83132faeb9aaa23be9aac9b7a9ca3b8459c76ae4508a15845c1750becda697ff",
     "analysis/runtime_receipts.py": "285aff76730d960797520107c3fe7c647cc82b5b3f1470c20e42cd28b73ca648",
     "analysis/stream_requests.py": "f59770a4c42093d68eee43cb2c55b6dcbc6eba1c6db3b1f17988f8461fd9fe4d"
   },
-  "selection_freeze_sha256": "e76f5bf27dd077980510ce3eb1e52492cc74438f25ab9874113af2d2a675a09c",
-  "scope_binding_sha256": "1d87658be588c1b2b3a7661f4d3d37d09932db322a9ee46c805f700453a0a8b3",
+  "selection_freeze_sha256": "86375d955e76fb2a4d868c99890156853be6b83e813b6bcb9d3558f7b47c4473",
+  "scope_binding_sha256": "a54c305e94ca3b73f4204112e8eccaee0c5f3cca3c6bd42dfd1f8788d08fe6cf",
   "confirmation_inputs_before_observer_freeze": 0,
   "numerical_event_map_changed": false
 }

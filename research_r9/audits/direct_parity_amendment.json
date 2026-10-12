@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "confirmation_inputs_before_amendment": 0,
+  "numerical_generator_changed": false,
+  "event_labels_changed": false,
+  "calibration_counts_changed": false,
+  "change": "Permit applicable A exact-event cards in B direct-renewal candidates.",
+  "methods_except_direct_bitwise_unchanged": true,
+  "direct_old_support_preserved": true,
+  "changed_direct_plans": 0,
+  "old_F1_sha256": "e76f5bf27dd077980510ce3eb1e52492cc74438f25ab9874113af2d2a675a09c",
+  "F1_sha256": "86375d955e76fb2a4d868c99890156853be6b83e813b6bcb9d3558f7b47c4473",
+  "history": "protocol\\history_F1_before_direct_parity"
+}

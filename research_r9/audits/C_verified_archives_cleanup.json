@@ -1,0 +1,96 @@
+{
+  "scope": "Only this task verified GitHub ZIP duplicates on C",
+  "removed": [
+    {
+      "file": "A20_R9_design_draft_20261012T095654Z.zip",
+      "bytes": 5840,
+      "sha256": "7a064f46be4e2d98adc5a7db3e2de14643659d214777e2fa8765146014e0033f",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_design_draft_20261012T095654Z.zip"
+    },
+    {
+      "file": "A20_R9_semantic_native_preflight_20261012T101217Z.zip",
+      "bytes": 151856,
+      "sha256": "20bd908ff0a72720e3d17e388b80907723d34c56655135880a25bd40288cd09e",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_semantic_native_preflight_20261012T101217Z.zip"
+    },
+    {
+      "file": "A20_R9_excluded_pilot_v2_20261012T102423Z.zip",
+      "bytes": 59860336,
+      "sha256": "c791f9f3833ea868095cd4f4be76f183426fdd8de1f4de5c6fba6d76bc3a6de6",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_excluded_pilot_v2_20261012T102423Z.zip"
+    },
+    {
+      "file": "A20_R9_protocol_v1_1_code_20261012T110245Z.zip",
+      "bytes": 219127,
+      "sha256": "ab92c5cf7f595437c61beb00cc8b6c97cf15f69266080f1d36d39747e27ff257",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_protocol_v1_1_code_20261012T110245Z.zip"
+    },
+    {
+      "file": "A20_R9_protocol_freeze_all_pilots_20261012T105852Z.zip",
+      "bytes": 175269884,
+      "sha256": "9496a3e71709e7c670e7aaa76b017d5566334597ee80c314b863457da920d234",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_protocol_freeze_all_pilots_20261012T105852Z.zip"
+    },
+    {
+      "file": "A20_R9_A_calibration_first16_20261012T110917Z.zip",
+      "bytes": 6392154,
+      "sha256": "2dc5ad4336cbae8dfb3b708d77d04178f6691d5ea9a42e52434ff2bb950c497f",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_first16_20261012T110917Z.zip"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_001.zip",
+      "bytes": 240742484,
+      "sha256": "cbf260c4cb78fafa7e331b62d0c9e3b3b6960c8b1104d7072a5c83d62b25be32",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_001.zip"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_002.zip",
+      "bytes": 240067800,
+      "sha256": "187e3c302710ac3cb3a4b9767ba6d827225c66b2067c444619254b2cd319bd57",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_002.zip"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_003.zip",
+      "bytes": 240561540,
+      "sha256": "590019642de152726762eb27d54eca7444edc1966f60a69f8257623edbd5b3ff",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_003.zip"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_004.zip",
+      "bytes": 242590261,
+      "sha256": "f78e9a4167f8de29f69e13fa5e458b08841aa764a367c2f701942d78b8c06ae7",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_004.zip"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_005.zip",
+      "bytes": 243809459,
+      "sha256": "64d819dccdb694d07b58310493ef87c640c9da8f9ffcb16d93dcd758aadd3fc9",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_005.zip"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_006.zip",
+      "bytes": 243674978,
+      "sha256": "c9833682526eb2f9842a903274e599572f9be28e2f5a1a7572e87edd3edda534",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_006.zip"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_007.zip",
+      "bytes": 243999837,
+      "sha256": "67c92867be1880806eb26ed1620b9c4a0a15ac19000cfb8e5d0a8f63347aa7a6",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_007.zip"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_raw_008.zip",
+      "bytes": 72046514,
+      "sha256": "e70622f577d418646f80a68601943f18c04ba7ebc9a915651de7a0ed7b49a29c",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_raw_008.zip"
+    },
+    {
+      "file": "A20_R9_A_calibration_complete_20261012T112234Z_tables.zip",
+      "bytes": 3880048,
+      "sha256": "9b132604157ead00ff231c3c3bee23929665303b2ed1e59d39542df0aa88855e",
+      "remote": "https://github.com/edrisskrah131-lang/A20-AEI-R8/releases/download/r9-checkpoints-20261012/A20_R9_A_calibration_complete_20261012T112234Z_tables.zip"
+    }
+  ],
+  "bytes_reclaimed": 2013272118.0
+}
