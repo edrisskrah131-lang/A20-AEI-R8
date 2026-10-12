@@ -1,6 +1,7 @@
 *.py text eol=lf
 *.md text eol=lf
-*.json text eol=lf
+# Preserve exact bytes of hashed protocols, manifests and audit records.
+*.json -text
 *.tex text eol=lf
 *.bib text eol=lf
 *.dll binary
