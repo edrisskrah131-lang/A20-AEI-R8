@@ -1,36 +1,16 @@
 # A20–AEI 最新论文与完整研究资料
 
-最新完整版本已于 **2026-10-20 同步到主分支 `main`**。打开这个仓库即可查看，无需切换分支。
+最新版本在主分支 **main**，已加入免费真实缺陷图像的实际训练、检测和校准结果。
 
-论文：*Executable Evidence Management for CAD-Guided Aircraft Inspection*。
+论文：*Executable Evidence Management for Aircraft Inspection*。
 
-## 查看与下载
+- **[正文 PDF（18 页）](manuscript/A20_AEI_Manuscript.pdf)**：7 幅图，34 篇参考文献，其中 11 篇 AEI。
+- **[补充材料（59 页）](manuscript/Supplement.pdf)**。
+- **[源码、全部数据卷和下载校验值](AEI_DOWNLOADS.md)**。
+- [免费真实数据的来源、分组和执行结果](experiments/real_image_data/README.md)。
 
-- **[正文 PDF（19 页）](manuscript/A20_AEI_Manuscript.pdf)**：8 幅图、31 篇参考文献，其中 11 篇 AEI。
-- **[补充材料（55 页）](manuscript/Supplement.pdf)**。
-- **[完整下载索引：源码、四个数据分卷与 SHA-256 校验值](AEI_DOWNLOADS.md)**。
+两个案例共用同一证据接口：CAD 关联检验空间质量，真实图像案例检验缺陷召回与误报。真实数据保留 1,339 张代表图像、222 个推断来源组，实际执行四个检测生产者的 3,524 个图像输出。当前组失败容许值下通过 0/16 个请求，实际结果和全部失败均已写入正文。报告完整性修复与质量准入分别验证。
 
-在 PDF 页面可使用右上角下载按钮。仅阅读论文时，下载正文和补充材料即可。
+阅读只需下载两份 PDF。复现时请下载完整源码 ZIP 与索引列出的每个数据卷；源码内 README 说明两个 Python 环境、离线恢复和完整复现命令。归档恢复、独立重推理、统计、图源、引用和排版检查均已通过。
 
-## 完整源码与数据
-
-如需复现，下载 `A20_AEI_Complete_Source.zip` 和 `A20_AEI_Data_001.zip` 至 `A20_AEI_Data_004.zip`，将五个 ZIP 放在同一目录。解压源码包后，在其中的 `manuscript` 目录运行：
-
-```sh
-python reporting/restore_data.py --archive-dir ..
-A20_PYTHON=python bash reproduce_artifacts.sh
-```
-
-依赖安装及运行方式见源码包内 README。完整交付包含 1,786 个源码和数据文件；归档恢复、实验重算、图表生成、引用及 PDF 排版检查已通过。
-
-## 版本说明
-
-本次同步采用论文交付提交 `3979e9b` 的正文、补充材料、源码及数据，文件内容和校验值保持一致。原交付分支 `aei-complete-20261014` 保留。
-
-根目录中名称带 `R8` 的论文、报告、旧来源清单和历史文件属于早期归档。当前版本请使用上面的 `manuscript/` 链接与 `AEI_DOWNLOADS.md`。
-
-## 真实图像案例接入
-
-已找到并下载可免费获取的 Innovation Hangar v2：CC BY 4.0，五类缺陷，公开作者仓库提供完整图像与标注。[免费数据来源、下载与核验说明](experiments/real_image_data/README.md)已加入仓库。原项目列出 4,288 张来源图像，下载的 v1 含训练扩增，共 10,722 张；后续将按来源分组使用。
-
-此前准备的 [DET2023 数据审计和分组工具](experiments/det2023/README.md)保留。当前论文 PDF 尚未加入新数据集的实验结果。
+原 CAD 研究和 1,559 份此前研究文件保留。根目录名称带 R8 的旧文件是早期归档；当前请使用以上 `manuscript/` 链接。原 DET2023 准备工具仍在 [experiments/det2023](experiments/det2023/README.md)。

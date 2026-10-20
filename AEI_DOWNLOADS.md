@@ -1,48 +1,48 @@
-# AEI 当前完整交付 · 2026-10-18 连续变更与结构化图像实验
+# AEI 完整交付 · 2026-10-20 真实缺陷图像案例
 
-正文：19 页、8 幅图、31 篇参考文献（其中 11 篇 AEI）。补充材料：55 页。标题为 *Executable Evidence Management for CAD-Guided Aircraft Inspection*。
+标题：*Executable Evidence Management for Aircraft Inspection*。
+正文 18 页、7 幅图、34 篇参考文献（11 篇 AEI）；补充材料 59 页。
 
-- [正文 PDF（19 页）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/manuscript/A20_AEI_Manuscript.pdf)
-- [补充材料（55 页）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/manuscript/Supplement.pdf)
+- [正文 PDF](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/manuscript/A20_AEI_Manuscript.pdf)
+- [补充材料 PDF](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/manuscript/Supplement.pdf)
 
-## 本轮完成
+本轮使用免费 CC BY 4.0 的 Innovation Hangar v2 实际训练检测器、执行检测、校准并运行报告更新流程。发布版 10,722 张图像包含增强和重复采集；本轮保留 1,339 张代表图像、222 个推断来源组，按整组划分训练/开发/校准/测试。四个生产者共执行 3,524 个图像输出；独立复算预测、评分和 16 个事件的二项上界。
 
-- 将正文组织为同一巡检输出经历要求变化、组件更新、旧输出误到、修复与数值回滚的连续案例；实际执行 256 个校准场景和 64 条独立测试轨迹，每条 16 步。
-- 完整 64 事件族中，各完整方法支持相同的 54 个配置。证据复用将记录评估从 13,824 降至 8,960（35.19%）；单独的轨迹请求目录从 2,048 降至 1,536（25%）。目录只构建一次，未按场景重复计费。
-- 四种完整实现分别恢复全部 128 个有效修复节点。数值计算、证据准备和绑定恢复分别归因；共享依赖缓存的 59.31% 工作流 CPU 缩减未归为复用方法独有收益。
-- 新增四类蒙皮结构，每类独立采样场景并施加四种成像工况，共 256 张实际 Cycles 测试图像；两个固定图像处理器产生 512 个评价结果。正文展示原始输入、实际匹配和失败案例。
-- 方法选择只使用 8 个开发场景；后两类结构不参与选择。全量成功、失败、遮挡及未相交结果均保留，配对区间以独立场景为重采样单位。
-- 核查正文、补充材料、图源、引用和复现入口；保留 419 份此前研究文件的原始字节。声明、图片授权和实现范围统一置于补充材料末尾。
+在预先设置的组失败容许值 0.25 下，通过校准的请求为 0/16。结果保留全部漏检和误报，没有为取得正面结果放宽测试标准。报告流程执行 408 步，68 次合法修复提交；完整性修复与质量准入分别判断。正文展示真实输入、标注和实际检测框。
 
-## 源码与全部数据
+原 CAD 案例的 54/64 支持、35.19% 完整目录证据评估缩减及 128 个有效修复节点保留。全部 1,559 份此前研究文件逐字节不变。旧几何挑战继续保留在补充材料及源数据中。数据出处、许可、实现范围和声明集中在补充材料末尾；统计单位与必要方法条件在正文定义。
 
-源码与原始数据采用独立 ZIP 分卷，每个文件小于 90 MiB。重新计算时，请下载源码包与下列全部数据卷，放在同一目录。
+## 完整源码和数据
 
-- [A20_AEI_Complete_Source.zip（22.52 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Complete_Source.zip)
+阅读只需两份 PDF。复现时下载以下源码包和全部数据卷（每个 ZIP 小于 90 MiB），放在同一目录：
+
+- [A20_AEI_Complete_Source.zip（44.53 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Complete_Source.zip)
 - [A20_AEI_Data_001.zip（56.32 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Data_001.zip)
 - [A20_AEI_Data_002.zip（81.58 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Data_002.zip)
 - [A20_AEI_Data_003.zip（83.78 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Data_003.zip)
-- [A20_AEI_Data_004.zip（54.43 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Data_004.zip)
+- [A20_AEI_Data_004.zip（74.81 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Data_004.zip)
+- [A20_AEI_Data_005.zip（35.02 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Data_005.zip)
 
-解压源码包后，在 `manuscript` 目录运行：
+解压源码包后进入 `manuscript`，按 README 安装论文和检测器的两个依赖环境，再运行：
 
 ```sh
 python reporting/restore_data.py --archive-dir ..
-A20_PYTHON=python bash reproduce_artifacts.sh
+A20_PYTHON=/path/to/paper/python A20_DETECTOR_PYTHON=/path/to/detector/python bash reproduce_artifacts.sh
 ```
 
-依赖安装见源码内 README。复现入口使用临时副本，验证后复制论文生成物，保留归档实验与计时。源码及数据卷共含 1,786 个有效载荷文件，逐文件 SHA-256 清单与恢复工具均已打包。第三方论文全文不再分发；文献元数据和引用依据保留。
+交付共 5,883 个有效载荷文件，包含代表图像、原始/转换标注、模型权重、原始预测、评分、协议、代码、图源和历次研究。恢复工具逐文件核对 SHA-256；默认复现使用已归档权重重新推理，不重新选择模型或改动历史实验计时。
 
-## 文件完整性
+## 校验值
 
 | 文件 | SHA-256 |
 |---|---|
-| `manuscript/A20_AEI_Manuscript.pdf` | `602ff95fe2616092a0ebb490f7334f047f0d8f77a14ab2ddadf87e154957e3ac` |
-| `manuscript/Supplement.pdf` | `70193c2f9bacd6931359641e57b64333ddf2a4ae89c9bb779ce81b5e7b8a1626` |
-| `A20_AEI_Complete_Source.zip` | `4faa7d400e24642a55fe5947138c91c00b60179531bd144663f27dfd210eb3f1` |
+| `manuscript/A20_AEI_Manuscript.pdf` | `bc6a0b18daf9ed5c9560ff470c7751b971b43fab5ad4e720c0af9d86f0f7eb69` |
+| `manuscript/Supplement.pdf` | `0a2f3c7b0dc37e843167e92f741f7825c9090edbedf563b0c0faf0282fc89f68` |
+| `A20_AEI_Complete_Source.zip` | `2ed95b4f57f40a77df267bdfecc040bfaa8d469d80cd37e501f7e06274168b8e` |
 | `A20_AEI_Data_001.zip` | `a878c889111041e53c4ae56f121220f5c5ba4fccc1ee36341acb9a19340f2c22` |
 | `A20_AEI_Data_002.zip` | `e3082ed8d1fdef6fff1ca774aa49228435ab73a783a25e4efa22d04c39c3e0ee` |
 | `A20_AEI_Data_003.zip` | `b53dd42faad850c9950b4956cfff49968adf5876486fb48c52efea05fff75bde` |
-| `A20_AEI_Data_004.zip` | `cb984e40cf1c0d108aa13b36c16d867efefcdeaadd8f0a8429af80d0c2f0ea09` |
+| `A20_AEI_Data_004.zip` | `4499fea3b0a876d6ca3f7db3a004995de13319d68931e20233af52378d81667f` |
+| `A20_AEI_Data_005.zip` | `89daf99dea001e31b0eb6406af258202e9e3cfdb413d16929684af16aa880475` |
 
-2026-10-20：最新完整交付已同步到主分支 `main`。以上链接均指向主分支；原交付分支 `aei-complete-20261014` 保留。
+当前交付位于 `main`；无需切换分支或账号。

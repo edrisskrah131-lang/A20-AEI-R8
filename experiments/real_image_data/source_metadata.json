@@ -71,7 +71,7 @@
     "filename_source_families": 4161,
     "source_names_crossing_official_splits": 36,
     "independent_capture_groups_verified": false,
-    "real_dataset_training_executed": false,
+    "real_dataset_training_executed": true,
     "annotation_format": "YOLO bounding_box, instance_polygon",
     "annotation_format_counts": {
       "bounding_box": 20001,
@@ -159,6 +159,42 @@
     "primary": "/workspace/a20-data/innovation_hangar_v2",
     "secondary": "/workspace/a20-data/sutd_aircraft_ai"
   },
-  "current_manuscript_updated": false,
-  "model_training_executed": false
+  "current_manuscript_updated": true,
+  "model_training_executed": true,
+  "executed_real_image_case": {
+    "study": "manuscript/studies/real_defects_20261020",
+    "canonical_images": 1339,
+    "inferred_source_groups": 222,
+    "group_counts": {
+      "train": 122,
+      "development": 33,
+      "calibration": 33,
+      "test": 34
+    },
+    "image_counts": {
+      "train": 458,
+      "development": 34,
+      "calibration": 368,
+      "test": 479
+    },
+    "model": "YOLO11n, COCO pretrained, actual grouped train/development fit",
+    "producers": 4,
+    "image_outputs": 3524,
+    "calibrated_events": 16,
+    "admitted_contexts": 0,
+    "group_failure_allowance": 0.25,
+    "report_operations": 408,
+    "valid_repairs": 68,
+    "invalid_bindings_issued": 0,
+    "manifest_sha256": "881ea28d18c140862b50ca540df9bb155fbdadd226bcb62cc4fe2ccb5d349d2e",
+    "model_record_sha256": "e663e45445aada981636f5d9260a1a8808dc153f6edf5466398a39776fdb164b",
+    "independent_prediction_reexecution": {
+      "status": "PASS",
+      "detector_outputs_recomputed": 3524,
+      "maximum_detection_difference": 0.0,
+      "scoring_records_identical": true,
+      "coco_metrics_identical": true
+    },
+    "aircraft_identities_verified": false
+  }
 }
