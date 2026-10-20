@@ -2,8 +2,8 @@
 
 正文：19 页、8 幅图、31 篇参考文献（其中 11 篇 AEI）。补充材料：55 页。标题为 *Executable Evidence Management for CAD-Guided Aircraft Inspection*。
 
-- [正文 PDF（19 页）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/aei-complete-20261014/manuscript/A20_AEI_Manuscript.pdf)
-- [补充材料（55 页）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/aei-complete-20261014/manuscript/Supplement.pdf)
+- [正文 PDF（19 页）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/manuscript/A20_AEI_Manuscript.pdf)
+- [补充材料（55 页）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/manuscript/Supplement.pdf)
 
 ## 本轮完成
 
@@ -18,11 +18,11 @@
 
 源码与原始数据采用独立 ZIP 分卷，每个文件小于 90 MiB。重新计算时，请下载源码包与下列全部数据卷，放在同一目录。
 
-- [A20_AEI_Complete_Source.zip（22.52 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/aei-complete-20261014/A20_AEI_Complete_Source.zip)
-- [A20_AEI_Data_001.zip（56.32 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/aei-complete-20261014/A20_AEI_Data_001.zip)
-- [A20_AEI_Data_002.zip（81.58 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/aei-complete-20261014/A20_AEI_Data_002.zip)
-- [A20_AEI_Data_003.zip（83.78 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/aei-complete-20261014/A20_AEI_Data_003.zip)
-- [A20_AEI_Data_004.zip（54.43 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/aei-complete-20261014/A20_AEI_Data_004.zip)
+- [A20_AEI_Complete_Source.zip（22.52 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Complete_Source.zip)
+- [A20_AEI_Data_001.zip（56.32 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Data_001.zip)
+- [A20_AEI_Data_002.zip（81.58 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Data_002.zip)
+- [A20_AEI_Data_003.zip（83.78 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Data_003.zip)
+- [A20_AEI_Data_004.zip（54.43 MiB）](https://github.com/edrisskrah131-lang/A20-AEI-R8/raw/main/A20_AEI_Data_004.zip)
 
 解压源码包后，在 `manuscript` 目录运行：
 
@@ -45,4 +45,4 @@ A20_PYTHON=python bash reproduce_artifacts.sh
 | `A20_AEI_Data_003.zip` | `b53dd42faad850c9950b4956cfff49968adf5876486fb48c52efea05fff75bde` |
 | `A20_AEI_Data_004.zip` | `cb984e40cf1c0d108aa13b36c16d867efefcdeaadd8f0a8429af80d0c2f0ea09` |
 
-仓库主分支未修改。交付分支为 `aei-complete-20261014`；以上公开链接无需切换账号或登录。
+2026-10-20：最新完整交付已同步到主分支 `main`。以上链接均指向主分支；原交付分支 `aei-complete-20261014` 保留。

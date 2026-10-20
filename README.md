@@ -1,27 +1,30 @@
-# A20–AEI R8 research archive
+# A20–AEI 最新论文与完整研究资料
 
-Private backup of the frozen aircraft inspection localization research. Main manuscript: **30 pages**; independent supplement: **41 pages**. Existing review score: **8.2/10**. This archival transfer introduces no new experiments and changes no frozen conclusions.
+最新完整版本已于 **2026-10-20 同步到主分支 `main`**。打开这个仓库即可查看，无需切换分支。
 
-## 新对话接手 / Start a new conversation
+论文：*Executable Evidence Management for CAD-Guided Aircraft Inspection*。
 
-1. Open **Releases** and choose **A20–AEI R8 — complete code, data and history** (`r8-handoff-2026-10-12`).
-2. Download `A20_R8_Start_Paper_Code_History.zip` (33.6 MiB) and upload it to the new conversation.
-3. Ask it to read `READ_FIRST_CN.md`, then the preserved handoff, task book, main manuscript and supplement.
-4. For full reproduction, download all eight original data/history ZIP archives listed in the release and extract them into one common parent directory. These are ordinary complete ZIP files; no 33-part reconstruction is needed when downloading from this GitHub release.
+## 查看与下载
 
-## Files directly in this repository
+- **[正文 PDF（19 页）](manuscript/A20_AEI_Manuscript.pdf)**：8 幅图、31 篇参考文献，其中 11 篇 AEI。
+- **[补充材料（55 页）](manuscript/Supplement.pdf)**。
+- **[完整下载索引：源码、四个数据分卷与 SHA-256 校验值](AEI_DOWNLOADS.md)**。
 
-- `A20_AEI_R8_Manuscript.pdf`: current main paper.
-- `A20_AEI_R8_Supplement.pdf`: supplementary material.
-- `A20_R8_Source_And_Handoff.zip`: 97 Python source files plus retained native source, configuration and handoff files, under their original directory paths. It is a convenient code/history extract, not the complete raw dataset.
-- `PROJECT_HISTORY_CN.md`, `LATEST_TASK_BRIEF_CN.md`, `VISIBLE_HISTORY_582_629_CN.md`: retained historical decisions, task book and visible conversation excerpts.
-- `A20_AEI_R8_Revision_Report_CN.*` and `A20_AEI_R8_Independent_Review_CN.*`: existing full revision and review reports.
-- `GITHUB_ASSET_SHA256SUMS.txt`, `GITHUB_ASSET_MANIFEST.json`: exact sizes and hashes of the release archives and standalone documents.
+在 PDF 页面可使用右上角下载按钮。仅阅读论文时，下载正文和补充材料即可。
 
-The full editable LaTeX source, graphics and large raw data are retained in the release assets. The eight original complete archives contain **2,716,317,526 bytes** in total.
+## 完整源码与数据
 
-## Evidence retained
+如需复现，下载 `A20_AEI_Complete_Source.zip` 和 `A20_AEI_Data_001.zip` 至 `A20_AEI_Data_004.zip`，将五个 ZIP 放在同一目录。解压源码包后，在其中的 `manuscript` 目录运行：
 
-The full contract system and the strongest fair procedural Flat baseline produced equal numerical and authorization results. Fixed2 was preferable in some ordinary routes. The manuscript does not claim new physical robot experiments. Four original real platform photos, five original simulation views and all retained A19/A20 historical assets remain preserved.
+```sh
+python reporting/restore_data.py --archive-dir ..
+A20_PYTHON=python bash reproduce_artifacts.sh
+```
 
-Retained historical instructions may refer to previous sandbox paths or the earlier 33-part download repair. For this GitHub copy, follow this README and the release instructions. The project history is the retained research files and explicitly visible records; it is not a full ChatGPT account history export.
+依赖安装及运行方式见源码包内 README。完整交付包含 1,786 个源码和数据文件；归档恢复、实验重算、图表生成、引用及 PDF 排版检查已通过。
+
+## 版本说明
+
+本次同步采用论文交付提交 `3979e9b` 的正文、补充材料、源码及数据，文件内容和校验值保持一致。原交付分支 `aei-complete-20261014` 保留。
+
+根目录中名称带 `R8` 的论文、报告、旧来源清单和历史文件属于早期归档。当前版本请使用上面的 `manuscript/` 链接与 `AEI_DOWNLOADS.md`。
