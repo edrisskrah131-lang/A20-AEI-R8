@@ -29,6 +29,8 @@ A20_PYTHON=python bash reproduce_artifacts.sh
 
 根目录中名称带 `R8` 的论文、报告、旧来源清单和历史文件属于早期归档。当前版本请使用上面的 `manuscript/` 链接与 `AEI_DOWNLOADS.md`。
 
-## DET2023 真实图像案例接入
+## 真实图像案例接入
 
-已选定 Aircraft_Fuselage_DET2023，正在准备真实图像案例。[来源核实、数据审计和分组工具](experiments/det2023/README.md)已加入仓库。官方说明为 389 张有标注图像与 5,212 张未标注图像；原始数据尚待获取，当前论文尚未加入该数据集的实验结果。
+已找到并下载可免费获取的 Innovation Hangar v2：CC BY 4.0，五类缺陷，公开作者仓库提供完整图像与标注。[免费数据来源、下载与核验说明](experiments/real_image_data/README.md)已加入仓库。原项目列出 4,288 张来源图像，下载的 v1 含训练扩增，共 10,722 张；后续将按来源分组使用。
+
+此前准备的 [DET2023 数据审计和分组工具](experiments/det2023/README.md)保留。当前论文 PDF 尚未加入新数据集的实验结果。

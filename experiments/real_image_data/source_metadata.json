@@ -1,0 +1,164 @@
+{
+  "primary_free_candidate": {
+    "status": "FILES_VERIFIED",
+    "dataset": "Innovation Hangar v2",
+    "version": 1,
+    "license": "CC BY 4.0",
+    "official_project": "https://universe.roboflow.com/innovation-hangar/innovation-hangar-v2",
+    "official_version": "https://universe.roboflow.com/innovation-hangar/innovation-hangar-v2/dataset/1",
+    "paper_doi": "10.3390/aerospace12040356",
+    "mirror_repository": "https://github.com/cparyoto/Aircraft-Skin-Defect-Detection-YOLOv9-Vs.-RT-DETR",
+    "git_tree_sha": "a390a6464de0437888a25c5bd62449c77a29a899",
+    "verified_files": 21445,
+    "raw_archive_sha256": "7024ec60ee7b71d7c4966d3e03bd2e9ef0d141ea07e782be19b021b42a744e5c",
+    "splits": {
+      "train": {
+        "images": 9651,
+        "labels": 9651,
+        "empty_labels": 48,
+        "boxes_by_class": {
+          "crack": 9592,
+          "dent": 8569,
+          "paint-off": 711,
+          "scratch": 180,
+          "missing-head": 852
+        }
+      },
+      "valid": {
+        "images": 642,
+        "labels": 642,
+        "empty_labels": 5,
+        "boxes_by_class": {
+          "crack": 607,
+          "dent": 554,
+          "scratch": 16,
+          "paint-off": 34,
+          "missing-head": 54
+        }
+      },
+      "test": {
+        "images": 429,
+        "labels": 429,
+        "empty_labels": 3,
+        "boxes_by_class": {
+          "dent": 413,
+          "crack": 386,
+          "paint-off": 23,
+          "scratch": 7,
+          "missing-head": 32
+        }
+      }
+    },
+    "total_images": 10722,
+    "total_boxes": 22030,
+    "classes": [
+      "crack",
+      "dent",
+      "missing-head",
+      "paint-off",
+      "scratch"
+    ],
+    "annotated_boxes_by_class": {
+      "crack": 10585,
+      "dent": 9536,
+      "paint-off": 768,
+      "scratch": 203,
+      "missing-head": 938
+    },
+    "slightly_outside_box_files": 0,
+    "original_project_image_count": 4288,
+    "training_augmentation_outputs_per_example": 3,
+    "filename_source_families": 4161,
+    "source_names_crossing_official_splits": 36,
+    "independent_capture_groups_verified": false,
+    "real_dataset_training_executed": false,
+    "annotation_format": "YOLO bounding_box, instance_polygon",
+    "annotation_format_counts": {
+      "bounding_box": 20001,
+      "instance_polygon": 2029
+    },
+    "retrieved_date": "2026-10-20"
+  },
+  "secondary_same_paper_dataset": {
+    "status": "FILES_VERIFIED",
+    "dataset": "SUTD Aircraft AI Dataset",
+    "version": "author repository dataset_1",
+    "license": "CC BY 4.0",
+    "official_project": "https://universe.roboflow.com/sutd-4mhea/aircraft-ai-dataset",
+    "official_version": "https://universe.roboflow.com/sutd-4mhea/aircraft-ai-dataset",
+    "paper_doi": "10.3390/aerospace12040356",
+    "mirror_repository": "https://github.com/cparyoto/Aircraft-Skin-Defect-Detection-YOLOv9-Vs.-RT-DETR",
+    "git_tree_sha": "a390a6464de0437888a25c5bd62449c77a29a899",
+    "verified_files": 1972,
+    "raw_archive_sha256": "7024ec60ee7b71d7c4966d3e03bd2e9ef0d141ea07e782be19b021b42a744e5c",
+    "splits": {
+      "train": {
+        "images": 688,
+        "labels": 688,
+        "empty_labels": 0,
+        "boxes_by_class": {
+          "Scartch": 1429,
+          "Missing-Rivet": 925,
+          "Rust": 1430
+        }
+      },
+      "valid": {
+        "images": 197,
+        "labels": 197,
+        "empty_labels": 0,
+        "boxes_by_class": {
+          "Scartch": 428,
+          "Rust": 426,
+          "Missing-Rivet": 321
+        }
+      },
+      "test": {
+        "images": 98,
+        "labels": 98,
+        "empty_labels": 0,
+        "boxes_by_class": {
+          "Rust": 183,
+          "Scartch": 211,
+          "Missing-Rivet": 162
+        }
+      }
+    },
+    "total_images": 983,
+    "total_boxes": 5515,
+    "classes": [
+      "Missing-Rivet",
+      "Rust",
+      "Scartch"
+    ],
+    "annotated_boxes_by_class": {
+      "Scartch": 2068,
+      "Missing-Rivet": 1408,
+      "Rust": 2039
+    },
+    "slightly_outside_box_files": 0,
+    "original_project_image_count": 983,
+    "training_augmentation_outputs_per_example": 1,
+    "license_note": "Current public SUTD project lists CC BY 4.0; historical repository export YAML contains Private in its Roboflow license field",
+    "filename_source_families": 978,
+    "source_names_crossing_official_splits": 3,
+    "independent_capture_groups_verified": false,
+    "real_dataset_training_executed": false,
+    "annotation_format": "YOLO bounding_box",
+    "annotation_format_counts": {
+      "bounding_box": 5515
+    },
+    "retrieved_date": "2026-10-20"
+  },
+  "download_test": {
+    "login_required": false,
+    "payment_required": false,
+    "source": "public author repository ZIP",
+    "full_archive_bytes": 427771492
+  },
+  "local_data_paths": {
+    "primary": "/workspace/a20-data/innovation_hangar_v2",
+    "secondary": "/workspace/a20-data/sutd_aircraft_ai"
+  },
+  "current_manuscript_updated": false,
+  "model_training_executed": false
+}
