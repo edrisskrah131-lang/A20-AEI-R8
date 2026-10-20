@@ -1,0 +1,99 @@
+{
+  "dataset": "Aircraft_Fuselage_DET2023",
+  "doi": "10.21227/3ref-ex71",
+  "official_url": "https://ieee-dataport.org/documents/aircraftfuselagedet2023-aircraft-fuselage-defect-detection-dataset",
+  "verified_date": "2026-10-20",
+  "license": [
+    {
+      "rights": "Creative Commons Attribution 4.0 International",
+      "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "schemeUri": "https://spdx.org/licenses/",
+      "rightsIdentifier": "cc-by-4.0",
+      "rightsIdentifierScheme": "SPDX"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Zhang, Xiaoyu",
+      "givenName": "Xiaoyu Zhang",
+      "familyName": "Zhang",
+      "affiliation": [
+        "Civil Aviation University of China"
+      ],
+      "nameIdentifiers": []
+    },
+    {
+      "name": "Zhang, Jinping",
+      "givenName": "Jinping Zhang",
+      "familyName": "Zhang",
+      "affiliation": [
+        "Civil Aviation University of China"
+      ],
+      "nameIdentifiers": []
+    },
+    {
+      "name": "Chen, Jiusheng",
+      "givenName": "Jiusheng Chen",
+      "familyName": "Chen",
+      "affiliation": [
+        "Civil Aviation University of China"
+      ],
+      "nameIdentifiers": []
+    },
+    {
+      "name": "Guo, Runxia",
+      "givenName": "Runxia Guo",
+      "familyName": "Guo",
+      "affiliation": [
+        "Civil Aviation University of China"
+      ],
+      "nameIdentifiers": []
+    },
+    {
+      "name": "Wu, Jun",
+      "givenName": "Jun Wu",
+      "familyName": "Wu",
+      "affiliation": [
+        "Civil Aviation University of China"
+      ],
+      "nameIdentifiers": []
+    }
+  ],
+  "publication_year": 2023,
+  "official_readme_counts": {
+    "total_images": 5601,
+    "labeled_images": 389,
+    "unlabeled_images": 5212,
+    "annotation_formats": [
+      "COCO",
+      "VOC",
+      "YOLO"
+    ],
+    "formats_share_the_same_labeled_images": true,
+    "width": 1120,
+    "height": 960
+  },
+  "official_zip": {
+    "name": "Aircraft_Fuselage_DET2023.zip",
+    "displayed_size": "216.66 MB"
+  },
+  "access_observed": {
+    "logged_in": false,
+    "dataset_download": "LOGIN TO ACCESS DATASET FILES",
+    "subscription_notice": "This dataset requires an IEEE DataPort Subscription to access."
+  },
+  "primary_sources": {
+    "datacite_api": "https://api.datacite.org/dois/10.21227/3ref-ex71",
+    "official_readme_sha256": "4e6b4995a4406790d645051b00778e26e9f5c3031870275a9589de8a6d97091b"
+  },
+  "dataset_downloaded": false,
+  "categories_verified_from_annotations": false,
+  "independent_capture_groups_verified": false,
+  "requested_companion_article": "A Semi-Supervised Aircraft Fuselage Defect Detection Network with Dynamic Attention and Class-aware Adaptive Pseudo-Label Assignment",
+  "companion_article_url": "https://ieeexplore.ieee.org/document/10457003",
+  "public_mirror_search": {
+    "github_exact_name_results": 0,
+    "huggingface_exact_name_results": 0,
+    "scope": "exact-name search only; not proof that no mirror exists"
+  }
+}

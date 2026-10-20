@@ -28,3 +28,7 @@ A20_PYTHON=python bash reproduce_artifacts.sh
 本次同步采用论文交付提交 `3979e9b` 的正文、补充材料、源码及数据，文件内容和校验值保持一致。原交付分支 `aei-complete-20261014` 保留。
 
 根目录中名称带 `R8` 的论文、报告、旧来源清单和历史文件属于早期归档。当前版本请使用上面的 `manuscript/` 链接与 `AEI_DOWNLOADS.md`。
+
+## DET2023 真实图像案例接入
+
+已选定 Aircraft_Fuselage_DET2023，正在准备真实图像案例。[来源核实、数据审计和分组工具](experiments/det2023/README.md)已加入仓库。官方说明为 389 张有标注图像与 5,212 张未标注图像；原始数据尚待获取，当前论文尚未加入该数据集的实验结果。
